@@ -4,6 +4,7 @@ services:
 
 
 script:
+    - cat VERSION
     - env
     - docker build -t debian/live-build .
     - mkdir build
