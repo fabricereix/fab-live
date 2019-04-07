@@ -11,7 +11,7 @@ ASSET_NAME=$(date +%Y%m%d)-$TRAVIS_BUILD_NUMBER-$(basename $ASSET_FILE)
 
 ls -lh $ASSET_FILE
 
-TAG=v1
+TAG=$(cat VERSION)
 echo Release from tag $TAG
 RELEASE_ID=$(curl -s -H "$AUTH_HEADER" $REPO_URL/releases/tags/$TAG | jq  '.id')
 echo RELEASE_ID=$RELEASE_ID
