@@ -3,7 +3,7 @@
 set -e
 set -u
 API_URL="https://api.github.com"
-REPO_NAME=fabiso
+REPO_NAME=fab-live
 REPO_URL="$API_URL/repos/fabricereix/$REPO_NAME"
 AUTH_HEADER="Authorization: token $github_api_token"
 ASSET_FILE=$1
