@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    customizing-package-installation -
+    Live システムマニュアル
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Live システムマニュアル" />
+  <meta name="dc.author" content="Live システムプロジェクト &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Live システムプロジェクト &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="2015-09-22"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. \\  \\ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. \\  \\ You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/. \\  \\ The complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-3 file." />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="ja">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="customization-overview.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-contents.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Live システムマニュアル
+  </h1>
+
+<h1 class="minitoc">
+    About
+  </h1>
+
+<h1 class="minitoc">
+    このマニュアルについて
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.ja.html" target="_top">
+    1. このマニュアルについて
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#8">
+    1.1 せっかちな人向け
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#12">
+    1.2 用語
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#29">
+    1.3 著者
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#44">
+    1.4 この文書への貢献
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.ja.html#46">
+  1.4.1 変更の適用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.ja.html#60">
+  1.4.2 翻訳
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Live システムプロジェクトへの貢献
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.ja.html" target="_top">
+    2. Live システムプロジェクトについて
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#75">
+    2.1 動機
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#76">
+  2.1.1 現在の Live システムの問題点
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#86">
+  2.1.2 自身の Live システムを作成する理由
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#94">
+    2.2 哲学
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#95">
+  2.2.1 Debian「main」の変更しないパッケージしか使いません
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#99">
+  2.2.2 Live システム固有のパッケージ設定はありません
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#103">
+    2.3 連絡先
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    ユーザ
+  </h1>
+
+<h1 class="minitoc">
+    インストール
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.ja.html" target="_top">
+    3. インストール
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#110">
+    3.1 要件
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#118">
+    3.2 live-build のインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#124">
+  3.2.1 Debian リポジトリから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#127">
+  3.2.2 ソースから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#138">
+  3.2.3 「スナップショット」から
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#140">
+    3.3 live-boot と live-config のインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#142">
+  3.3.1 Debian リポジトリから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#144">
+  3.3.2 ソースから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#156">
+  3.3.3 「スナップショット」から
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    基本
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.ja.html" target="_top">
+    4. 基本
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#163">
+    4.1 Live システムとは何?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#171">
+    4.2 ビルド済みイメージのダウンロード
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#173">
+    4.3 ウェブ Live イメージビルダーの利用
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#175">
+  4.3.1 ウェブビルダーの使い方と注意
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#179">
+    4.4 最初の段階: ISO hybrid イメージのビルド
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#190">
+    4.5 ISO hybrid Live イメージの利用
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#192">
+  4.5.1 ISOイメージの実際のメディアへの書き込み
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#195">
+  4.5.2 ISO hybrid イメージのUSBメモリへのコピー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#200">
+  4.5.3 USBメモリの空きスペースの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#207">
+  4.5.4 Live メディアのブート
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#211">
+    4.6 仮想マシンを利用したテスト
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#218">
+  4.6.1 QEMU でのISOイメージのテスト
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#225">
+  4.6.2 VirtualBox でのISOイメージのテスト
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#233">
+    4.7 HDDイメージのビルド及び利用
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#245">
+    4.8 netboot イメージのビルド
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#258">
+  4.8.1 DHCP サーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#262">
+  4.8.2 TFTP サーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#267">
+  4.8.3 NFSサーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#275">
+  4.8.4 ネットワーク経由のブートをテストする方法
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#284">
+    4.9 ウェブブート
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#286">
+  4.9.1 ウェブブートファイルの取得
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#292">
+  4.9.2 ウェブブートイメージの起動
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    ツールの概要
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.ja.html" target="_top">
+    5. ツールの概要
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#300">
+    5.1 live-build パッケージ
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#310">
+  5.1.1 <tt>lb config</tt> コマンド
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#320">
+  5.1.2 <tt>lb build</tt> コマンド
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#322">
+  5.1.3 <tt>lb clean</tt> コマンド
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#324">
+    5.2 live-boot パッケージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#328">
+    5.3 live-config パッケージ
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    設定の管理
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.ja.html" target="_top">
+    6. 設定の管理
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ja.html#333">
+    6.1 設定変更への対応
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ja.html#335">
+  6.1.1 自動化スクリプトを使う理由は? それは何をするもの?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ja.html#338">
+  6.1.2 自動化スクリプトの使用例
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ja.html#345">
+    6.2 Git経由で公開されている設定の複製
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    収録内容の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.ja.html" target="_top">
+    7. 独自化の概要
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#359">
+    7.1 ビルド時とブート時の設定
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#362">
+    7.2 ビルド段階
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#365">
+    7.3 ファイルによる lb config の補完
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#367">
+    7.4 独自化タスク
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    インストールするパッケージの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.ja.html" target="_top">
+    8. インストールするパッケージの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#372">
+    8.1 パッケージソース
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#373">
+  8.1.1 ディストリビューション、アーカイブ領域とモード
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#380">
+  8.1.2 ディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#382">
+  8.1.3 ビルド時に利用するディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#386">
+  8.1.4 実行時に利用するディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#389">
+  8.1.5 追加リポジトリ
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#397">
+    8.2 インストールするパッケージの選択
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#399">
+  8.2.1 パッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#402">
+  8.2.2 メタパッケージの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#410">
+  8.2.3 ローカルパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#414">
+  8.2.4 ローカルバイナリパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#416">
+  8.2.5 生成されたパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#420">
+  8.2.6 条件付き内部パッケージ一覧の利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#429">
+  8.2.7 インストール時のパッケージの削除
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#431">
+  8.2.8 デスクトップ及び言語タスク
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#436">
+  8.2.9 カーネルのフレーバー (種類) とバージョン
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#441">
+  8.2.10 独自のカーネル
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#449">
+    8.3 変更したあるいはサードパーティ製パッケージのインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#456">
+  8.3.1 <tt>packages.chroot</tt> を利用した独自のパッケージのインストール
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#463">
+  8.3.2 APTリポジトリを利用した独自パッケージのインストール
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#466">
+  8.3.3 独自パッケージとAPT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#469">
+    8.4 ビルド時のAPT設定
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#471">
+  8.4.1 apt と aptitude の選択
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#475">
+  8.4.2 APTでのプロキシの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#478">
+  8.4.3 APTの調整による容量節約
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#487">
+  8.4.4 apt や aptitude へのオプションの受け渡し
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#492">
+  8.4.5 APTのピン止め
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    収録内容の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.ja.html" target="_top">
+    9. 収録内容の独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#506">
+  9.1.1 Live/chroot ローカルインクルード
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#513">
+  9.1.2 バイナリローカルインクルード
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#517">
+    9.2 フック
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#520">
+  9.2.1 chroot ローカルフック
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#522">
+  9.2.2 バイナリローカルフック
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#524">
+  9.2.3 ブート時フック
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#526">
+    9.3 Debconf 質問の preseed
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    実行時の挙動の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html" target="_top">
+    10. 実行時の挙動の独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#532">
+    10.1 live ユーザの独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#541">
+    10.2 ロケールと言語の独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#558">
+    10.3 保持機能
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#580">
+  10.3.1 persistence.conf ファイル
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#585">
+  10.3.2 保持先を複数使いたい場合
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#591">
+  10.3.3 暗号化した保持先の利用
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    バイナリイメージの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.ja.html" target="_top">
+    11. バイナリイメージの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ja.html#619">
+    11.1 ブートローダ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ja.html#626">
+    11.2 ISO メタ情報
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Debian インストーラの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.ja.html" target="_top">
+    12. Debian インストーラの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#636">
+    12.1 Debian インストーラの種類
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#648">
+    12.2 preseed による Debian インストーラの独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#651">
+    12.3 Debian インストーラの収録内容の独自化
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    プロジェクト
+  </h1>
+
+<h1 class="minitoc">
+    プロジェクトへの貢献
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.ja.html" target="_top">
+    13. プロジェクトへの貢献
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ja.html#667">
+    13.1 変更を加える
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ja.html#682">
+    13.2 man ページの翻訳
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    バグの報告
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.ja.html" target="_top">
+    14. バグの報告
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#698">
+    14.1 既知の問題
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#703">
+    14.2 最初から再ビルド
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#705">
+    14.3 最新のパッケージを使う
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#707">
+    14.4 情報収集
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#724">
+    14.5 可能であれば失敗している状況を分離する
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#726">
+    14.6 正しいパッケージに対してバグを報告する
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#729">
+  14.6.1 ビルド時のパッケージ収集中
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#732">
+  14.6.2 ビルド時のパッケージインストール中
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#736">
+  14.6.3 ブート時
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#738">
+  14.6.4 実行時
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#740">
+    14.7 調査してください
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#744">
+    14.8 バグの報告先
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    コーディングスタイル
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.ja.html" target="_top">
+    15. コーディングスタイル
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#751">
+    15.1 互換性
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#756">
+    15.2 インデント
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#758">
+    15.3 改行
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#770">
+    15.4 変数
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#789">
+    15.5 その他
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    手順
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.ja.html" target="_top">
+    16. 手順
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.ja.html#797">
+    16.1 主要リリース
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.ja.html#803">
+    16.2 ポイントリリース
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.ja.html#807">
+  16.2.1 ある Debian リリースの最後のポイントリリース
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.ja.html#809">
+  16.2.2 ポイントリリース告知用テンプレート
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Gitリポジトリ
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.ja.html" target="_top">
+    17. Gitリポジトリ
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.ja.html#827">
+    17.1 リポジトリを複数処理
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    例
+  </h1>
+
+<h1 class="minitoc">
+    例
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.ja.html" target="_top">
+    18. 例
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#835">
+    18.1 例の使用
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#839">
+    18.2 チュートリアル 1: デフォルトイメージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#848">
+    18.3 チュートリアル 2: ウェブブラウザユーティリティ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#856">
+    18.4 チュートリアル 3: 私的イメージ
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.ja.html#859">
+  18.4.1 最初の改訂
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.ja.html#873">
+  18.4.2 2回目の改訂
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#885">
+    18.5 VNC 公衆クライアント
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#899">
+    18.6 128MB USB メモリ向けの基本イメージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#910">
+    18.7 地域化した GNOME デスクトップとインストーラ
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    付録
+  </h1>
+
+<h1 class="minitoc">
+    スタイルガイド
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.ja.html" target="_top">
+    19. スタイルガイド
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.ja.html#925">
+    19.1 著者向けガイドライン
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#928">
+  19.1.1 言語特性
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#961">
+  19.1.2 手順
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.ja.html#1000">
+    19.2 翻訳者向けガイドライン
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#1004">
+  19.2.1 翻訳の手がかり
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.ja.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.ja.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Live システムマニュアル
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    インストールするパッケージの独自化
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#370" class="lnkocn">370</a></label>
+  <h1 class="norm" id="370"><a name="370"></a>
+    8. インストールするパッケージの独自化
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#371" class="lnkocn">371</a></label>
+  <p class="i0" id="371">
+    恐らく Live システムの最も基本的な独自化はイメージに収録するパッケージの選択でしょう。この章では <i>live-build</i> でのパッケージのインストールの独自化のためのビルド時の様々なオプションを見ていきます。イメージへのインストールに利用可能なパッケージに関して最も影響が大きい選択はディストリビューションとアーカイブ領域です。まともなダウンロード速度を確保するため、近いディストリビューションミラーを選択してください。backports や experimental あるいは独自のパッケージのある自身専用のリポジトリを追加することもできます。また、ファイルを直接パッケージとして収録することもできます。特定のデスクトップや言語のパッケージ等、多数の関連パッケージを同時にインストールするメタパッケージを含め、パッケージ一覧は定義できます。最後に、ビルドでパッケージをインストールするときに <i>apt</i> や好みにより <i>aptitude</i> を制御するオプションもいくらかあります。プロキシを使っていたり、推奨パッケージのインストールを無効にして容量を節約したい、インストールするパッケージのバージョンをAPTのピン経由で制御する必要がある、等便利だと思う場面があるかもしれません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#372" class="lnkocn">372</a></label>
+  <p class="bold" id="372"><a name="372"></a> <a id="hc8.1"></a>
+    <a name="c8.1" ></a><a name="h8.1" ></a>8.1 パッケージソース
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#373" class="lnkocn">373</a></label>
+  <p class="bold" id="373"><a name="373"></a> <a id="hc8.1.1"></a>
+    <a name="c8.1.1" ></a><a name="h8.1.1" ></a>8.1.1 ディストリビューション、アーカイブ領域とモード
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#374" class="lnkocn">374</a></label>
+  <p class="i0" id="374">
+    ディストリビューションの選択は Live イメージへの収録に利用できるパッケージに最も影響があります。コード名を指定してください。<b>buster</b> バージョンの <i>live-build</i> では <b>buster</b> がデフォルトになっています。現在アーカイブにある任意のディストリビューションをコード名で指定できます (詳細については <a href="about-manual.ja.html#terms">条件</a>  参照)。<tt>--distribution</tt> オプションはアーカイブ内のパッケージソースに影響するだけでなく、サポートしている各ディストリビューションをビルドするのに必要な動作をするよう <i>live-build</i> に指示します。例えば*{unstable}*リリースであるsidに対してビルドする場合は:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#375" class="lnkocn">375</a></label>
+  <p class="code" id="375">
+    $ lb config --distribution sid<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#376" class="lnkocn">376</a></label>
+  <p class="i0" id="376">
+    のように指定します。ディストリビューションアーカイブ内で、アーカイブ領域はアーカイブを大きく分類します。Debian では#{main}#、<tt>contrib</tt>、<tt>non-free</tt> となっています。<tt>main</tt>に収録されるソフトウェアだけが Debian ディストリビューションの一部であり、したがってそれがデフォルトとなっています。複数指定することもできます。例えば
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#377" class="lnkocn">377</a></label>
+  <p class="code" id="377">
+    $ lb config --archive-areas "main contrib non-free"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#378" class="lnkocn">378</a></label>
+  <p class="i0" id="378">
+    Debian 派生物によっては <tt>--mode</tt> オプションの実験的サポートが利用できるものがあります。このオプションは Debian または未知のシステムでビルドしている場合にのみデフォルトで <tt>debian</tt> がセットされています。サポートしている派生物のどれかで <tt>lb config</tt> を実行した場合のデフォルト値はその派生物のイメージを作成するための値になります。<tt>lb config</tt> を例えば <tt>ubuntu</tt> モードで実行すると Debian 向けに代えて指定された派生物のディストリビューション名やアーカイブ領域がサポートされます。このモードはその派生物に合うように <i>live-build</i> の挙動も変更します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#379" class="lnkocn">379</a></label>
+  <p class="i0" id="379">
+    <b>注意:</b> モードを追加したプロジェクトの設定については主にそのオプションのサポートユーザの担当です。Live システムプロジェクトは最善の努力をもって開発サポートを提供はしますが、私たちは派生物を自ら開発あるいはサポートしているわけではないため、あくまで派生物プロジェクトからのフィードバックが基になります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#380" class="lnkocn">380</a></label>
+  <p class="bold" id="380"><a name="380"></a> <a id="hc8.1.2"></a>
+    <a name="c8.1.2" ></a><a name="h8.1.2" ></a>8.1.2 ディストリビューションミラー
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#381" class="lnkocn">381</a></label>
+  <p class="i0" id="381">
+    Debian アーカイブは世界中の巨大なネットワークミラーにまたがって複製されているため、各地域の人が最高のダウンロード速度を求めて近いミラーを選択できます。<tt>--mirror-*</tt> オプションはそれぞれ、ビルドの様々な段階でどのディストリビューションミラーを利用するのかを決定します。 <a href="customization-overview.ja.html#stages-of-the-build">ビルド段階</a>  の繰り返しになりますが*{パッケージ収集}*段階は最小限のシステムで <i>debootstrap</i> により最初に chroot を構成する段階、<b>chroot</b> 段階は chroot を使って Live システムのファイルシステムをビルドする段階です。ミラーはこの各段階ごとにそれぞれのオプションで指定するため*{バイナリ}*の段階では <tt>--mirror-binary</tt> や <tt>--mirror-binary-security</tt> の値が採用され、早い段階で使っていたミラーは置き換えられることになります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#382" class="lnkocn">382</a></label>
+  <p class="bold" id="382"><a name="382"></a> <a id="hdistribution-mirrors-build-time"></a>
+    <a name="h8.1.3" ></a><a name="distribution-mirrors-build-time" ></a>8.1.3 ビルド時に利用するディストリビューションミラー
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#383" class="lnkocn">383</a></label>
+  <p class="i0" id="383">
+    ビルド時に利用するディストリビューションミラーにローカルミラーを指定するには、<tt>--mirror-bootstrap</tt> と <tt>--mirror-chroot-security</tt> を以下のように指定するだけです。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#384" class="lnkocn">384</a></label>
+  <p class="code" id="384">
+    $ lb config --mirror-bootstrap http://localhost/debian/ \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--mirror-chroot-security http://localhost/debian-security/<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#385" class="lnkocn">385</a></label>
+  <p class="i0" id="385">
+    <tt>--mirror-chroot</tt> で指定する chroot ミラーのデフォルト値は <tt>--mirror-bootstrap</tt> の値になっています。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#386" class="lnkocn">386</a></label>
+  <p class="bold" id="386"><a name="386"></a> <a id="hc8.1.4"></a>
+    <a name="c8.1.4" ></a><a name="h8.1.4" ></a>8.1.4 実行時に利用するディストリビューションミラー
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#387" class="lnkocn">387</a></label>
+  <p class="i0" id="387">
+    <tt>--mirror-binary*</tt> オプションはバイナリイメージ中のディストリビューションミラーの位置を決定します。このオプションは Live システムの実行中に追加のパッケージをインストールする際に利用できます。デフォルトは <tt>httpredir.debian.org</tt> で、利用できるミラーの中から特にユーザのIPアドレスを基にして地理的に近いミラーを選択するサービスになっています。これはその Live システムを利用するユーザにとって最適なミラーを予測できない場合に適切な選択です。以下の例に示すように自分専用の値を指定することもできます。この設定でビルドされたイメージはその"<tt>ミラー</tt>"が到達可能なネットワークにいるユーザにとってのみ適します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#388" class="lnkocn">388</a></label>
+  <p class="code" id="388">
+    $ lb config --mirror-binary http://mirror/debian/ \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--mirror-binary-security http://mirror/debian-security/ \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--mirror-binary-backports http://mirror/debian-backports/<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#389" class="lnkocn">389</a></label>
+  <p class="bold" id="389"><a name="389"></a> <a id="hadditional-repositories"></a>
+    <a name="h8.1.5" ></a><a name="additional-repositories" ></a>8.1.5 追加リポジトリ
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#390" class="lnkocn">390</a></label>
+  <p class="i0" id="390">
+    リポジトリをさらに追加して、利用できるパッケージ選択の幅を対象ディストリビューション以外にも広げられます。それにより、例えば backports や experimental、そして独自のパッケージを利用できます。追加のリポジトリを設定するには <tt>config/archives/your-repository.list.chroot</tt> や <tt>config/archives/your-repository.list.binary</tt> ファイルを作成します。<tt>--mirror-*</tt> オプションにより、イメージのビルドの <b>chroot</b> 段階や*{バイナリ}*段階、つまり Live システムの実行時に利用するリポジトリを決定できます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#391" class="lnkocn">391</a></label>
+  <p class="i0" id="391">
+    例えば <tt>config/archives/live.list.chroot</tt> により Live システムのビルド時に debian-live スナップショットリポジトリからパッケージをインストールできます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#392" class="lnkocn">392</a></label>
+  <p class="code" id="392">
+    deb http://debian-live.alioth.debian.org/ sid-snapshots main contrib non-free<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#393" class="lnkocn">393</a></label>
+  <p class="i0" id="393">
+    同一の行を <tt>config/archives/live.list.binary</tt> に追加すると、Live システムの <tt>/etc/apt/sources.list.d/</tt> ディレクトリにそのリポジトリが追加されます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#394" class="lnkocn">394</a></label>
+  <p class="i0" id="394">
+    こういったファイルが存在すれば自動的に処理されます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#395" class="lnkocn">395</a></label>
+  <p class="i0" id="395">
+    リポジトリの署名に利用されたGPG鍵を <tt>config/archives/your-repository.key.{binary,chroot}</tt> ファイルに置くこともできます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#396" class="lnkocn">396</a></label>
+  <p class="i0" id="396">
+    APTのピン止めが独自に必要な場合、APT設定行等を <tt>config/archives/your-repository.pref.{binary,chroot}</tt> ファイルに配置すれば自動的に Live システムの <tt>/etc/apt/preferences.d/</tt> ディレクトリに追加されます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#397" class="lnkocn">397</a></label>
+  <p class="bold" id="397"><a name="397"></a> <a id="hchoosing-packages-to-install"></a>
+    <a name="h8.2" ></a><a name="choosing-packages-to-install" ></a>8.2 インストールするパッケージの選択
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#398" class="lnkocn">398</a></label>
+  <p class="i0" id="398">
+    There are a number of ways to choose which packages <i>live-build</i> will install in your image, covering a variety of different needs. You can simply name individual packages to install in a package list. You can also use metapackages in those lists, or select them using package control file fields. And finally, you may place package files in your <tt>config/</tt> tree, which is well suited to testing of new or experimental packages before they are available from a repository.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#399" class="lnkocn">399</a></label>
+  <p class="bold" id="399"><a name="399"></a> <a id="hpackage-lists"></a>
+    <a name="h8.2.1" ></a><a name="package-lists" ></a>8.2.1 パッケージ一覧
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#400" class="lnkocn">400</a></label>
+  <p class="i0" id="400">
+    パッケージ一覧はインストールするパッケージを明確にする強力な方法です。一覧の構文では条件付けをサポートし、一覧の生成や複数の設定への適合を容易にしています。ビルド時にシェルヘルパーを使って一覧にパッケージ名を差し込むこともできます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#401" class="lnkocn">401</a></label>
+  <p class="i0" id="401">
+    <b>注意:</b>  存在しないパッケージが指定されたときの <i>live-build</i> の挙動はAPTユーティリティの選択により決定されます。さらなる詳細については  <a href="customizing-package-installation.ja.html#choosing-apt-or-aptitude">apt と aptitude の選択</a>  を見てください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#402" class="lnkocn">402</a></label>
+  <p class="bold" id="402"><a name="402"></a> <a id="husing-metapackages"></a>
+    <a name="h8.2.2" ></a><a name="using-metapackages" ></a>8.2.2 メタパッケージの利用
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#403" class="lnkocn">403</a></label>
+  <p class="i0" id="403">
+    パッケージ一覧を指示するもっとも簡単な方法は利用するディストリビューションで保守されているタスクのメタパッケージの利用です。例えば:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#404" class="lnkocn">404</a></label>
+  <p class="code" id="404">
+    $ lb config<br>
+$ echo task-gnome-desktop &gt; config/package-lists/desktop.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#405" class="lnkocn">405</a></label>
+  <p class="i0" id="405">
+    <tt>live-build</tt> 2.x でサポートされていた、一覧を事前定義する古い方法はこれで置き換えられました。一覧の事前定義とは異なり、タスクのメタパッケージは Live システムプロジェクト特有のものではありません。タスクのメタパッケージはディストリビューション内の専門の作業グループにより保守されているため、要求したユーザに対して提供する最善のパッケージについて、各グループでの合意を反映したものとなっています。また、一覧を事前定義する置き換えられた方法よりはるかに幅広い事例にも対応できます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#406" class="lnkocn">406</a></label>
+  <p class="i0" id="406">
+    タスクのメタパッケージには全て先頭が <tt>task-</tt> から始まるため、利用できるものを簡単に判別する方法があります (名前が該当しても実際にはメタパッケージではないものもほんの一部とはいえありますが)。パッケージ名を前方一致で検索します:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#407" class="lnkocn">407</a></label>
+  <p class="code" id="407">
+    $ apt-cache search --names-only ^task-<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#408" class="lnkocn">408</a></label>
+  <p class="i0" id="408">
+    以上に加え、他に様々な目的を持ったメタパッケージを見つけられるでしょう。<tt>gnome-core</tt> のように他のもっと範囲の広いタスクパッケージの一部を構成するものや、<tt>education-*</tt> メタパッケージのように Debian Pure Blend の中のある個々の専門分野に特化したものもあります。アーカイブにある全メタパッケージを列挙するには、<tt>debtags</tt> パッケージをインストールして <tt>role::metapackage</tt> タグの付けられたパッケージを全て列挙させます:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#409" class="lnkocn">409</a></label>
+  <p class="code" id="409">
+    $ debtags search role::metapackage<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#410" class="lnkocn">410</a></label>
+  <p class="bold" id="410"><a name="410"></a> <a id="hc8.2.3"></a>
+    <a name="c8.2.3" ></a><a name="h8.2.3" ></a>8.2.3 ローカルパッケージ一覧
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#411" class="lnkocn">411</a></label>
+  <p class="i0" id="411">
+    列挙したものがメタパッケージであれ、個々のパッケージであれ、両方の組み合わせであれ、ローカルパッケージ一覧は全て <tt>config/package-lists/</tt> に保存されます。この一覧は複数利用できるため、うまい具合にこの一覧自体を組み込める設計になっています。例えばある一覧は特定のデスクトップ選択時向け、別の一覧は異なるデスクトップでも簡単に使えるような関連パッケージ群を、というようにできます。これにより、パッケージ群の異なる組み合わせを最小限の手間で試したり、あるいは異なる Live イメージプロジェクトで一覧を共有する、といったことが可能になります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#412" class="lnkocn">412</a></label>
+  <p class="i0" id="412">
+    このディレクトリに存在するパッケージ一覧は、処理対象とするためには後ろに <tt>.list</tt> を付ける必要があり、さらにその一覧をどの段階の対象とするのか示すためには <tt>.chroot</tt> や <tt>.binary</tt> をその後に追加します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#413" class="lnkocn">413</a></label>
+  <p class="i0" id="413">
+    <b>注意:</b> 対象とする段階の指定を追加しない場合、その一覧は両方の段階で利用されます。通常指定するのは <tt>.list.chroot</tt> で、この場合そのパッケージは Live ファイルシステムにのみインストールされ、メディア上に <tt>.deb</tt> の余計なコピーは置かれません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#414" class="lnkocn">414</a></label>
+  <p class="bold" id="414"><a name="414"></a> <a id="hc8.2.4"></a>
+    <a name="c8.2.4" ></a><a name="h8.2.4" ></a>8.2.4 ローカルバイナリパッケージ一覧
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#415" class="lnkocn">415</a></label>
+  <p class="i0" id="415">
+    バイナリ段階の一覧を作成する場合はファイルの末尾を <tt>.list.binary</tt> にして <tt>config/package-lists/</tt> に置きます。それにより指定したパッケージは Live ファイルシステムにはインストールされず、Live メディアの <tt>pool/</tt> 以下に収録されます。Live ではないインストーラでこういった一覧を標準的に利用しているものもあります。バイナリ段階で chroot 段階と同一の一覧を利用したい場合は上述したように末尾を <tt>.list</tt> とします。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#416" class="lnkocn">416</a></label>
+  <p class="bold" id="416"><a name="416"></a> <a id="hgenerated-package-lists"></a>
+    <a name="h8.2.5" ></a><a name="generated-package-lists" ></a>8.2.5 生成されたパッケージ一覧
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#417" class="lnkocn">417</a></label>
+  <p class="i0" id="417">
+    一覧の構成はスクリプトで生成するのが最善の方法だということもあります。感嘆符から始まる行は全て、そのコマンドがイメージのビルド後に chroot 内で実行されることを示します。例えばパッケージ一覧に <tt>! grep-aptavail -n -sPackage -FPriority standard | sort</tt> という行を書いておけば、<tt>Priority: standard</tt> で利用可能なパッケージをソートした一覧を生成できます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#418" class="lnkocn">418</a></label>
+  <p class="i0" id="418">
+    実際、パッケージの選択に <tt>grep-aptavail</tt> コマンド (<tt>dctrl-tools</tt> パッケージに収録) はとても有用なので、<tt>live-build</tt> では便宜のため <tt>Packages</tt> 補助スクリプトを提供しています。このスクリプトは引数を#{フィールド}#と#{パターン}#の2つ取ります。一覧を作成する例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#419" class="lnkocn">419</a></label>
+  <p class="code" id="419">
+    $ lb config<br>
+$ echo '! Packages Priority standard' &gt; config/package-lists/standard.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#420" class="lnkocn">420</a></label>
+  <p class="bold" id="420"><a name="420"></a> <a id="hc8.2.6"></a>
+    <a name="c8.2.6" ></a><a name="h8.2.6" ></a>8.2.6 条件付き内部パッケージ一覧の利用
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#421" class="lnkocn">421</a></label>
+  <p class="i0" id="421">
+    <tt>config/*</tt> (<tt>LB_</tt> が先頭に付くものは除く) に保存された <i>live-build</i> の設定変数はどれもパッケージ一覧の条件文で利用できます。一般には <tt>lb config</tt> オプションを大文字に、ダッシュ文字をアンダースコアに変更したものになります。しかし実際に意味があるのは、パッケージ選択に関わるもの、例えば <tt>DISTRIBUTION</tt> や <tt>ARCHITECTURES</tt>、<tt>ARCHIVE_AREAS</tt> だけです。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#422" class="lnkocn">422</a></label>
+  <p class="i0" id="422">
+    例えば <tt>--architectures amd64</tt> が指定された場合に <tt>ia32-libs</tt> をインストールする場合:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#423" class="lnkocn">423</a></label>
+  <p class="code" id="423">
+    #if ARCHITECTURES amd64<br>
+ia32-libs<br>
+#endif<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#424" class="lnkocn">424</a></label>
+  <p class="i0" id="424">
+    任意の1つを条件の値とすることもできます。<tt>--architectures i386</tt> または <tt>--architectures amd64</tt> のどちらかが指定された場合に <i>memtest86+</i> をインストールする場合の例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#425" class="lnkocn">425</a></label>
+  <p class="code" id="425">
+    #if ARCHITECTURES i386 amd64<br>
+memtest86+<br>
+#endif<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#426" class="lnkocn">426</a></label>
+  <p class="i0" id="426">
+    値を複数指定できる変数を条件にすることもできます。<tt>--archive-areas</tt> で <tt>contrib</tt> または <tt>non-free</tt> のどちらかが指定されている場合に <i>vrms</i> をインストールする場合の例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#427" class="lnkocn">427</a></label>
+  <p class="code" id="427">
+    #if ARCHIVE_AREAS contrib non-free<br>
+vrms<br>
+#endif<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#428" class="lnkocn">428</a></label>
+  <p class="i0" id="428">
+    入り組んだ条件分岐はサポートしていません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#429" class="lnkocn">429</a></label>
+  <p class="bold" id="429"><a name="429"></a> <a id="hc8.2.7"></a>
+    <a name="c8.2.7" ></a><a name="h8.2.7" ></a>8.2.7 インストール時のパッケージの削除
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#430" class="lnkocn">430</a></label>
+  <p class="i0" id="430">
+    <tt>config/package-lists</tt> ディレクトリの末尾が <tt>.list.chroot_live</tt> や <tt>.list.chroot_install</tt> のファイルにパッケージを列挙できます。Live 用とインストール用の両方の一覧が存在する場合、<tt>.list.chroot_live</tt> に列挙されているパッケージは (ユーザがインストーラを利用している場合) インストール後にフックにより削除されます。<tt>.list.chroot_install</tt> に列挙されているパッケージは Live システムとインストールされたシステムの両方に存在することになります。これはインストーラ向けの特別な調整で、設定で <tt>--debian-installer live</tt> をセットしている場合や Live システム特有のパッケージをインストール時には削除したい場合に有用かもしれません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#431" class="lnkocn">431</a></label>
+  <p class="bold" id="431"><a name="431"></a> <a id="hdesktop-and-language-tasks"></a>
+    <a name="h8.2.8" ></a><a name="desktop-and-language-tasks" ></a>8.2.8 デスクトップ及び言語タスク
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#432" class="lnkocn">432</a></label>
+  <p class="i0" id="432">
+    デスクトップと言語のタスクは特別で、計画性や設定が追加で必要となります。Live イメージが Debian インストーライメージとは異なる点です。Debian インストーラでは、特定のデスクトップ環境向けに用意されたメディアでは対応するタスクは自動的にインストールされます。内部に <tt>gnome-desktop</tt> や <tt>kde-desktop</tt>、<tt>lxde-desktop</tt>、<tt>xfce-desktop</tt> タスクがあり、<tt>tasksel</tt> のメニューにはどれも出てきません。同様に言語向けタスクのメニュー項目はありませんが、インストール中にユーザが選択した言語が対応する言語タスクの選択に影響します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#433" class="lnkocn">433</a></label>
+  <p class="i0" id="433">
+    デスクトップ向け Live イメージ開発時には、イメージは通常動作するデスクトップを直接ブートし、デスクトップやデフォルト言語はどちらも Debian インストーラの場合のように実行時に選択するのではなくビルド時に決められています。これは Live イメージでデスクトップや言語を複数サポートしてユーザに選択の機会を与えるようにできないわけではなく、それが <i>live-build</i> のデフォルトの挙動ではないというだけです。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#434" class="lnkocn">434</a></label>
+  <p class="i0" id="434">
+    言語特有のフォントや入力メソッドにどのパッケージを収録するのか、といった規定は言語タスクにはないので、特定のパッケージを収録したい場合は設定で指定する必要があります。ドイツ語サポートを収録した GNOME デスクトップイメージの場合に収録するタスクのメタパッケージの例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#435" class="lnkocn">435</a></label>
+  <p class="code" id="435">
+    $ lb config<br>
+$ echo "task-gnome-desktop task-laptop" &gt;&gt; config/package-lists/my.list.chroot<br>
+$ echo "task-german task-german-desktop task-german-gnome-desktop" &gt;&gt; config/package-lists/my.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#436" class="lnkocn">436</a></label>
+  <p class="bold" id="436"><a name="436"></a> <a id="hkernel-flavour-and-version"></a>
+    <a name="h8.2.9" ></a><a name="kernel-flavour-and-version" ></a>8.2.9 カーネルのフレーバー (種類) とバージョン
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#437" class="lnkocn">437</a></label>
+  <p class="i0" id="437">
+    アーキテクチャによっては、イメージに複数のカーネルをデフォルトで収録することができます。フレーバーは <tt>--linux-flavours</tt> オプションで選択できます。各フレーバーはデフォルトの短い <tt>linux-image</tt> に、イメージに収録される実際のカーネルパッケージに依存する各メタパッケージの名前を付加した形式になります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#438" class="lnkocn">438</a></label>
+  <p class="i0" id="438">
+    そうして、デフォルトで <tt>amd64</tt> アーキテクチャのイメージは <tt>linux-image-amd64</tt> のメタパッケージを収録し、<tt>i386</tt> アーキテクチャのイメージは <tt>linux-image-586</tt> メタパッケージを収録します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#439" class="lnkocn">439</a></label>
+  <p class="i0" id="439">
+    設定したアーカイブで複数バージョンのカーネルパッケージが利用できる場合、<tt>--linux-packages</tt> オプションでカーネルパッケージ名の前半部を指定できます。例えば <tt>amd64</tt> アーキテクチャのイメージをビルドする際にテスト用に experimental アーカイブを追加すると <tt>linux-image-3.18.0-trunk-amd64</tt> カーネルをインストールできます。そのイメージの設定例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#440" class="lnkocn">440</a></label>
+  <p class="code" id="440">
+    $ lb config --linux-packages linux-image-3.18.0-trunk<br>
+$ echo "deb http://ftp.debian.org/debian/ experimental main" &gt; config/archives/experimental.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#441" class="lnkocn">441</a></label>
+  <p class="bold" id="441"><a name="441"></a> <a id="hcustom-kernels"></a>
+    <a name="h8.2.10" ></a><a name="custom-kernels" ></a>8.2.10 独自のカーネル
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#442" class="lnkocn">442</a></label>
+  <p class="i0" id="442">
+    Debian パッケージ管理システムに組み入れられていれば、独自のカーネルを自分でビルド、収録できます。<i>live-build</i> システムは <tt>.deb</tt> パッケージでビルドされていないカーネルはサポートしていません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#443" class="lnkocn">443</a></label>
+  <p class="i0" id="443">
+    自身のカーネルパッケージを配置するための適切で推奨する方法は <tt>kernel-handbook</tt> の指示に従うことです。パッケージ名のABIとフレーバーの部分を忘れずに適切に変更し、リポジトリに <tt>linux</tt> の完全なビルドとそれに該当する <tt>linux-latest</tt> パッケージを収録してください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#444" class="lnkocn">444</a></label>
+  <p class="i0" id="444">
+    該当するメタパッケージ無しでカーネルパッケージをビルドしたい場合は、 <a href="customizing-package-installation.ja.html#kernel-flavour-and-version">カーネルのフレーバー (種類) とバージョン</a>  で説明しているように <tt>--linux-packages</tt> でパッケージ名の適切な前半部を指定する必要があります。 <a href="customizing-package-installation.ja.html#installing-modified-or-third-party-packages">変更したあるいはサードパーティ製パッケージのインストール</a>  で説明しているように、自身のリポジトリに独自のカーネルパッケージを収録する場合はそのようにするのが最善ですが、別の方法についても説明しています。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#445" class="lnkocn">445</a></label>
+  <p class="i0" id="445">
+    カーネルを独自化する方法はこの文書の対象範囲ではありません。とはいえ、設定が最低限満たさないといけない要件があります:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#446" class="lnkocn">446</a></label>
+  <ul>
+  <li class="bullet" id="446">
+    初期RAMディスクを利用する。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#447" class="lnkocn">447</a></label>
+  <ul>
+  <li class="bullet" id="447">
+    結合ファイルシステムモジュール (つまり通常は <tt>aufs</tt>) を収録する。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#448" class="lnkocn">448</a></label>
+  <ul>
+  <li class="bullet" id="448">
+    自分の設定で必要とする他のファイルシステムモジュール (つまり通常は <tt>squashfs</tt>) があればそれを収録する。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#449" class="lnkocn">449</a></label>
+  <p class="bold" id="449"><a name="449"></a> <a id="hinstalling-modified-or-third-party-packages"></a>
+    <a name="h8.3" ></a><a name="installing-modified-or-third-party-packages" ></a>8.3 変更したあるいはサードパーティ製パッケージのインストール
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#450" class="lnkocn">450</a></label>
+  <p class="i0" id="450">
+    Live システムの哲学には反しますが、Debian リポジトリにあるバージョンのパッケージを改変して Live システムをビルドする必要に迫られることもあります。それは機能や言語、商標を変更あるいは追加するものであったり、既存のパッケージから望ましくない要素を削除するものであるかもしれません。同様に求める機能や独自開発の機能を追加するのに「サードパーティ製」パッケージを利用できます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#451" class="lnkocn">451</a></label>
+  <p class="i0" id="451">
+    この節では変更したパッケージのビルドや保守については対象としていません。Joachim Breitner さんの ‹<a href="http://www.joachim-breitner.de/blog/archives/282-How-to-fork-privately.html" target="_top">http://www.joachim-breitner.de/blog/archives/282-How-to-fork-privately.html</a>› にある「How to fork privately」に書かれている方法が該当するのかもしれませんが。求める機能を収録したパッケージの作成については ‹<a href="https://www.debian.org/doc/maint-guide/" target="_top">https://www.debian.org/doc/maint-guide/</a>› にある Debian 新メンテナーガイドその他で説明されています。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#452" class="lnkocn">452</a></label>
+  <p class="i0" id="452">
+    変更した独自のパッケージをインストールする方法は2つあります:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#453" class="lnkocn">453</a></label>
+  <ul>
+  <li class="bullet" id="453">
+    <tt>packages.chroot</tt>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#454" class="lnkocn">454</a></label>
+  <ul>
+  <li class="bullet" id="454">
+    独自APTリポジトリの利用
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#455" class="lnkocn">455</a></label>
+  <p class="i0" id="455">
+    <tt>packages.chroot</tt> を使う方法はより簡単に出来て「一度限りの」独自化には有用ですが欠点がいくつかあります。一方独自のAPTリポジトリを使う方法はその準備に時間がかかりまます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#456" class="lnkocn">456</a></label>
+  <p class="bold" id="456"><a name="456"></a> <a id="hc8.3.1"></a>
+    <a name="c8.3.1" ></a><a name="h8.3.1" ></a>8.3.1 <tt>packages.chroot</tt> を利用した独自のパッケージのインストール
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#457" class="lnkocn">457</a></label>
+  <p class="i0" id="457">
+    独自化したパッケージをインストールするには、単に#{config/packages.chroot/}# ディレクトリにコピーします。このディレクトリ内に置かれたパッケージはビルドの際に Live システムに自動的にインストールされます - 他のどこかを指定する必要はありません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#458" class="lnkocn">458</a></label>
+  <p class="i0" id="458">
+    パッケージ名は規定の命名規則に従わ*{ないといけません}*。それを簡単に行う方法は <tt>dpkg-name</tt> の利用です。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#459" class="lnkocn">459</a></label>
+  <p class="i0" id="459">
+    <tt>packages.chroot</tt> を利用した独自のパッケージのインストールには欠点があります:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#460" class="lnkocn">460</a></label>
+  <ul>
+  <li class="bullet" id="460">
+    secure APT を利用することができません。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#461" class="lnkocn">461</a></label>
+  <ul>
+  <li class="bullet" id="461">
+    <tt>config/packages.chroot/</tt> ディレクトリに適切なパッケージを全てインストールしないといけません。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#462" class="lnkocn">462</a></label>
+  <ul>
+  <li class="bullet" id="462">
+    Live システムの設定をリビジョン管理するには適しません。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#463" class="lnkocn">463</a></label>
+  <p class="bold" id="463"><a name="463"></a> <a id="hc8.3.2"></a>
+    <a name="c8.3.2" ></a><a name="h8.3.2" ></a>8.3.2 APTリポジトリを利用した独自パッケージのインストール
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#464" class="lnkocn">464</a></label>
+  <p class="i0" id="464">
+    <tt>packages.chroot</tt>  を使う場合とは異なり、独自のAPTリポジトリを使う場合は他のどこかでパッケージを指定する必要があります。詳細については <a href="customizing-package-installation.ja.html#choosing-packages-to-install">インストールするパッケージの選択</a>  を見てください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#465" class="lnkocn">465</a></label>
+  <p class="i0" id="465">
+    独自のパッケージをインストールするためにAPTリポジトリを作成するのは不要な手間だと思うかもしれませんが、その基盤は変更したパッケージを後で更新する際に簡単に再利用できます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#466" class="lnkocn">466</a></label>
+  <p class="bold" id="466"><a name="466"></a> <a id="hc8.3.3"></a>
+    <a name="c8.3.3" ></a><a name="h8.3.3" ></a>8.3.3 独自パッケージとAPT
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#467" class="lnkocn">467</a></label>
+  <p class="i0" id="467">
+    <i>live-build</i> は Live システムへのパッケージのインストールに全てAPTを利用するため、そのプログラムの挙動を引き継ぎます。関連する一例としては (デフォルト設定だと仮定して)、異なる2つのリポジトリでバージョン番号の異なるあるパッケージが利用可能な場合に、APTはバージョン番号の大きい方のパッケージをインストールに選択します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#468" class="lnkocn">468</a></label>
+  <p class="i0" id="468">
+    そのため、独自パッケージの <tt>debian/changeLog</tt> ファイルでバージョン番号を増加させ、公式の Debian リポジトリにあるものよりも変更したバージョンが確実にインストールされるようにすると良いでしょう。Live システムのAPTのピン設定を改変する方法もあります - さらなる情報については、 <a href="customizing-package-installation.ja.html#apt-pinning">APTのピン止め</a>  を見てください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#469" class="lnkocn">469</a></label>
+  <p class="bold" id="469"><a name="469"></a> <a id="hc8.4"></a>
+    <a name="c8.4" ></a><a name="h8.4" ></a>8.4 ビルド時のAPT設定
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#470" class="lnkocn">470</a></label>
+  <p class="i0" id="470">
+    ビルド時だけに適用されるオプションを使ってAPTを設定できます (実行中の Live システムで利用されるAPTの設定は Live システムの内容による通常の、<tt>config/includes.chroot/</tt> で適切な設定を収録する) 方法により設定できます。オプションの全容については <tt>lb_config</tt> man ページの <tt>apt</tt> で始まるオプションを見てください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#471" class="lnkocn">471</a></label>
+  <p class="bold" id="471"><a name="471"></a> <a id="hchoosing-apt-or-aptitude"></a>
+    <a name="h8.4.1" ></a><a name="choosing-apt-or-aptitude" ></a>8.4.1 apt と aptitude の選択
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#472" class="lnkocn">472</a></label>
+  <p class="i0" id="472">
+    ビルド時にパッケージをインストールする際に <i>apt</i> と <i>aptitude</i> のどちらを利用するのか選択できます。利用するユーティリティは <tt>lb config</tt> の <tt>--apt</tt> 引数で決定します。パッケージが欠けている場合の処理方法に顕著な違いがあることに着目し、パッケージのインストール時に望ましい挙動を実装している方を選択してください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#473" class="lnkocn">473</a></label>
+  <ul>
+  <li class="bullet" id="473">
+    <tt>apt</tt>: この方法では、欠けているパッケージが指定された場合にそのパッケージのインストールは失敗します。これはデフォルトの設定です。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#474" class="lnkocn">474</a></label>
+  <ul>
+  <li class="bullet" id="474">
+    <tt>aptitude</tt>: この方法では、欠けているパッケージが指定された場合にそのパッケージのインストールは成功します。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#475" class="lnkocn">475</a></label>
+  <p class="bold" id="475"><a name="475"></a> <a id="hc8.4.2"></a>
+    <a name="c8.4.2" ></a><a name="h8.4.2" ></a>8.4.2 APTでのプロキシの利用
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#476" class="lnkocn">476</a></label>
+  <p class="i0" id="476">
+    よく要求されるAPTの設定として、プロキシの内側でのイメージのビルドへの対応があります。必要に応じて、<tt>--apt-ftp-proxy</tt> や <tt>--apt-http-proxy</tt> オプションによりAPTプロキシを指定できます。例:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#477" class="lnkocn">477</a></label>
+  <p class="code" id="477">
+    $ lb config --apt-http-proxy http://proxy/<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#478" class="lnkocn">478</a></label>
+  <p class="bold" id="478"><a name="478"></a> <a id="htweaking-apt-to-save-space"></a>
+    <a name="h8.4.3" ></a><a name="tweaking-apt-to-save-space" ></a>8.4.3 APTの調整による容量節約
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#479" class="lnkocn">479</a></label>
+  <p class="i0" id="479">
+    イメージのメディアの容量をいくらか節約する必要があるかもしれません。その場合は以下に挙げるオプションを利用するといいかもしれません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#480" class="lnkocn">480</a></label>
+  <p class="i0" id="480">
+    APTの索引をイメージに収録したくない場合は除外できます:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#481" class="lnkocn">481</a></label>
+  <p class="code" id="481">
+    $ lb config --apt-indices false<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#482" class="lnkocn">482</a></label>
+  <p class="i0" id="482">
+    これは <tt>/etc/apt/sources.list</tt> 内の項目には影響せず、単に <tt>/var/lib/apt</tt> に索引ファイルを収録するかどうかだけに影響します。その代わりに、Live システムでAPTを操作するためにはこの索引が必要なので、<tt>apt-cache search</tt> や <tt>apt-get install</tt> を実行する前にユーザは例えば <tt>apt-get update</tt> をまず実行して索引を作成しないといけません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#483" class="lnkocn">483</a></label>
+  <p class="i0" id="483">
+    推奨パッケージのインストールによりイメージが肥大化しているような場合、以下で説明している影響を踏まえた上でAPTのデフォルトオプションを無効にできます:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#484" class="lnkocn">484</a></label>
+  <p class="code" id="484">
+    $ lb config --apt-recommends false<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#485" class="lnkocn">485</a></label>
+  <p class="i0" id="485">
+    推奨パッケージを無効にした場合の最も重要な影響は、<tt>live-boot</tt> や <tt>live-config</tt> 自体が、ほとんどの Live 設定に利用している重要な機能を提供する一部のパッケージを推奨していることによるもので、例えば <tt>live-config</tt> が推奨し、Live ユーザの作成に利用している <tt>user-setup</tt> があります。ほぼ例外なく、パッケージ一覧に追加しないといけないパッケージが推奨パッケージの中にいくらかあります。追加しない場合は、イメージが期待通りに動作しないということになります。ビルドに収録されている各 <tt>live-*</tt> パッケージの推奨パッケージを確認し、省略できると確信できない場合はパッケージ一覧に当該パッケージを追加するようにしてください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#486" class="lnkocn">486</a></label>
+  <p class="i0" id="486">
+    あるパッケージの推奨パッケージをインストールしないことによるもっと一般的な影響は「異常なインストール状態でなければあるパッケージとともにあるはずの」(Debian ポリシーマニュアル7.2節) Live システムのユーザが実際に必要とする一部のパッケージが省略されているかもしれないということです。したがって、推奨パッケージのインストールを無効にした場合とのパッケージ一覧 (<tt>lb build</tt> により生成される <tt>binary.packages</tt> ファイル参照) の違いを確認して、欠けているパッケージの中にインストールしたいものがあれば一覧に収録することを推奨しています。推奨パッケージからほんの一部を除外したい場合は、推奨パッケージのインストールは有効なままにしておき、 <a href="customizing-package-installation.ja.html#apt-pinning">APTのピン止め</a>  で説明しているようにAPTのピン機能で、選択したパッケージについて負の優先度をセットしてインストールされないようにする方法があります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#487" class="lnkocn">487</a></label>
+  <p class="bold" id="487"><a name="487"></a> <a id="hc8.4.4"></a>
+    <a name="c8.4.4" ></a><a name="h8.4.4" ></a>8.4.4 apt や aptitude へのオプションの受け渡し
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#488" class="lnkocn">488</a></label>
+  <p class="i0" id="488">
+    障害となるAPTの挙動を変更するための <tt>lb config</tt> オプションがない場合、<tt>--apt-options</tt> や <tt>--aptitude-options</tt> により任意のオプションを選択したAPTツールに渡せます。詳細については <tt>apt</tt> や <tt>aptitude</tt> の man ページを見てください。どちらのオプションにも、優先設定に加えて保持しておく必要のあるデフォルト値があることに注意してください。そのため、例えば <tt>snapshot.debian.org</tt> からテスト用に何か取得する場合に <tt>Acquire::Check-Valid-Until=false</tt> を指定するとAPTは古いままの <tt>Release</tt> ファイルを使い続けます。以下の例のように、デフォルト値 <tt>--yes</tt> の後に新しいオプションを付加します:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#489" class="lnkocn">489</a></label>
+  <p class="code" id="489">
+    $ lb config --apt-options "--yes -oAcquire::Check-Valid-Until=false"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#490" class="lnkocn">490</a></label>
+  <p class="i0" id="490">
+    このオプションを利用する場合は man ページを確認して完全に理解するようにしてください。これはあくまで例であり、イメージをこの方法で設定するようにという助言だと解釈することのないようにしてください。このオプションは例えば Live イメージの最終的なリリースには適しません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#491" class="lnkocn">491</a></label>
+  <p class="i0" id="491">
+    <tt>apt.conf</tt> のオプションを利用するようなもっと複雑なAPT設定には代わりに <tt>config/apt/apt.conf</tt> ファイルを作成すると良いでしょう。少数ですが、よく必要とされるオプションへの有用なショートカットがあります。他の <tt>apt-*</tt> オプションについても参照してください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#492" class="lnkocn">492</a></label>
+  <p class="bold" id="492"><a name="492"></a> <a id="hapt-pinning"></a>
+    <a name="h8.4.5" ></a><a name="apt-pinning" ></a>8.4.5 APTのピン止め
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#493" class="lnkocn">493</a></label>
+  <p class="i0" id="493">
+    背景として、<tt>apt_preferences(5)</tt> man ページをまず読んでください。APTのピン機能はビルド時用と実行時用に設定できます。前者については <tt>config/archives/*.pref</tt>、<tt>config/archives/*.pref.chroot</tt>、<tt>config/apt/preferences</tt> を、後者については <tt>config/includes.chroot/etc/apt/preferences</tt> を作成してください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#494" class="lnkocn">494</a></label>
+  <p class="i0" id="494">
+    <b>buster</b> の Live システムをビルドするとしましょう。その場合に必要な Live パッケージは全て、ビルド時にバイナリイメージを <b>sid</b> からインストールする必要があります。APTソースに <b>sid</b> を追加して、ピン機能で <b>sid</b> の Live パッケージには高い優先度をセットし、他のパッケージには全てデフォルトよりも低い優先度をセットする必要があります。そうするとビルド時に望むパッケージだけを <b>sid</b> からインストールし、他は全て対象システムのディストリビューションである <b>buster</b> から取得します。以下によりその動作になります:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#495" class="lnkocn">495</a></label>
+  <p class="code" id="495">
+    $ echo "deb http://mirror/debian/ sid main" &gt; config/archives/sid.list.chroot<br>
+$ cat &gt;&gt; config/archives/sid.pref.chroot &lt;&lt; EOF<br>
+Package: live-*<br>
+Pin: release n=sid<br>
+Pin-Priority: 600<br><br>
+Package: *<br>
+Pin: release n=sid<br>
+Pin-Priority: 1<br>
+EOF<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#496" class="lnkocn">496</a></label>
+  <p class="i0" id="496">
+    別のパッケージにより推奨されたパッケージを望まない場合に、ピン機能で優先度に負の値をセットすることによりそのパッケージをインストールしないようにできます。<tt>config/package-lists/desktop.list.chroot</tt> で <tt>task-lxde-desktop</tt> を使って LXDE イメージをビルドしていて、wifi パスワードをキーリングに保存するかユーザに聞かないようにしたいと仮定しましょう。このメタパッケージは <i>lxde-core</i> に依存し、<i>lxde-core</i> は <i>gksu</i> を推奨し、<i>gksu</i> は <i>gnome-keyring</i> を推奨しています。そこで、推奨された <i>gnome-keyring</i> パッケージを除外したい場合、<tt>config/apt/preferences</tt> に以下を追加することで除外できます:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#497" class="lnkocn">497</a></label>
+  <p class="code" id="497">
+    Package: gnome-keyring<br>
+Pin: version *<br>
+Pin-Priority: -1<br>
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="customization-overview.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-contents.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

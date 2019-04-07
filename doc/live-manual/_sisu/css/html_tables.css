@@ -1,0 +1,28 @@
+/* SiSU table output stylesheet */
+  body {
+    color: black;
+    background: #ffffff;
+  }
+  p {
+    display: block;
+    line-height: 1.5;
+    font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+  }
+  a:link {
+    color: #003399;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #003399;
+    text-decoration: none;
+    /* background-color: #e3ecef; */
+  }
+  a:hover {
+    color: #000000;
+    text-decoration: underline;
+    background-color: #fff3b6;
+  }
+  a:active {
+    color: #003399;
+    text-decoration: underline;
+  }

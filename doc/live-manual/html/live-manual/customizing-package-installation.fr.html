@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    customizing-package-installation -
+    Manuel Live Systems
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Manuel Live Systems" />
+  <meta name="dc.author" content="Projet Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Projet Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="2015-09-22"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: Ce programme est un logiciel libre; vous pouvez le redistribuer ou le modifier suivant les termes de la Licence G&#233;n&#233;rale Publique GNU telle que publi&#233;e par la Free Software Foundation: soit la version 3 de cette licence, soit (&#224; votre gr&#233;) toute version ult&#233;rieure. \\  \\ Ce programme est distribu&#233; dans l&#8217;espoir qu&#8217;il vous sera utile, mais SANS AUCUNE GARANTIE: sans m&#234;me la garantie implicite de COMMERCIALISABILIT&#201; ni d&#8217;AD&#201;QUATION &#192; UN OBJECTIF PARTICULIER. Consultez la Licence G&#233;n&#233;rale Publique GNU pour plus de d&#233;tails. \\  \\ Vous devriez avoir re&#231;u une copie de la Licence G&#233;n&#233;rale Publique GNU avec ce programme ; si ce n&#8217;est pas le cas, consultez http://www.gnu.org/licenses/. \\  \\ Le texte complet de la Licence G&#233;n&#233;rale Publique GNU peut &#234;tre trouv&#233; dans le fichier / usr/share/common-licenses/GPL-3" />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="fr">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="customization-overview.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-contents.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Manuel Live Systems
+  </h1>
+
+<h1 class="minitoc">
+    À propos
+  </h1>
+
+<h1 class="minitoc">
+    À propos de ce manuel
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.fr.html" target="_top">
+    1. À propos de ce manuel
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#8">
+    1.1 Pour les impatients
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#12">
+    1.2 Terminologie
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#29">
+    1.3 Auteurs
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#44">
+    1.4 Contribuer à ce document
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.fr.html#46">
+  1.4.1 Appliquer des modifications
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.fr.html#60">
+  1.4.2 Traduction
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    À propos du Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.fr.html" target="_top">
+    2. À propos du Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#75">
+    2.1 Motivation
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#76">
+  2.1.1 Ce qui ne va pas avec les systèmes live actuels
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#86">
+  2.1.2 Pourquoi créer notre propre système live?
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#94">
+    2.2 Philosophie
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#95">
+  2.2.1 Seulement des paquets inchangés de Debian «main»
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#99">
+  2.2.2 Pas de configuration des paquets du système live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#103">
+    2.3 Contact
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Utilisateur
+  </h1>
+
+<h1 class="minitoc">
+    Installation
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.fr.html" target="_top">
+    3. Installation
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#110">
+    3.1 Exigences
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#118">
+    3.2 Installation de live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#124">
+  3.2.1 À partir du dépôt Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#127">
+  3.2.2 À partir du code source
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#138">
+  3.2.3 À partir des instantanés
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#140">
+    3.3 Installation de live-boot et live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#142">
+  3.3.1 À partir du dépôt Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#144">
+  3.3.2 À partir du code source
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#156">
+  3.3.3 À partir des instantanés
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Les bases
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.fr.html" target="_top">
+    4. Les bases
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#163">
+    4.1 Qu'est-ce qu'un système live?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#171">
+    4.2 Téléchargement des images précompilées
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#173">
+    4.3 Utiliser le constructeur web d'images live
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#175">
+  4.3.1 Utilisation du constructeur web et avertissements
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#179">
+    4.4 Premières étapes: la construction d'une image ISO  hybride
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#190">
+    4.5 Utilisation d'une image ISO hybride live
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#192">
+  4.5.1 Graver une image ISO sur un support physique
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#195">
+  4.5.2 Copie d'une image ISO hybride sur une clé USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#200">
+  4.5.3 Utilisation de l'espace disponible sur une clé USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#207">
+  4.5.4 Démarrer le support live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#211">
+    4.6 Utiliser une machine virtuelle pour les tests
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#218">
+  4.6.1 Test d'une image ISO avec QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#225">
+  4.6.2 Test d'une image ISO avec VirtualBox
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#233">
+    4.7 Construire et utiliser une image HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#245">
+    4.8 Construction d'une image netboot
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#258">
+  4.8.1 Serveur DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#262">
+  4.8.2 Serveur TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#267">
+  4.8.3 Serveur NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#275">
+  4.8.4 Guide pratique pour expérimenter avec une image Netboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#284">
+    4.9 Webbooting
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#286">
+  4.9.1 Obtenir les fichiers webboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#292">
+  4.9.2 Démarrer images webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Aperçu des outils
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.fr.html" target="_top">
+    5. Aperçu des outils
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#300">
+    5.1 Le paquet live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#310">
+  5.1.1 La commande <tt>lb config</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#320">
+  5.1.2 La commande <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#322">
+  5.1.3 La commande <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#324">
+    5.2 Le paquet live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#328">
+    5.3 Le paquet live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Gestion d'une configuration
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.fr.html" target="_top">
+    6. Gestion d'une configuration
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.fr.html#333">
+    6.1 Gérer les modifications de la configuration
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.fr.html#335">
+  6.1.1 Pourquoi utiliser des scripts auto? Que font-ils?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.fr.html#338">
+  6.1.2 Utiliser les scripts auto d'exemple
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.fr.html#345">
+    6.2 Cloner une configuration publiée via Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation des contenus
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.fr.html" target="_top">
+    7. Vue d'ensemble de la personnalisation
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#359">
+    7.1 Configuration pendant la construction vs. l'amorçage
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#362">
+    7.2 Étapes de la construction
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#365">
+    7.3 Supplément lb config avec des fichiers
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#367">
+    7.4 Tâches de personnalisation
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation de l'installation de paquets
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.fr.html" target="_top">
+    8. Personnalisation de l'installation de  paquets
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#372">
+    8.1 Sources des paquets
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#373">
+  8.1.1 Distribution, zones d'archive et mode
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#380">
+  8.1.2 Miroirs de distribution
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#382">
+  8.1.3 Miroirs de distribution utilisés lors de  la construction
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#386">
+  8.1.4 Miroirs de distribution utilisés pendant l'exécution
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#389">
+  8.1.5 Dépôts additionnels
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#397">
+    8.2 Choisir les paquets à installer
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#399">
+  8.2.1 Listes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#402">
+  8.2.2 Utilisation des métapaquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#410">
+  8.2.3 Listes de paquets locaux
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#414">
+  8.2.4 Listes de paquets locaux pour l'étape binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#416">
+  8.2.5 Listes de paquets générées
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#420">
+  8.2.6 Utiliser des conditions dans les listes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#429">
+  8.2.7 Suppression de paquets lors de l'installation
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#431">
+  8.2.8 Tâches de bureau et de langue
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#436">
+  8.2.9 Version et type de noyau
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#441">
+  8.2.10 Noyaux personnalisés
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#449">
+    8.3 Installation de paquets  modifiés ou tiers
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#456">
+  8.3.1 Utiliser <tt>packages.chroot</tt> pour installer des paquets personnalisés
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#463">
+  8.3.2 Utiliser un dépôt APT pour installer des paquets personnalisés.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#466">
+  8.3.3 Les paquets personnalisés et APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#469">
+    8.4 Configuration d'APT pendant la construction
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#471">
+  8.4.1 Choisir apt ou aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#475">
+  8.4.2 Utilisation d'un proxy avec APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#478">
+  8.4.3 Régler APT pour économiser de l'espace
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#487">
+  8.4.4 Passer des options à apt ou aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#492">
+  8.4.5 APT pinning
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personnalisation des contenus
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.fr.html" target="_top">
+    9. Personnalisation des contenus
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#506">
+  9.1.1 Live/chroot local includes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#513">
+  9.1.2 Binary local includes
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#517">
+    9.2 Hooks
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#520">
+  9.2.1 Chroot local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#522">
+  9.2.2 Binary local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#524">
+  9.2.3 Hooks pendant le démarrage
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#526">
+    9.3 Préconfigurer questions de debconf
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation des comportements pendant l'exécution
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html" target="_top">
+    10. Personnalisation des comportements pendant  l'exécution
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#532">
+    10.1 Personnalisation de l'utilisateur live
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#541">
+    10.2 Personnalisation des paramètres régionaux  et de la langue
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#558">
+    10.3 Persistance
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#580">
+  10.3.1 Le fichier persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#585">
+  10.3.2 Utilisation de plusieurs dispositifs de persistance
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#591">
+  10.3.3 Utilisation de la persistance avec chiffrement
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personnalisation de l'image binaire
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.fr.html" target="_top">
+    11. Personnalisation de l'image binaire
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.fr.html#619">
+    11.1 Chargeurs d'amorçage
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.fr.html#626">
+    11.2 Métadonnées ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation de l'installateur Debian
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.fr.html" target="_top">
+    12. Personnalisation du contenu pour l'installateur  Debian
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#636">
+    12.1 Types d'installateur Debian
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#648">
+    12.2 Personnalisation de l'installateur Debian par préconfiguration
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#651">
+    12.3 Personnalisation de contenu pour l'Installateur Debian
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Projet
+  </h1>
+
+<h1 class="minitoc">
+    Contribuer au projet
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.fr.html" target="_top">
+    13. Contribuer au projet
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.fr.html#667">
+    13.1 Faire des changements
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.fr.html#682">
+    13.2 Traduction des pages de manuel
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Signaler des bogues
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.fr.html" target="_top">
+    14. Signaler des bogues
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#698">
+    14.1 Problèmes connus
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#703">
+    14.2 Reconstruire à partir de zéro
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#705">
+    14.3 Utiliser des paquets mis à jour
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#707">
+    14.4 Recueillir l'information
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#724">
+    14.5 Isoler le cas qui échoue, si possible
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#726">
+    14.6 Utiliser le paquet adéquat pour rapporter un bogue
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#729">
+  14.6.1 Pendant la construction durant l'amorçage
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#732">
+  14.6.2 Pendant la construction durant l'installation de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#736">
+  14.6.3 Pendant le démarrage
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#738">
+  14.6.4 Pendant l'exécution
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#740">
+    14.7 Effectuer une recherche
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#744">
+    14.8 Où rapporter les bogues
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Style de code
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.fr.html" target="_top">
+    15. Style du code
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#751">
+    15.1 Compatibilité
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#756">
+    15.2 Indentation
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#758">
+    15.3 Adaptateur
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#770">
+    15.4 Variables
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#789">
+    15.5 Autres
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procédures
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.fr.html" target="_top">
+    16. Procédures
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.fr.html#797">
+    16.1 Évolutions majeures
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.fr.html#803">
+    16.2 Évolutions mineures
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.fr.html#807">
+  16.2.1 Dernière évolution mineure d'une version Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.fr.html#809">
+  16.2.2 Modèle pour l'annonce d'une évolution mineure
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Dépôts Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.fr.html" target="_top">
+    17. Dépôts Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.fr.html#829">
+    17.1 Gestion de multiples dépôts
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.fr.html" target="_top">
+    18. Exemples
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#837">
+    18.1 Utiliser les exemples
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#841">
+    18.2 Tutoriel 1: Une image par défaut
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#850">
+    18.3 Tutoriel 2: Un utilitaire d'un navigateur Web
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#858">
+    18.4 Tutoriel 3: Une image personnalisée
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.fr.html#861">
+  18.4.1 Première révision
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.fr.html#875">
+  18.4.2 Deuxième révision
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#887">
+    18.5 Un client kioske VNC
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#901">
+    18.6 Une image de base pour une clé USB de 128 Mo
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#912">
+    18.7 Un bureau GNOME localisé avec un installateur
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Appendix
+  </h1>
+
+<h1 class="minitoc">
+    Guide de style
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.fr.html" target="_top">
+    19. Guide de style
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.fr.html#927">
+    19.1 Lignes directrices pour les auteurs
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#930">
+  19.1.1 Caractéristiques linguistiques
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#963">
+  19.1.2 Procédures
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.fr.html#1002">
+    19.2 Lignes directrices pour les traducteurs
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#1006">
+  19.2.1 Conseils de traduction
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.fr.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.fr.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Manuel Live Systems
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Personnalisation de l'installation de paquets
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#370" class="lnkocn">370</a></label>
+  <h1 class="norm" id="370"><a name="370"></a>
+    8. Personnalisation de l'installation de  paquets
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#371" class="lnkocn">371</a></label>
+  <p class="i0" id="371">
+    La personnalisation la plus fondamentale d'un système live est sans doute la sélection des paquets à inclure dans l'image. Ce chapitre vous guide tout au long des différentes options de construction pour personnaliser l'installation des paquets avec <i>live-build</i>. Le plus large choix influençant les paquets disponibles pour l'installation dans l'image sont la distribution et les zones d'archive. Afin de vous assurer des vitesses de téléchargement décentes, vous devez choisir un miroir de distribution proche. Vous pouvez également ajouter vos propres dépôts pour les rétroportages, paquets expérimentaux ou personnalisés, ou inclure des paquets directement comme fichiers. Vous pouvez définir des listes de paquets, incluant des métapaquets qui installent en même temps de nombreux paquets liés, tels que les paquets de bureau ou une langue particulière. Enfin, un certain nombre d'options donne un certain contrôle sur <i>apt</i>, ou si vous préférez, <i>aptitude</i>, pendant la construction quand les paquets sont installés. Vous pouvez trouver cela très pratique si vous utilisez un proxy, si vous voulez désactiver l'installation des paquets recommandés pour économiser l'espace, ou avez besoin de contrôler quelles versions des paquets sont installées via APT pinning, pour ne nommer que quelques possibilités.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#372" class="lnkocn">372</a></label>
+  <p class="bold" id="372"><a name="372"></a> <a id="hc8.1"></a>
+    <a name="c8.1" ></a><a name="h8.1" ></a>8.1 Sources des paquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#373" class="lnkocn">373</a></label>
+  <p class="bold" id="373"><a name="373"></a> <a id="hc8.1.1"></a>
+    <a name="c8.1.1" ></a><a name="h8.1.1" ></a>8.1.1 Distribution, zones d'archive et mode
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#374" class="lnkocn">374</a></label>
+  <p class="i0" id="374">
+    La distribution que vous choisissez a le plus large impact sur les paquets qui sont disponibles pour l'inclusion dans votre image live. Indiquez le nom de code, qui est par défaut <b>buster</b> pour la version de <i>live-build</i> dans <b>buster</b>. Toute distribution actuelle dans l'archive peut être indiquée par son nom de code ici. (Voir  <a href="about-manual.fr.html#terms">Termes</a>  pour plus de détails.) L'option <tt>--distribution</tt> influence non seulement la source des paquets dans l'archive, mais indique également à <i>live-build</i> comment construire chaque distribution prise en charge. Par exemple, pour construire sur <b>unstable</b>, <b>sid</b>, précisez:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#375" class="lnkocn">375</a></label>
+  <p class="code" id="375">
+    $ lb config --distribution sid<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#376" class="lnkocn">376</a></label>
+  <p class="i0" id="376">
+    Dans l'archive de distribution, les zones d'archive («archive areas») sont les principales divisions de l'archive. Dans Debian, ce sont <tt>main</tt>, <tt>contrib</tt> et <tt>non-free</tt>. Seule <tt>main</tt> contient des logiciels qui font partie de la distribution Debian, c'est donc la valeur par défaut. Une ou plusieurs valeurs peuvent être indiquées, par exemple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#377" class="lnkocn">377</a></label>
+  <p class="code" id="377">
+    $ lb config --archive-areas "main contrib non-free"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#378" class="lnkocn">378</a></label>
+  <p class="i0" id="378">
+    La prise en charge d'experimental est disponible pour certains dérivés de Debian grâce à l'option <tt>--mode</tt>. L'option par défaut est <tt>debian</tt> mais seulement si vous construisez sur un système Debian ou un système inconnu. Si <tt>lb config</tt> est appelé sur un des dérivés pris en charge, il créera par défaut une image de ce dérivé. Si par exemple <tt>lb config</tt> est lancé en mode <tt>ubuntu</tt>, les noms de distribution et des zones d'archives pour ce dérivé spécifique seront gérés à la place de ceux de Debian. Le mode modifie également le comportement de <i>live-build</i> en fonction des dérivés.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#379" class="lnkocn">379</a></label>
+  <p class="i0" id="379">
+    <b>Remarque:</b> Les projets pour lesquels ces modes ont été ajoutés sont chargés d'aider les utilisateurs de ces options. Le Live Systems Project, en retour, fournit un soutien de développement sur une base du meilleur effort seulement, en fonction des commentaires sur les projets dérivés que nous n'avons pas développés ou pris en charge nous-mêmes.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#380" class="lnkocn">380</a></label>
+  <p class="bold" id="380"><a name="380"></a> <a id="hc8.1.2"></a>
+    <a name="c8.1.2" ></a><a name="h8.1.2" ></a>8.1.2 Miroirs de distribution
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#381" class="lnkocn">381</a></label>
+  <p class="i0" id="381">
+    L'archive Debian est répliquée sur un grand réseau de miroirs autour du monde pour que les habitants de chaque région puissent choisir un miroir proche ayant la meilleure vitesse de téléchargement. Chacune des options <tt>--mirror-*</tt> régit quel miroir de distribution est utilisé dans les différentes étapes de la construction. Rappelez-vous dans les  <a href="customization-overview.fr.html#stages-of-the-build">Étapes de la construction</a>  que l'étape <b>bootstrap</b> a lieu quand le chroot est initialement peuplé par <i>debootstrap</i> avec un système minimal, et l'étape <b>chroot</b> a lieu quand le chroot utilisé pour construire le système de fichiers du système live est construit. Ainsi, les commutateurs des miroirs correspondants sont utilisés pour ces étapes et plus tard, dans l'étape <b>binary</b>, les valeurs <tt>--mirror-binary</tt> et <tt>--mirror-binary-security</tt> sont utilisées, remplaçant tout miroir utilisé dans une étape antérieure.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#382" class="lnkocn">382</a></label>
+  <p class="bold" id="382"><a name="382"></a> <a id="hdistribution-mirrors-build-time"></a>
+    <a name="h8.1.3" ></a><a name="distribution-mirrors-build-time" ></a>8.1.3 Miroirs de distribution utilisés lors de  la construction
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#383" class="lnkocn">383</a></label>
+  <p class="i0" id="383">
+    Pour définir les miroirs de distribution utilisés pendant la construction pour pointer vers un miroir local, il suffit de paramétrer <tt>--mirror-bootstrap</tt> et <tt>--mirror-chroot-security</tt> comme suit.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#384" class="lnkocn">384</a></label>
+  <p class="code" id="384">
+    $ lb config --mirror-bootstrap http://localhost/debian/ \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--mirror-chroot-security http://localhost/debian-security/<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#385" class="lnkocn">385</a></label>
+  <p class="i0" id="385">
+    Le miroir chroot, indiqué avec <tt>--mirror-chroot</tt>, est par défaut la valeur de <tt>--mirror-bootstrap</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#386" class="lnkocn">386</a></label>
+  <p class="bold" id="386"><a name="386"></a> <a id="hc8.1.4"></a>
+    <a name="c8.1.4" ></a><a name="h8.1.4" ></a>8.1.4 Miroirs de distribution utilisés pendant l'exécution
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#387" class="lnkocn">387</a></label>
+  <p class="i0" id="387">
+    Les options <tt>--mirror-binary*</tt> régissent les miroirs de distribution placés dans l'image binaire. Elles peuvent être utilisées pour installer des paquets supplémentaires lors de l'exécution du système live. Les valeurs par défaut emploient <tt>httpredir.debian.org</tt>, un service qui choisit un miroir géographiquement proche basé, entre autres choses, sur la famille IP de l'utilisateur et la disponibilité des miroirs. C'est un choix approprié lorsque vous ne pouvez pas prédire quel miroir sera le meilleur pour tous vos utilisateurs. Autrement, vous pouvez indiquer vos propres valeurs, comme indiqué dans l'exemple ci-dessous. Une image construite avec cette configuration ne serait appropriée que pour les utilisateurs sur un réseau où le "<tt>mirror</tt>" est accessible.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#388" class="lnkocn">388</a></label>
+  <p class="code" id="388">
+    $ lb config --mirror-binary http://mirror/debian/ \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--mirror-binary-security http://mirror/debian-security/ \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--mirror-binary-backports http://mirror/debian-backports/<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#389" class="lnkocn">389</a></label>
+  <p class="bold" id="389"><a name="389"></a> <a id="hadditional-repositories"></a>
+    <a name="h8.1.5" ></a><a name="additional-repositories" ></a>8.1.5 Dépôts additionnels
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#390" class="lnkocn">390</a></label>
+  <p class="i0" id="390">
+    Vous pouvez ajouter d'autres dépôts, élargissant votre choix de paquets au-delà de ceux disponibles dans votre distribution cible. Cela peut être, par exemple, pour avoir des paquets rétroportés, personnalisés ou expérimentaux. Pour configurer des dépôts supplémentaires, créez les fichiers <tt>config/archives/your-repository.list.chroot</tt>, et/ou <tt>config/archives/your-repository.list.binary</tt>. Comme avec les options <tt>--mirror-*</tt>, ces fichiers donnent les dépôts utilisés dans l'étape <b>chroot</b> lors de la construction de l'image, et dans l'étape <b>binary</b>, c'est-à-dire pendant l'exécution du système live.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#391" class="lnkocn">391</a></label>
+  <p class="i0" id="391">
+    Par exemple, <tt>config/archives/live.list.chroot</tt> vous permet d'installer les paquets du dépôt des instantanés debian live pendant la construction du système live.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#392" class="lnkocn">392</a></label>
+  <p class="code" id="392">
+    deb http://debian-live.alioth.debian.org/ sid-snapshots main contrib non-free<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#393" class="lnkocn">393</a></label>
+  <p class="i0" id="393">
+    Si vous ajoutez la même ligne à <tt>config/archives/live.list.binary</tt>, le dépôt sera ajouté au répertoire <tt>/etc/apt/sources.list.d/</tt> de votre système live.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#394" class="lnkocn">394</a></label>
+  <p class="i0" id="394">
+    Si ces fichiers existent, ils seront sélectionnés automatiquement.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#395" class="lnkocn">395</a></label>
+  <p class="i0" id="395">
+    Vous devriez également mettre la clé GPG utilisée pour signer le dépôt dans les fichiers <tt>config/archives/your-repository.key.{binary,chroot}</tt>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#396" class="lnkocn">396</a></label>
+  <p class="i0" id="396">
+    Si vous avez besoin d'un APT pinning personnalisé, les préférences APT peuvent être placées dans les fichiers <tt>config/archives/your-repository.pref.{binary,chroot}</tt> et elles seront automatiquement ajoutées à votre système live dans le répertoire <tt>/etc/apt/preferences.d/</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#397" class="lnkocn">397</a></label>
+  <p class="bold" id="397"><a name="397"></a> <a id="hchoosing-packages-to-install"></a>
+    <a name="h8.2" ></a><a name="choosing-packages-to-install" ></a>8.2 Choisir les paquets à installer
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#398" class="lnkocn">398</a></label>
+  <p class="i0" id="398">
+    Il y a un certain nombre de façons pour choisir quels paquets <i>live-build</i> s'installeront dans votre image, couvrant toute une variété de besoins. Vous pouvez tout simplement nommer les paquets individuels à installer dans une liste de paquets. Vous pouvez également choisir des métapaquets dans ces listes, ou les sélectionner en utilisant les champs de contrôle de fichiers des paquets. Enfin, vous pouvez placer des paquets dans votre arbre <tt>config/</tt> qui est bien adapté aux essais de nouveaux paquets ou expérimentaux avant qu'ils ne soient disponibles sur un dépôt.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#399" class="lnkocn">399</a></label>
+  <p class="bold" id="399"><a name="399"></a> <a id="hpackage-lists"></a>
+    <a name="h8.2.1" ></a><a name="package-lists" ></a>8.2.1 Listes de paquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#400" class="lnkocn">400</a></label>
+  <p class="i0" id="400">
+    Les listes de paquets sont un excellent moyen d'exprimer quels paquets doivent être installés. La syntaxe de la liste gère des sections conditionnelles, ce qui les rend faciles à construire et à adapter pour leur utilisation dans des configurations multiples. Les noms des paquets peuvent également être injectés dans la liste en utilisant des assistants de shell pendant la construction.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#401" class="lnkocn">401</a></label>
+  <p class="i0" id="401">
+    <b>Remarque:</b>  Le comportement de <i>live-build</i> pour indiquer un paquet qui n'existe pas est déterminé par votre choix de l'utilitaire APT. Consultez  <a href="customizing-package-installation.fr.html#choosing-apt-or-aptitude">Choisir apt ou aptitude</a>  pour plus de détails.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#402" class="lnkocn">402</a></label>
+  <p class="bold" id="402"><a name="402"></a> <a id="husing-metapackages"></a>
+    <a name="h8.2.2" ></a><a name="using-metapackages" ></a>8.2.2 Utilisation des métapaquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#403" class="lnkocn">403</a></label>
+  <p class="i0" id="403">
+    La façon la plus simple de remplir votre liste de paquets consiste à utiliser un métapaquet de tâche maintenu par votre distribution. Par exemple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#404" class="lnkocn">404</a></label>
+  <p class="code" id="404">
+    $ lb config<br>
+$ echo task-gnome-desktop &gt; config/package-lists/desktop.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#405" class="lnkocn">405</a></label>
+  <p class="i0" id="405">
+    Cela remplace l'ancienne méthode des listes prédéfinies gérée dans <tt>live-build</tt> 2.x. Contrairement aux listes prédéfinies, les métapaquets ne sont pas spécifiques au projet Live Systems. Au lieu de cela, ils sont maintenus par des groupes de travail spécialisés dans la distribution et reflètent donc le consensus de chaque groupe sur les paquets pour mieux servir les besoins des utilisateurs. Ils couvrent également une gamme beaucoup plus large des cas d'utilisation que les listes prédéfinies qu'ils remplacent.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#406" class="lnkocn">406</a></label>
+  <p class="i0" id="406">
+    Tous les métapaquets de tâches sont préfixés avec <tt>task-</tt>, donc un moyen rapide pour déterminer lesquels sont disponibles (même s'il peut y avoir une poignée de faux positifs dont le nom correspond mais qui ne sont pas des métapaquets) est de faire correspondre le nom du paquet avec:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#407" class="lnkocn">407</a></label>
+  <p class="code" id="407">
+    $ apt-cache search --names-only ^task-<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#408" class="lnkocn">408</a></label>
+  <p class="i0" id="408">
+    En plus, vous trouverez d'autres métapaquets à des fins diverses. Certains sont des sous-ensembles de paquets de tâches plus larges, comme <tt>gnome-core</tt>, tandis que d'autres sont des pièces individuelles spécialisées d'un Debian Pure Blend, comme les métapaquets <tt>education-*</tt>. Pour lister tous les métapaquets dans l'archive, installez le paquet <tt>debtags</tt> et listez tous les paquets ayant l'étiquette <tt>role::metapackage</tt> comme suit:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#409" class="lnkocn">409</a></label>
+  <p class="code" id="409">
+    $ debtags search role::metapackage<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#410" class="lnkocn">410</a></label>
+  <p class="bold" id="410"><a name="410"></a> <a id="hc8.2.3"></a>
+    <a name="c8.2.3" ></a><a name="h8.2.3" ></a>8.2.3 Listes de paquets locaux
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#411" class="lnkocn">411</a></label>
+  <p class="i0" id="411">
+    Que vous listiez des métapaquets, des paquets individuels ou une combinaison des deux, toutes les listes de paquets locaux sont stockées dans <tt>config/package-lists/</tt>. Comme plus d'une liste peut être utilisée, cela se prête bien à une conception modulaire. Par exemple, vous pouvez décider de consacrer une liste à un choix particulier de bureau, l'autre à une collection de paquets connexes qui pourraient aussi bien être utilisés au-dessus d'un bureau différent. Cela vous permet d'expérimenter avec différentes combinaisons d'ensembles de paquets avec un minimum de tracas en utilisant des listes communes entre les différents projets d'images live.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#412" class="lnkocn">412</a></label>
+  <p class="i0" id="412">
+    Les listes de paquets qui existent dans ce répertoire ont besoin d'avoir un suffixe <tt>.list</tt> pour être traitées, puis un suffixe d'étape supplémentaire <tt>.chroot</tt> ou <tt>.binary</tt> pour indiquer à quelle étape la liste est destinée.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#413" class="lnkocn">413</a></label>
+  <p class="i0" id="413">
+    <b>Remarque:</b> Si vous n'indiquez pas le suffixe de l'étape, la liste sera utilisée pour les deux étapes. Normalement, vous voulez indiquer <tt>.list.chroot</tt> de sorte que les paquets soient seulement installés dans le système de fichiers live et ne pas avoir une copie supplémentaire des <tt>.deb</tt> placée sur le support.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#414" class="lnkocn">414</a></label>
+  <p class="bold" id="414"><a name="414"></a> <a id="hc8.2.4"></a>
+    <a name="c8.2.4" ></a><a name="h8.2.4" ></a>8.2.4 Listes de paquets locaux pour l'étape binary
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#415" class="lnkocn">415</a></label>
+  <p class="i0" id="415">
+    Pour faire une liste pour l'étape binary, placez un fichier avec le suffixe <tt>.list.binary</tt> dans <tt>config/package-lists/</tt>. Ces paquets ne sont pas installés dans le système de fichiers live, mais sont inclus sur le support live sous <tt>pool/</tt>. Vous utiliserez généralement cette liste avec une des variantes d'installation non-live. Comme mentionné ci-dessus, si vous voulez que cette liste soit la même que votre liste pour l'étape chroot, utilisez simplement le suffixe <tt>.list</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#416" class="lnkocn">416</a></label>
+  <p class="bold" id="416"><a name="416"></a> <a id="hgenerated-package-lists"></a>
+    <a name="h8.2.5" ></a><a name="generated-package-lists" ></a>8.2.5 Listes de paquets générées
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#417" class="lnkocn">417</a></label>
+  <p class="i0" id="417">
+    Il arrive parfois que la meilleure façon de composer une liste soit de la générer avec un script. Toute ligne commençant par un point d'exclamation indique une commande à exécuter dans le chroot lorsque l'image est construite. Par exemple, on pourrait inclure la ligne <tt>! grep-aptavail -n -sPackage -FPriority standard | sort</tt> dans une liste de paquets qui permet de produire une liste triée des paquets disponibles avec <tt>Priority: standard</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#418" class="lnkocn">418</a></label>
+  <p class="i0" id="418">
+    En fait, la sélection des paquets avec la commande <tt>grep-aptavail</tt> (du paquet <tt>dctrl-tools</tt>) est si utile que <tt>live-build</tt> fournit un script <tt>Packages</tt> à titre de commodité. Ce script accepte deux arguments: <tt>field</tt> et <tt>pattern</tt>. Ainsi, vous pouvez créer une liste avec le contenu suivant:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#419" class="lnkocn">419</a></label>
+  <p class="code" id="419">
+    $ lb config<br>
+$ echo '! Packages Priority standard' &gt; config/package-lists/standard.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#420" class="lnkocn">420</a></label>
+  <p class="bold" id="420"><a name="420"></a> <a id="hc8.2.6"></a>
+    <a name="c8.2.6" ></a><a name="h8.2.6" ></a>8.2.6 Utiliser des conditions dans les listes de paquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#421" class="lnkocn">421</a></label>
+  <p class="i0" id="421">
+    Toutes les variables de configuration de <i>live-build</i> stockées dans <tt>config/*</tt> (sans le préfixe <tt>LB_</tt>) peuvent être utilisées dans des instructions conditionnelles dans les listes de paquets. Généralement, cela correspond à toute option <tt>lb config</tt> en majuscule et avec tirets changés en caractères de soulignement. Mais en pratique, ce ne sont que celles qui influencent la sélection des paquets qui font sens, comme <tt>DISTRIBUTION</tt>, <tt>ARCHITECTURES</tt> ou <tt>ARCHIVE_AREAS</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#422" class="lnkocn">422</a></label>
+  <p class="i0" id="422">
+    Par exemple, pour installer <tt>ia32-libs</tt> si <tt>--architectures amd64</tt> est indiqué:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#423" class="lnkocn">423</a></label>
+  <p class="code" id="423">
+    #if ARCHITECTURES amd64<br>
+ia32-libs<br>
+#endif<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#424" class="lnkocn">424</a></label>
+  <p class="i0" id="424">
+    Vous pouvez tester pour un certain nombre de valeurs, par exemple pour installer <i>memtest86+</i> si <tt>--architectures i386</tt> ou <tt>--architectures amd64</tt> est indiqué:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#425" class="lnkocn">425</a></label>
+  <p class="code" id="425">
+    #if ARCHITECTURES i386 amd64<br>
+memtest86+<br>
+#endif<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#426" class="lnkocn">426</a></label>
+  <p class="i0" id="426">
+    Vous pouvez également tester avec des variables pouvant contenir plus d'une valeur, par exemple pour installer <i>vrms</i> si <tt>contrib</tt> ou <tt>non-free</tt> est indiqué via <tt>--archive-areas</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#427" class="lnkocn">427</a></label>
+  <p class="code" id="427">
+    #if ARCHIVE_AREAS contrib non-free<br>
+vrms<br>
+#endif<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#428" class="lnkocn">428</a></label>
+  <p class="i0" id="428">
+    L'imbrication des conditions n'est pas prise en charge.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#429" class="lnkocn">429</a></label>
+  <p class="bold" id="429"><a name="429"></a> <a id="hc8.2.7"></a>
+    <a name="c8.2.7" ></a><a name="h8.2.7" ></a>8.2.7 Suppression de paquets lors de l'installation
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#430" class="lnkocn">430</a></label>
+  <p class="i0" id="430">
+    Il est possible de lister des paquets dans des fichiers utilisant les extensions <tt>.list.chroot_live</tt> et <tt>.list.chroot_install</tt> à l'intérieur du répertoire <tt>config/package-lists</tt>. Si une liste «install» et une liste «live» existent conjointement, les paquets dans la liste <tt>.list.chroot_live</tt> seront supprimés par un hook après l'installation (si l'utilisateur utilise l'installeur). Les paquets dans la liste <tt>.list.chroot_install</tt> sont présents à la fois dans le système live et dans le système installé. Il s'agit d'un paramétrage spécial pour l'installeur et peut se révéler utile si vous avez choisi <tt>--debian-installer live</tt> dans votre configuration, et souhaitez supprimer des paquets spécifiques aux systèmes live lors de l'installation.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#431" class="lnkocn">431</a></label>
+  <p class="bold" id="431"><a name="431"></a> <a id="hdesktop-and-language-tasks"></a>
+    <a name="h8.2.8" ></a><a name="desktop-and-language-tasks" ></a>8.2.8 Tâches de bureau et de langue
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#432" class="lnkocn">432</a></label>
+  <p class="i0" id="432">
+    Les tâches de bureau et de langue sont des cas particuliers qui ont besoin d'une certaine planification et de configuration supplémentaire. Dans l'installateur Debian, si le support a été préparé pour un environnement de bureau particulier, la tâche correspondante sera automatiquement installée. Ainsi, il y a tâches internes <tt>gnome-desktop</tt>, <tt>kde-desktop</tt>, <tt>lxde-desktop</tt> et <tt>xfce-desktop</tt>, dont aucune n'est proposée dans le menu <tt>tasksel</tt>. De même, il n'y a pas d'élément de menu pour les tâches de langue, mais le choix de la langue de l'utilisateur lors de l'installation influence le choix des tâches de langue correspondantes.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#433" class="lnkocn">433</a></label>
+  <p class="i0" id="433">
+    Lors du développement d'une image de bureau live, l'image s'amorce généralement directement sur un bureau de travail. Les choix de l'environnement de bureau et la langue par défaut ont été faits pendant la construction et non pas pendant l'exécution comme dans le cas de l'installateur de Debian. Cela ne veut pas dire qu'une image live ne pourrait pas être construite pour prendre en charge plusieurs environnements de bureau ou plusieurs langues et offrir à l'utilisateur un choix, mais ce n'est pas le comportement par défaut de <i>live-build</i>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#434" class="lnkocn">434</a></label>
+  <p class="i0" id="434">
+    Comme aucune disposition n'est faite automatiquement pour les tâches de la langue, qui comprennent des éléments tels que des polices spécifiques à la langue et des paquets de méthodes de saisie, vous devez les indiquer dans votre configuration si vous les voulez. Par exemple, une image de bureau GNOME contenant la prise en charge de l'allemand pourrait inclure les métapaquets de tâches suivants:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#435" class="lnkocn">435</a></label>
+  <p class="code" id="435">
+    $ lb config<br>
+$ echo "task-gnome-desktop task-laptop" &gt;&gt; config/package-lists/my.list.chroot<br>
+$ echo "task-german task-german-desktop task-german-gnome-desktop" &gt;&gt; config/package-lists/my.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#436" class="lnkocn">436</a></label>
+  <p class="bold" id="436"><a name="436"></a> <a id="hkernel-flavour-and-version"></a>
+    <a name="h8.2.9" ></a><a name="kernel-flavour-and-version" ></a>8.2.9 Version et type de noyau
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#437" class="lnkocn">437</a></label>
+  <p class="i0" id="437">
+    Un ou plusieurs types de noyau seront inclus dans votre image par défaut, en fonction de l'architecture. Vous pouvez choisir différents types avec l'option <tt>--linux-flavours</tt>. Chaque type est suffixé à partir de <tt>linux-image</tt> pour former le nom de chaque métapaquet qui dépend à son tour d'un paquet noyau exact à inclure dans votre image.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#438" class="lnkocn">438</a></label>
+  <p class="i0" id="438">
+    Ainsi, par défaut, une image pour l'architecture <tt>amd64</tt> comprendra le métapaquet <tt>linux-image-amd64</tt>, et une image pour l'architecture <tt>i386</tt> comprendra le métapaquet <tt>linux-image-586</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#439" class="lnkocn">439</a></label>
+  <p class="i0" id="439">
+    Lorsque plus d'une version du paquet du noyau est disponible dans vos archives configurées, vous pouvez indiquer un nom du paquet du noyau différent avec l'option <tt>--linux-packages</tt>. Par exemple, supposons que vous construisiez une image pour l'architecture <tt>amd64</tt> et ajoutiez l'archive expérimentale pour faire des essais. Pour installer le noyau <tt>linux-image-3.18.0-trunk-amd64</tt> vous pouvez configurer cette image comme suit:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#440" class="lnkocn">440</a></label>
+  <p class="code" id="440">
+    $ lb config --linux-packages linux-image-3.18.0-trunk<br>
+$ echo "deb http://ftp.debian.org/debian/ experimental main" &gt; config/archives/experimental.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#441" class="lnkocn">441</a></label>
+  <p class="bold" id="441"><a name="441"></a> <a id="hcustom-kernels"></a>
+    <a name="h8.2.10" ></a><a name="custom-kernels" ></a>8.2.10 Noyaux personnalisés
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#442" class="lnkocn">442</a></label>
+  <p class="i0" id="442">
+    Vous pouvez créer et inclure vos propres noyaux personnalisés, à condition qu'ils soient intégrés dans le système de gestion des paquets Debian. Le système de <i>live-build</i> ne gère pas les noyaux qui ne sont pas construits sous forme de paquets <tt>.deb</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#443" class="lnkocn">443</a></label>
+  <p class="i0" id="443">
+    La façon correcte et recommandée de déployer vos propres paquets du noyau est de suivre les instructions dans le <tt>kernel-handbook</tt>. N'oubliez pas de modifier l'ABI et les suffixes de manière appropriée, puis d'inclure une construction complète des paquets <tt>linux</tt> et <tt>linux-latest</tt> dans votre dépôt.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#444" class="lnkocn">444</a></label>
+  <p class="i0" id="444">
+    Si vous optez pour la construction des paquets du noyau sans les métapaquets correspondants, vous devez indiquer une chaîne <tt>--linux-packages</tt> appropriée tel que discuté dans  <a href="customizing-package-installation.fr.html#kernel-flavour-and-version">Version et type de noyau</a>.  Comme nous l'expliquons dans  <a href="customizing-package-installation.fr.html#installing-modified-or-third-party-packages">Installation de paquets modifiés ou tiers</a>,  il est préférable que vous incluiez vos paquets de noyau personnalisés à votre propre dépôt, bien que les alternatives discutées dans cette section fonctionnent bien également.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#445" class="lnkocn">445</a></label>
+  <p class="i0" id="445">
+    Donner des conseils sur la façon de personnaliser votre noyau sort du cadre de ce document. Toutefois, vous devez au moins vous assurer que votre configuration répond à ces exigences minimales:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#446" class="lnkocn">446</a></label>
+  <ul>
+  <li class="bullet" id="446">
+    Utilisez un ramdisk initial.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#447" class="lnkocn">447</a></label>
+  <ul>
+  <li class="bullet" id="447">
+    Incluez un module d'union de systèmes de fichiers (par exemple <tt>aufs</tt>).
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#448" class="lnkocn">448</a></label>
+  <ul>
+  <li class="bullet" id="448">
+    Incluez tous les autres modules du système de fichiers requis pour votre configuration (habituellement <tt>squashfs</tt>).
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#449" class="lnkocn">449</a></label>
+  <p class="bold" id="449"><a name="449"></a> <a id="hinstalling-modified-or-third-party-packages"></a>
+    <a name="h8.3" ></a><a name="installing-modified-or-third-party-packages" ></a>8.3 Installation de paquets  modifiés ou tiers
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#450" class="lnkocn">450</a></label>
+  <p class="i0" id="450">
+    Bien que ce soit contre la philosophie d'un système live, il peut parfois être nécessaire de construire un système live avec des versions modifiées des paquets du dépôt Debian. Cela peut être pour modifier ou prendre en charge des fonctionnalités supplémentaires, des langues et la marque, ou même pour supprimer des éléments indésirables dans les paquets existants. De même, les paquets «tiers» peuvent être utilisés pour ajouter des fonctionnalités sur mesure et/ou propriétaires.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#451" class="lnkocn">451</a></label>
+  <p class="i0" id="451">
+    Cette section ne couvre pas les conseils concernant la construction ou la maintenance des paquets modifiés. La méthode de Joachim Breitner 'How to fork privately' ‹<a href="http://www.joachim-breitner.de/blog/archives/282-How-to-fork-privately.html" target="_top">http://www.joachim-breitner.de/blog/archives/282-How-to-fork-privately.html</a>› peut, cependant, vous intéresser. La création de paquets sur mesure est traitée dans le guide du nouveau mainteneur Debian à ‹<a href="https://www.debian.org/doc/maint-guide/" target="_top">https://www.debian.org/doc/maint-guide/</a>› et ailleurs
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#452" class="lnkocn">452</a></label>
+  <p class="i0" id="452">
+    Il y a deux façons d'installer des paquets personnalisés modifiés:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#453" class="lnkocn">453</a></label>
+  <ul>
+  <li class="bullet" id="453">
+    <tt>packages.chroot</tt>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#454" class="lnkocn">454</a></label>
+  <ul>
+  <li class="bullet" id="454">
+    Utiliser un dépôt APT personnalisé
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#455" class="lnkocn">455</a></label>
+  <p class="i0" id="455">
+    Utiliser <tt>packages.chroot</tt> est plus simple à réaliser et utile pour les personnalisations ponctuelles mais a un certain nombre d'inconvénients, alors qu'utiliser un dépôt personnalisé APT est plus fastidieux à mettre en place.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#456" class="lnkocn">456</a></label>
+  <p class="bold" id="456"><a name="456"></a> <a id="hc8.3.1"></a>
+    <a name="c8.3.1" ></a><a name="h8.3.1" ></a>8.3.1 Utiliser <tt>packages.chroot</tt> pour installer des paquets personnalisés
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#457" class="lnkocn">457</a></label>
+  <p class="i0" id="457">
+    Pour installer un paquet personnalisé, il suffit de le copier dans le répertoire <tt>config/packages.chroot/</tt>. Les paquets qui sont dans ce répertoire seront automatiquement installés dans le système live pendant la construction du système - vous n'avez pas besoin de les indiquer ailleurs.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#458" class="lnkocn">458</a></label>
+  <p class="i0" id="458">
+    Les paquets <b>doivent</b> être nommés de la manière prescrite. Une façon simple de le faire consiste à utiliser <tt>dpkg-name</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#459" class="lnkocn">459</a></label>
+  <p class="i0" id="459">
+    L'utilisation de <tt>packages.chroot</tt> pour l'installation de paquets personnalisés a des inconvénients:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#460" class="lnkocn">460</a></label>
+  <ul>
+  <li class="bullet" id="460">
+    Il n'est pas possible d'utiliser APT de façon sécurisée.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#461" class="lnkocn">461</a></label>
+  <ul>
+  <li class="bullet" id="461">
+    Vous devez installer tous les paquets appropriés dans le répertoire <tt>config/packages.chroot/</tt>.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#462" class="lnkocn">462</a></label>
+  <ul>
+  <li class="bullet" id="462">
+    Il ne se prête pas au stockage de configurations des systèmes live dans le contrôle de révision.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#463" class="lnkocn">463</a></label>
+  <p class="bold" id="463"><a name="463"></a> <a id="hc8.3.2"></a>
+    <a name="c8.3.2" ></a><a name="h8.3.2" ></a>8.3.2 Utiliser un dépôt APT pour installer des paquets personnalisés.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#464" class="lnkocn">464</a></label>
+  <p class="i0" id="464">
+    Contrairement à l'utilisation de <tt>packages.chroot</tt>, lorsque vous utilisez un dépôt personnalisé APT, vous devez vous assurer que vous indiquez les paquets ailleurs. Voir  <a href="customizing-package-installation.fr.html#choosing-packages-to-install">Choisir les paquets à installer</a>  pour plus de détails.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#465" class="lnkocn">465</a></label>
+  <p class="i0" id="465">
+    S'il peut sembler inutile de créer un dépôt APT pour installer des paquets personnalisés, l'infrastructure peut être facilement réutilisée à une date ultérieure pour offrir les mises à jour des paquets modifiés.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#466" class="lnkocn">466</a></label>
+  <p class="bold" id="466"><a name="466"></a> <a id="hc8.3.3"></a>
+    <a name="c8.3.3" ></a><a name="h8.3.3" ></a>8.3.3 Les paquets personnalisés et APT
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#467" class="lnkocn">467</a></label>
+  <p class="i0" id="467">
+    <i>live-build</i> utilise apt pour installer tous les paquets dans le système live, il héritera donc des comportements de ce logiciel. Un exemple pertinent est que (en supposant une configuration par défaut), s'il y a un paquet disponible dans deux dépôts différents avec des numéros de version différents, APT choisira d'installer le paquet ayant le numéro de version le plus grand.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#468" class="lnkocn">468</a></label>
+  <p class="i0" id="468">
+    Pour cette raison, vous pouvez incrémenter le numéro de version dans les fichiers <tt>debian/changelog</tt> de vos paquets personnalisés pour vous assurer que votre version modifiée sera installée au lieu d'une autre provenant des dépôts officiels Debian. Cela peut aussi être fait en modifiant les préférences d'APT pinning dans le système live − voir  <a href="customizing-package-installation.fr.html#apt-pinning">APT pinning</a>  pour plus d'informations.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#469" class="lnkocn">469</a></label>
+  <p class="bold" id="469"><a name="469"></a> <a id="hc8.4"></a>
+    <a name="c8.4" ></a><a name="h8.4" ></a>8.4 Configuration d'APT pendant la construction
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#470" class="lnkocn">470</a></label>
+  <p class="i0" id="470">
+    Vous pouvez configurer APT par un certain nombre d'options appliquées uniquement pendant la construction. (La configuration d'APT utilisée dans le système live en fonctionnement peut être configurée de façon normale pour un système live, c'est-à-dire en incluant les configurations appropriées dans <tt>config/includes.chroot/</tt>.) Pour une liste complète, regardez les options commençant par <tt>apt</tt> dans la page de manuel de <tt>lb_config</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#471" class="lnkocn">471</a></label>
+  <p class="bold" id="471"><a name="471"></a> <a id="hchoosing-apt-or-aptitude"></a>
+    <a name="h8.4.1" ></a><a name="choosing-apt-or-aptitude" ></a>8.4.1 Choisir apt ou aptitude
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#472" class="lnkocn">472</a></label>
+  <p class="i0" id="472">
+    Vous pouvez choisir d'utiliser soit <i>apt</i>, soit <i>aptitude</i>. Le choix du logiciel utilisé dépend de l'argument <tt>--apt</tt> de <tt>lb config</tt>. Choisissez la méthode ayant le comportement que vous préférez pour l'installation de paquets, la différence notable étant la manière dont les paquets manquants sont traités.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#473" class="lnkocn">473</a></label>
+  <ul>
+  <li class="bullet" id="473">
+    <tt>apt</tt>: Avec cette méthode, si un paquet manquant est indiqué, l'installation va échouer. C'est le réglage par défaut.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#474" class="lnkocn">474</a></label>
+  <ul>
+  <li class="bullet" id="474">
+    <tt>aptitude</tt>: Avec cette méthode, si un paquet manquant est indiqué, l'installation va réussir.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#475" class="lnkocn">475</a></label>
+  <p class="bold" id="475"><a name="475"></a> <a id="hc8.4.2"></a>
+    <a name="c8.4.2" ></a><a name="h8.4.2" ></a>8.4.2 Utilisation d'un proxy avec APT
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#476" class="lnkocn">476</a></label>
+  <p class="i0" id="476">
+    Une configuration communément requise par APT est de gérer la construction d'une image derrière un proxy. Vous pouvez indiquer votre proxy APT avec les options <tt>--apt-ftp-proxy</tt> ou <tt>--apt-http-proxy</tt> si nécessaire, par exemple
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#477" class="lnkocn">477</a></label>
+  <p class="code" id="477">
+    $ lb config --apt-http-proxy http://proxy/<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#478" class="lnkocn">478</a></label>
+  <p class="bold" id="478"><a name="478"></a> <a id="htweaking-apt-to-save-space"></a>
+    <a name="h8.4.3" ></a><a name="tweaking-apt-to-save-space" ></a>8.4.3 Régler APT pour économiser de l'espace
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#479" class="lnkocn">479</a></label>
+  <p class="i0" id="479">
+    Vous pouvez avoir besoin d'économiser de l'espace sur le support d'image, auquel cas l'une ou l'autre ou les deux options suivantes peuvent être d'intérêt.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#480" class="lnkocn">480</a></label>
+  <p class="i0" id="480">
+    Si vous ne voulez pas inclure les index d'APT dans l'image, vous pouvez les omettre avec:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#481" class="lnkocn">481</a></label>
+  <p class="code" id="481">
+    $ lb config --apt-indices false<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#482" class="lnkocn">482</a></label>
+  <p class="i0" id="482">
+    Cela n'influencera pas les entrées dans <tt>/etc/apt/sources.list</tt>, mais seulement le fait que <tt>/var/lib/apt</tt> contienne les fichiers index ou non. La contrepartie est qu'APT a besoin de ces index afin d'opérer dans le système live. Par conséquent, avant de procéder à <tt>apt-cache search</tt> ou <tt>apt-get install</tt> par exemple, l'utilisateur doit faire <tt>apt-get update</tt> pour créer ces index.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#483" class="lnkocn">483</a></label>
+  <p class="i0" id="483">
+    Si vous trouvez que l'installation des paquets recommandés fait trop gonfler votre image, à condition d'être prêt à faire face aux conséquences décrites ci-dessous, vous pouvez désactiver l'option par défaut d'APT avec:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#484" class="lnkocn">484</a></label>
+  <p class="code" id="484">
+    $ lb config --apt-recommends false<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#485" class="lnkocn">485</a></label>
+  <p class="i0" id="485">
+    La conséquence la plus importante de la désactivation des recommandations est que <tt>live-boot</tt> et <tt>live-config</tt> recommandent certains paquets qui fournissent des fonctionnalités importantes utilisées par la plupart de configurations live, telles que <tt>user-setup</tt> qui est recommandé par <tt>live-config</tt> qui est utilisé pour créer l'utilisateur live. Sauf exception, vous aurez besoin de rajouter au moins certaines de ces recommandations à vos listes de paquets ou votre image ne fonctionnera pas comme prévu, si elle fonctionne. Regardez les paquets recommandés pour chacun des paquets <tt>live-*</tt> inclus dans votre construction et si vous n'êtes pas sûr de pouvoir les omettre, ajoutez-les à nouveau dans vos listes de paquets.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#486" class="lnkocn">486</a></label>
+  <p class="i0" id="486">
+    La conséquence la plus générale est que si vous n'installez pas les paquets recommandés par un paquet, c'est-à-dire les «paquets qu'on trouverait avec celui-ci dans toute installation standard» (Debian Policy Manual, section 7.2), certains paquets dont vous avez vraiment besoin peuvent être omis. Par conséquent, nous vous suggérons d'examiner la différence que la désactivation des recommandations induit sur votre liste de paquets (voir le fichier <tt>binary.packages</tt> généré par <tt>lb build</tt>) et incluez dans votre liste tous les paquets manquants que vous souhaitez toujours installer. Alternativement, si seulement un petit nombre de paquets que vous ne souhaitez pas est exclus, laissez les recommandations activées et définissez une priorité APT pin négative sur les paquets sélectionnés pour éviter les installer, comme expliqué dans  <a href="customizing-package-installation.fr.html#apt-pinning">APT pinning</a>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#487" class="lnkocn">487</a></label>
+  <p class="bold" id="487"><a name="487"></a> <a id="hc8.4.4"></a>
+    <a name="c8.4.4" ></a><a name="h8.4.4" ></a>8.4.4 Passer des options à apt ou aptitude
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#488" class="lnkocn">488</a></label>
+  <p class="i0" id="488">
+    S'il n'y a pas d'option <tt>lb config</tt> pour modifier le comportement d'APT de la façon dont vous avez besoin, utilisez <tt>--apt-options</tt> ou <tt>--aptitude-options</tt> pour passer des options par le biais de l'outil APT configuré. Consultez les pages de manuel <tt>apt</tt> et <tt>aptitude</tt> pour les détails. Notez que les deux options ont des valeurs par défaut que vous aurez besoin de conserver en plus des remplacements que vous pouvez fournir. Ainsi, par exemple, supposons que vous ayez inclus quelque chose de <tt>snapshot.debian.org</tt> à des fins de test et que vous vouliez indiquer <tt>Acquire::Check-Valid-Until=false</tt> pour satisfaire APT avec le fichier <tt>Release</tt> obsolète. Vous le feriez comme dans l'exemple suivant, avec l'ajout de la nouvelle option après la valeur par défaut <tt>--yes</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#489" class="lnkocn">489</a></label>
+  <p class="code" id="489">
+    $ lb config --apt-options "--yes -oAcquire::Check-Valid-Until=false"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#490" class="lnkocn">490</a></label>
+  <p class="i0" id="490">
+    Veuillez lire attentivement les pages de manuel pour bien comprendre ces options et quand les utiliser. Ce n'est qu'un exemple et ne doit pas être interprété comme un conseil pour configurer votre image de cette façon. Par exemple, cette option ne serait pas appropriée pour une version finale d'une image live.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#491" class="lnkocn">491</a></label>
+  <p class="i0" id="491">
+    Pour les configurations plus compliquées concernant des options <tt>apt.conf</tt>, vous pourriez vouloir créer un fichier <tt>config/apt/apt.conf</tt>. Consultez aussi les autres options <tt>apt-*</tt> pour obtenir quelques raccourcis pratiques pour les options fréquemment utilisées.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#492" class="lnkocn">492</a></label>
+  <p class="bold" id="492"><a name="492"></a> <a id="hapt-pinning"></a>
+    <a name="h8.4.5" ></a><a name="apt-pinning" ></a>8.4.5 APT pinning
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#493" class="lnkocn">493</a></label>
+  <p class="i0" id="493">
+    Pour plus de contexte, veuillez d'abord lire la page de manuel <tt>apt_preferences(5)</tt>. APT pinning peut être configuré soit pendant la construction, soit pendant l'exécution. Dans le premier cas, créez <tt>config/archives/*.pref</tt>, <tt>config/archives/*.pref.chroot</tt>, et <tt>config/apt/preferences</tt>. Dans le second cas, créez <tt>config/includes.chroot/etc/apt/preferences</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#494" class="lnkocn">494</a></label>
+  <p class="i0" id="494">
+    Imaginons que vous voulez construire un système live <b>buster</b> mais qu'il faut installer tous les paquets live qui finissent dans l'image binaire de <b>sid</b> pendant la construction. Vous devez ajouter <b>sid</b> à votre fichier APT sources et fixer tous les paquets live avec une priorité supérieure mais tous les autres paquets avec une priorité inférieure à la priorité par défaut de sorte que seuls les paquets que vous voulez soient installés à partir de <b>sid</b> pendant la construction et que tous les autres viennent de la distribution du système cible, <b>buster</b>. Ce qui suit devrait accomplir cela:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#495" class="lnkocn">495</a></label>
+  <p class="code" id="495">
+    $ echo "deb http://mirror/debian/ sid main" &gt; config/archives/sid.list.chroot<br>
+$ cat &gt;&gt; config/archives/sid.pref.chroot &lt;&lt; EOF<br>
+Package: live-*<br>
+Pin: release n=sid<br>
+Pin-Priority: 600<br><br>
+Package: *<br>
+Pin: release n=sid<br>
+Pin-Priority: 1<br>
+EOF<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#496" class="lnkocn">496</a></label>
+  <p class="i0" id="496">
+    Une priorité pin négative empêchera l'installation d'un paquet, comme dans le cas où vous ne voudriez pas un paquet qui est recommandé par un autre paquet. Supposons que vous construisiez une image LXDE en utilisant <tt>task-lxde-desktop</tt> dans <tt>config/package-lists/desktop.list.chroot</tt> mais que vous ne vouliez pas que l'utilisateur soit invité à stocker les mots de passe wifi dans le trousseau de clés. Cette liste comprend <i>lxde-core</i>, qui recommande <i>gksu</i>, qui à son tour recommande <i>gnome-keyring</i>. Donc, vous voulez omettre le paquet recommandé <i>gnome-keyring</i>. Cela peut être fait en ajoutant ce qui suit à <tt>config/apt/preferences</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#497" class="lnkocn">497</a></label>
+  <p class="code" id="497">
+    Package: gnome-keyring<br>
+Pin: version *<br>
+Pin-Priority: -1<br>
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="customization-overview.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-contents.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

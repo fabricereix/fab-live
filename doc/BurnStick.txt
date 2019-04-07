@@ -1,0 +1,6 @@
+USB_DISK=/dev/disk/by-id/usb-JetFlash_TS2GJFT3_71HS0WU6-0\:0
+USB_DISK=/dev/disk/by-id/usb-JetFlash_TS2GJFT3_7OZWJHV5-0:0
+USB_DISK=/dev/disk/by-id/usb-Kingston_DataTraveler_2.0_001731897883BE71893E9517-0:0
+
+sudo dd bs=4M if=build/LIVE_BOOT/debian-custom.iso of=$USB_DISK
+

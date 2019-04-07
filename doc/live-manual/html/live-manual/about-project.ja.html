@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    about-project -
+    Live システムマニュアル
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Live システムマニュアル" />
+  <meta name="dc.author" content="Live システムプロジェクト &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Live システムプロジェクト &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="2015-09-22"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. \\  \\ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. \\  \\ You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/. \\  \\ The complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-3 file." />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="ja">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="about-manual.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="installation.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Live システムマニュアル
+  </h1>
+
+<h1 class="minitoc">
+    About
+  </h1>
+
+<h1 class="minitoc">
+    このマニュアルについて
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.ja.html" target="_top">
+    1. このマニュアルについて
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#8">
+    1.1 せっかちな人向け
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#12">
+    1.2 用語
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#29">
+    1.3 著者
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#44">
+    1.4 この文書への貢献
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.ja.html#46">
+  1.4.1 変更の適用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.ja.html#60">
+  1.4.2 翻訳
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Live システムプロジェクトへの貢献
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.ja.html" target="_top">
+    2. Live システムプロジェクトについて
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#75">
+    2.1 動機
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#76">
+  2.1.1 現在の Live システムの問題点
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#86">
+  2.1.2 自身の Live システムを作成する理由
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#94">
+    2.2 哲学
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#95">
+  2.2.1 Debian「main」の変更しないパッケージしか使いません
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#99">
+  2.2.2 Live システム固有のパッケージ設定はありません
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#103">
+    2.3 連絡先
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    ユーザ
+  </h1>
+
+<h1 class="minitoc">
+    インストール
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.ja.html" target="_top">
+    3. インストール
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#110">
+    3.1 要件
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#118">
+    3.2 live-build のインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#124">
+  3.2.1 Debian リポジトリから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#127">
+  3.2.2 ソースから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#138">
+  3.2.3 「スナップショット」から
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#140">
+    3.3 live-boot と live-config のインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#142">
+  3.3.1 Debian リポジトリから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#144">
+  3.3.2 ソースから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#156">
+  3.3.3 「スナップショット」から
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    基本
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.ja.html" target="_top">
+    4. 基本
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#163">
+    4.1 Live システムとは何?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#171">
+    4.2 ビルド済みイメージのダウンロード
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#173">
+    4.3 ウェブ Live イメージビルダーの利用
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#175">
+  4.3.1 ウェブビルダーの使い方と注意
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#179">
+    4.4 最初の段階: ISO hybrid イメージのビルド
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#190">
+    4.5 ISO hybrid Live イメージの利用
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#192">
+  4.5.1 ISOイメージの実際のメディアへの書き込み
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#195">
+  4.5.2 ISO hybrid イメージのUSBメモリへのコピー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#200">
+  4.5.3 USBメモリの空きスペースの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#207">
+  4.5.4 Live メディアのブート
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#211">
+    4.6 仮想マシンを利用したテスト
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#218">
+  4.6.1 QEMU でのISOイメージのテスト
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#225">
+  4.6.2 VirtualBox でのISOイメージのテスト
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#233">
+    4.7 HDDイメージのビルド及び利用
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#245">
+    4.8 netboot イメージのビルド
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#258">
+  4.8.1 DHCP サーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#262">
+  4.8.2 TFTP サーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#267">
+  4.8.3 NFSサーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#275">
+  4.8.4 ネットワーク経由のブートをテストする方法
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#284">
+    4.9 ウェブブート
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#286">
+  4.9.1 ウェブブートファイルの取得
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#292">
+  4.9.2 ウェブブートイメージの起動
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    ツールの概要
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.ja.html" target="_top">
+    5. ツールの概要
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#300">
+    5.1 live-build パッケージ
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#310">
+  5.1.1 <tt>lb config</tt> コマンド
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#320">
+  5.1.2 <tt>lb build</tt> コマンド
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#322">
+  5.1.3 <tt>lb clean</tt> コマンド
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#324">
+    5.2 live-boot パッケージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#328">
+    5.3 live-config パッケージ
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    設定の管理
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.ja.html" target="_top">
+    6. 設定の管理
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ja.html#333">
+    6.1 設定変更への対応
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ja.html#335">
+  6.1.1 自動化スクリプトを使う理由は? それは何をするもの?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ja.html#338">
+  6.1.2 自動化スクリプトの使用例
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ja.html#345">
+    6.2 Git経由で公開されている設定の複製
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    収録内容の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.ja.html" target="_top">
+    7. 独自化の概要
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#359">
+    7.1 ビルド時とブート時の設定
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#362">
+    7.2 ビルド段階
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#365">
+    7.3 ファイルによる lb config の補完
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#367">
+    7.4 独自化タスク
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    インストールするパッケージの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.ja.html" target="_top">
+    8. インストールするパッケージの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#372">
+    8.1 パッケージソース
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#373">
+  8.1.1 ディストリビューション、アーカイブ領域とモード
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#380">
+  8.1.2 ディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#382">
+  8.1.3 ビルド時に利用するディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#386">
+  8.1.4 実行時に利用するディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#389">
+  8.1.5 追加リポジトリ
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#397">
+    8.2 インストールするパッケージの選択
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#399">
+  8.2.1 パッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#402">
+  8.2.2 メタパッケージの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#410">
+  8.2.3 ローカルパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#414">
+  8.2.4 ローカルバイナリパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#416">
+  8.2.5 生成されたパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#420">
+  8.2.6 条件付き内部パッケージ一覧の利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#429">
+  8.2.7 インストール時のパッケージの削除
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#431">
+  8.2.8 デスクトップ及び言語タスク
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#436">
+  8.2.9 カーネルのフレーバー (種類) とバージョン
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#441">
+  8.2.10 独自のカーネル
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#449">
+    8.3 変更したあるいはサードパーティ製パッケージのインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#456">
+  8.3.1 <tt>packages.chroot</tt> を利用した独自のパッケージのインストール
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#463">
+  8.3.2 APTリポジトリを利用した独自パッケージのインストール
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#466">
+  8.3.3 独自パッケージとAPT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#469">
+    8.4 ビルド時のAPT設定
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#471">
+  8.4.1 apt と aptitude の選択
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#475">
+  8.4.2 APTでのプロキシの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#478">
+  8.4.3 APTの調整による容量節約
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#487">
+  8.4.4 apt や aptitude へのオプションの受け渡し
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#492">
+  8.4.5 APTのピン止め
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    収録内容の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.ja.html" target="_top">
+    9. 収録内容の独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#506">
+  9.1.1 Live/chroot ローカルインクルード
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#513">
+  9.1.2 バイナリローカルインクルード
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#517">
+    9.2 フック
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#520">
+  9.2.1 chroot ローカルフック
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#522">
+  9.2.2 バイナリローカルフック
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#524">
+  9.2.3 ブート時フック
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#526">
+    9.3 Debconf 質問の preseed
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    実行時の挙動の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html" target="_top">
+    10. 実行時の挙動の独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#532">
+    10.1 live ユーザの独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#541">
+    10.2 ロケールと言語の独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#558">
+    10.3 保持機能
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#580">
+  10.3.1 persistence.conf ファイル
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#585">
+  10.3.2 保持先を複数使いたい場合
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#591">
+  10.3.3 暗号化した保持先の利用
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    バイナリイメージの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.ja.html" target="_top">
+    11. バイナリイメージの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ja.html#619">
+    11.1 ブートローダ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ja.html#626">
+    11.2 ISO メタ情報
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Debian インストーラの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.ja.html" target="_top">
+    12. Debian インストーラの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#636">
+    12.1 Debian インストーラの種類
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#648">
+    12.2 preseed による Debian インストーラの独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#651">
+    12.3 Debian インストーラの収録内容の独自化
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    プロジェクト
+  </h1>
+
+<h1 class="minitoc">
+    プロジェクトへの貢献
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.ja.html" target="_top">
+    13. プロジェクトへの貢献
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ja.html#667">
+    13.1 変更を加える
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ja.html#682">
+    13.2 man ページの翻訳
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    バグの報告
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.ja.html" target="_top">
+    14. バグの報告
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#698">
+    14.1 既知の問題
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#703">
+    14.2 最初から再ビルド
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#705">
+    14.3 最新のパッケージを使う
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#707">
+    14.4 情報収集
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#724">
+    14.5 可能であれば失敗している状況を分離する
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#726">
+    14.6 正しいパッケージに対してバグを報告する
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#729">
+  14.6.1 ビルド時のパッケージ収集中
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#732">
+  14.6.2 ビルド時のパッケージインストール中
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#736">
+  14.6.3 ブート時
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#738">
+  14.6.4 実行時
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#740">
+    14.7 調査してください
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#744">
+    14.8 バグの報告先
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    コーディングスタイル
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.ja.html" target="_top">
+    15. コーディングスタイル
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#751">
+    15.1 互換性
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#756">
+    15.2 インデント
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#758">
+    15.3 改行
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#770">
+    15.4 変数
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#789">
+    15.5 その他
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    手順
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.ja.html" target="_top">
+    16. 手順
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.ja.html#797">
+    16.1 主要リリース
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.ja.html#803">
+    16.2 ポイントリリース
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.ja.html#807">
+  16.2.1 ある Debian リリースの最後のポイントリリース
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.ja.html#809">
+  16.2.2 ポイントリリース告知用テンプレート
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Gitリポジトリ
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.ja.html" target="_top">
+    17. Gitリポジトリ
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.ja.html#827">
+    17.1 リポジトリを複数処理
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    例
+  </h1>
+
+<h1 class="minitoc">
+    例
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.ja.html" target="_top">
+    18. 例
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#835">
+    18.1 例の使用
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#839">
+    18.2 チュートリアル 1: デフォルトイメージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#848">
+    18.3 チュートリアル 2: ウェブブラウザユーティリティ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#856">
+    18.4 チュートリアル 3: 私的イメージ
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.ja.html#859">
+  18.4.1 最初の改訂
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.ja.html#873">
+  18.4.2 2回目の改訂
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#885">
+    18.5 VNC 公衆クライアント
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#899">
+    18.6 128MB USB メモリ向けの基本イメージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#910">
+    18.7 地域化した GNOME デスクトップとインストーラ
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    付録
+  </h1>
+
+<h1 class="minitoc">
+    スタイルガイド
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.ja.html" target="_top">
+    19. スタイルガイド
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.ja.html#925">
+    19.1 著者向けガイドライン
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#928">
+  19.1.1 言語特性
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#961">
+  19.1.2 手順
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.ja.html#1000">
+    19.2 翻訳者向けガイドライン
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#1004">
+  19.2.1 翻訳の手がかり
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.ja.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.ja.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Live システムマニュアル
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Live システムプロジェクトへの貢献
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#74" class="lnkocn">74</a></label>
+  <h1 class="norm" id="74"><a name="74"></a>
+    2. Live システムプロジェクトについて
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#75" class="lnkocn">75</a></label>
+  <p class="bold" id="75"><a name="75"></a> <a id="hc2.1"></a>
+    <a name="c2.1" ></a><a name="h2.1" ></a>2.1 動機
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#76" class="lnkocn">76</a></label>
+  <p class="bold" id="76"><a name="76"></a> <a id="hc2.1.1"></a>
+    <a name="c2.1.1" ></a><a name="h2.1.1" ></a>2.1.1 現在の Live システムの問題点
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#77" class="lnkocn">77</a></label>
+  <p class="i0" id="77">
+    Live システムプロジェクトが始まったとき、利用可能な Debian ベースの Live システムは既に複数あり、素晴らしい作業を行っていました。Debian の視点から見て、そのほとんどには以下のような不満があります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#78" class="lnkocn">78</a></label>
+  <ul>
+  <li class="bullet" id="78">
+    Debian のプロジェクトではないために Debian でのサポートがない。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#79" class="lnkocn">79</a></label>
+  <ul>
+  <li class="bullet" id="79">
+    異なるディストリビューション、例えば*{安定版 (testing)}* と*{不安定版 (unstable)}* を混ぜて使っている。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#80" class="lnkocn">80</a></label>
+  <ul>
+  <li class="bullet" id="80">
+    サポートしているのが i386 だけ。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#81" class="lnkocn">81</a></label>
+  <ul>
+  <li class="bullet" id="81">
+    容量節約のためにパッケージの挙動や見た目を変更している。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#82" class="lnkocn">82</a></label>
+  <ul>
+  <li class="bullet" id="82">
+    Debian アーカイブ外のパッケージを収録している。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#83" class="lnkocn">83</a></label>
+  <ul>
+  <li class="bullet" id="83">
+    Debian のものではない追加パッチを適用した独自カーネルを使っている。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#84" class="lnkocn">84</a></label>
+  <ul>
+  <li class="bullet" id="84">
+    本体のサイズのために巨大で遅く、レスキュー用途に合わない。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#85" class="lnkocn">85</a></label>
+  <ul>
+  <li class="bullet" id="85">
+    異なる形式、例えば CD、DVD、USB メモリ、netboot イメージから利用できない。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#86" class="lnkocn">86</a></label>
+  <p class="bold" id="86"><a name="86"></a> <a id="hc2.1.2"></a>
+    <a name="c2.1.2" ></a><a name="h2.1.2" ></a>2.1.2 自身の Live システムを作成する理由
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#87" class="lnkocn">87</a></label>
+  <p class="i0" id="87">
+    Debian はユニバーサルオペレーティングシステムです: Debian に Live システムがあることで Debian システムを案内、正確に表現することができるとともに、主に以下の利点があります:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#88" class="lnkocn">88</a></label>
+  <ul>
+  <li class="bullet" id="88">
+    これは Debian のサブプロジェクトです。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#89" class="lnkocn">89</a></label>
+  <ul>
+  <li class="bullet" id="89">
+    単一のディストリビューションの (現在の) 状態を反映します。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#90" class="lnkocn">90</a></label>
+  <ul>
+  <li class="bullet" id="90">
+    可能な限り多くのアーキテクチャで動作します。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#91" class="lnkocn">91</a></label>
+  <ul>
+  <li class="bullet" id="91">
+    変更しない Debian パッケージだけで構成されます。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#92" class="lnkocn">92</a></label>
+  <ul>
+  <li class="bullet" id="92">
+    Debian アーカイブにないパッケージは何も含まれません。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#93" class="lnkocn">93</a></label>
+  <ul>
+  <li class="bullet" id="93">
+    改変しない Debian のカーネルを追加パッチなしで利用します。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#94" class="lnkocn">94</a></label>
+  <p class="bold" id="94"><a name="94"></a> <a id="hc2.2"></a>
+    <a name="c2.2" ></a><a name="h2.2" ></a>2.2 哲学
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#95" class="lnkocn">95</a></label>
+  <p class="bold" id="95"><a name="95"></a> <a id="hc2.2.1"></a>
+    <a name="c2.2.1" ></a><a name="h2.2.1" ></a>2.2.1 Debian「main」の変更しないパッケージしか使いません
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#96" class="lnkocn">96</a></label>
+  <p class="i0" id="96">
+    「main」Debian リポジトリのパッケージだけを利用します。「non-free」は Debian の中には含まれないため、公式の Live システムのイメージでは利用できません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#97" class="lnkocn">97</a></label>
+  <p class="i0" id="97">
+    いかなるパッケージも変更しません。何か変更が必要であれば Debian のそのパッケージのメンテナと調整を行います。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#98" class="lnkocn">98</a></label>
+  <p class="i0" id="98">
+    例外として、<i>live-boot</i> や <i>live-build</i>、<i>live-config</i> といった私達の独自のパッケージを開発用の目的 (例えば開発用スナップショットの作成) のため私達自身のリポジトリから一時的に利用するかもしれません。このパッケージ群は定期的に Debian にアップロードされます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#99" class="lnkocn">99</a></label>
+  <p class="bold" id="99"><a name="99"></a> <a id="hc2.2.2"></a>
+    <a name="c2.2.2" ></a><a name="h2.2.2" ></a>2.2.2 Live システム固有のパッケージ設定はありません
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#100" class="lnkocn">100</a></label>
+  <p class="i0" id="100">
+    現段階で、インストール例や代替設定は組み込んでいません。パッケージが利用されるのは Debian を普通にインストールした後のものなので全てデフォルト設定です。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#101" class="lnkocn">101</a></label>
+  <p class="i0" id="101">
+    別のデフォルト設定が必要であれば Debian のそのパッケージのメンテナと調整を行います。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#102" class="lnkocn">102</a></label>
+  <p class="i0" id="102">
+    debconf を使うことで提供されるパッケージ設定システムにより、独自に作成した Live システムのイメージを使って独自に設定したパッケージをインストールすることができるようになりますが、 <a href="the-basics.ja.html#downloading-prebuilt-images">ビルド済み Live イメージ</a>  では Live 環境で動作させるために絶対に必要だという場合を除いて、パッケージをそのデフォルト設定のままにすることを選択しました。Live 用ツールチェインや <a href="managing-a-configuration.ja.html#clone-configuration-via-git">ビルド済みイメージ設定</a>  への変更よりも、そこで可能である限り、Debian アーカイブにあるパッケージを Live システムでよりよく動作させることを好みます。さらなる情報については、 <a href="customization-overview.ja.html#customization-overview">独自化概要</a>  を見てください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#103" class="lnkocn">103</a></label>
+  <p class="bold" id="103"><a name="103"></a> <a id="hcontact"></a>
+    <a name="h2.3" ></a><a name="contact" ></a>2.3 連絡先
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#104" class="lnkocn">104</a></label>
+  <ul>
+  <li class="bullet" id="104">
+    <b>メーリングリスト</b>: プロジェクトの第一の連絡先は ‹<a href="https://lists.debian.org/debian-live/" target="_top">https://lists.debian.org/debian-live/</a>› のメーリングリストです。debian-live@lists.debian.org 宛てのメールにより、メーリングリストに直接メールを送ることができます。メーリングリストのアーカイブは ‹<a href="https://lists.debian.org/debian-live/" target="_top">https://lists.debian.org/debian-live/</a>› で利用できます。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#105" class="lnkocn">105</a></label>
+  <ul>
+  <li class="bullet" id="105">
+    <b>IRC</b>: ユーザや開発者達が irc.debian.org (OFTC) の #debian-live チャンネルにいます。IRCで質問するときは静かに回答を待ってください。回答が得られないときはメーリングリストにメールで質問してください。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#106" class="lnkocn">106</a></label>
+  <ul>
+  <li class="bullet" id="106">
+    <b>BTS</b> :  <a href="https://www.debian.org/Bugs/">Debian バグ追跡システム</a>  (BTS) には、ユーザや開発者により報告されたバグの詳細があります。バグにはそれぞれに番号が与えられ、対処されたものとして指示するまで存在するバグとして扱われます。さらなる情報については <a href="bugs.ja.html#bugs">バグの報告</a>  を見てください。
+  </li>
+  </ul>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="about-manual.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="installation.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

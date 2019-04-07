@@ -1,0 +1,4 @@
+#!/bin/bash
+echo BOOT CUSTOM
+
+echo BOOT CUSTOM >/tmp/boot-custom

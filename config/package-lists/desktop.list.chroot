@@ -1,0 +1,9 @@
+xorg 
+#xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev
+i3-wm i3status i3lock
+vlc chromium
+youtube-dl
+synergy
+
+printer-driver-cups-pdf
+

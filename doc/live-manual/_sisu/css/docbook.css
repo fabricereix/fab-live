@@ -1,0 +1,204 @@
+/* SiSU css docbook.xml default style */
+    book {
+      display: block;
+      margin-left: 0mm;
+      margin-right: 0mm;
+    }
+    bookinfo {
+      display: block;
+      margin-bottom: 20px;
+      background-color: #dddddd;
+    }
+    source_control {
+      display: block;
+    }
+    dc,sc {
+      display: block;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      color: blue;
+      background-color: #dddddd;
+      font-weight: normal;
+      text-align: justify;
+      font-size: xx-small;
+      line-height: 120%;
+      margin-left: 5%;
+      margin-right: 5mm;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    sc {
+      color: green;
+    }
+    keywords,copyright {
+      display: block;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      color: red;
+      background-color: #dddddd;
+      font-weight: normal;
+      text-align: justify;
+      font-size: xx-small;
+      line-height: 120%;
+      margin-left: 5%;
+      margin-right: 5mm;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    body {
+      color: black;
+      background: #ffffff;
+    }
+    a:link {
+      color: #003399;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #003399;
+      text-decoration: none;
+      /* background-color: #e3ecef; */
+    }
+    a:hover {
+      color: #000000;
+      text-decoration: underline;
+      background-color: #fff3b6;
+    }
+    a:hover IMG {
+      background-color: #ffffff;
+    }
+    a:active {
+      color: #003399;
+      text-decoration: underline;
+    }
+    object {
+      display: block;
+      margin-left: 2mm;
+      margin-right: 2mm;
+      margin-top: 4px;
+      margin-bottom: 8px;
+    }
+    part {
+      display: block;
+      /* font-weight: bold; */
+    }
+    contents {
+      font-weight: normal;
+    }
+    para {
+      display: block;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      /* font-weight: normal; */
+      text-align: justify;
+      font-size: 100%;
+      line-height: 150%;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 2px;
+      margin-bottom: 0px;
+    }
+    para.verse, para.block, para.group, para.code {
+      text-align: left;
+    }
+    para.norm {
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      font-weight: normal;
+    }
+    para.h1, title {
+      display: block;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      font-size: 120%;
+      font-weight: bold;
+      text-align: left;
+      line-height: 120%;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    para.h2 {
+      font-weight: bold;
+      font-size: 110%;
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    para.h3 {
+      font-size: 110%;
+      font-weight: bold;
+      text-align: left;
+    }
+    para.h4 {
+      font-size: 110%;
+      font-weight: bold;
+      text-align: left;
+    }
+    para.h5 {
+      font-size: 110%;
+      font-weight: bold;
+      text-align: left;
+    }
+    para.h6 {
+      font-size: 110%;
+      font-weight: bold;
+      text-align: left;
+    }
+    para.h7 {
+      font-size: 110%;
+      font-weight: bold;
+      text-align: left;
+    }
+    table {
+      margin-left: 5%;
+      display: block;
+    }
+    tr {
+      display: block;
+    }
+    th, td {
+      display: inline;
+    }
+    nametag {
+      display: none;
+    }
+    number {
+      padding-right: 4px;
+    }
+    ocn {
+      font-weight: normal;
+      display: block;
+      text-align: right;
+      vertical-align: super;
+      color: #990000;
+      font-size: xx-small;
+      margin-right: 0mm;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    endnote {
+      display: block;
+      font-size: small;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      font-weight: normal;
+      line-height: 150%;
+      text-align: justify;
+      margin-left: 10%;
+      margin-right: 5%;
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    endnote_indent {
+      display: block;
+      font-size: small;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      font-weight: normal;
+      line-height: 150%;
+      text-align: justify;
+      margin-left: 15%;
+      margin-right: 5%;
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    en {
+      font-size: xx-small;
+      vertical-align: super;
+    }
+    i { font-style: italic; }
+    b { font-style: bold; }
+    u { text-decoration: underline; }
+    br { display: block; }

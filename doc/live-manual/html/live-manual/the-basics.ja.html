@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    the-basics -
+    Live システムマニュアル
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Live システムマニュアル" />
+  <meta name="dc.author" content="Live システムプロジェクト &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Live システムプロジェクト &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="2015-09-22"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. \\  \\ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. \\  \\ You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/. \\  \\ The complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-3 file." />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="ja">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="installation.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="overview-of-tools.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Live システムマニュアル
+  </h1>
+
+<h1 class="minitoc">
+    About
+  </h1>
+
+<h1 class="minitoc">
+    このマニュアルについて
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.ja.html" target="_top">
+    1. このマニュアルについて
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#8">
+    1.1 せっかちな人向け
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#12">
+    1.2 用語
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#29">
+    1.3 著者
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ja.html#44">
+    1.4 この文書への貢献
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.ja.html#46">
+  1.4.1 変更の適用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.ja.html#60">
+  1.4.2 翻訳
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Live システムプロジェクトへの貢献
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.ja.html" target="_top">
+    2. Live システムプロジェクトについて
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#75">
+    2.1 動機
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#76">
+  2.1.1 現在の Live システムの問題点
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#86">
+  2.1.2 自身の Live システムを作成する理由
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#94">
+    2.2 哲学
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#95">
+  2.2.1 Debian「main」の変更しないパッケージしか使いません
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ja.html#99">
+  2.2.2 Live システム固有のパッケージ設定はありません
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ja.html#103">
+    2.3 連絡先
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    ユーザ
+  </h1>
+
+<h1 class="minitoc">
+    インストール
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.ja.html" target="_top">
+    3. インストール
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#110">
+    3.1 要件
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#118">
+    3.2 live-build のインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#124">
+  3.2.1 Debian リポジトリから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#127">
+  3.2.2 ソースから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#138">
+  3.2.3 「スナップショット」から
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.ja.html#140">
+    3.3 live-boot と live-config のインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#142">
+  3.3.1 Debian リポジトリから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#144">
+  3.3.2 ソースから
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ja.html#156">
+  3.3.3 「スナップショット」から
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    基本
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.ja.html" target="_top">
+    4. 基本
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#163">
+    4.1 Live システムとは何?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#171">
+    4.2 ビルド済みイメージのダウンロード
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#173">
+    4.3 ウェブ Live イメージビルダーの利用
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#175">
+  4.3.1 ウェブビルダーの使い方と注意
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#179">
+    4.4 最初の段階: ISO hybrid イメージのビルド
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#190">
+    4.5 ISO hybrid Live イメージの利用
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#192">
+  4.5.1 ISOイメージの実際のメディアへの書き込み
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#195">
+  4.5.2 ISO hybrid イメージのUSBメモリへのコピー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#200">
+  4.5.3 USBメモリの空きスペースの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#207">
+  4.5.4 Live メディアのブート
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#211">
+    4.6 仮想マシンを利用したテスト
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#218">
+  4.6.1 QEMU でのISOイメージのテスト
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#225">
+  4.6.2 VirtualBox でのISOイメージのテスト
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#233">
+    4.7 HDDイメージのビルド及び利用
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#245">
+    4.8 netboot イメージのビルド
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#258">
+  4.8.1 DHCP サーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#262">
+  4.8.2 TFTP サーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#267">
+  4.8.3 NFSサーバ
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#275">
+  4.8.4 ネットワーク経由のブートをテストする方法
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ja.html#284">
+    4.9 ウェブブート
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#286">
+  4.9.1 ウェブブートファイルの取得
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ja.html#292">
+  4.9.2 ウェブブートイメージの起動
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    ツールの概要
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.ja.html" target="_top">
+    5. ツールの概要
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#300">
+    5.1 live-build パッケージ
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#310">
+  5.1.1 <tt>lb config</tt> コマンド
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#320">
+  5.1.2 <tt>lb build</tt> コマンド
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ja.html#322">
+  5.1.3 <tt>lb clean</tt> コマンド
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#324">
+    5.2 live-boot パッケージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ja.html#328">
+    5.3 live-config パッケージ
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    設定の管理
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.ja.html" target="_top">
+    6. 設定の管理
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ja.html#333">
+    6.1 設定変更への対応
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ja.html#335">
+  6.1.1 自動化スクリプトを使う理由は? それは何をするもの?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ja.html#338">
+  6.1.2 自動化スクリプトの使用例
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ja.html#345">
+    6.2 Git経由で公開されている設定の複製
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    収録内容の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.ja.html" target="_top">
+    7. 独自化の概要
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#359">
+    7.1 ビルド時とブート時の設定
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#362">
+    7.2 ビルド段階
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#365">
+    7.3 ファイルによる lb config の補完
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ja.html#367">
+    7.4 独自化タスク
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    インストールするパッケージの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.ja.html" target="_top">
+    8. インストールするパッケージの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#372">
+    8.1 パッケージソース
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#373">
+  8.1.1 ディストリビューション、アーカイブ領域とモード
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#380">
+  8.1.2 ディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#382">
+  8.1.3 ビルド時に利用するディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#386">
+  8.1.4 実行時に利用するディストリビューションミラー
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#389">
+  8.1.5 追加リポジトリ
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#397">
+    8.2 インストールするパッケージの選択
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#399">
+  8.2.1 パッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#402">
+  8.2.2 メタパッケージの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#410">
+  8.2.3 ローカルパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#414">
+  8.2.4 ローカルバイナリパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#416">
+  8.2.5 生成されたパッケージ一覧
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#420">
+  8.2.6 条件付き内部パッケージ一覧の利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#429">
+  8.2.7 インストール時のパッケージの削除
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#431">
+  8.2.8 デスクトップ及び言語タスク
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#436">
+  8.2.9 カーネルのフレーバー (種類) とバージョン
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#441">
+  8.2.10 独自のカーネル
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#449">
+    8.3 変更したあるいはサードパーティ製パッケージのインストール
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#456">
+  8.3.1 <tt>packages.chroot</tt> を利用した独自のパッケージのインストール
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#463">
+  8.3.2 APTリポジトリを利用した独自パッケージのインストール
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#466">
+  8.3.3 独自パッケージとAPT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ja.html#469">
+    8.4 ビルド時のAPT設定
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#471">
+  8.4.1 apt と aptitude の選択
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#475">
+  8.4.2 APTでのプロキシの利用
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#478">
+  8.4.3 APTの調整による容量節約
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#487">
+  8.4.4 apt や aptitude へのオプションの受け渡し
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ja.html#492">
+  8.4.5 APTのピン止め
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    収録内容の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.ja.html" target="_top">
+    9. 収録内容の独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#506">
+  9.1.1 Live/chroot ローカルインクルード
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#513">
+  9.1.2 バイナリローカルインクルード
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#517">
+    9.2 フック
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#520">
+  9.2.1 chroot ローカルフック
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#522">
+  9.2.2 バイナリローカルフック
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ja.html#524">
+  9.2.3 ブート時フック
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ja.html#526">
+    9.3 Debconf 質問の preseed
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    実行時の挙動の独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html" target="_top">
+    10. 実行時の挙動の独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#532">
+    10.1 live ユーザの独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#541">
+    10.2 ロケールと言語の独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#558">
+    10.3 保持機能
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#580">
+  10.3.1 persistence.conf ファイル
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#585">
+  10.3.2 保持先を複数使いたい場合
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ja.html#591">
+  10.3.3 暗号化した保持先の利用
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    バイナリイメージの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.ja.html" target="_top">
+    11. バイナリイメージの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ja.html#619">
+    11.1 ブートローダ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ja.html#626">
+    11.2 ISO メタ情報
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Debian インストーラの独自化
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.ja.html" target="_top">
+    12. Debian インストーラの独自化
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#636">
+    12.1 Debian インストーラの種類
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#648">
+    12.2 preseed による Debian インストーラの独自化
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ja.html#651">
+    12.3 Debian インストーラの収録内容の独自化
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    プロジェクト
+  </h1>
+
+<h1 class="minitoc">
+    プロジェクトへの貢献
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.ja.html" target="_top">
+    13. プロジェクトへの貢献
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ja.html#667">
+    13.1 変更を加える
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ja.html#682">
+    13.2 man ページの翻訳
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    バグの報告
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.ja.html" target="_top">
+    14. バグの報告
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#698">
+    14.1 既知の問題
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#703">
+    14.2 最初から再ビルド
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#705">
+    14.3 最新のパッケージを使う
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#707">
+    14.4 情報収集
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#724">
+    14.5 可能であれば失敗している状況を分離する
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#726">
+    14.6 正しいパッケージに対してバグを報告する
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#729">
+  14.6.1 ビルド時のパッケージ収集中
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#732">
+  14.6.2 ビルド時のパッケージインストール中
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#736">
+  14.6.3 ブート時
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ja.html#738">
+  14.6.4 実行時
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#740">
+    14.7 調査してください
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ja.html#744">
+    14.8 バグの報告先
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    コーディングスタイル
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.ja.html" target="_top">
+    15. コーディングスタイル
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#751">
+    15.1 互換性
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#756">
+    15.2 インデント
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#758">
+    15.3 改行
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#770">
+    15.4 変数
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ja.html#789">
+    15.5 その他
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    手順
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.ja.html" target="_top">
+    16. 手順
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.ja.html#797">
+    16.1 主要リリース
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.ja.html#803">
+    16.2 ポイントリリース
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.ja.html#807">
+  16.2.1 ある Debian リリースの最後のポイントリリース
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.ja.html#809">
+  16.2.2 ポイントリリース告知用テンプレート
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Gitリポジトリ
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.ja.html" target="_top">
+    17. Gitリポジトリ
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.ja.html#827">
+    17.1 リポジトリを複数処理
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    例
+  </h1>
+
+<h1 class="minitoc">
+    例
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.ja.html" target="_top">
+    18. 例
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#835">
+    18.1 例の使用
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#839">
+    18.2 チュートリアル 1: デフォルトイメージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#848">
+    18.3 チュートリアル 2: ウェブブラウザユーティリティ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#856">
+    18.4 チュートリアル 3: 私的イメージ
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.ja.html#859">
+  18.4.1 最初の改訂
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.ja.html#873">
+  18.4.2 2回目の改訂
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#885">
+    18.5 VNC 公衆クライアント
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#899">
+    18.6 128MB USB メモリ向けの基本イメージ
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ja.html#910">
+    18.7 地域化した GNOME デスクトップとインストーラ
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    付録
+  </h1>
+
+<h1 class="minitoc">
+    スタイルガイド
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.ja.html" target="_top">
+    19. スタイルガイド
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.ja.html#925">
+    19.1 著者向けガイドライン
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#928">
+  19.1.1 言語特性
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#961">
+  19.1.2 手順
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.ja.html#1000">
+    19.2 翻訳者向けガイドライン
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ja.html#1004">
+  19.2.1 翻訳の手がかり
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.ja.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.ja.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Live システムマニュアル
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    基本
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#159" class="lnkocn">159</a></label>
+  <h1 class="norm" id="159"><a name="159"></a>
+    4. 基本
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#160" class="lnkocn">160</a></label>
+  <p class="i0" id="160">
+    この章ではビルドプロセスの概要と最も広く利用されている3種類のイメージの使用手順について簡単に述べます。最も汎用性の高い形式のイメージである <tt>iso-hybrid</tt> は、仮想マシンや光学メディア、USBポータブルストレージ機器上で利用できます。特に変わった状況では後述のように、<tt>hdd</tt> 形式の方が適するかもしれません。この章では <tt>netboot</tt> 形式のイメージをビルド、利用する手順を記載しています。この形式はサーバ上で必要とする準備のためにやや複雑になります。これは netboot についてまだ不慣れな人にとってはわずかに高度な話題となりますが、その準備さえできればローカルネットワーク上でブートするためのイメージをテスト、展開するのに非常に便利な方法で、難なくイメージのメディアを扱うことができるため、ここに収録しています。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#161" class="lnkocn">161</a></label>
+  <p class="i0" id="161">
+    この節は  <a href="the-basics.ja.html#webbooting">ウェブブート</a>  の簡単な手引きで終えています。これは恐らく異なる目的の異なるイメージを必要に応じて切り替えて使う最も簡単な方法で、手段としてインターネットを使います。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#162" class="lnkocn">162</a></label>
+  <p class="i0" id="162">
+    この章全体を通して、<i>live-build</i> により作成されるデフォルトのファイル名を頻繁に参照しています。 <a href="the-basics.ja.html#downloading-prebuilt-images">ビルド済みイメージをダウンロード</a>  した場合、実際のファイル名は異なる場合があります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#163" class="lnkocn">163</a></label>
+  <p class="bold" id="163"><a name="163"></a> <a id="hwhat-is-live"></a>
+    <a name="h4.1" ></a><a name="what-is-live" ></a>4.1 Live システムとは何?
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#164" class="lnkocn">164</a></label>
+  <p class="i0" id="164">
+    Live システムとは、 通常 CD-ROM やUSBメモリ等の取り外し可能メディア、あるいはネットワークからコンピュータ上でブートされるオペレーティングシステムを意味し、普通のドライブに何もインストールせずに利用でき、実行時に自動設定が行われます ( <a href="about-manual.ja.html#terms">用語</a>  参照)。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#165" class="lnkocn">165</a></label>
+  <p class="i0" id="165">
+    Live システムはオペレーティングシステムで、サポートしているうちの単一のアーキテクチャ (現在 amd64 と i386) 向けにビルドされています。以下から構成されています。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#166" class="lnkocn">166</a></label>
+  <ul>
+  <li class="bullet" id="166">
+    <b>Linux カーネルイメージ</b> 、通常 <tt>vmlinuz*</tt> という名前です
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#167" class="lnkocn">167</a></label>
+  <ul>
+  <li class="bullet" id="167">
+    <b>初期 RAM ディスクイメージ (initrd)</b>: Linux ブート用に用意された RAM ディスクで、システムのイメージをマウントするのに必要となる可能性があるモジュールとマウントするためのスクリプトをいくつか収録しています。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#168" class="lnkocn">168</a></label>
+  <ul>
+  <li class="bullet" id="168">
+    <b>システムイメージ</b> : オペレーティングシステムのファイルシステムのイメージです。通常、Live システムのイメージサイズを最小限にするため、SquashFS 圧縮ファイルシステムが利用されています。このファイルシステムは読み込み専用であることに注意してください。そのため、ブート処理中は Live システムはRAMディスクと「ユニオン」機構を利用して実行中のシステム中でファイルを書き込むことができるようにしています。ただし、オプションの保持機能を使っていない限り、変更は全てシャットダウンにより失われます ( <a href="customizing-run-time-behaviours.ja.html#persistence">保持機能</a>  参照)。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#169" class="lnkocn">169</a></label>
+  <ul>
+  <li class="bullet" id="169">
+    <b>ブートローダ</b>: 選択したメディアからブートするように作られた短いコードの集合で、オプション/設定を選択できるプロンプトやメニューを恐らく提示します。Linux カーネルとその initrd を読み込んでそのシステムのファイルシステム上で実行します。前に言及した構成要素を収録する対象メディアやファイルシステムの形式によっては別の方法があります。isolinux では ISO9660 形式のCDやDVDからのブート、syslinux ではHDDやUSBドライブの VFAT パーティションからのブート、extlinux では ext2/3/4 や btrfs パーティション、pxelinux では PXE netboot、GRUB では ext2/3/4 パーティション、等。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#170" class="lnkocn">170</a></label>
+  <p class="i0" id="170">
+    <i>live-build</i> を使って Linux カーネル、initrd、それを実行するためのブートローダを独自仕様で用意して全て1つのメディア特有の形式 (ISO9660 イメージやディスクイメージ等) でシステムのイメージをビルドできます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#171" class="lnkocn">171</a></label>
+  <p class="bold" id="171"><a name="171"></a> <a id="hdownloading-prebuilt-images"></a>
+    <a name="h4.2" ></a><a name="downloading-prebuilt-images" ></a>4.2 ビルド済みイメージのダウンロード
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#172" class="lnkocn">172</a></label>
+  <p class="i0" id="172">
+    このマニュアルの対象は自分の Live イメージの開発やビルドですが、使い方の手引き、あるいは自分でビルドする代わりにビルド済みイメージを簡単に試してみたいこともあるでしょう。 <a href="managing-a-configuration.ja.html#clone-configuration-via-git"><i>live-images</i> のgitリポジトリ</a>  と公式の安定版 (stable) リリースを使ってビルドされたイメージが ‹<a href="https://www.debian.org/CD/live/" target="_top">https://www.debian.org/CD/live/</a>› で公開されています。さらに、古いものや今後のリリース、non-free ファームウェアを収録する非公式のイメージ、あるいはドライバが ‹<a href="http://debian-live.alioth.debian.org/cdimage/release/" target="_top">http://debian-live.alioth.debian.org/cdimage/release/</a>› から利用できるようになっています。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#173" class="lnkocn">173</a></label>
+  <p class="bold" id="173"><a name="173"></a> <a id="husing-web-builder"></a>
+    <a name="h4.3" ></a><a name="using-web-builder" ></a>4.3 ウェブ Live イメージビルダーの利用
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#174" class="lnkocn">174</a></label>
+  <p class="i0" id="174">
+    コミュニティへのサービスとして、ウェブベースの Live イメージビルダーサービスを ‹<a href="http://debian-live.alioth.debian.org/build/" target="_top">http://debian-live.alioth.debian.org/build/</a>› で運営しています。このサイトはベストエフォートの方針で保守されています。つまり、最新でいつでも使える状態の維持に努め、大規模な運用停止については問題を告知しますが、100% いつでも使えることやイメージの高速なビルドを保証することはできず、サービスについて解決に時間を要する問題が時々あるかもしれないということです。サービスについて問題や疑問があれば、問題のあるビルドへのリンクを添えて <a href="about-project.ja.html#contact">連絡</a>  してください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#175" class="lnkocn">175</a></label>
+  <p class="bold" id="175"><a name="175"></a> <a id="hc4.3.1"></a>
+    <a name="c4.3.1" ></a><a name="h4.3.1" ></a>4.3.1 ウェブビルダーの使い方と注意
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#176" class="lnkocn">176</a></label>
+  <p class="i0" id="176">
+    ウェブインターフェイスでは現在、オプションの不正な組み合わせを避ける対策を何も取っていません。また、特に、変更すると通常ウェブフォームにある他のオプションのデフォルト値 (つまり <i>live-build</i> を直接使った場合の値) が変わるオプションを変更した場合にウェブビルダーはそのデフォルト値を変更しません。最も顕著な例として、<tt>--architectures</tt> をデフォルトの <tt>i386</tt> から <tt>amd64</tt> に変更すると対応するオプション <tt>--linux-flavours</tt> をデフォルトの <tt>586</tt> から <tt>amd64</tt> に変更する必要があります。ウェブビルダーにインストールされている <i>live-build</i> のバージョンやさらなる詳細については <tt>lb_config</tt> man ページを見てください。<i>live-build</i> のバージョン番号はウェブビルダーのページ下部に記載されています。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#177" class="lnkocn">177</a></label>
+  <p class="i0" id="177">
+    ウェブビルダーにより提示される時間の推定は条件を考慮しない推定であり、実際にビルドにかかる時間を反映していないかもしれません。表示された後に更新もされません。それについては我慢してください。ビルド条件を送信した後にこのページを更新しないでください。更新すると同一のパラメータで再び新たにビルドを送信することになります。ビルドの通知をただの一度も受け取っておらず、十分な時間が確実に過ぎて、通知メールが自分の spam メールフィルタに引っかかっていないことを確認した場合、 <a href="about-project.ja.html#contact">連絡</a>  してください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#178" class="lnkocn">178</a></label>
+  <p class="i0" id="178">
+    ウェブビルダーがビルドできるイメージの種類は限定されています。これにより、利用や保守を簡単、能率的に維持できます。ウェブインターフェイスで提供されていない独自化を行いたい場合は、<i>live-build</i> を使って自分のイメージをビルドする方法をこのマニュアルの残りで説明しています。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#179" class="lnkocn">179</a></label>
+  <p class="bold" id="179"><a name="179"></a> <a id="hbuilding-iso-hybrid"></a>
+    <a name="h4.4" ></a><a name="building-iso-hybrid" ></a>4.4 最初の段階: ISO hybrid イメージのビルド
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#180" class="lnkocn">180</a></label>
+  <p class="i0" id="180">
+    イメージの種類を問わず、イメージをビルドするのに同一の基礎手順を毎回実行する必要があります。最初の例ではビルド用のディレクトリを作成して、このディレクトリに移動してから <i>live-build</i> コマンドを以下の順で実行し、X.org のないデフォルトの Live システムを収録する基本的な ISO hybrid イメージを作成します。このイメージはCDやDVDメディアへの書き込み、さらにUSBメモリへの複製にも適しています。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#181" class="lnkocn">181</a></label>
+  <p class="i0" id="181">
+    作業ディレクトリの名前は完全に自由ですが、<i>live-manual</i> 全体で利用されている例を参考にする場合、特に異なる種類のイメージについて作業、実験している場合、各ディレクトリで作業しているイメージの識別を支援する名前を使うのは良い方法です。ここではデフォルトのシステムをビルドするとして、例えば live-default と呼びましょう。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#182" class="lnkocn">182</a></label>
+  <p class="code" id="182">
+    $ mkdir live-default &amp;&amp; cd live-default<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#183" class="lnkocn">183</a></label>
+  <p class="i0" id="183">
+    それから <tt>lb config</tt> コマンドを実行します。これにより他のコマンドが利用する「config/」階層を現在のディレクトリに作成します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#184" class="lnkocn">184</a></label>
+  <p class="code" id="184">
+    $ lb config<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#185" class="lnkocn">185</a></label>
+  <p class="i0" id="185">
+    上記のコマンドにはパラメータが渡されていないので、様々な選択肢についてそれぞれのデフォルト値が使われます。さらなる詳細については  <a href="overview-of-tools.ja.html#lb-config">lb config コマンド</a>  を見てください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#186" class="lnkocn">186</a></label>
+  <p class="i0" id="186">
+    これで「config/」階層ができました。<tt>lb build</tt> コマンドでイメージをビルドします。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#187" class="lnkocn">187</a></label>
+  <p class="code" id="187">
+    # lb build<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#188" class="lnkocn">188</a></label>
+  <p class="i0" id="188">
+    コンピュータやネットワーク接続の速度により、このプロセスには少々時間がかかるかもしれません。完了すると、<tt>live-image-i386.hybrid.iso</tt> イメージファイルが使える状態で現在のディレクトリにできているはずです。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#189" class="lnkocn">189</a></label>
+  <p class="i0" id="189">
+    <b>注意:</b> amd64 システムでビルドした場合は、出来上がるイメージの名前は <tt>live-image-amd64.hybrid.iso</tt> となります。マニュアル全体でこの慣例を採用していることに留意してください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#190" class="lnkocn">190</a></label>
+  <p class="bold" id="190"><a name="190"></a> <a id="husing-iso-hybrid"></a>
+    <a name="h4.5" ></a><a name="using-iso-hybrid" ></a>4.5 ISO hybrid Live イメージの利用
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#191" class="lnkocn">191</a></label>
+  <p class="i0" id="191">
+    ISO hybrid イメージをビルド、または ‹<a href="https://www.debian.org/CD/live/" target="_top">https://www.debian.org/CD/live/</a>› にあるものをダウンロードした後、通常は次にブート用メディアとして CD-R(W) や DVD-R(W) の光学メディアかUSBメモリを用意します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#192" class="lnkocn">192</a></label>
+  <p class="bold" id="192"><a name="192"></a> <a id="hburning-iso-image"></a>
+    <a name="h4.5.1" ></a><a name="burning-iso-image" ></a>4.5.1 ISOイメージの実際のメディアへの書き込み
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#193" class="lnkocn">193</a></label>
+  <p class="i0" id="193">
+    ISOイメージの書き込みは簡単です。<i>xorriso</i> をインストールしてそれをコマンドラインから使ってイメージを書き込むだけです。例えば:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#194" class="lnkocn">194</a></label>
+  <p class="code" id="194">
+    # apt-get install xorriso<br>
+$ xorriso -as cdrecord -v dev=/dev/sr0 blank=as_needed live-image-i386.hybrid.iso<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#195" class="lnkocn">195</a></label>
+  <p class="bold" id="195"><a name="195"></a> <a id="hcopying-iso-hybrid-to-usb"></a>
+    <a name="h4.5.2" ></a><a name="copying-iso-hybrid-to-usb" ></a>4.5.2 ISO hybrid イメージのUSBメモリへのコピー
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#196" class="lnkocn">196</a></label>
+  <p class="i0" id="196">
+    <tt>xorriso</tt> で作られたISOイメージは <tt>cp</tt> プログラムや同等プログラムを使って単純にUSBメモリにコピーすることができます。イメージファイルを置けるだけの十分に大きなサイズのUSBメモリを差し込んでそれがどのデバイスなのか決定します。以後 <tt>${USBメモリ}</tt> として参照します。これは例えば <tt>/dev/sdb</tt> といったUSBメモリのデバイスファイルで、例えば <tt>/dev/sdb1</tt> といったパーティションではありません! USBメモリを差し込んでから <tt>dmesg</tt> か、もっと良いのは <tt>ls -l /dev/disk/by-id</tt> の出力を見ると正しいデバイス名を調べることができます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#197" class="lnkocn">197</a></label>
+  <p class="i0" id="197">
+    正しいデバイス名を得られたことを確信できたら <tt>cp</tt> コマンドを使ってイメージをUSBメモリにコピーします。<b>これを実行すると以前そのUSBメモリにあった内容は全て確実に上書きされます!</b>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#198" class="lnkocn">198</a></label>
+  <p class="code" id="198">
+    $ cp live-image-i386.hybrid.iso ${USBメモリ}<br>
+$ sync<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#199" class="lnkocn">199</a></label>
+  <p class="i0" id="199">
+    <b>注意:</b> <i>sync</i> コマンドはイメージのコピー中にカーネルによりメモリに記憶されているデータが全てUSBメモリに書き込まれたことを保証するのに有用です。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#200" class="lnkocn">200</a></label>
+  <p class="bold" id="200"><a name="200"></a> <a id="husing-usb-extra-space"></a>
+    <a name="h4.5.3" ></a><a name="using-usb-extra-space" ></a>4.5.3 USBメモリの空きスペースの利用
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#201" class="lnkocn">201</a></label>
+  <p class="i0" id="201">
+    <tt>live-image-i386.hybrid.iso</tt> をUSBメモリにコピーすると、最初のパーティションは Live システムで埋められます。残った空きスペースを利用するには、<i>gparted</i> や <i>parted</i> といったパーティション作業ツールを使ってそのUSBメモリに新しいパーティションを作成します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#202" class="lnkocn">202</a></label>
+  <p class="code" id="202">
+    # gparted ${USBメモリ}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#203" class="lnkocn">203</a></label>
+  <p class="i0" id="203">
+    パーティションの作成後にはファイルシステムを作成する必要があります。選択肢には ext4 等があります。<tt>${パーティション}</tt>には例えば <tt>/dev/sdb2</tt> 等パーティションの名前が入ります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#204" class="lnkocn">204</a></label>
+  <p class="code" id="204">
+    # mkfs.ext4 ${パーティション}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#205" class="lnkocn">205</a></label>
+  <p class="i0" id="205">
+    <b>注意:</b>  余った容量を Windows で使いたい場合ですが、このOSでは最初のパーティション以外にアクセスすることは通常できません。この問題に対する解決策が <a href="about-project.ja.html#contact">メーリングリスト</a>  でいくらか議論されていますが、簡単な解はないようです。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#206" class="lnkocn">206</a></label>
+  <p class="i0" id="206">
+    <b>Remember: 新しい live-image-i386.hybrid.iso をUSBメモリにインストールする度に、パーティションテーブルがイメージの内容で上書きされるために USB メモリにあるデータは全て失われるので、追加パーティションをまずバックアップしてから、Live イメージの更新後に復帰させるようにしてください。</b>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#207" class="lnkocn">207</a></label>
+  <p class="bold" id="207"><a name="207"></a> <a id="hbooting-live-medium"></a>
+    <a name="h4.5.4" ></a><a name="booting-live-medium" ></a>4.5.4 Live メディアのブート
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#208" class="lnkocn">208</a></label>
+  <p class="i0" id="208">
+    Live メディアCD、DVD、USBメモリ、あるいは PXE ブートでの初回ブート時に、そのコンピュータの BIOS をまず設定する必要があるかもしれません。BIOS により機能やキーの割り当てが大きく異なるため、ここではそれについて深くは触れません。BIOS によってはブートするデバイスのメニューをブート時に提示させるキー割り当てを提供しているものがあり、そのシステムでこれが利用できる場合は最も簡単な方法でしょう。それがない場合は BIOS 設定メニューに入って Live システムのブートデバイスを通常のブートデバイスよりも前に配置するようにブート順を変更する必要があります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#209" class="lnkocn">209</a></label>
+  <p class="i0" id="209">
+    メディアをブートするとブートメニューが表示されているでしょう。ここで単に enter を押すと、システムはデフォルトの項目 <tt>Live</tt> とデフォルトのオプションを使ってブートします。ブートオプションのさらなる情報については、メニューの「ヘルプ」の項目や Live システム内にある <i>live-boot</i> 及び <i>live-config</i> の man ページを見てください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#210" class="lnkocn">210</a></label>
+  <p class="i0" id="210">
+    <tt>Live</tt>  を選択してデフォルトのデスクトップ Live イメージをブートしたとして、ブートメッセージが流れた後、自動的に <tt>user</tt> アカウントにログインし、デスクトップがすぐに使える状態で見えているはずです。 <a href="the-basics.ja.html#downloading-prebuilt-images">ビルド済みイメージ</a>  の <tt>standard</tt> 等コンソールだけのイメージをブートした場合はコンソールで自動的に <tt>user</tt> アカウントにログインし、シェルプロンプトがすぐに使える状態で見えているはずです。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#211" class="lnkocn">211</a></label>
+  <p class="bold" id="211"><a name="211"></a> <a id="husing-virtual-machine"></a>
+    <a name="h4.6" ></a><a name="using-virtual-machine" ></a>4.6 仮想マシンを利用したテスト
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#212" class="lnkocn">212</a></label>
+  <p class="i0" id="212">
+    Live イメージを仮想マシン (VM) 内で実行すると開発の面で大きな時間の節約になるかもしれません。これには注意事項がないというわけではありません:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#213" class="lnkocn">213</a></label>
+  <ul>
+  <li class="bullet" id="213">
+    VMの実行にはゲストOSとホストOSの両方に十分なRAMが必要で、CPUには仮想化をハードウェアでサポートしているものを推奨します。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#214" class="lnkocn">214</a></label>
+  <ul>
+  <li class="bullet" id="214">
+    VM上での実行には、例えばビデオ性能が低いこと、エミュレーするハードウェアの選択肢が限られていること等内在する制限がいくらかあります。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#215" class="lnkocn">215</a></label>
+  <ul>
+  <li class="bullet" id="215">
+    特定のハードウェア向けの開発ではそのハードウェア自体での実行に代わるものはありません。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#216" class="lnkocn">216</a></label>
+  <ul>
+  <li class="bullet" id="216">
+    VMでの実行にのみ関連するバグが時々あります。その疑いがあるときはイメージをハードウェアで直接テストしてください。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#217" class="lnkocn">217</a></label>
+  <p class="i0" id="217">
+    こういった制約があることを理解した上で利用可能なVMソフトウェアを調べて要件に合うものを選択してください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#218" class="lnkocn">218</a></label>
+  <p class="bold" id="218"><a name="218"></a> <a id="htesting-iso-with-qemu"></a>
+    <a name="h4.6.1" ></a><a name="testing-iso-with-qemu" ></a>4.6.1 QEMU でのISOイメージのテスト
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#219" class="lnkocn">219</a></label>
+  <p class="i0" id="219">
+    Debian で最も汎用性の高いVMは QEMU です。プロセッサが仮想化をハードウェアでサポートしている場合は <i>qemu-kvm</i> パッケージを使ってください。<i>qemu-kvm</i> パッケージの説明に要件の簡単な一覧があります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#220" class="lnkocn">220</a></label>
+  <p class="i0" id="220">
+    プロセッサがサポートしている場合はまず <i>qemu-kvm</i> をインストールしてください。サポートしている場合は <i>qemu</i> をインストールしてください。以下の例ではどちらの場合もプログラム名は <tt>kvm</tt> ではなく <tt>qemu</tt> とします。<i>qemu-utils</i> パッケージもあると <tt>qemu-img</tt> で仮想ディスクのイメージを作成するのによいでしょう。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#221" class="lnkocn">221</a></label>
+  <p class="code" id="221">
+    # apt-get install qemu-kvm qemu-utils<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#222" class="lnkocn">222</a></label>
+  <p class="i0" id="222">
+    ISOイメージのブートは簡単です:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#223" class="lnkocn">223</a></label>
+  <p class="code" id="223">
+    $ kvm -cdrom live-image-i386.hybrid.iso<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#224" class="lnkocn">224</a></label>
+  <p class="i0" id="224">
+    詳細については man ページを見てください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#225" class="lnkocn">225</a></label>
+  <p class="bold" id="225"><a name="225"></a> <a id="htesting-iso-with-virtualbox"></a>
+    <a name="h4.6.2" ></a><a name="testing-iso-with-virtualbox" ></a>4.6.2 VirtualBox でのISOイメージのテスト
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#226" class="lnkocn">226</a></label>
+  <p class="i0" id="226">
+    <i>virtualbox</i> でISOをテストするには:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#227" class="lnkocn">227</a></label>
+  <p class="code" id="227">
+    # apt-get install virtualbox virtualbox-qt virtualbox-dkms<br>
+$ virtualbox<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#228" class="lnkocn">228</a></label>
+  <p class="i0" id="228">
+    新しい仮想マシンを作成し、<tt>live-image-i386.hybrid.iso</tt> を CD/DVD デバイスとして利用するようにストレージ設定を変更して仮想マシンを起動します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#229" class="lnkocn">229</a></label>
+  <p class="i0" id="229">
+    <b>注意:</b> X.org を収録している Live システムを <i>virtualbox</i> でテストしたい場合は <i>live-build</i> 設定に VirtualBox X.org ドライバパッケージ <i>virtualboxbox-guest-dkms</i> 及び <i>virtualboxbox-guest-x11</i> を収録するとよいでしょう。収録しない場合、解像度は 800x600 に限定されます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#230" class="lnkocn">230</a></label>
+  <p class="code" id="230">
+    $ echo "virtualbox-guest-dkms virtualbox-guest-x11" &gt;&gt; config/package-lists/my.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#231" class="lnkocn">231</a></label>
+  <p class="i0" id="231">
+    dkms パッケージを機能させるためには、そのイメージで利用しているカーネルの種類のカーネルヘッダもインストールする必要があります。正しいパッケージの選択は上記で作成したパッケージ一覧に正しい <i>linux-headers</i> パッケージを手作業により列挙する代わりに <i>live-build</i> により自動的に行うことができます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#232" class="lnkocn">232</a></label>
+  <p class="code" id="232">
+    &nbsp;&nbsp;$ lb config --linux-packages "linux-image linux-headers"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#233" class="lnkocn">233</a></label>
+  <p class="bold" id="233"><a name="233"></a> <a id="husing-hdd-image"></a>
+    <a name="h4.7" ></a><a name="using-hdd-image" ></a>4.7 HDDイメージのビルド及び利用
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#234" class="lnkocn">234</a></label>
+  <p class="i0" id="234">
+    HDDイメージのビルドは全面的に ISO hybrid イメージのビルドと似ていて、<tt>-b hdd</tt> を指定することと出来上がりのファイル名が <tt>live-image-i386.img</tt> で光学メディアに書き込んで使うことができないという点が異なります。このイメージはUSBメモリやUSBハードドライブ、その他様々な他のポータブルストレージデバイスからのブートに適しています。通常、この目的には ISO hybrid イメージを代わりに使えますが、BIOS が hybrid イメージを適切に処理できない場合はHDDイメージが必要となります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#235" class="lnkocn">235</a></label>
+  <p class="i0" id="235">
+    <b>注意:</b>  前の例で ISO hybrid イメージを作成している場合 <tt>lb clean</tt> コマンド ( <a href="overview-of-tools.ja.html#lb-clean">lb clean コマンド</a>  参照) で作業ディレクトリをきれいにする必要があります:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#236" class="lnkocn">236</a></label>
+  <p class="code" id="236">
+    # lb clean --binary<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#237" class="lnkocn">237</a></label>
+  <p class="i0" id="237">
+    前と同様に <tt>lb config</tt> コマンドを実行します。今回はイメージの種類にHDDを指定する点が異なります:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#238" class="lnkocn">238</a></label>
+  <p class="code" id="238">
+    $ lb config -b hdd<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#239" class="lnkocn">239</a></label>
+  <p class="i0" id="239">
+    それから <tt>lb build</tt> コマンドでイメージをビルドします:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#240" class="lnkocn">240</a></label>
+  <p class="code" id="240">
+    # lb build<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#241" class="lnkocn">241</a></label>
+  <p class="i0" id="241">
+    ビルドが完了すると現在のディレクトリに <tt>live-image-i386.img</tt> ファイルができているはずです。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#242" class="lnkocn">242</a></label>
+  <p class="i0" id="242">
+    生成されたバイナリイメージには VFAT パーティションと syslinux ブートローダが収録され、そのままUSB機器に書きこめます。繰り返しますがHDDイメージの使い方はUSBで ISO hybrid イメージを使うのと同様です。 <a href="the-basics.ja.html#using-iso-hybrid">ISO hybrid Live イメージの利用</a>  の指示に従ってください。<tt>live-image-i386.hybrid.iso</tt> に代えて <tt>live-image-i386.img</tt> をファイル名に使う点が異なります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#243" class="lnkocn">243</a></label>
+  <p class="i0" id="243">
+    同様に、Qemu でHDDイメージをテストするには上記の  <a href="the-basics.ja.html#testing-iso-with-qemu">Qemu でのISOイメージのテスト</a>  で説明しているように <i>qemu</i> をインストールしてください。それから <tt>kvm</tt> か <tt>qemu</tt> のホストシステムで必要バージョンを実行し、最初のハードドライブとして <tt>live-image-i386.img</tt> を指定します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#244" class="lnkocn">244</a></label>
+  <p class="code" id="244">
+    $ kvm -hda live-image-i386.img<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#245" class="lnkocn">245</a></label>
+  <p class="bold" id="245"><a name="245"></a> <a id="hbuilding-netboot-image"></a>
+    <a name="h4.8" ></a><a name="building-netboot-image" ></a>4.8 netboot イメージのビルド
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#246" class="lnkocn">246</a></label>
+  <p class="i0" id="246">
+    以下の順でコマンドを実行すると X.org のないデフォルトの Live システムを収録する基本的な netboot イメージを作成します。ネットワーク越しのブートに適しています。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#247" class="lnkocn">247</a></label>
+  <p class="i0" id="247">
+    <b>注意:</b> 前に示した例からどれかを実行した場合、作業ディレクトリを <tt>lb clean</tt> コマンドできれいにする必要があります:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#248" class="lnkocn">248</a></label>
+  <p class="code" id="248">
+    # lb clean<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#249" class="lnkocn">249</a></label>
+  <p class="i0" id="249">
+    この特定の場合必要な段階の掃除が <tt>lb clean --binary</tt> では不十分です。netboot イメージのビルドで <i>live-build</i> が netboot の準備を自動的に実行するにあたって異なる initramfs 設定が必要なことがその原因です。initramfs の作成は chroot の段階で行われるため、既存のビルドディレクトリで netboot に切り替えるということは chroot の段階も再ビルドするということになります。したがって、<tt>lb clean</tt> (これは chroot の段階も削除します) を使う必要があります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#250" class="lnkocn">250</a></label>
+  <p class="i0" id="250">
+    <tt>lb config</tt> コマンドを以下のように実行してイメージを netboot 用に設定します:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#251" class="lnkocn">251</a></label>
+  <p class="code" id="251">
+    $ lb config -b netboot --net-root-path "/srv/debian-live" --net-root-server "192.168.0.2"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#252" class="lnkocn">252</a></label>
+  <p class="i0" id="252">
+    ISO及びHDDイメージとは対照的に netboot 自体ではクライアントに対してファイルシステムのイメージを提供しないため、ファイルをNFS経由で提供する必要があります。lb config で異なるネットワークファイルシステムを選択することもできます。<tt>--net-root-path</tt> 及び <tt>--net-root-server</tt> オプションはそれぞれ、ブート時にファイルシステムのイメージが置かれるNFSサーバの位置とサーバを指定します。ネットワークやサーバに合う適切な値がセットされていることを確認してください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#253" class="lnkocn">253</a></label>
+  <p class="i0" id="253">
+    それから <tt>lb build</tt> コマンドでイメージをビルドします:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#254" class="lnkocn">254</a></label>
+  <p class="code" id="254">
+    # lb build<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#255" class="lnkocn">255</a></label>
+  <p class="i0" id="255">
+    ネットワーク経由のブートでは、クライアントは通常イーサネットカードの EPROM にある小さなソフトウェアを実行します。このプログラムは DHCP リクエストを送り、IPアドレスと次に行うことについての情報を取得します。次の段階は通常、TFTP プロトコルを経由した高レベルブートローダの取得です。これには pxelinux や GRUB、さらには直接 Linux のようなオペレーティングシステムをブートすることもできます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#256" class="lnkocn">256</a></label>
+  <p class="i0" id="256">
+    例えば生成された <tt>live-image-i386.netboot.tar</tt> アーカイブを <tt>/srv/debian-live</tt> ディレクトリに展開すると、<tt>live/filesystem.squashfs</tt> にファイルシステムのイメージ、カーネルや initrd、pxelinux ブートローダが <tt>tftpboot/</tt> にあることがわかるでしょう。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#257" class="lnkocn">257</a></label>
+  <p class="i0" id="257">
+    ネットワーク経由でのブートをできるようにするにはサーバ上でサービスを3つ、DHCP サーバ、TFTP サーバ、NFSサーバを設定する必要があります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#258" class="lnkocn">258</a></label>
+  <p class="bold" id="258"><a name="258"></a> <a id="hc4.8.1"></a>
+    <a name="c4.8.1" ></a><a name="h4.8.1" ></a>4.8.1 DHCP サーバ
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#259" class="lnkocn">259</a></label>
+  <p class="i0" id="259">
+    ネットワーク経由でブートするクライアントシステムに対して確実にIPアドレスを1つ与え、PXEブートローダの位置を通知するようにネットワークの DHCP サーバを設定する必要があります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#260" class="lnkocn">260</a></label>
+  <p class="i0" id="260">
+    イメージしやすいように <tt>/etc/dhcp/dhcpd.conf</tt> 設定ファイルで設定する ISC DHCP サーバ <tt>isc-dhcp-server</tt> 向けに書かれた例を示します:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#261" class="lnkocn">261</a></label>
+  <p class="code" id="261">
+    # /etc/dhcp/dhcpd.conf - configuration file for isc-dhcp-server<br><br>
+ddns-update-style none;<br><br>
+option domain-name "example.org";<br>
+option domain-name-servers ns1.example.org, ns2.example.org;<br><br>
+default-lease-time 600;<br>
+max-lease-time 7200;<br><br>
+log-facility local7;<br><br>
+subnet 192.168.0.0 netmask 255.255.255.0 {<br>
+&nbsp;&nbsp;&nbsp;range 192.168.0.1 192.168.0.254;<br>
+&nbsp;&nbsp;&nbsp;filename "pxelinux.0";<br>
+&nbsp;&nbsp;&nbsp;next-server 192.168.0.2;<br>
+&nbsp;&nbsp;&nbsp;option subnet-mask 255.255.255.0;<br>
+&nbsp;&nbsp;&nbsp;option broadcast-address 192.168.0.255;<br>
+&nbsp;&nbsp;&nbsp;option routers 192.168.0.1;<br>
+}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#262" class="lnkocn">262</a></label>
+  <p class="bold" id="262"><a name="262"></a> <a id="hc4.8.2"></a>
+    <a name="c4.8.2" ></a><a name="h4.8.2" ></a>4.8.2 TFTP サーバ
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#263" class="lnkocn">263</a></label>
+  <p class="i0" id="263">
+    これはカーネルと初期RAMディスクをシステム実行時に提供します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#264" class="lnkocn">264</a></label>
+  <p class="i0" id="264">
+    <i>tftpd-hpa</i> パッケージをインストールすべきです。これはルートディレクトリ、通常 <tt>/srv/tftp</tt> 内にある全ファイルを提供できます。<tt>/srv/debian-live/tftpboot</tt> 内にあるファイルを提供させるには root で
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#265" class="lnkocn">265</a></label>
+  <p class="code" id="265">
+    # dpkg-reconfigure -plow tftpd-hpa<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#266" class="lnkocn">266</a></label>
+  <p class="i0" id="266">
+    を実行し、tftp サーバの新しいディレクトリについて聞かれたら回答します。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#267" class="lnkocn">267</a></label>
+  <p class="bold" id="267"><a name="267"></a> <a id="hc4.8.3"></a>
+    <a name="c4.8.3" ></a><a name="h4.8.3" ></a>4.8.3 NFSサーバ
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#268" class="lnkocn">268</a></label>
+  <p class="i0" id="268">
+    ゲストコンピュータが Linux カーネルをダウンロード、ブートして initrd を読み込むと、NFSサーバ経由で Live ファイルシステムのイメージをマウントしようとします。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#269" class="lnkocn">269</a></label>
+  <p class="i0" id="269">
+    <i>nfs-kernel-server</i> パッケージをインストールする必要があります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#270" class="lnkocn">270</a></label>
+  <p class="i0" id="270">
+    それから <tt>/etc/exports</tt> に
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#271" class="lnkocn">271</a></label>
+  <p class="code" id="271">
+    /srv/debian-live *(ro,async,no_root_squash,no_subtree_check)<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#272" class="lnkocn">272</a></label>
+  <p class="i0" id="272">
+    のような行を追記してファイルシステムのイメージをNFS経由で利用できるようにし、この新しいエクスポートについてNFSサーバに知らせます:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#273" class="lnkocn">273</a></label>
+  <p class="code" id="273">
+    # exportfs -rv<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#274" class="lnkocn">274</a></label>
+  <p class="i0" id="274">
+    この3つのサービスの設定にはやや注意が必要かもしれません。全て協調して機能させるまでには忍耐がいくらか必要かもしれません。さらなる情報については ‹<a href="http://www.syslinux.org/wiki/index.php/PXELINUX" target="_top">http://www.syslinux.org/wiki/index.php/PXELINUX</a>› にある syslinux wiki や ‹<a href="http://d-i.alioth.debian.org/manual/ja.i386/ch04s05.html" target="_top">http://d-i.alioth.debian.org/manual/ja.i386/ch04s05.html</a>› にある Debian インストーラマニュアルの TFTP ネットブート節を見てください。方法はとても似ているので手助けになるかもしれません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#275" class="lnkocn">275</a></label>
+  <p class="bold" id="275"><a name="275"></a> <a id="hc4.8.4"></a>
+    <a name="c4.8.4" ></a><a name="h4.8.4" ></a>4.8.4 ネットワーク経由のブートをテストする方法
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#276" class="lnkocn">276</a></label>
+  <p class="i0" id="276">
+    Netboot イメージの作成は <i>live-build</i> により簡単になりましたが、イメージを実際のマシンでテストするのは本当に時間がかかるものとなるかもしれません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#277" class="lnkocn">277</a></label>
+  <p class="i0" id="277">
+    日常を楽にするために仮想化を利用できます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#278" class="lnkocn">278</a></label>
+  <p class="bold" id="278"><a name="278"></a> <a id="hc4.8.5"></a>
+    <a name="c4.8.5" ></a><a name="h4.8.5" ></a>4.8.5 Qemu
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#279" class="lnkocn">279</a></label>
+  <ul>
+  <li class="bullet" id="279">
+    <i>qemu</i>、<i>bridge-utils</i>、<i>sudo</i> をインストールします。
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#280" class="lnkocn">280</a></label>
+  <p class="i0" id="280">
+    <tt>/etc/qemu-ifup</tt> を編集します:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#281" class="lnkocn">281</a></label>
+  <p class="code" id="281">
+    #!/bin/sh<br>
+sudo -p "Password for $0:" /sbin/ifconfig $1 172.20.0.1<br>
+echo "Executing /etc/qemu-ifup"<br>
+echo "Bringing up $1 for bridged mode..."<br>
+sudo /sbin/ifconfig $1 0.0.0.0 promisc up<br>
+echo "Adding $1 to br0..."<br>
+sudo /usr/sbin/brctl addif br0 $1<br>
+sleep 2<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#282" class="lnkocn">282</a></label>
+  <p class="i0" id="282">
+    <tt>grub-floppy-netboot</tt> を取得またはビルドします。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#283" class="lnkocn">283</a></label>
+  <p class="i0" id="283">
+    「<tt>-net nic,vlan=0 -net tap,vlan=0,ifname=tun0</tt>」を引数にして <tt>qemu</tt> を実行します
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#284" class="lnkocn">284</a></label>
+  <p class="bold" id="284"><a name="284"></a> <a id="hwebbooting"></a>
+    <a name="h4.9" ></a><a name="webbooting" ></a>4.9 ウェブブート
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#285" class="lnkocn">285</a></label>
+  <p class="i0" id="285">
+    ウェブブートは手段としてインターネットを使い Live システムをブートするための便利な方法です。ウェブブートの要件はとても少なくなっています。ある言い方をすれば必要なのはブートローダと初期RAMディスク、カーネルを収録したメディアです。別の言い方をすれば必要なのはファイルシステムを収録する squashfs ファイルを置くウェブサーバです。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#286" class="lnkocn">286</a></label>
+  <p class="bold" id="286"><a name="286"></a> <a id="hc4.9.1"></a>
+    <a name="c4.9.1" ></a><a name="h4.9.1" ></a>4.9.1 ウェブブートファイルの取得
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#287" class="lnkocn">287</a></label>
+  <p class="i0" id="287">
+    いつものように、イメージを自分でビルドすることも、プロジェクトのホームページ ‹<a href="http://debian-live.alioth.debian.org/" target="_top">http://debian-live.alioth.debian.org/</a>› から取得できるビルド済みファイルを利用することも可能です。自身の必要に応じて微調整ができるまでの初期テストにはビルド済みイメージの利用が手軽でしょう。Live イメージのビルド後ならウェブブートに必要なファイルは <tt>binary/live/</tt> 下のビルドディレクトリで見つけられるでしょう。ファイルは <tt>vmlinuz</tt>、<tt>initrd.img</tt>、<tt>filesystem.squashfs</tt> と呼ばれます。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#288" class="lnkocn">288</a></label>
+  <p class="i0" id="288">
+    必要なファイルを既に存在するISOイメージから抽出することも可能です。そのためには以下のようにしてそのイメージをループバックマウントします:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#289" class="lnkocn">289</a></label>
+  <p class="code" id="289">
+    # mount -o loop image.iso /mnt<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#290" class="lnkocn">290</a></label>
+  <p class="i0" id="290">
+    ファイルは <tt>live/</tt> ディレクトリで見つけられます。この例の場合は <tt>/mnt/live/</tt> になります。この方法にはそのイメージをマウントするのに root になる必要があるという欠点があります。しかしこれには簡単に定型処理、つまり自動化できるという利点があります。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#291" class="lnkocn">291</a></label>
+  <p class="i0" id="291">
+    しかし疑いようもなく、ISOイメージからファイルを抽出すると同時にウェブサーバにアップロードするのに最も簡単なのはミッドナイトコマンダーや <i>mc</i> の利用でしょう。<i>genisoimage</i> パッケージをインストールしていれば2ペインのファイルマネージャによりISOファイルの内容を確認しながらもう1つのペインではftp経由でファイルをアップロードできます。この方法は手作業の介入が必要とはなりますが root 権限を必要としません。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#292" class="lnkocn">292</a></label>
+  <p class="bold" id="292"><a name="292"></a> <a id="hc4.9.2"></a>
+    <a name="c4.9.2" ></a><a name="h4.9.2" ></a>4.9.2 ウェブブートイメージの起動
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#293" class="lnkocn">293</a></label>
+  <p class="i0" id="293">
+    ユーザによってはウェブブートのテストに仮想化を好みますがここでは以下の活用事例に合わせて実際のハードウェアについて言及します。あくまで例だと思ってください。
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#294" class="lnkocn">294</a></label>
+  <p class="i0" id="294">
+    ウェブブートイメージの起動は上記で示した構成要素、つまり <tt>vmlinuz</tt> と <tt>initrd.img</tt> をUSBメモリの <tt>live/</tt> ディレクトリ以下に書き込み、ブートローダとして syslinux をインストールすれば十分です。そしてUSBメモリからブートしてブートオプションに <tt>fetch=URL/ファイル/への/パス</tt> を入力します。<i>live-boot</i> は squashfs ファイルを取得してRAMに格納します。こうして、ダウンロードした圧縮ファイルシステムを普通の Live システムとして使えるようになります。例えば:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#295" class="lnkocn">295</a></label>
+  <p class="code" id="295">
+    append boot=live components fetch=http://192.168.2.50/images/webboot/filesystem.squashfs<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#296" class="lnkocn">296</a></label>
+  <p class="i0" id="296">
+    <b>活用事例:</b> ウェブサーバがあり、squashfs ファイルが2つ、1つは例えば gnome のようなデスクトップ環境一式を収録したものともう1つは標準のものが置かれているとします。あるマシンでグラフィカル環境が必要であればUSBメモリを差し込んで gnome 用イメージをウェブブートできます。後者のイメージに収録されている何かのツールが別のマシン等で必要になった場合は標準的なイメージをウェブブートできます。
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="installation.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="overview-of-tools.ja.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

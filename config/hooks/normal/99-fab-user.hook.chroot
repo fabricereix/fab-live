@@ -1,0 +1,11 @@
+#/!bin/bash
+echo $0
+
+useradd -m -s /bin/bash fab
+usermod -a -G docker fab
+
+chown -R fab:fab /home/fab
+find /home/fab
+
+
+

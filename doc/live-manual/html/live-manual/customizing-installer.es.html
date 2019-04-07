@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    customizing-installer -
+    Manual de Live Systems
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Manual de Live Systems" />
+  <meta name="dc.author" content="Proyecto Live  Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Live Systems Project &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="22.09.2015"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: Este programa es software libre: puede ser redistribuido y/o modificado bajo los t&#233;rminos de la GNU General Public License publicada por la Free Software Foundation, bien de la versi&#243;n 3 de la Licencia, o (a su elecci&#243;n) cualquier versi&#243;n posterior. \\  \\ Este programa se distribuye con la esperanza de que sea &#251;til, pero SIN NINGUNA GARANT&#205;A, incluso sin la garant&#237;a impl&#237;cita de COMERCIALIZACI&#211;N o IDONEIDAD PARA UN PROP&#211;SITO PARTICULAR. Consulte la GNU General Public License para m&#225;s detalles. \\  \\ Deber&#237;a haber recibido una copia de la General Public License GNU junto con este programa. Si no, vea http://www.gnu.org/licenses/. \\  \\ El texto completo de la GNU Licencia P&#251;blica General se pueden encontrar en /usr/share/common-licenses/GPL-3" />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="es">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-binary.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="contributing-to-project.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Manual de Live Systems
+  </h1>
+
+<h1 class="minitoc">
+    Acerca de este manual
+  </h1>
+
+<h1 class="minitoc">
+    Acerca de este manual
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.es.html" target="_top">
+    1. Acerca de este manual
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.es.html#8">
+    1.1 Para el impaciente.
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.es.html#12">
+    1.2 Términos
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.es.html#29">
+    1.3 Autores
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.es.html#44">
+    1.4 Cómo contribuir a este documento
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.es.html#46">
+  1.4.1 Aplicar cambios
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.es.html#60">
+  1.4.2 Traducción
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Contribuir al Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.es.html" target="_top">
+    2. Acerca del Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.es.html#75">
+    2.1 Motivación
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.es.html#76">
+  2.1.1 Desventajas de los sistemas en vivo actuales
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.es.html#86">
+  2.1.2 El porqué de crear un sistema en vivo propio.
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.es.html#94">
+    2.2 Filosofía
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.es.html#95">
+  2.2.1 Solamente paquetes sin modificación alguna de Debian «main»
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.es.html#99">
+  2.2.2 Sin configuración especial para el sistema en vivo
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.es.html#103">
+    2.3 Contacto
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Usuario
+  </h1>
+
+<h1 class="minitoc">
+    Instalación
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.es.html" target="_top">
+    3. Instalación
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.es.html#110">
+    3.1 Requisitos
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.es.html#118">
+    3.2 Instalación de live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#124">
+  3.2.1 Desde el repositorio Debian.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#127">
+  3.2.2 A partir del código fuente
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#138">
+  3.2.3 A partir de «instantáneas»
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.es.html#140">
+    3.3 Instalación de live-boot y live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#142">
+  3.3.1 Desde el repositorio Debian.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#144">
+  3.3.2 A partir del código fuente
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#156">
+  3.3.3 A partir de «instantáneas»
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Conceptos básicos
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.es.html" target="_top">
+    4. Conceptos básicos
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#163">
+    4.1 ¿Qué es un sistema en vivo?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#171">
+    4.2 Descarga de imágenes prefabricadas
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#173">
+    4.3 Uso del servicio de creación de imágenes web
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#175">
+  4.3.1 Uso y advertencias del servicio de creación de imágenes web
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#179">
+    4.4 Primeros pasos: creación de una imagen ISO híbrida
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#190">
+    4.5 Usar una imagen ISO híbrida
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#192">
+  4.5.1 Grabar una imagen ISO en un medio físico.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#195">
+  4.5.2 Copiar una imagen ISO híbrida a un dispositivo  USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#200">
+  4.5.3 Usar el espacio libre en el dispositivo USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#207">
+  4.5.4 Arrancar el medio en vivo
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#211">
+    4.6 Usar una máquina virtual para pruebas
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#218">
+  4.6.1 Probar una imagen ISO con QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#225">
+  4.6.2 Probar una imagen ISO con VirtualBox
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#233">
+    4.7 Construir y utilizar una imágen HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#245">
+    4.8 Creación de una imagen de arranque en red
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#258">
+  4.8.1 Servidor DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#262">
+  4.8.2 Servidor TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#267">
+  4.8.3 Servidor NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#275">
+  4.8.4 Cómo probar el arranque en red
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#284">
+    4.9 Arrancar desde internet
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#286">
+  4.9.1 Conseguir los ficheros para arrancar desde internet
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#292">
+  4.9.2 Arrancar imágenes webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Descripción general de las herramientas
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.es.html" target="_top">
+    5. Descripción general de las herramientas
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.es.html#300">
+    5.1 El paquete live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.es.html#310">
+  5.1.1 El comando <tt>lb config</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.es.html#320">
+  5.1.2 El comando <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.es.html#322">
+  5.1.3 El comando <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.es.html#324">
+    5.2 El paquete live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.es.html#328">
+    5.3 El paquete live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Gestionar una configuración
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.es.html" target="_top">
+    6. Gestionar una configuración
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.es.html#333">
+    6.1 Gestionar cambios en la configuración
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.es.html#335">
+  6.1.1 ¿Por qué utilizar scripts auto? ¿Qué hacen?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.es.html#338">
+  6.1.2 Usar scripts auto de ejemplo
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.es.html#345">
+    6.2 Clonar una configuración publicada a través de  Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalización de contenidos
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.es.html" target="_top">
+    7. Descripción general de la personalización.
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.es.html#359">
+    7.1 Configuración en el momento de la creación vs en el momento del arranque
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.es.html#362">
+    7.2 Etapas de la creación
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.es.html#365">
+    7.3 Opciones para lb config en ficheros
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.es.html#367">
+    7.4 Tareas de personalización
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalización de la instalación de paquetes
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.es.html" target="_top">
+    8. Personalización de la instalación de  paquetes
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.es.html#372">
+    8.1 Origen de los paquetes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#373">
+  8.1.1 Distribución, áreas de archivo y modo
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#380">
+  8.1.2 Réplicas de Distribución Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#382">
+  8.1.3 Réplicas de Distribution utilizadas  durante la creación
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#386">
+  8.1.4 Réplicas de distribución Debian utilizadas en la ejecución.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#389">
+  8.1.5 Repositorios adicionales
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.es.html#397">
+    8.2 Selección de los paquetes a instalar
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#399">
+  8.2.1 Listas de paquetes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#402">
+  8.2.2 Utilizar metapaquetes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#410">
+  8.2.3 Listas de paquetes locales
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#414">
+  8.2.4 Listas de paquetes locales para la etapa binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#416">
+  8.2.5 Generar listas de paquetes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#420">
+  8.2.6 Utilización de condiciones dentro de las listas de paquetes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#429">
+  8.2.7 Eliminación paquetes durante la instalación
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#431">
+  8.2.8 Tareas de Escritorio e Idioma
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#436">
+  8.2.9 Versión y tipo de kernel
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#441">
+  8.2.10 Kernels personalizados
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.es.html#449">
+    8.3 Instalar paquetes modificados  o de terceros
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#456">
+  8.3.1 Método <tt>packages.chroot</tt> para instalar paquetes personalizados
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#463">
+  8.3.2 Método de repositorio APT para instalar paquetes personalizados
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#466">
+  8.3.3 Paquetes personalizados y APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.es.html#469">
+    8.4 Configurar APT en la creación
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#471">
+  8.4.1 Utilizar apt o aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#475">
+  8.4.2 Utilización de un proxy con APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#478">
+  8.4.3 Ajuste de APT para ahorrar espacio
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#487">
+  8.4.4 Pasar opciones a apt o a aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#492">
+  8.4.5 APT pinning
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personalización de contenidos
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.es.html" target="_top">
+    9. Personalización de contenidos
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.es.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.es.html#506">
+  9.1.1 Includes locales en Live/chroot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.es.html#513">
+  9.1.2 Includes locales en Binary
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.es.html#517">
+    9.2 Scripts gancho (Hooks)
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.es.html#520">
+  9.2.1 Scripts gancho locales en el chroot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.es.html#522">
+  9.2.2 Scripts gancho locales en Binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.es.html#524">
+  9.2.3 Scripts gancho en tiempo de arranque
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.es.html#526">
+    9.3 Preconfiguración de las preguntas de Debconf
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalización del comportamiento en tiempo de ejecución.
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html" target="_top">
+    10. Personalización del comportamiento en  tiempo de ejecución.
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#532">
+    10.1 Personalización del usuario por defecto del sistema en vivo
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#541">
+    10.2 Personalización de las variantes locales e  idioma
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#558">
+    10.3 Persistencia
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#580">
+  10.3.1 El fichero persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#585">
+  10.3.2 Utilizar varios medios persistentes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#591">
+  10.3.3 Utilizar persistencia con cifrado
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personalización de la imagen binaria
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.es.html" target="_top">
+    11. Personalización de la imagen binaria
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.es.html#619">
+    11.1 Gestores de arranque
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.es.html#626">
+    11.2 Metadatos ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalización del Instalador de Debian
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.es.html" target="_top">
+    12. Personalización del Instalador de Debian
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.es.html#636">
+    12.1 Tipos de imágenes según el instalador
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.es.html#648">
+    12.2 Personalizando el Instalador de Debian mediante preconfiguración
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.es.html#651">
+    12.3 Personalizar el contenido del Instalador de Debian
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Proyecto
+  </h1>
+
+<h1 class="minitoc">
+    Contribuir al proyecto
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.es.html" target="_top">
+    13. Contribuir al proyecto
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.es.html#667">
+    13.1 Realizar cambios
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.es.html#682">
+    13.2 Traducción de las páginas de manual
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Cómo informar acerca de errores.
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.es.html" target="_top">
+    14. Informes de errores.
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#698">
+    14.1 Problemas conocidos
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#703">
+    14.2 Reconstruir desde cero
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#705">
+    14.3 Utilizar paquetes actualizados
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#707">
+    14.4 Recopilar información
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#724">
+    14.5 Aislar el fallo si es posible
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#726">
+    14.6 Utilizar el paquete correcto sobre el que informar del error
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.es.html#729">
+  14.6.1 En la preinstalación (bootstrap) en tiempo de creación.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.es.html#732">
+  14.6.2 Mientras se instalan paquetes en tiempo de creación.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.es.html#736">
+  14.6.3 En tiempo de arranque
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.es.html#738">
+  14.6.4 En tiempo de ejecución
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#740">
+    14.7 Hacer la investigación
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#744">
+    14.8 Dónde informar de los fallos
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Estilo de código
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.es.html" target="_top">
+    15. Estilo de código
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.es.html#751">
+    15.1 Compatibilidad
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.es.html#756">
+    15.2 Sangrado
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.es.html#758">
+    15.3 Ajuste de líneas
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.es.html#770">
+    15.4 Variables
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.es.html#789">
+    15.5 Miscelánea
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procedimientos
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.es.html" target="_top">
+    16. Procedimientos
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.es.html#797">
+    16.1 Principales lanzamientos
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.es.html#803">
+    16.2 Nuevas versiones
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.es.html#807">
+  16.2.1 Última actualización de una versión Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.es.html#809">
+  16.2.2 Plantilla para anunciar nuevas versiones.
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Repositorios Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.es.html" target="_top">
+    17. Repositorios Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.es.html#829">
+    17.1 Manejo de múltiples repositorios
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Ejemplos
+  </h1>
+
+<h1 class="minitoc">
+    Ejemplos
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.es.html" target="_top">
+    18. Ejemplos
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#837">
+    18.1 Uso de los ejemplos
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#841">
+    18.2 Tutorial 1: Una imagen predeterminada
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#850">
+    18.3 Tutorial 2: Una utilidad de navegador web
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#858">
+    18.4 Tutorial 3: Una imagen personalizada
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.es.html#861">
+  18.4.1 Primera revisión
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.es.html#875">
+  18.4.2 Segunda revisión
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#887">
+    18.5 Un cliente VNC kiosk
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#901">
+    18.6 Una imagen básica para un pendrive USB de 128MB
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#912">
+    18.7 Un escritorio GNOME con variante local e instalador
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Apéndice
+  </h1>
+
+<h1 class="minitoc">
+    Style guide
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.es.html" target="_top">
+    19. Guía de estilo
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.es.html#927">
+    19.1 Instrucciones para los autores
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.es.html#930">
+  19.1.1 Aspectos lingüísticos
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.es.html#963">
+  19.1.2 Procedimientos
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.es.html#1002">
+    19.2 Directrices para los traductores
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.es.html#1006">
+  19.2.1 Consejos de traducción
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.es.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.es.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Manual de Live Systems
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Personalización del Instalador de Debian
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#633" class="lnkocn">633</a></label>
+  <h1 class="norm" id="633"><a name="633"></a>
+    12. Personalización del Instalador de Debian
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#634" class="lnkocn">634</a></label>
+  <p class="i0" id="634">
+    Las imágenes de los sistemas en vivo pueden integrarse con el Instalador de Debian. Hay varios tipos de instalación que se diferencian en qué se incluye en la imágen y en cómo opera el instalador.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#635" class="lnkocn">635</a></label>
+  <p class="i0" id="635">
+    En esta sección se debe estar atento a la utilización de las mayúsculas. Cuando se utiliza «Instalador de Debian», con mayúsculas, se hace referencia explícita al instalador oficial del sistema Debian, y a nada más ni a ningún otro instalador. A menudo se abrevia con «d-i».
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#636" class="lnkocn">636</a></label>
+  <p class="bold" id="636"><a name="636"></a> <a id="hc12.1"></a>
+    <a name="c12.1" ></a><a name="h12.1" ></a>12.1 Tipos de imágenes según el instalador
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#637" class="lnkocn">637</a></label>
+  <p class="i0" id="637">
+    Principalmente existen tres tipos de imágenes según el instalador:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#638" class="lnkocn">638</a></label>
+  <p class="i0" id="638">
+    <b>Imágenes con Instalador Debian «normal»</b>: Esta imagen en vivo se puede considerar como la imagen habitual. Dispone de un kernel y un initrd diferenciados que, al ser seleccionados desde el gestor de arranque, ejecutan un Instalador de Debian estándar, de la misma manera que lo harían si se arrancase desde una imagen de CD descargada desde el sitio oficial de Debian. Las imágenes que contienen un sistema en vivo con otro instalador independiente se suelen llamar «imágenes combinadas».
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#639" class="lnkocn">639</a></label>
+  <p class="i0" id="639">
+    En estas imágenes, el sistema operativo Debian se instala mediante la herramienta <i>debootstrap</i> que descarga paquetes .deb desde medios locales o por red. El resultado final es un sistema Debian por defecto instalado en el disco duro.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#640" class="lnkocn">640</a></label>
+  <p class="i0" id="640">
+    El conjunto de este proceso puede ser preconfigurado (preseeded) y personalizado de muchas maneras; Para más información, ver las páginas relevantes en el manual del Instalador de Debian. Una vez que se ha generado el fichero de preconfiguración adecuado a las necesidades, <i>live-build</i> puede encargarse de depositarlo en la imagen y activarlo de forma automática.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#641" class="lnkocn">641</a></label>
+  <p class="i0" id="641">
+    <b>Imágenes con Instalador Debian «Live»</b>: Estas imágenes en vivo también disponen de un kernel y un initrd diferenciados que, al ser seleccionados desde el gestor de arranque, ejecutan un Instalador de Debian.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#642" class="lnkocn">642</a></label>
+  <p class="i0" id="642">
+    El procedimiento de instalación es idéntico al realizado por las imagenes «Regulares» pero, en lugar de utilizar <i>debootstrap</i> para obtener e instalar paquetes .deb, lo que hace es copiar al disco duro la imagen del sistema de ficheros que se había preparado para lanzar el sistema en vivo. Esto se logra mediante un .udeb especial llamado <i>live-installer</i>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#643" class="lnkocn">643</a></label>
+  <p class="i0" id="643">
+    Una vez finalizada esta etapa, el Instalador de Debian continua normalmente, instalando y configurando los siguientes elementos como pueden ser gestor de arranque, creación de usuarios locales, etc.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#644" class="lnkocn">644</a></label>
+  <p class="i0" id="644">
+    <b>Nota:</b> Para poder incluir los dos tipos de instalador, «normal» y «live», en el mismo medio, se debe deshabilitar el <i>live-installer</i>. Esto se hace utilizando la variable de preconfiguración (preseed) <tt>live-installer/enable=false</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#645" class="lnkocn">645</a></label>
+  <p class="i0" id="645">
+    <b>Instalador Debian «del escritorio»</b>: Una vez el sistema en vivo está ejecutandose, se puede lanzar el Instalador de Debian haciendo clic en el icono correspondiente, sin importar el tipo de Instalador Debian utilizado en el arranque. Esta manera de instalar Debian es más sencilla para el usuario y aconsejable en algunas situaciones. Para poder realizar esta acción se debe instalar el paquete <i>debian-installer-launcher</i>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#646" class="lnkocn">646</a></label>
+  <p class="i0" id="646">
+    Por defecto, <i>live-build</i> no incluye las imágenes que utilizan el Instalador de Debian. Esto debe ser habilitado de forma específica en <tt>lb config</tt>. También hay que hacer notar que, para que la instalación desde «el escritorio» funcione, el kernel del sistema en vivo debe ser el mismo que el kernel que utiliza <tt>d-i</tt> en la arquitectura especificada. Por ejemplo:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#647" class="lnkocn">647</a></label>
+  <p class="code" id="647">
+    $ lb config --architectures i386 --linux-flavours 586 \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--debian-installer live<br>
+$ echo debian-installer-launcher &gt;&gt; config/package-lists/my.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#648" class="lnkocn">648</a></label>
+  <p class="bold" id="648"><a name="648"></a> <a id="hc12.2"></a>
+    <a name="c12.2" ></a><a name="h12.2" ></a>12.2 Personalizando el Instalador de Debian mediante preconfiguración
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#649" class="lnkocn">649</a></label>
+  <p class="i0" id="649">
+    Tal y como se describe en el apéndice B del manual del Instalador de Debian que puede consultarse en ‹<a href="https://www.debian.org/releases/stable/i386/apb.html" target="_top">https://www.debian.org/releases/stable/i386/apb.html</a>›, «La preconfiguración permite asociar respuestas a preguntas que aparecen en el proceso de instalación, sin tener que responderlas manualmente en el momento se se ejecuta dicho proceso. Esto hace posible automatizar totalmente la mayoria de las instalaciones e incluso ofrece alguna característica que no está disponible durante una instalación normal.» Con <i>live-build</i> se puede llevar a cabo esta personalización depositando un fichero llamado <tt>preseed.cfg</tt> en el directorio de configuración <tt>config/includes.installer/</tt>. Por ejemplo, para preconfigurar la variante local a <tt>en_US</tt> se puede hacer:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#650" class="lnkocn">650</a></label>
+  <p class="code" id="650">
+    $ echo "d-i debian-installer/locale string en_US" \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; config/includes.installer/preseed.cfg<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#651" class="lnkocn">651</a></label>
+  <p class="bold" id="651"><a name="651"></a> <a id="hc12.3"></a>
+    <a name="c12.3" ></a><a name="h12.3" ></a>12.3 Personalizar el contenido del Instalador de Debian
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#652" class="lnkocn">652</a></label>
+  <p class="i0" id="652">
+    Es posible que, con propósitos experimentales o para depuración de errores, se desee incluir paquetes udeb creados localmente para el <tt>d-i</tt>. Estos paquetes udeb son componentes del Instalador de Debian que definen su comportamiento. Para incluirlos en la imagen, basta con depositarlos en el directorio de configuración <tt>config/packages.binary/</tt>. También pueden incluirse o reemplazarse ficheros y directorios en el initrd del instalador de una manera similar a la que se describe en  <a href="customizing-contents.es.html#live-chroot-local-includes">Includes locales en Live/chroot</a>,  depositando el material en el directorio <tt>config/includes.installer/</tt>.
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-binary.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="contributing-to-project.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

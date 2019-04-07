@@ -1,0 +1,144 @@
+#% dom output model, part of SiSU and distributed under the same license
+default namespace = ""
+namespace xl = "http://www.w3.org/1999/xlink"
+start =
+  element document {
+    element head {
+      element header {
+        meta,
+        (element creator { text }
+         | element date { xsd:NMTOKEN }
+         | element date_available { xsd:NMTOKEN }
+         | element date_created { xsd:NMTOKEN }
+         | element date_issued { xsd:NMTOKEN }
+         | element date_modified { xsd:NMTOKEN }
+         | element date_valid { xsd:NMTOKEN }
+         | element keywords { text }
+         | element language { xsd:NCName }
+         | element rights { (text | link)+ }
+         | element source { text }
+         | element structure { text }
+         | element subject { text }
+         | element title { text }
+         | element type { text }
+         | element source_control {
+             (br
+              | meta
+              | element sc {
+                  attribute class { xsd:NCName },
+                  text
+                })+
+           })
+      }+
+    },
+    element body {
+      element heading1 {
+        heading,
+        contents1*,
+        element heading2 {
+          heading,
+          contents1*,
+          element heading3 {
+            heading,
+            element contents1 {
+              heading,
+              content,
+              element contents2 {
+                heading,
+                content,
+                element contents3 { heading, content }*
+              }*
+            }+
+          }*
+        }*
+      }+
+    }
+  }
+meta = element meta { text }
+br = element br { empty }
+heading = element heading { object }
+contents1 =
+  element contents1 {
+    heading,
+    content,
+    element contents2 {
+      heading,
+      content,
+      element contents3 { heading, content }*
+    }*
+  }
+content = element content { object* }
+object =
+  element object {
+    attribute id { xsd:integer },
+    element ocn { text },
+    element nametag { text }?,
+    (element table {
+       attribute align { xsd:NCName },
+       attribute bgcolor { xsd:NCName },
+       attribute border { xsd:integer },
+       attribute cellpadding { xsd:integer },
+       attribute summary { text },
+       attribute width { text },
+       element tr {
+         element td {
+           attribute valign { xsd:NCName },
+           attribute width { text },
+           (text | b | i)+
+         }+
+       }+
+     }
+     | element text {
+         attribute class { xsd:NCName }?,
+         (text
+          | b
+          | del
+          | endnote
+          | i
+          | link
+          | element br { empty }
+          | element endnote {
+              element number { xsd:integer },
+              element note { (text | i | link)+ }
+            }
+          | element image {
+              attribute height { xsd:integer },
+              attribute width { xsd:integer },
+              attribute xl:actuate { xsd:NCName },
+              attribute xl:href { text },
+              attribute xl:show { xsd:NCName },
+              attribute xl:type { xsd:NCName }
+            }
+          | element sub { text })+
+       })
+  }
+i = element i { text }
+b = element i { text }
+u = element u { (text | b | i)+ }
+sub = element sub { xsd:NCName }
+sup = element sup { xsd:NCName }
+del = element del { (text | b | i | link)+ }
+link =
+  element link {
+    attribute xl:href { xsd:anyURI },
+    attribute xl:type { xsd:NCName },
+    xsd:anyURI
+  }
+endnote =
+  element endnote {
+    (element number { xsd:integer }
+     | element symbol { text }),
+    element note {
+      (text
+       | b
+       | br
+       | del
+       | i
+       | link
+       | sub
+       | sup
+       | u
+       | element em { xsd:NCName }
+       | element sub { xsd:NCName })+
+    }
+  }

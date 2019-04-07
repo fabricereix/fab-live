@@ -1,0 +1,14 @@
+vim curl wget git locate xz-utils
+net-tools
+openssh-server cups cntlm
+build-essential libffi-dev libgmp-dev zlib1g-dev gnupg libncurses-dev
+
+#virtualbox-dkms
+unzip
+cryptsetup
+python3-venv
+libssl-dev
+libsqlite3-dev
+lsof
+sqlite3
+

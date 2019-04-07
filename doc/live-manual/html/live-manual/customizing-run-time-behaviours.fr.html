@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    customizing-run-time-behaviours -
+    Manuel Live Systems
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Manuel Live Systems" />
+  <meta name="dc.author" content="Projet Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Projet Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="2015-09-22"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: Ce programme est un logiciel libre; vous pouvez le redistribuer ou le modifier suivant les termes de la Licence G&#233;n&#233;rale Publique GNU telle que publi&#233;e par la Free Software Foundation: soit la version 3 de cette licence, soit (&#224; votre gr&#233;) toute version ult&#233;rieure. \\  \\ Ce programme est distribu&#233; dans l&#8217;espoir qu&#8217;il vous sera utile, mais SANS AUCUNE GARANTIE: sans m&#234;me la garantie implicite de COMMERCIALISABILIT&#201; ni d&#8217;AD&#201;QUATION &#192; UN OBJECTIF PARTICULIER. Consultez la Licence G&#233;n&#233;rale Publique GNU pour plus de d&#233;tails. \\  \\ Vous devriez avoir re&#231;u une copie de la Licence G&#233;n&#233;rale Publique GNU avec ce programme ; si ce n&#8217;est pas le cas, consultez http://www.gnu.org/licenses/. \\  \\ Le texte complet de la Licence G&#233;n&#233;rale Publique GNU peut &#234;tre trouv&#233; dans le fichier / usr/share/common-licenses/GPL-3" />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="fr">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-contents.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-binary.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Manuel Live Systems
+  </h1>
+
+<h1 class="minitoc">
+    À propos
+  </h1>
+
+<h1 class="minitoc">
+    À propos de ce manuel
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.fr.html" target="_top">
+    1. À propos de ce manuel
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#8">
+    1.1 Pour les impatients
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#12">
+    1.2 Terminologie
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#29">
+    1.3 Auteurs
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#44">
+    1.4 Contribuer à ce document
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.fr.html#46">
+  1.4.1 Appliquer des modifications
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.fr.html#60">
+  1.4.2 Traduction
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    À propos du Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.fr.html" target="_top">
+    2. À propos du Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#75">
+    2.1 Motivation
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#76">
+  2.1.1 Ce qui ne va pas avec les systèmes live actuels
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#86">
+  2.1.2 Pourquoi créer notre propre système live?
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#94">
+    2.2 Philosophie
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#95">
+  2.2.1 Seulement des paquets inchangés de Debian «main»
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#99">
+  2.2.2 Pas de configuration des paquets du système live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#103">
+    2.3 Contact
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Utilisateur
+  </h1>
+
+<h1 class="minitoc">
+    Installation
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.fr.html" target="_top">
+    3. Installation
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#110">
+    3.1 Exigences
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#118">
+    3.2 Installation de live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#124">
+  3.2.1 À partir du dépôt Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#127">
+  3.2.2 À partir du code source
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#138">
+  3.2.3 À partir des instantanés
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#140">
+    3.3 Installation de live-boot et live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#142">
+  3.3.1 À partir du dépôt Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#144">
+  3.3.2 À partir du code source
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#156">
+  3.3.3 À partir des instantanés
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Les bases
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.fr.html" target="_top">
+    4. Les bases
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#163">
+    4.1 Qu'est-ce qu'un système live?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#171">
+    4.2 Téléchargement des images précompilées
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#173">
+    4.3 Utiliser le constructeur web d'images live
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#175">
+  4.3.1 Utilisation du constructeur web et avertissements
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#179">
+    4.4 Premières étapes: la construction d'une image ISO  hybride
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#190">
+    4.5 Utilisation d'une image ISO hybride live
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#192">
+  4.5.1 Graver une image ISO sur un support physique
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#195">
+  4.5.2 Copie d'une image ISO hybride sur une clé USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#200">
+  4.5.3 Utilisation de l'espace disponible sur une clé USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#207">
+  4.5.4 Démarrer le support live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#211">
+    4.6 Utiliser une machine virtuelle pour les tests
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#218">
+  4.6.1 Test d'une image ISO avec QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#225">
+  4.6.2 Test d'une image ISO avec VirtualBox
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#233">
+    4.7 Construire et utiliser une image HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#245">
+    4.8 Construction d'une image netboot
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#258">
+  4.8.1 Serveur DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#262">
+  4.8.2 Serveur TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#267">
+  4.8.3 Serveur NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#275">
+  4.8.4 Guide pratique pour expérimenter avec une image Netboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#284">
+    4.9 Webbooting
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#286">
+  4.9.1 Obtenir les fichiers webboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#292">
+  4.9.2 Démarrer images webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Aperçu des outils
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.fr.html" target="_top">
+    5. Aperçu des outils
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#300">
+    5.1 Le paquet live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#310">
+  5.1.1 La commande <tt>lb config</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#320">
+  5.1.2 La commande <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#322">
+  5.1.3 La commande <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#324">
+    5.2 Le paquet live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#328">
+    5.3 Le paquet live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Gestion d'une configuration
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.fr.html" target="_top">
+    6. Gestion d'une configuration
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.fr.html#333">
+    6.1 Gérer les modifications de la configuration
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.fr.html#335">
+  6.1.1 Pourquoi utiliser des scripts auto? Que font-ils?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.fr.html#338">
+  6.1.2 Utiliser les scripts auto d'exemple
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.fr.html#345">
+    6.2 Cloner une configuration publiée via Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation des contenus
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.fr.html" target="_top">
+    7. Vue d'ensemble de la personnalisation
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#359">
+    7.1 Configuration pendant la construction vs. l'amorçage
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#362">
+    7.2 Étapes de la construction
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#365">
+    7.3 Supplément lb config avec des fichiers
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#367">
+    7.4 Tâches de personnalisation
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation de l'installation de paquets
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.fr.html" target="_top">
+    8. Personnalisation de l'installation de  paquets
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#372">
+    8.1 Sources des paquets
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#373">
+  8.1.1 Distribution, zones d'archive et mode
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#380">
+  8.1.2 Miroirs de distribution
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#382">
+  8.1.3 Miroirs de distribution utilisés lors de  la construction
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#386">
+  8.1.4 Miroirs de distribution utilisés pendant l'exécution
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#389">
+  8.1.5 Dépôts additionnels
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#397">
+    8.2 Choisir les paquets à installer
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#399">
+  8.2.1 Listes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#402">
+  8.2.2 Utilisation des métapaquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#410">
+  8.2.3 Listes de paquets locaux
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#414">
+  8.2.4 Listes de paquets locaux pour l'étape binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#416">
+  8.2.5 Listes de paquets générées
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#420">
+  8.2.6 Utiliser des conditions dans les listes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#429">
+  8.2.7 Suppression de paquets lors de l'installation
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#431">
+  8.2.8 Tâches de bureau et de langue
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#436">
+  8.2.9 Version et type de noyau
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#441">
+  8.2.10 Noyaux personnalisés
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#449">
+    8.3 Installation de paquets  modifiés ou tiers
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#456">
+  8.3.1 Utiliser <tt>packages.chroot</tt> pour installer des paquets personnalisés
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#463">
+  8.3.2 Utiliser un dépôt APT pour installer des paquets personnalisés.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#466">
+  8.3.3 Les paquets personnalisés et APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#469">
+    8.4 Configuration d'APT pendant la construction
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#471">
+  8.4.1 Choisir apt ou aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#475">
+  8.4.2 Utilisation d'un proxy avec APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#478">
+  8.4.3 Régler APT pour économiser de l'espace
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#487">
+  8.4.4 Passer des options à apt ou aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#492">
+  8.4.5 APT pinning
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personnalisation des contenus
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.fr.html" target="_top">
+    9. Personnalisation des contenus
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#506">
+  9.1.1 Live/chroot local includes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#513">
+  9.1.2 Binary local includes
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#517">
+    9.2 Hooks
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#520">
+  9.2.1 Chroot local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#522">
+  9.2.2 Binary local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#524">
+  9.2.3 Hooks pendant le démarrage
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#526">
+    9.3 Préconfigurer questions de debconf
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation des comportements pendant l'exécution
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html" target="_top">
+    10. Personnalisation des comportements pendant  l'exécution
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#532">
+    10.1 Personnalisation de l'utilisateur live
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#541">
+    10.2 Personnalisation des paramètres régionaux  et de la langue
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#558">
+    10.3 Persistance
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#580">
+  10.3.1 Le fichier persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#585">
+  10.3.2 Utilisation de plusieurs dispositifs de persistance
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#591">
+  10.3.3 Utilisation de la persistance avec chiffrement
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personnalisation de l'image binaire
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.fr.html" target="_top">
+    11. Personnalisation de l'image binaire
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.fr.html#619">
+    11.1 Chargeurs d'amorçage
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.fr.html#626">
+    11.2 Métadonnées ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation de l'installateur Debian
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.fr.html" target="_top">
+    12. Personnalisation du contenu pour l'installateur  Debian
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#636">
+    12.1 Types d'installateur Debian
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#648">
+    12.2 Personnalisation de l'installateur Debian par préconfiguration
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#651">
+    12.3 Personnalisation de contenu pour l'Installateur Debian
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Projet
+  </h1>
+
+<h1 class="minitoc">
+    Contribuer au projet
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.fr.html" target="_top">
+    13. Contribuer au projet
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.fr.html#667">
+    13.1 Faire des changements
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.fr.html#682">
+    13.2 Traduction des pages de manuel
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Signaler des bogues
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.fr.html" target="_top">
+    14. Signaler des bogues
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#698">
+    14.1 Problèmes connus
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#703">
+    14.2 Reconstruire à partir de zéro
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#705">
+    14.3 Utiliser des paquets mis à jour
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#707">
+    14.4 Recueillir l'information
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#724">
+    14.5 Isoler le cas qui échoue, si possible
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#726">
+    14.6 Utiliser le paquet adéquat pour rapporter un bogue
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#729">
+  14.6.1 Pendant la construction durant l'amorçage
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#732">
+  14.6.2 Pendant la construction durant l'installation de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#736">
+  14.6.3 Pendant le démarrage
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#738">
+  14.6.4 Pendant l'exécution
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#740">
+    14.7 Effectuer une recherche
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#744">
+    14.8 Où rapporter les bogues
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Style de code
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.fr.html" target="_top">
+    15. Style du code
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#751">
+    15.1 Compatibilité
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#756">
+    15.2 Indentation
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#758">
+    15.3 Adaptateur
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#770">
+    15.4 Variables
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#789">
+    15.5 Autres
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procédures
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.fr.html" target="_top">
+    16. Procédures
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.fr.html#797">
+    16.1 Évolutions majeures
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.fr.html#803">
+    16.2 Évolutions mineures
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.fr.html#807">
+  16.2.1 Dernière évolution mineure d'une version Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.fr.html#809">
+  16.2.2 Modèle pour l'annonce d'une évolution mineure
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Dépôts Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.fr.html" target="_top">
+    17. Dépôts Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.fr.html#829">
+    17.1 Gestion de multiples dépôts
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.fr.html" target="_top">
+    18. Exemples
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#837">
+    18.1 Utiliser les exemples
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#841">
+    18.2 Tutoriel 1: Une image par défaut
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#850">
+    18.3 Tutoriel 2: Un utilitaire d'un navigateur Web
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#858">
+    18.4 Tutoriel 3: Une image personnalisée
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.fr.html#861">
+  18.4.1 Première révision
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.fr.html#875">
+  18.4.2 Deuxième révision
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#887">
+    18.5 Un client kioske VNC
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#901">
+    18.6 Une image de base pour une clé USB de 128 Mo
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#912">
+    18.7 Un bureau GNOME localisé avec un installateur
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Appendix
+  </h1>
+
+<h1 class="minitoc">
+    Guide de style
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.fr.html" target="_top">
+    19. Guide de style
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.fr.html#927">
+    19.1 Lignes directrices pour les auteurs
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#930">
+  19.1.1 Caractéristiques linguistiques
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#963">
+  19.1.2 Procédures
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.fr.html#1002">
+    19.2 Lignes directrices pour les traducteurs
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#1006">
+  19.2.1 Conseils de traduction
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.fr.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.fr.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Manuel Live Systems
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Personnalisation des comportements pendant l'exécution
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#530" class="lnkocn">530</a></label>
+  <h1 class="norm" id="530"><a name="530"></a>
+    10. Personnalisation des comportements pendant  l'exécution
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#531" class="lnkocn">531</a></label>
+  <p class="i0" id="531">
+    Toute la configuration qui est faite pendant l'exécution est faite par <i>live-config</i>. Voici quelques options parmi les plus courantes de <i>live-config</i> qui peuvent intéresser les utilisateurs. Une liste complète de toutes les possibilités peut être trouvée dans la page de manuel de <i>live-config</i>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#532" class="lnkocn">532</a></label>
+  <p class="bold" id="532"><a name="532"></a> <a id="hc10.1"></a>
+    <a name="c10.1" ></a><a name="h10.1" ></a>10.1 Personnalisation de l'utilisateur live
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#533" class="lnkocn">533</a></label>
+  <p class="i0" id="533">
+    Une considération importante est que l'utilisateur live est créé par <i>live-boot</i> au démarrage, non pas par <i>live-build</i> pendant la construction. Cela influence non seulement l'emplacement où les documents relatifs à l'utilisateur live sont introduits dans la construction, tel que discuté dans  <a href="customizing-contents.fr.html#live-chroot-local-includes">Live/chroot local includes</a>,  mais aussi tous les groupes et autorisations associés à l'utilisateur live.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#534" class="lnkocn">534</a></label>
+  <p class="i0" id="534">
+    Vous pouvez indiquer d'autres groupes pour l'utilisateur live en utilisant une des possibilités pour configurer <i>live-config</i>. Par exemple, pour ajouter l'utilisateur live au groupe <tt>fuse</tt>, vous pouvez ajouter le fichier suivant dans <tt>config/includes.chroot/etc/live/config/user-setup.conf</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#535" class="lnkocn">535</a></label>
+  <p class="code" id="535">
+    LIVE_USER_DEFAULT_GROUPS="audio cdrom dip floppy video plugdev netdev powerdev scanner bluetooth fuse"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#536" class="lnkocn">536</a></label>
+  <p class="i0" id="536">
+    ou utiliser <tt>live-config.user-default-groups=audio,cdrom,dip,floppy,video,plugdev,netdev,powerdev,scanner,bluetooth,fuse</tt> comme paramètre d'amorçage.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#537" class="lnkocn">537</a></label>
+  <p class="i0" id="537">
+    Il est également possible de changer le nom de l'utilisateur par défaut «user» et du mot de passe par défaut «live». Si vous voulez faire cela, vous pouvez le faire facilement comme suit:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#538" class="lnkocn">538</a></label>
+  <p class="i0" id="538">
+    Pour modifier le nom de l'utilisateur par défaut, vous pouvez simplement l'indiquer dans votre configuration:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#539" class="lnkocn">539</a></label>
+  <p class="code" id="539">
+    $ lb config --bootappend-live "boot=live components username=live-user"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#540" class="lnkocn">540</a></label>
+  <p class="i0" id="540">
+    Une façon possible de changer le mot de passe par défaut est d'utiliser un hook comme décrit dans  <a href="customizing-contents.fr.html#boot-time-hooks">Hooks pendant le démarrage</a>.  Pour ce faire vous pouvez utiliser le hook "passwd" de <tt>/usr/share/doc/live-config/examples/hooks</tt>, ajouter un préfixe correct (par exemple 2000-passwd) et l'ajouter à <tt>config/includes.chroot/lib/live/config/</tt>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#541" class="lnkocn">541</a></label>
+  <p class="bold" id="541"><a name="541"></a> <a id="hcustomizing-locale-and-language"></a>
+    <a name="h10.2" ></a><a name="customizing-locale-and-language" ></a>10.2 Personnalisation des paramètres régionaux  et de la langue
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#542" class="lnkocn">542</a></label>
+  <p class="i0" id="542">
+    Au démarrage du système live, la langue est impliquée dans deux étapes:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#543" class="lnkocn">543</a></label>
+  <ul>
+  <li class="bullet" id="543">
+    la génération des paramètres régionaux
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#544" class="lnkocn">544</a></label>
+  <ul>
+  <li class="bullet" id="544">
+    le réglage de la disposition du clavier
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#545" class="lnkocn">545</a></label>
+  <p class="i0" id="545">
+    Les paramètres régionaux par défaut pendant la construction d'un système Live sont <tt>locales=en_US.UTF-8</tt>. Pour définir les paramètres régionaux qui doivent être générés, utilisez le paramètre <tt>locales</tt> dans l'option <tt>--bootappend-live</tt> de <tt>lb config</tt>, par exemple
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#546" class="lnkocn">546</a></label>
+  <p class="code" id="546">
+    $ lb config --bootappend-live "boot=live components locales=de_CH.UTF-8"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#547" class="lnkocn">547</a></label>
+  <p class="i0" id="547">
+    Plusieurs paramètres régionaux peuvent être indiqués dans une liste séparée par des virgules.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#548" class="lnkocn">548</a></label>
+  <p class="i0" id="548">
+    Ce paramètre, ainsi que les paramètres de configuration du clavier indiqués ci-dessous, peut également être utilisé sur la ligne de commande du noyau. On peut indiquer des paramètres régionaux avec <tt>language_country</tt> (dans ce cas, le codage par défaut est utilisé) ou l'expression complète <tt>language_country.encoding</tt>. Une liste des paramètres régionaux et le codage pour chacun peuvent être trouvés dans <tt>/usr/share/i18n/SUPPORTED</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#549" class="lnkocn">549</a></label>
+  <p class="i0" id="549">
+    La configuration du clavier pour la console et pour X est faite par <tt>live-config</tt> en utilisant le paquet <tt>console-setup</tt>. Pour les configurer, utilisez les paramètres de démarrage <tt>keyboard-layouts</tt>, <tt>keyboard-variants</tt>, <tt>keyboard-options</tt> et <tt>keyboard-model</tt> avec l'option <tt>--bootappend-live</tt>. On peut trouver les options valides dans <tt>/usr/share/X11/xkb/rules/base.lst</tt>. Pour trouver les dispositions et les variantes correspondantes à une langue, essayez de rechercher le nom anglais de la nation où la langue est parlée, par exemple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#550" class="lnkocn">550</a></label>
+  <p class="code" id="550">
+    $ egrep -i '(^!|german.*switzerland)' /usr/share/X11/xkb/rules/base.lst<br>
+! model<br>
+! layout<br>
+&nbsp;&nbsp;&nbsp;ch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;German (Switzerland)<br>
+! variant<br>
+&nbsp;&nbsp;&nbsp;legacy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ch: German (Switzerland, legacy)<br>
+&nbsp;&nbsp;&nbsp;de_nodeadkeys&nbsp;&nbsp;&nbsp;ch: German (Switzerland, eliminate dead keys)<br>
+&nbsp;&nbsp;&nbsp;de_sundeadkeys&nbsp;&nbsp;ch: German (Switzerland, Sun dead keys)<br>
+&nbsp;&nbsp;&nbsp;de_mac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ch: German (Switzerland, Macintosh)<br>
+! option<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#551" class="lnkocn">551</a></label>
+  <p class="i0" id="551">
+    Chaque variante présente une description de la disposition appliquée.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#552" class="lnkocn">552</a></label>
+  <p class="i0" id="552">
+    Souvent, seule la disposition doit être configurée. Par exemple, pour obtenir les fichiers des paramètres régionaux de l'allemand et la disposition du clavier suisse allemand dans X, utilisez:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#553" class="lnkocn">553</a></label>
+  <p class="code" id="553">
+    $ lb config --bootappend-live "boot=live components locales=de_CH.UTF-8 keyboard-layouts=ch"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#554" class="lnkocn">554</a></label>
+  <p class="i0" id="554">
+    Toutefois, pour les cas d'utilisation très spécifiques, on peut inclure d'autres paramètres. Par exemple, pour mettre en place un système français avec une disposition French-Dvorak (Bépo) avec un clavier USB TypeMatrix EZ-Reach 2030, utilisez:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#555" class="lnkocn">555</a></label>
+  <p class="code" id="555">
+    $ lb config --bootappend-live \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"boot=live components locales=fr_FR.UTF-8 keyboard-layouts=fr keyboard-variants=bepo keyboard-model=tm2030usb"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#556" class="lnkocn">556</a></label>
+  <p class="i0" id="556">
+    Plusieurs valeurs peuvent être indiquées dans des listes séparées par des virgules pour chacune des options <tt>keyboard-*</tt>, à l'exception de <tt>keyboard-model</tt> qui accepte une seule valeur. Veuillez consulter la page de manuel <tt>keyboard(5)</tt> pour plus de détails et des exemples des variables <tt>XKBMODEL</tt>, <tt>XKBLAYOUT</tt>, <tt>XKBVARIANT</tt> et <tt>XKBOPTIONS</tt>. Si plusieurs valeurs <tt>keyboard-variants</tt> sont données, elles seront jumelées une à une avec les valeurs <tt>keyboard-layouts</tt> (voir <tt>setxkbmap(1)</tt> option <tt>-variant</tt>). On peut utiliser des valeurs vides; par exemple pour régler deux dispositions, une par défaut US QWERTY et l'autre US Dvorak, utilisez:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#557" class="lnkocn">557</a></label>
+  <p class="code" id="557">
+    $ lb config --bootappend-live \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"boot=live components keyboard-layouts=us,us keyboard-variants=,dvorak"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#558" class="lnkocn">558</a></label>
+  <p class="bold" id="558"><a name="558"></a> <a id="hpersistence"></a>
+    <a name="h10.3" ></a><a name="persistence" ></a>10.3 Persistance
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#559" class="lnkocn">559</a></label>
+  <p class="i0" id="559">
+    Le paradigme d'un Live CD est d'être un système pré-installé qui amorce sur un support en lecture seule, comme un cdrom, où les données et les modifications ne survivent pas aux redémarrages du matériel hôte qui l'exécute.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#560" class="lnkocn">560</a></label>
+  <p class="i0" id="560">
+    Un système live est une généralisation de ce paradigme et gère ainsi d'autres supports en plus de CDs. Malgré tout, dans son comportement par défaut, il doit être considéré en lecture seule et toutes les évolutions pendant l'exécution du système sont perdues à l'arrêt.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#561" class="lnkocn">561</a></label>
+  <p class="i0" id="561">
+    La «persistance» est un nom commun pour les différents types de solutions pour sauver, après un redémarrage, certaines ou toutes les données, de cette évolution pendant l'exécution du système. Pour comprendre comment cela fonctionne, il peut être utile de savoir que même si le système est démarré et exécuté à partir d'un support en lecture seule, les modifications des fichiers et répertoires sont écrites sur des supports inscriptibles, typiquement un disque ram (tmpfs) et les données des disques RAM ne survivent pas à un redémarrage.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#562" class="lnkocn">562</a></label>
+  <p class="i0" id="562">
+    Les données stockées sur ce disque virtuel doivent être enregistrées sur un support inscriptible persistant comme un support de stockage local, un partage réseau ou même une séance d'un CD/DVD multisession (ré)inscriptible. Tous ces supports sont pris en charge dans les systèmes live de différentes manières, et tous, à part le dernier, nécessitent un paramètre d'amorçage spécial à préciser au moment du démarrage: <tt>persistence</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#563" class="lnkocn">563</a></label>
+  <p class="i0" id="563">
+    Si le paramètre de démarrage <tt>persistence</tt> est réglé (et <tt>nopersistence</tt> n'est pas utilisé), les supports de stockage locaux (par exemple les disques durs, clés USB) seront examinés pour trouver des volumes persistants pendant le démarrage. Il est possible de limiter les types de volumes persistants à utiliser en indiquant certains paramètres de démarrage décrits dans la page de manuel <i>live-boot</i>(7). Un volume persistant est un des éléments suivants:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#564" class="lnkocn">564</a></label>
+  <ul>
+  <li class="bullet" id="564">
+    une partition, identifiée par son nom GPT.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#565" class="lnkocn">565</a></label>
+  <ul>
+  <li class="bullet" id="565">
+    un système de fichiers, identifié par son étiquette de système de fichiers.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#566" class="lnkocn">566</a></label>
+  <ul>
+  <li class="bullet" id="566">
+    un fichier image situé sur la racine d'un système de fichiers en lecture (même une partition NTFS d'un système d'exploitation étranger), identifié par son nom de fichier.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#567" class="lnkocn">567</a></label>
+  <p class="i0" id="567">
+    L'étiquette du volume pour les overlays doit être <tt>persistence</tt> mais elle sera ignorée à moins de contenir dans sa racine un fichier nommé <tt>persistence.conf</tt> qui est utilisé pour personnaliser entièrement la persistance du volume, c'est-à-dire indiquer les répertoires que vous voulez sauvegarder dans votre volume de persistance après un redémarrage. Voir  <a href="customizing-run-time-behaviours.fr.html#persistence-conf">Le fichier persistence.conf</a>  pour plus de détails.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#568" class="lnkocn">568</a></label>
+  <p class="i0" id="568">
+    Voici quelques exemples montrant comment préparer un volume à utiliser pour la persistance. Cela peut être, par exemple, une partition ext4 sur un disque dur ou sur une clé usb créée avec:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#569" class="lnkocn">569</a></label>
+  <p class="code" id="569">
+    # mkfs.ext4 -L persistence /dev/sdb1<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#570" class="lnkocn">570</a></label>
+  <p class="i0" id="570">
+    Voir aussi  <a href="the-basics.fr.html#using-usb-extra-space">Utilisation de l'espace disponible sur une clé USB</a>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#571" class="lnkocn">571</a></label>
+  <p class="i0" id="571">
+    Si vous avez déjà une partition sur votre périphérique, vous pouvez simplement modifier l'étiquette avec l'un des exemples suivants:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#572" class="lnkocn">572</a></label>
+  <p class="code" id="572">
+    # tune2fs -L persistence /dev/sdb1 # for ext2,3,4 filesystems<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#573" class="lnkocn">573</a></label>
+  <p class="i0" id="573">
+    Voici un exemple montrant comment créer un fichier image avec un système de fichiers ext4 pour être utilisé pour la persistance:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#574" class="lnkocn">574</a></label>
+  <p class="code" id="574">
+    $ dd if=/dev/null of=persistence bs=1 count=0 seek=1G # for a 1GB sized image file<br>
+$ /sbin/mkfs.ext4 -F persistence<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#575" class="lnkocn">575</a></label>
+  <p class="i0" id="575">
+    Une fois que le fichier image est créé, à titre d'exemple, pour rendre <tt>/usr</tt> persistant mais seulement enregistrer les modifications que vous apportez à ce répertoire et non pas tout le contenu de <tt>/usr</tt>, vous pouvez utiliser l'option «union». Si le fichier image se trouve dans votre répertoire personnel, copiez-le à la racine du système de fichiers de votre disque dur et montez-le dans <tt>/mnt</tt> comme suit:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#576" class="lnkocn">576</a></label>
+  <p class="code" id="576">
+    # cp persistence /<br>
+# mount -t ext4 /persistence /mnt<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#577" class="lnkocn">577</a></label>
+  <p class="i0" id="577">
+    Ensuite, créez le fichier <tt>persistence.conf</tt> ajoutant du contenu et démontez le fichier image.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#578" class="lnkocn">578</a></label>
+  <p class="code" id="578">
+    # echo "/usr union" &gt;&gt; /mnt/persistence.conf<br>
+# umount /mnt<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#579" class="lnkocn">579</a></label>
+  <p class="i0" id="579">
+    Maintenant, redémarrez dans votre support live avec le paramètre de démarrage "persistence".
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#580" class="lnkocn">580</a></label>
+  <p class="bold" id="580"><a name="580"></a> <a id="hpersistence-conf"></a>
+    <a name="h10.3.1" ></a><a name="persistence-conf" ></a>10.3.1 Le fichier persistence.conf
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#581" class="lnkocn">581</a></label>
+  <p class="i0" id="581">
+    Un volume ayant l'étiquette <tt>persistence</tt> doit être configuré avec un fichier <tt>persistence.conf</tt> pour créer des répertoires persistants arbitraires. Ce fichier, situé sur le système de fichiers racine du volume, contrôle quels répertoires il rend persistants, et de quelle manière.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#582" class="lnkocn">582</a></label>
+  <p class="i0" id="582">
+    La façon de configurer les montages overlays est décrite en détail dans la page de manuel persistence.conf(5), mais un simple exemple devrait suffire pour la plupart des utilisations. Imaginons que nous voulions rendre notre répertoire personnel et APT cache persistants dans un système de fichiers ext4 sur la partition /dev/sdb1:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#583" class="lnkocn">583</a></label>
+  <p class="code" id="583">
+    # mkfs.ext4 -L persistence /dev/sdb1<br>
+# mount -t ext4 /dev/sdb1 /mnt<br>
+# echo "/home" &gt;&gt; /mnt/persistence.conf<br>
+# echo "/var/cache/apt" &gt;&gt; /mnt/persistence.conf<br>
+# umount /mnt<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#584" class="lnkocn">584</a></label>
+  <p class="i0" id="584">
+    Puis nous redémarrons. Lors du premier démarrage, les contenus du <tt>/home</tt> et <tt>/var/cache/apt</tt> seront copiés dans le volume persistant. À partir de ce moment, tous les changements dans ces répertoires seront stockés dans le volume persistant. Veuiller remarquer que les chemins répertoriés dans le fichier <tt>persistence.conf</tt> ne peuvent pas contenir d'espaces ou d'éléments spéciaux <tt>.</tt> et <tt>..</tt>. En outre, ni <tt>/lib</tt>, <tt>/lib/live</tt> (ou un de leurs sous-répertoires), ni <tt>/</tt> ne peuvent être rendus persistants en utilisant des montages personnalisés. Comme solution à cette limitation, vous pouvez ajouter <tt>/ union</tt> à votre fichier <tt>persistence.conf</tt> pour obtenir une persistance complète.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#585" class="lnkocn">585</a></label>
+  <p class="bold" id="585"><a name="585"></a> <a id="hc10.3.2"></a>
+    <a name="c10.3.2" ></a><a name="h10.3.2" ></a>10.3.2 Utilisation de plusieurs dispositifs de persistance
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#586" class="lnkocn">586</a></label>
+  <p class="i0" id="586">
+    Il existe différentes méthodes d'utilisation de multiples dispositifs de persistance pour les différents cas d'utilisation. Par exemple, utiliser plusieurs dispositifs à la fois ou en sélectionner un seul, entre plusieurs, à des fins très spécifiques.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#587" class="lnkocn">587</a></label>
+  <p class="i0" id="587">
+    Plusieurs volumes overlays différents (avec leurs propres fichiers <tt>persistence.conf</tt>) peuvent être utilisés au même temps, mais si plusieurs volumes rendent le même répertoire persistant, un seul d'entre eux sera utilisé. Si les deux sont «imbriqués» (un est un sous-répertoire de l'autre) le premier sera monté avant le second de sorte qu'aucun ne sera caché par l'autre. Monter des éléments personnalisés imbriqués est problématique s'ils sont énumérés dans le même fichier <tt>persistence.conf</tt>. Voir la page de manuel persistence.conf(5) pour savoir comment gérer ce cas si vous en avez vraiment besoin (remarque: ce n'est généralement pas le cas).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#588" class="lnkocn">588</a></label>
+  <p class="i0" id="588">
+    Un cas d'utilisation possible: Si vous souhaitez stocker les données de l'utilisateur, c'est-à-dire <tt>/home</tt> et les données du superutilisateur, c'est-à-dire <tt>/root</tt> dans des partitions différentes, créer deux partitions avec l'étiquette <tt>persistence</tt> et ajouter un fichier <tt>persistence.conf</tt> dans chacun comme ça <tt># echo "/home" &gt; persistence.conf</tt> pour la première partition qui permettra de sauver les fichiers de l'utilisateur et <tt># echo "/root" &gt; persistence.conf</tt> pour la seconde partition qui permettra de stocker les fichiers du superutilisateur. Enfin, utiliser le paramètre d'amorçage <tt>persistence</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#589" class="lnkocn">589</a></label>
+  <p class="i0" id="589">
+    Si un utilisateur a besoin de stockages persistants multiples du même type pour différents endroits ou essais, tel que <tt>private</tt> et <tt>work</tt>, le paramètre de démarrage <tt>persistence-label</tt> utilisé en conjonction avec le paramètre de démarrage <tt>persistence</tt> permettra de multiples mais uniques supports persistants. Dans le cas où un utilisateur voudrait utiliser une partition persistante étiquetée <tt>private</tt>, pour des données personelles comme les marque-pages du navigateur ou d'autres types, il utiliserait les paramètres de démarrage: <tt>persistence</tt> <tt>persistence-label=private</tt>. Et pour stocker des données liées au travail, comme des documents, des projets de recherche ou d'autres types, il utiliserait les paramètres de démarrage: <tt>persistence</tt> <tt>persistence-label=work</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#590" class="lnkocn">590</a></label>
+  <p class="i0" id="590">
+    Il est important de se rappeler que chacun de ces volumes, <tt>private</tt> et <tt>work</tt>, a également besoin d'un fichier <tt>persistence.conf</tt> dans sa racine. La page de manuel <i>live-boot</i> contient plus d'informations sur la façon d'utiliser ces étiquettes avec des noms ancients.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#591" class="lnkocn">591</a></label>
+  <p class="bold" id="591"><a name="591"></a> <a id="hc10.3.3"></a>
+    <a name="c10.3.3" ></a><a name="h10.3.3" ></a>10.3.3 Utilisation de la persistance avec chiffrement
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#592" class="lnkocn">592</a></label>
+  <p class="i0" id="592">
+    Utiliser la persistance signifie que certaines données sensibles peuvent être exposées au risque. Surtout si les données persistantes sont stockées sur un dispositif portable tel qu'une clé USB ou un disque dur externe. C'est quand le chiffrement est plus pratique. Même si la procédure complète peut paraître compliquée en raison du nombre d'étapes à suivre, il est vraiment facile de manipuler des partitions chiffrées avec <i>live-boot</i>. Pour utiliser <b>luks</b>, qui est le type de chiffrement pris en charge, vous devez installer <i>cryptsetup</i> tant sur la machine avec laquelle vous créez la partition chiffrée et aussi dans le système live avec lequel vous allez utiliser la partition persistante chiffrée.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#593" class="lnkocn">593</a></label>
+  <p class="i0" id="593">
+    Pour installer <i>cryptsetup</i> sur votre machine:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#594" class="lnkocn">594</a></label>
+  <p class="code" id="594">
+    # apt-get install cryptsetup<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#595" class="lnkocn">595</a></label>
+  <p class="i0" id="595">
+    Pour installer <i>cryptsetup</i> dans votre système live, ajouter à vos listes de paquets:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#596" class="lnkocn">596</a></label>
+  <p class="code" id="596">
+    $ lb config<br>
+$ echo "cryptsetup" &gt; config/package-lists/encryption.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#597" class="lnkocn">597</a></label>
+  <p class="i0" id="597">
+    Une fois que vous avez votre système live avec <i>cryptsetup</i>, vous avez essentiellement besoin de créer une nouvelle partition, la chiffrer et démarrer avec les paramètres <tt>persistence</tt> et <tt>persistence-encryption=luks</tt>. Nous aurions pu déjà anticipée cette étape et ajoutée ces paramètres de démarrage selon la procédure habituelle:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#598" class="lnkocn">598</a></label>
+  <p class="code" id="598">
+    $ lb config --bootappend-live "boot=live components persistence persistence-encryption=luks"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#599" class="lnkocn">599</a></label>
+  <p class="i0" id="599">
+    Allons dans les détails pour tous ceux qui ne connaissent pas bien le chiffrement. Dans l'exemple suivant, nous allons utiliser une partition sur une clé usb qui correspond au dispositif <tt>/dev/sdc2</tt>. S'il vous plaît être averti que vous devez déterminer quelle partition est celui que vous allez utiliser dans votre cas particulier.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#600" class="lnkocn">600</a></label>
+  <p class="i0" id="600">
+    La première étape est de brancher votre clé usb et de déterminer quel dispositif il est. La méthode recommandée pour lister les dispositifs dans <i>live-manual</i> est utiliser <tt>ls -l /dev/disk/by-id</tt>. Après cela, créer une nouvelle partition et la chiffrer avec un mot de passe comme suit:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#601" class="lnkocn">601</a></label>
+  <p class="code" id="601">
+    # cryptsetup --verify-passphrase luksFormat /dev/sdc2<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#602" class="lnkocn">602</a></label>
+  <p class="i0" id="602">
+    Ensuite, ouvrir la partition luks dans le mappeur de dispositifs virtuel. Utilisez n'importe quel nom que vous aimez. Nous utilisons <b>live</b> ici à titre d'exemple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#603" class="lnkocn">603</a></label>
+  <p class="code" id="603">
+    # cryptsetup luksOpen /dev/sdc2 live<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#604" class="lnkocn">604</a></label>
+  <p class="i0" id="604">
+    La prochaine étape est de remplir le dispositif avec des zéros avant de créer le système de fichiers:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#605" class="lnkocn">605</a></label>
+  <p class="code" id="605">
+    # dd if=/dev/zero of=/dev/mapper/live<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#606" class="lnkocn">606</a></label>
+  <p class="i0" id="606">
+    Maintenant, nous sommes prêts à créer le système de fichiers. Notez que nous ajoutons l'étiquette <tt>persistence</tt> de sorte que le dispositif est monté en tant que magasin de persistance au moment du démarrage.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#607" class="lnkocn">607</a></label>
+  <p class="code" id="607">
+    # mkfs.ext4 -L persistence /dev/mapper/live<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#608" class="lnkocn">608</a></label>
+  <p class="i0" id="608">
+    Pour continuer avec notre configuration, nous avons besoin de monter le dispositif, par exemple dans <tt>/mnt</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#609" class="lnkocn">609</a></label>
+  <p class="code" id="609">
+    # mount /dev/mapper/live /mnt<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#610" class="lnkocn">610</a></label>
+  <p class="i0" id="610">
+    Et créer le fichier <tt>persistence.conf</tt> à la racine de la partition. Ceci est, comme expliqué précédemment, strictement nécessaire. Voir  <a href="customizing-run-time-behaviours.fr.html#persistence-conf">Le fichier persistence.conf</a>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#611" class="lnkocn">611</a></label>
+  <p class="code" id="611">
+    # echo "/ union" &gt; /mnt/persistence.conf<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#612" class="lnkocn">612</a></label>
+  <p class="i0" id="612">
+    Puis, démontez le point de montage:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#613" class="lnkocn">613</a></label>
+  <p class="code" id="613">
+    # umount /mnt<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#614" class="lnkocn">614</a></label>
+  <p class="i0" id="614">
+    Et éventuellement, bien qu'il pourrait être un bon moyen de sécuriser les données que nous venons d'ajouter à la partition, nous pouvons fermer le dispositif:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#615" class="lnkocn">615</a></label>
+  <p class="code" id="615">
+    # cryptsetup luksClose live<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#616" class="lnkocn">616</a></label>
+  <p class="i0" id="616">
+    Résumons la procédure. Jusqu'ici nous avons créé un système capable d'utiliser le chiffrement, qui peut être copié sur une clé usb comme expliqué dans  <a href="the-basics.fr.html#copying-iso-hybrid-to-usb">Copie d'une image ISO hybride sur une clé USB</a>.  Nous avons également créé une partition chiffrée, qui peut être située dans la même clé USB pour le porter autour et nous avons configuré la partition chiffrée pour être utilisée comme magasin de persistance. Alors maintenant, nous avons seulement besoin de démarrer le système live. Au moment du démarrage, <i>live-boot</i> nous demandera le mot de passe pour monter la partition chiffrée à être utilisé pour la persistance.
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-contents.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-binary.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

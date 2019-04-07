@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    the-basics -
+    Manual de Live Systems
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Manual de Live Systems" />
+  <meta name="dc.author" content="Projecte Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Projecte Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="22.09.2015"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: Aquest programa &#233;s un programari lliure: es pot redistribuir i/o modificar sota els termes de la Llic&#232;ncia P&#251;blica General de la GNU com &#233;s publicada per la Free Software Foundation, ja sigui la versi&#243; 3 de la Llic&#232;ncia, o (si ho preferiu) qualsevol versi&#243; posterior. \\  \\ Aquest programa es distribueix amb l'esperan&#231;a que sigui &#251;til, per&#242; sense cap garantia, fins i tot sense la garantia impl&#237;cita de COMERCIALITZACI&#211; o ADEQUACI&#211; PER A PROP&#210;SITS DETERMINATS. Vegeu la Llic&#232;ncia General P&#251;blica de la GNU per a m&#233;s detalls. \\  \\ Haurieu de rebre una c&#242;pia de la Llic&#232;ncia P&#251;blica General de la GNU amb aquest programa. Si no &#233;s aix&#237;, consulteu http://www.gnu.org/licenses/. \\  \\ El text complet de la Llic&#232;ncia P&#251;blica General de la GNU es pot trobar a /usr/share/common-licenses/GPL-3." />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="ca">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="installation.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="overview-of-tools.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Manual de Live Systems
+  </h1>
+
+<h1 class="minitoc">
+    Sobre aquest manual
+  </h1>
+
+<h1 class="minitoc">
+    Sobre aquest manual
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.ca.html" target="_top">
+    1. Sobre aquest manual
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#8">
+    1.1 Per als impacients
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#12">
+    1.2 Termes
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#29">
+    1.3 Autors
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#44">
+    1.4 Contribuir a aquest document
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.ca.html#46">
+  1.4.1 Aplicar canvis
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.ca.html#60">
+  1.4.2 Traducció
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Sobre el Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.ca.html" target="_top">
+    2. Sobre el Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.ca.html#75">
+    2.1 Motivació
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#76">
+  2.1.1 Què passa amb els sistemes vius actuals
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#86">
+  2.1.2 Per què crear el nostre pròpi sistema viu?
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ca.html#94">
+    2.2 Filosofia
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#95">
+  2.2.1 Només paquets Debian sense modificacions de la secció "main"
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#99">
+  2.2.2 Paquets del sistema viu sense cap configuració
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ca.html#103">
+    2.3 Contacte
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Usuari
+  </h1>
+
+<h1 class="minitoc">
+    Instal·lació
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.ca.html" target="_top">
+    3. Instal·lació
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.ca.html#110">
+    3.1 Requisits
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.ca.html#118">
+    3.2 Instal·lació de live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#124">
+  3.2.1 Des del repositori de Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#127">
+  3.2.2 A partir del codi font
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#138">
+  3.2.3 A partir d'instantànies
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.ca.html#140">
+    3.3 Instal.lació de live-boot i live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#142">
+  3.3.1 Des del repositori de Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#144">
+  3.3.2 A partir del codi font
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#156">
+  3.3.3 A partir d'instantànies
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Conceptes bàsics
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.ca.html" target="_top">
+    4. Conceptes bàsics
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#163">
+    4.1 Què és un sistema viu?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#171">
+    4.2 Descàrrega d'imatges prefabricades
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#173">
+    4.3 Ús del servei de construcció d'imatges en viu web
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#175">
+  4.3.1 Ús i advertències sobre el servei web
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#179">
+    4.4 Primers passos: construcció d'una imatge ISO híbrida
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#190">
+    4.5 Usar una imatge ISO híbrida en viu
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#192">
+  4.5.1 Gravar una imatge ISO en un medi físic
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#195">
+  4.5.2 Copiar una imatge ISO híbrida en un dispositiu  USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#200">
+  4.5.3 Utilitzar l'espai lliure en una memòria USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#207">
+  4.5.4 Arrencar el medi en viu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#211">
+    4.6 Utilitzar una màquina virtual per a fer proves
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#218">
+  4.6.1 Provar una imatge ISO amb QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#225">
+  4.6.2 Provar una imatge ISO amb VirtualBox
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#233">
+    4.7 Construir i utilitzar una imatge HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#245">
+    4.8 Construir una imatge netboot
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#258">
+  4.8.1 Servidor DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#262">
+  4.8.2 Servidor TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#267">
+  4.8.3 Servidor NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#275">
+  4.8.4 Com provar l'arrencada en xarxa
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#284">
+    4.9 Webbooting
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#286">
+  4.9.1 Obtenir els fitxers webboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#292">
+  4.9.2 Arrencar imatges webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Descripció general de les eines
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.ca.html" target="_top">
+    5. Descripció general de les eines
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ca.html#300">
+    5.1 El paquet live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ca.html#310">
+  5.1.1 L'ordre <tt>lb config</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ca.html#320">
+  5.1.2 L'ordre <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ca.html#322">
+  5.1.3 L'ordre <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ca.html#324">
+    5.2 El paquet live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ca.html#328">
+    5.3 El paquet live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Gestió d'una configuració
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.ca.html" target="_top">
+    6. Gestió d'una configuració
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ca.html#333">
+    6.1 Gestionar canvis en la configuració
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ca.html#335">
+  6.1.1 Per què utilitzar scripts auto? Què fan?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ca.html#338">
+  6.1.2 Utilitzar scripts auto d'exemple
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ca.html#345">
+    6.2 Clonar una configuració publicada via Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització dels continguts
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.ca.html" target="_top">
+    7. Visió general de la personalització
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#359">
+    7.1 Configuració durant la construcció vs. durant l'arrencada
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#362">
+    7.2 Etapes de la construcció
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#365">
+    7.3 Suplementar lb config amb fitxers
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#367">
+    7.4 Tasques de personalització
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització de la instal·lació de paquets
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.ca.html" target="_top">
+    8. Personalització de la instal·lació de  paquets
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#372">
+    8.1 Fonts dels paquets
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#373">
+  8.1.1 Distribució, àrees d'arxiu i mode
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#380">
+  8.1.2 Miralls de distribució
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#382">
+  8.1.3 Miralls de distribució utilitzats en temps  de construcció
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#386">
+  8.1.4 Miralls de distribució utilitzats en temps d'execució
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#389">
+  8.1.5 Repositoris addicionals
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#397">
+    8.2 Selecció dels paquets a instal·lar
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#399">
+  8.2.1 Llistes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#402">
+  8.2.2 Ús dels metapaquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#410">
+  8.2.3 Llistes locals de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#414">
+  8.2.4 Llistes locals de paquets per a l'etapa binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#416">
+  8.2.5 Generar llistes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#420">
+  8.2.6 Ús de condicionals dins de les llistes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#429">
+  8.2.7 Eliminar paquets durant la instal·lació
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#431">
+  8.2.8 Tasques d'escriptori i llenguatge
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#436">
+  8.2.9 Tipus i versió del nucli
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#441">
+  8.2.10 Nuclis personalitzats
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#449">
+    8.3 Instal·lació de paquets  modificats o de tercers
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#456">
+  8.3.1 Fer servir <tt>packages.chroot</tt> per a instaŀar paquets personalitzats
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#463">
+  8.3.2 Fer servir un repositori APT per a instal·lar paquets personalitzats
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#466">
+  8.3.3 Paquets personalitzats i APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#469">
+    8.4 Configurar APT en temps de construcció
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#471">
+  8.4.1 Elegir apt o aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#475">
+  8.4.2 L'ús d'un proxy amb APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#478">
+  8.4.3 Afinar APT per a estalviar espai
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#487">
+  8.4.4 Passar opcions per a apt o aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#492">
+  8.4.5 APT pinning
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personalització dels continguts
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.ca.html" target="_top">
+    9. Personalització dels continguts
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ca.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#506">
+  9.1.1 Live/chroot local includes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#513">
+  9.1.2 Binary local includes
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ca.html#517">
+    9.2 Scripts ganxo (Hooks)
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#520">
+  9.2.1 Chroot local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#522">
+  9.2.2 Binary local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#524">
+  9.2.3 Scripts ganxo en temps d'arrencada
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ca.html#526">
+    9.3 Preconfiguració de les preguntes de Debconf
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització dels comportaments en temps d'execució
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html" target="_top">
+    10. Personalització dels comportaments en  temps d'execució
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#532">
+    10.1 Personalitzar l'usuari en viu
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#541">
+    10.2 Personalització de l'entorn local i el  llenguatge
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#558">
+    10.3 Persistència
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#580">
+  10.3.1 El fitxer persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#585">
+  10.3.2 Utilitzar diversos medis persistents
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#591">
+  10.3.3 Persistència amb xifratge
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personalització de la imatge binària
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.ca.html" target="_top">
+    11. Personalització de la imatge binària
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ca.html#619">
+    11.1 Carregadors d'arrencada
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ca.html#626">
+    11.2 metadades ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització de l'instal·lador de debian
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.ca.html" target="_top">
+    12. Personalització de l'instal·lador de debian
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ca.html#636">
+    12.1 Tipus d'instal·lador de Debian
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ca.html#648">
+    12.2 Personalització de l'instal·lador de Debian amb preconfiguració
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ca.html#651">
+    12.3 Personalitzar el contingut de l'instal·lador de Debian
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Projecte
+  </h1>
+
+<h1 class="minitoc">
+    Contribuir al projecte
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.ca.html" target="_top">
+    13. Contribuir al projecte
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ca.html#667">
+    13.1 Fer canvis
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ca.html#682">
+    13.2 Traducció de pàgines dels manuals
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Informar dels errors
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.ca.html" target="_top">
+    14. Informar dels errors
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#698">
+    14.1 Problemes coneguts
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#703">
+    14.2 Reconstruir des de zero
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#705">
+    14.3 Fer servir paquets actualitzats
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#707">
+    14.4 Recopilar informació
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#724">
+    14.5 Aïllar el cas que falla, si és possible
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#726">
+    14.6 Utilitzar el paquet correcte per a informar de l'error
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#729">
+  14.6.1 A l'hora de construir mentre bootstrapping
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#732">
+  14.6.2 A l'hora de construir, durant la instal·lació de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#736">
+  14.6.3 En el moment d'arrencar
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#738">
+  14.6.4 En temps d'execució
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#740">
+    14.7 Fer la recerca
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#744">
+    14.8 On informar dels errors
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Estil de Codi
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.ca.html" target="_top">
+    15. Estil de Codi
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#751">
+    15.1 Compatibilitat
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#756">
+    15.2 Indentació
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#758">
+    15.3 Ajust de línia
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#770">
+    15.4 Variables
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#789">
+    15.5 Miscel·lània
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procediments
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.ca.html" target="_top">
+    16. Procediments
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.ca.html#797">
+    16.1 Publicacions majors
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.ca.html#803">
+    16.2 Publicacions puntuals
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.ca.html#807">
+  16.2.1 Ùltima publicació puntual d'una versió de Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.ca.html#809">
+  16.2.2 Plantilla per a anunciar una publicació puntual
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Repositoris Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.ca.html" target="_top">
+    17. Repositoris Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.ca.html#829">
+    17.1 Gestió de múltiples repositoris
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.ca.html" target="_top">
+    18. Exemples
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#837">
+    18.1 Ús dels exemples
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#841">
+    18.2 Tutorial 1: Una imatge per defecte
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#850">
+    18.3 Tutorial 2: Una utilitat de navegador web
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#858">
+    18.4 Tutorial 3: Una imatge personalitzada
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.ca.html#861">
+  18.4.1 Primera revisió
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.ca.html#875">
+  18.4.2 Segona revisió
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#887">
+    18.5 Un client per a un quiosc VNC
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#901">
+    18.6 Una imatge bàsica per a un dispositiu USB de 128MB
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#912">
+    18.7 Un escriptori GNOME localitzat i amb instal·lador
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Apèndix
+  </h1>
+
+<h1 class="minitoc">
+    Style guide
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.ca.html" target="_top">
+    19. Guia d'estil
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.ca.html#927">
+    19.1 Instruccions per als autors
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ca.html#930">
+  19.1.1 Característiques lingüístiques
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.ca.html#963">
+  19.1.2 Procediments
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.ca.html#1002">
+    19.2 Directrius per als traductors
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ca.html#1006">
+  19.2.1 Consells de traducció
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.ca.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.ca.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Manual de Live Systems
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Conceptes bàsics
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#159" class="lnkocn">159</a></label>
+  <h1 class="norm" id="159"><a name="159"></a>
+    4. Conceptes bàsics
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#160" class="lnkocn">160</a></label>
+  <p class="i0" id="160">
+    Aquest capítol conté una breu descripció del procés de construcció i les instruccions per a l'utilització dels tres tipus d'imatge més comunes. El tipus d'imatge més versàtil <tt>iso-hybrid</tt> es pot utilitzar en una màquina virtual, en un medi òptic o qualsevol altre dispositiu d'emmagatzematge USB. En certs casos especials, com s'explica més endavant, el tipus <tt>hdd</tt> pot ser el més adequat. El capítol conté instruccions detallades per a la construcció d'una imatge tipus <tt>netboot</tt>, que és una mica més complicat a causa de la configuració necessària en el servidor. Aquest és un tema una mica avançat per a algú que no està familiaritzat ja amb l'arrencada en xarxa, però s'inclou aquí perquè un cop que la configuració es porta a terme, es tracta d'una manera molt convenient per a provar i desplegar imatges per a l'arrencada en xarxa local sense la molèstia de tractar amb els dispositius de les imatges.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#161" class="lnkocn">161</a></label>
+  <p class="i0" id="161">
+    La secció acaba amb una breu introducció al  <a href="the-basics.ca.html#webbooting">webbooting</a>  que és, potser, la forma més fàcil d'utilitzar imatges diferents per a diferents propòsits, canviant d'una a l'altra segons sigui necessari, utilitzant internet com un mitjà.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#162" class="lnkocn">162</a></label>
+  <p class="i0" id="162">
+    Al llarg del capítol, sovint es fa referència als noms dels fitxers produïts per defecte per <i>live-build</i>. Si es  <a href="the-basics.ca.html#downloading-prebuilt-images">descarrega una imatge prefabricada</a>,  els noms dels fitxers poden ser direrents.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#163" class="lnkocn">163</a></label>
+  <p class="bold" id="163"><a name="163"></a> <a id="hwhat-is-live"></a>
+    <a name="h4.1" ></a><a name="what-is-live" ></a>4.1 Què és un sistema viu?
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#164" class="lnkocn">164</a></label>
+  <p class="i0" id="164">
+    Un sistema viu és un sistema operatiu que arrenca en un equip des d'un dispositiu extraïble, com un CD-ROM o una memòria USB o des d'una xarxa, a punt per a fer servir sense cap tipus d'instal·lació en la unitat(s) habitual(s), amb una configuració automàtica feta en temps d'execució (veure  <a href="about-manual.ca.html#terms">Termes</a>).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#165" class="lnkocn">165</a></label>
+  <p class="i0" id="165">
+    Amb live systems, és un sistema operatiu, construït per a una de les arquitectures suportades (actualment amd64 i i386). Conté les següents parts:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#166" class="lnkocn">166</a></label>
+  <ul>
+  <li class="bullet" id="166">
+    <b>Imatge del nucli Linux</b>, generalment s'anomena <tt>vmlinuz*</tt>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#167" class="lnkocn">167</a></label>
+  <ul>
+  <li class="bullet" id="167">
+    <b>Imatge del disc RAM inicial (initrd)</b>: un disc RAM configurat per a l'arrencada de Linux, que conté els mòduls que possiblement es necessitaran per a muntar la imatge del sistema i algunes seqüències d'ordres per a fer-ho.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#168" class="lnkocn">168</a></label>
+  <ul>
+  <li class="bullet" id="168">
+    <b>Imatge del sistema</b>: Imatge del sistema de fitxers del sistema operatiu. Normalment, s'utilitza un sistema de fitxers comprimit SquashFS per a minimitzar la mida de la imatge. Tenir en compte que és de només lectura. Així, durant l'arrencada, el sistema Debian Live utilitzarà el disc RAM i un mecanisme de "unió" per a permetre l'escriptura de fitxers en el sistema en funcionament. No obstant això, totes les modificacions es perdran al apagar l'equip si no és que s'utilitza la persistència opcional (vegeu  <a href="customizing-run-time-behaviours.ca.html#persistence">Persistència</a>).
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#169" class="lnkocn">169</a></label>
+  <ul>
+  <li class="bullet" id="169">
+    <b>Carregador d'arrencada </b>: Una petita peça de codi dissenyat per a arrencar des del medi triat, possiblement presentant un indicador d'arrencada o un menú per a permetre la selecció d'opcions/configuració. Carrega el nucli de Linux i el seu initrd per a funcionar amb un sistema de fitxers del sistema associat. Es poden utilitzar diverses solucions, en funció del medi de destinació i el format del sistema de fitxers que conté els components esmentats anteriorment: isolinux per a arrencar des de CD o DVD en format ISO9660, syslinux per a una unitat USB o HDD que s'iniciarà des de particions VFAT, extlinux per a particions ext2/3/4 i btrfs, pxelinux per a PXE netboot, GRUB per a particions ext2/3/4, etc.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#170" class="lnkocn">170</a></label>
+  <p class="i0" id="170">
+    Es pot utilitzar <i>live-build</i> per a construir la imatge del sistema amb especificacions pròpies, configurar un nucli de Linux, el initrd, i un carregador d'arrencada per a executar-los, tot això en un format depenent del medi (imatge ISO9660, imatge de disc, etc.).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#171" class="lnkocn">171</a></label>
+  <p class="bold" id="171"><a name="171"></a> <a id="hdownloading-prebuilt-images"></a>
+    <a name="h4.2" ></a><a name="downloading-prebuilt-images" ></a>4.2 Descàrrega d'imatges prefabricades
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#172" class="lnkocn">172</a></label>
+  <p class="i0" id="172">
+    Si bé l'objectiu d'aquest manual és el desenvolupament i la construcció d'imatges en viu pròpies, es pot simplement voler provar una de les nostres imatges prefabricades, ja sigui com una introducció al seu ús o a la construcció d'imatges personalitzades. Aquestes imatges estan construïdes utilitzant el nostre  <a href="managing-a-configuration.ca.html#clone-configuration-via-git">repositori git live-images</a>  i les versions oficials estables es publiquen a ‹<a href="https://www.debian.org/CD/live/" target="_top">https://www.debian.org/CD/live/</a>›. A més, les versions antigues i les futures, i les imatges no oficials que contenen microprogramari i controladors no lliures estan disponibles a ‹<a href="http://debian-live.alioth.debian.org/cdimage/release/" target="_top">http://debian-live.alioth.debian.org/cdimage/release/</a>›.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#173" class="lnkocn">173</a></label>
+  <p class="bold" id="173"><a name="173"></a> <a id="husing-web-builder"></a>
+    <a name="h4.3" ></a><a name="using-web-builder" ></a>4.3 Ús del servei de construcció d'imatges en viu web
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#174" class="lnkocn">174</a></label>
+  <p class="i0" id="174">
+    Com un servei a la comunitat, oferim un servei web capaç de construïr imatges en viu a ‹<a href="http://debian-live.alioth.debian.org/build/" target="_top">http://debian-live.alioth.debian.org/build/</a>›. Aquest lloc es mantingut sobre una base del millor esforç. És a dir, encara que ens esforcem per a mantenir-lo al dia i que estigui operatiu en tot moment, i de fer anuncis d'interrupcions importants del servei, no podem garantir una disponibilitat del 100% o una creació d'imatges ràpida. Tanmateix, el servei pot tenir, de tant en tant, problemes que triguin algun temps en resoldre's. Si es té problemes o preguntes sobre aquest servei, posar-se en  <a href="about-project.ca.html#contact">contacte amb nosaltres</a>,  proporcionant l'enllaç a la pàgina web de la imatge construïda.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#175" class="lnkocn">175</a></label>
+  <p class="bold" id="175"><a name="175"></a> <a id="hc4.3.1"></a>
+    <a name="c4.3.1" ></a><a name="h4.3.1" ></a>4.3.1 Ús i advertències sobre el servei web
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#176" class="lnkocn">176</a></label>
+  <p class="i0" id="176">
+    La interfície web actualment no pot prevenir l'ús de combinacions d'opcions no vàlides, i en particular, quan el canvi d'una opció que normalment (és a dir, utilitzant <i>live-build</i> directament) canviaria els valors predeterminats d'altres opcions que figuren en el formulari de la web, el constructor web no canvia aquests valors predeterminats. En particular, si es canvia <tt>--architectures</tt> del valor per defecte <tt>i386</tt> a <tt>amd64</tt>, s'ha de canviar l'opció corresponent <tt>--linux-flavours</tt> del valor per defecte <tt>586</tt> a <tt>amd64</tt>. Veure la pàgina del manual <tt>lb_config</tt> per a la versió de <i>live-build</i> instal·lada al constructor web per a més detalls. El nombre de la versió de <i>live-build</i> apareix a la part inferior de la pàgina web.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#177" class="lnkocn">177</a></label>
+  <p class="i0" id="177">
+    El càlcul de temps donat pel constructor web és només una estimació aproximada i pot no reflectir acuradament el temps que realment es necessita per a finalitzar la construcció d'una imatge. Tenir en compte que aquesta estimació tampoc s'actualitza tal i com va passant el temps. Cal tenir una mica de paciència. No tornar a carregar la pàgina després de enviar la proposta de construcció, ja que això pot tornar a reenviar una nova petició amb els mateixos paràmetres. Posar-se  <a href="about-project.ca.html#contact">en contacte amb nosaltres</a>  si no es rep la notificació de la construcció un cop que s'estigui segur que s'ha esperat prou i verificat que la notificació per correu electrònic no ha anat a parar al spam.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#178" class="lnkocn">178</a></label>
+  <p class="i0" id="178">
+    El servei web està limitat en el tipus d'imatges que es poden construir. Això el manté simple i eficient d'utilitzar i mantenir. Si es desitja realitzar personalitzacions que no es contemplen en la interfície web, a la resta d'aquest manual s'explica com crear imatges pròpies amb <i>live-build</i>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#179" class="lnkocn">179</a></label>
+  <p class="bold" id="179"><a name="179"></a> <a id="hbuilding-iso-hybrid"></a>
+    <a name="h4.4" ></a><a name="building-iso-hybrid" ></a>4.4 Primers passos: construcció d'una imatge ISO híbrida
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#180" class="lnkocn">180</a></label>
+  <p class="i0" id="180">
+    Independentment del tipus d'imatge, s'haurà de fer els mateixos passos bàsics per a construir una imatge cada vegada. Com a primer exemple, crear un directori de treball, canviar a aquest directori i executar la següent seqüència d'ordres <i>live-build</i> per a crear una imatge ISO híbrida de base que conté només el sistema per defecte de Debian sense X.org. És adequat per a gravar en un CD o DVD, i també per a copiar en una memòria USB.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#181" class="lnkocn">181</a></label>
+  <p class="i0" id="181">
+    El nom del directori de treball és absolutament indiferent, però si es fa un cop d'ull als exemples utilitzats a <i>live-manual</i>, és una bona idea utilitzar un nom que ajudi a identificar la imatge amb que s'està treballant en cada directori, especialment si s'està treballant o experimentant amb diferents tipus d'imatges. En aquest cas, anem a construir un sistema per defecte així que l'anomenarem, per exemple, live-default.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#182" class="lnkocn">182</a></label>
+  <p class="code" id="182">
+    $ mkdir live-default &amp;&amp; cd live-default<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#183" class="lnkocn">183</a></label>
+  <p class="i0" id="183">
+    Aleshores, executar l'ordre <tt>lb config</tt>. Això crearà una jerarquia «config/» en el directori actual per a ser utilitzada per altres ordres:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#184" class="lnkocn">184</a></label>
+  <p class="code" id="184">
+    $ lb config<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#185" class="lnkocn">185</a></label>
+  <p class="i0" id="185">
+    Aquí no es passa cap paràmetre a aquestes ordres, per tant s'utilitzaran les opcions per defecte. Veure  <a href="overview-of-tools.ca.html#lb-config">L'ordre lb config</a>  per a més detalls.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#186" class="lnkocn">186</a></label>
+  <p class="i0" id="186">
+    Ara que la jerarquia «config/» ja existeix, crear la imatge amb l'ordre <tt>lb build</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#187" class="lnkocn">187</a></label>
+  <p class="code" id="187">
+    # lb build<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#188" class="lnkocn">188</a></label>
+  <p class="i0" id="188">
+    Aquest procés tardarà una mica, depenent de la velocitat del ordinador i de la connexió de la xarxa. Quan hagi acabat, ha d'haver un fitxer imatge <tt>live-image-i386.hybrid.iso</tt>, a punt per a ser utilitzat, en el directori actual.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#189" class="lnkocn">189</a></label>
+  <p class="i0" id="189">
+    <b>Nota:</b> Si s'està construint en un sistema amd64 el nom de la imatge resultant serà <tt>live-image-amd64.hybrid.iso</tt>. Tenir en compte aquesta convenció al llarg del manual.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#190" class="lnkocn">190</a></label>
+  <p class="bold" id="190"><a name="190"></a> <a id="husing-iso-hybrid"></a>
+    <a name="h4.5" ></a><a name="using-iso-hybrid" ></a>4.5 Usar una imatge ISO híbrida en viu
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#191" class="lnkocn">191</a></label>
+  <p class="i0" id="191">
+    Després de la construcció o la descàrrega d'una imatge ISO híbrida, que pot ser obtinguda a ‹<a href="https://www.debian.org/CD/live/" target="_top">https://www.debian.org/CD/live/</a>›, el següent pas habitual és preparar el dispositiu per a l'arrencada, ja sigui medis òptics com un CD-R(W) o DVD-R(W) o una memòria USB.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#192" class="lnkocn">192</a></label>
+  <p class="bold" id="192"><a name="192"></a> <a id="hburning-iso-image"></a>
+    <a name="h4.5.1" ></a><a name="burning-iso-image" ></a>4.5.1 Gravar una imatge ISO en un medi físic
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#193" class="lnkocn">193</a></label>
+  <p class="i0" id="193">
+    Gravar una imatge ISO és fàcil. Simplement cal instal·lar <i>xorriso</i> i utilitzar-lo des de la línia d'ordres per a gravar la imatge. Per exemple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#194" class="lnkocn">194</a></label>
+  <p class="code" id="194">
+    # apt-get install xorriso<br>
+$ xorriso -as cdrecord -v dev=/dev/sr0 blank=as_needed live-image-i386.hybrid.iso<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#195" class="lnkocn">195</a></label>
+  <p class="bold" id="195"><a name="195"></a> <a id="hcopying-iso-hybrid-to-usb"></a>
+    <a name="h4.5.2" ></a><a name="copying-iso-hybrid-to-usb" ></a>4.5.2 Copiar una imatge ISO híbrida en un dispositiu  USB
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#196" class="lnkocn">196</a></label>
+  <p class="i0" id="196">
+    Les imatges ISO preparades amb <tt>xorriso</tt>, és poden copiar directament a una memòria USB utilitzant el programa <tt>cp</tt> o un altre d'equivalent. Connectar una memòria USB amb una mida prou gran per al fitxer de la imatge i determinar quin dispositiu és, que d'ara endavant anomenarem <tt>${USBSTICK}</tt>. Aquest és el dispositiu de la memòria, com per exemple <tt>/dev/sdb</tt>, i no una partició, com ara <tt>/dev/sdb1</tt>! Es pot trobar el nom del dispositiu correcte mirant la sortida de <tt>dmesg</tt> després de connectar la memòria usb, o encara millor, <tt>ls -l /dev/disk/by-id</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#197" class="lnkocn">197</a></label>
+  <p class="i0" id="197">
+    Quan s'estigui segur de tenir el nom del dispositiu correcte, utilitzar l'ordre <tt>cp</tt> per a copiar la imatge a la memòria. <b>Fent això es perdran definitivament tots els continguts anteriors de la memòria usb!</b>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#198" class="lnkocn">198</a></label>
+  <p class="code" id="198">
+    $ cp live-image-i386.hybrid.iso ${USBSTICK}<br>
+$ sync<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#199" class="lnkocn">199</a></label>
+  <p class="i0" id="199">
+    <b>Nota:</b> L'ordre <i>sync</i> s'utilitza per a assegurar-se que totes les dades, que el nucli emmagatzema en la memòria durant la còpia de la imatge, s'escriuen en el dispositiu USB.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#200" class="lnkocn">200</a></label>
+  <p class="bold" id="200"><a name="200"></a> <a id="husing-usb-extra-space"></a>
+    <a name="h4.5.3" ></a><a name="using-usb-extra-space" ></a>4.5.3 Utilitzar l'espai lliure en una memòria USB
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#201" class="lnkocn">201</a></label>
+  <p class="i0" id="201">
+    Després de copiar la <tt>live-image-i386.hybrid.iso</tt> en un dispositiu USB, la primera partició serà utilitzada pel sistema en viu. Per a poder utilitzar l'espai que queda lliure es pot utilitzar una eina de particionament com <i>gparted</i> o <i>parted</i> per a crear una nova partició.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#202" class="lnkocn">202</a></label>
+  <p class="code" id="202">
+    # gparted ${USBSTICK}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#203" class="lnkocn">203</a></label>
+  <p class="i0" id="203">
+    Després de crear la partició, on <tt>${PARTITION}</tt> és el nom de la partició, com ara <tt>/dev/sdb2</tt>, s'ha de crear un sistema de fitxers. Una opció possible seria ext4.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#204" class="lnkocn">204</a></label>
+  <p class="code" id="204">
+    # mkfs.ext4 ${PARTITION}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#205" class="lnkocn">205</a></label>
+  <p class="i0" id="205">
+    <b>Nota:</b>  Si es vol utilitzar l'espai addicional amb Windows, pel que sembla, aquest sistema operatiu normalment no pot accedir a altres particions més que a la primera. Algunes solucions a aquest problema han estat discutides a la nostra  <a href="about-project.ca.html#contact">llista de correu</a>,  però sembla que no hi ha respostes fàcils.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#206" class="lnkocn">206</a></label>
+  <p class="i0" id="206">
+    <b>Recordar: Cada vegada que s'instal·li una nova live-image-i386.hybrid.iso al dispositiu, es perdran totes les dades perquè la taula de particions se sobreescriu amb el contingut de la imatge, de manera que es assenyat fer una còpia de seguretat de la partició addicional per a restaurar les dades de nou després d'actualitzar la imatge en viu.</b>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#207" class="lnkocn">207</a></label>
+  <p class="bold" id="207"><a name="207"></a> <a id="hbooting-live-medium"></a>
+    <a name="h4.5.4" ></a><a name="booting-live-medium" ></a>4.5.4 Arrencar el medi en viu
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#208" class="lnkocn">208</a></label>
+  <p class="i0" id="208">
+    La primera vegada que s'arrenqui el medi en viu, ja sigui des de CD, DVD, memòria USB, o PXE, pot ser necessaria alguna petita configuració al BIOS del ordinador en primer lloc. Atès que les BIOS varien molt en les seves funcions i dreceres de teclat, no podem entrar en el tema en profunditat aquí. Algunes BIOS proporcionen una tecla per a obrir un menú de dispositius d'arrencada, que és la manera més fàcil si es troba disponible al sistema. En cas contrari, cal entrar al menú de configuració del BIOS i canviar l'ordre d'arrencada per a situar el dispositiu del sistema en viu abans que el dispositiu d'arrencada normal.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#209" class="lnkocn">209</a></label>
+  <p class="i0" id="209">
+    Després d'arrencar des del dispositiu, es veurà un menu d'inici. Si es prem «entrer» el sistema s'iniciarà amb l'entrada <tt>Live</tt> i les seves opcions per defecte. Per a obtenir més informació sobre les opcions d'arrencada, llegir «l'ajuda» (help) al menú i també les pàgines del manual de <i>live-boot</i> i <i>live-config</i> que es troben dins del sistema en viu.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#210" class="lnkocn">210</a></label>
+  <p class="i0" id="210">
+    Suposant que s'ha seleccionat <tt>Live</tt> i s'ha arrencat una imatge d'escriptori per defecte, després que els missatges d'arrencada hagin passat s'haurà iniciat una sessió com a usuari <tt>user</tt> i es veurà un escriptori, a punt per a ser utilitzat. Si s'ha arrencat una imatge de només consola, com per exemple una imatge <tt>standard</tt> de les  <a href="the-basics.ca.html#downloading-prebuilt-images">imatges prefabricades</a>,  s'iniciarà una sessió com a usuari <tt>user</tt> i es veurà el indicador de la shell, a punt per a ser utilitzat.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#211" class="lnkocn">211</a></label>
+  <p class="bold" id="211"><a name="211"></a> <a id="husing-virtual-machine"></a>
+    <a name="h4.6" ></a><a name="using-virtual-machine" ></a>4.6 Utilitzar una màquina virtual per a fer proves
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#212" class="lnkocn">212</a></label>
+  <p class="i0" id="212">
+    Pot ser un gran estalvi de temps per al desenvolupament d'imatges en viu executar-les en una màquina virtual (VM). Això no està exempt d'advertiments:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#213" class="lnkocn">213</a></label>
+  <ul>
+  <li class="bullet" id="213">
+    L'execució d'una màquina virtual requereix de suficient memòria RAM, tant per al sistema operatiu convidat i l'amfitrió i es recomana una CPU amb suport de maquinari per a la virtualització.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#214" class="lnkocn">214</a></label>
+  <ul>
+  <li class="bullet" id="214">
+    Hi ha algunes limitacions inherents a l'execució en una màquina virtual, per exemple, rendiment de vídeo pobre, opcions limitadades de maquinari emulat.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#215" class="lnkocn">215</a></label>
+  <ul>
+  <li class="bullet" id="215">
+    En el desenvolupament per a un maquinari específic, no hi ha cap substitut millor que el propi maquinari.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#216" class="lnkocn">216</a></label>
+  <ul>
+  <li class="bullet" id="216">
+    De tant en tant hi ha errors que només sorgeixen durant l'execució en una màquina virtual. En cas de dubte, comprovar la imatge directament al maquinari.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#217" class="lnkocn">217</a></label>
+  <p class="i0" id="217">
+    Sempre que es pugui treballar dins d'aquestes limitacions, examinar el programari de màquina virtual disponible i triar un que sigui adequat per a les necessitats pròpies.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#218" class="lnkocn">218</a></label>
+  <p class="bold" id="218"><a name="218"></a> <a id="htesting-iso-with-qemu"></a>
+    <a name="h4.6.1" ></a><a name="testing-iso-with-qemu" ></a>4.6.1 Provar una imatge ISO amb QEMU
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#219" class="lnkocn">219</a></label>
+  <p class="i0" id="219">
+    La màquina virtual més versàtil dins Debian és QEMU. Si el processador té suport de maquinari per a la virtualització, utilitzar el paquet <i>qemu-kvm</i>; la descripció del paquet <i>qemu-kvm</i> enumera breument els requisits.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#220" class="lnkocn">220</a></label>
+  <p class="i0" id="220">
+    Primer, instal·lar <i>qemu-kvm</i> si el processador ho suporta. Si no, instal·lar <i>qemu</i>, en aquest cas el nom del programa és <tt>qemu</tt> en lloc de <tt>kvm</tt> en els exemples següents. El paquet <i>qemu-utils</i> també és valuós per a la creació d'imatges de disc virtuals amb <tt>qemu-img</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#221" class="lnkocn">221</a></label>
+  <p class="code" id="221">
+    # apt-get install qemu-kvm qemu-utils<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#222" class="lnkocn">222</a></label>
+  <p class="i0" id="222">
+    Arrencar una imatge ISO és senzill:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#223" class="lnkocn">223</a></label>
+  <p class="code" id="223">
+    $ kvm -cdrom live-image-i386.hybrid.iso<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#224" class="lnkocn">224</a></label>
+  <p class="i0" id="224">
+    Veure les pàgines del manual per a més detalls
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#225" class="lnkocn">225</a></label>
+  <p class="bold" id="225"><a name="225"></a> <a id="htesting-iso-with-virtualbox"></a>
+    <a name="h4.6.2" ></a><a name="testing-iso-with-virtualbox" ></a>4.6.2 Provar una imatge ISO amb VirtualBox
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#226" class="lnkocn">226</a></label>
+  <p class="i0" id="226">
+    Per a provar la ISO amb <i>virtualbox</i>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#227" class="lnkocn">227</a></label>
+  <p class="code" id="227">
+    # apt-get install virtualbox virtualbox-qt virtualbox-dkms<br>
+$ virtualbox<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#228" class="lnkocn">228</a></label>
+  <p class="i0" id="228">
+    Crear una nova màquina virtual, canviar els paràmetres d'emmagatzematge per a utilitzar <tt>live-image-i386.hybrid.iso</tt> com unitat de CD/DVD i arrencar la màquina.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#229" class="lnkocn">229</a></label>
+  <p class="i0" id="229">
+    <b>Nota:</b> Per a provar sistemes vius que contenen X.org amb <i>virtualbox</i>, segurament es assenyat incloure el paquet del driver VirtualBox X.org, <i>virtualbox-guest-dkms</i> i <i>virtualbox-guest-x11</i>, en la configuració de <i>live-build</i>. En cas contrari, la resolució es limita a 800x600.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#230" class="lnkocn">230</a></label>
+  <p class="code" id="230">
+    $ echo "virtualbox-guest-dkms virtualbox-guest-x11" &gt;&gt; config/package-lists/my.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#231" class="lnkocn">231</a></label>
+  <p class="i0" id="231">
+    Per tal de fer que el paquet dkms funcioni, s'han d'instal·lar també les capçaleres del nucli per a la variant del nucli de la imatge. En lloc d'enumerar manualment el paquet <i>linux-headers</i> correcte en la llista de paquets creat anteriorment, la selecció del paquet adequat es pot fer automàticament amb <i>live-build</i>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#232" class="lnkocn">232</a></label>
+  <p class="code" id="232">
+    &nbsp;&nbsp;$ lb config --linux-packages "linux-image linux-headers"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#233" class="lnkocn">233</a></label>
+  <p class="bold" id="233"><a name="233"></a> <a id="husing-hdd-image"></a>
+    <a name="h4.7" ></a><a name="using-hdd-image" ></a>4.7 Construir i utilitzar una imatge HDD
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#234" class="lnkocn">234</a></label>
+  <p class="i0" id="234">
+    Construir una imatge HDD és similar a una ISO híbrida en tots els aspectes, excepte que s'especifica <tt>-b hdd</tt>, que el nom del fitxer resultant és <tt>live-image-i386.img</tt> i que no es pot gravar en medis òptics. És adequada per a arrencar des de dispositius USB, discs durs USB, i altres dispositius d'emmagatzematge portàtils. Normalment, una imatge ISO híbrida es pot utilitzar per a aquest propòsit en el seu lloc, però si el BIOS no maneja adequadament les imatges híbrides, cal utilitzar una imatge HDD.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#235" class="lnkocn">235</a></label>
+  <p class="i0" id="235">
+    <b>Nota:</b>  si s'ha creat una imatge ISO híbrida amb l'exemple anterior, s'haurà de netejar el directori de treball amb l'ordre <tt>lb clean</tt> (veure  <a href="overview-of-tools.ca.html#lb-clean">L'ordre lb clean</a>):
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#236" class="lnkocn">236</a></label>
+  <p class="code" id="236">
+    # lb clean --binary<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#237" class="lnkocn">237</a></label>
+  <p class="i0" id="237">
+    Executar l'ordre <tt>lb config</tt> com abans, excepte que aquesta vegada especificant el tipus d'imatge HDD:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#238" class="lnkocn">238</a></label>
+  <p class="code" id="238">
+    $ lb config -b hdd<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#239" class="lnkocn">239</a></label>
+  <p class="i0" id="239">
+    Ara construir la imatge amb l'ordre <tt>lb build</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#240" class="lnkocn">240</a></label>
+  <p class="code" id="240">
+    # lb build<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#241" class="lnkocn">241</a></label>
+  <p class="i0" id="241">
+    Quan la construcció acabi, hauria d'haver un fitxer <tt>live-image-i386.img</tt> al directori actual.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#242" class="lnkocn">242</a></label>
+  <p class="i0" id="242">
+    La imatge binària generada conté una partició VFAT i el carregador d'arrencada syslinux, llestos per a ser escrits directament a una memòria USB. Un cop més, donat que l'ús d'una imatge HDD és com utilitzar una imatge ISO híbrida en un USB, seguir les instruccions de  <a href="the-basics.ca.html#using-iso-hybrid">Usar una imatge ISO híbrida en viu</a>,  però amb el nom de fitxer <tt>live-image-i386.img</tt> en lloc de <tt>live-image-i386.hybrid.iso</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#243" class="lnkocn">243</a></label>
+  <p class="i0" id="243">
+    Igualment, per a provar una imatge HDD amb Qemu, instal·lar <i>qemu</i> com s'ha descrit anteriorment a  <a href="the-basics.ca.html#testing-iso-with-qemu">Provar una imatge ISO amb QEMU</a>.  A continuació, executar <tt>kvm</tt> o <tt>qemu</tt>, segons la versió instal·lada al sistema amfitrió, especificant <tt>live-image-i386.img</tt> com a primer disc dur.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#244" class="lnkocn">244</a></label>
+  <p class="code" id="244">
+    $ kvm -hda live-image-i386.img<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#245" class="lnkocn">245</a></label>
+  <p class="bold" id="245"><a name="245"></a> <a id="hbuilding-netboot-image"></a>
+    <a name="h4.8" ></a><a name="building-netboot-image" ></a>4.8 Construir una imatge netboot
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#246" class="lnkocn">246</a></label>
+  <p class="i0" id="246">
+    La següent seqüència d'ordres crearà una imatge netboot bàsica que conté el sistema per defecte de Debian sense X.org. És adequada per a l'arrencada en xarxa.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#247" class="lnkocn">247</a></label>
+  <p class="i0" id="247">
+    <b>Nota:</b> si s'ha realitzat algun dels exemples anteriors, s'haurà de netejar el directori de treball amb l'ordre <tt>lb clean</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#248" class="lnkocn">248</a></label>
+  <p class="code" id="248">
+    # lb clean<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#249" class="lnkocn">249</a></label>
+  <p class="i0" id="249">
+    En aquest cas concret, un <tt>lb clean --binary</tt> no seria suficient per a netejar les etapes necessàries. La causa d'això és que en les configuracions d'arrencada en xarxa, es necessita una configuració initramfs diferent que <i>live-build</i> realitza automàticament quan es construeixen imatges netboot. Ja que la creació del initramfs pertany a l'etapa chroot, fer el canvi a netboot en un directori de construcció existent significa reconstruir l'etapa chroot també. Per tant, s'ha de fer un <tt>lb clean</tt> (que eliminarà l'etapa chroot, també)
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#250" class="lnkocn">250</a></label>
+  <p class="i0" id="250">
+    Executar l'ordre següent per a configurar la imatge per a arrencar en xarxa:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#251" class="lnkocn">251</a></label>
+  <p class="code" id="251">
+    $ lb config -b netboot --net-root-path "/srv/debian-live" --net-root-server "192.168.0.2"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#252" class="lnkocn">252</a></label>
+  <p class="i0" id="252">
+    A diferència de les imatges ISO i HDD, l'arrencada en xarxa no serveix el sistema de fitxers al client, per tant els fitxers han de ser servits a través de NFS. Amb lb config es poden elegir diferents sistemes de fitxers de xarxa. Les opcions <tt>--net-root-path</tt> i <tt>--net-root-server</tt> especifiquen la ubicació i el servidor, respectivament, del servidor NFS on es troba la imatge del sistema de fitxers a l'hora d'arrencar. Assegurar-se que aquests s'ajusten als valors adequats per a la xarxa i el servidor.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#253" class="lnkocn">253</a></label>
+  <p class="i0" id="253">
+    Ara construir la imatge amb l'ordre <tt>lb build</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#254" class="lnkocn">254</a></label>
+  <p class="code" id="254">
+    # lb build<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#255" class="lnkocn">255</a></label>
+  <p class="i0" id="255">
+    En l'arrencada en xarxa, el client executa una petita peça de programari que normalment es troba a la EPROM de la targeta Ethernet. Aquest programa envia una petició DHCP per a obtenir una adreça IP i la informació sobre què fer a continuació. Per regla general, el següent pas és aconseguir un carregador d'arrencada de més alt nivell a través del protocol TFTP. Podria ser GRUB, pxelinux o fins i tot arrencar directament a un sistema operatiu com Linux.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#256" class="lnkocn">256</a></label>
+  <p class="i0" id="256">
+    Per exemple, si es descomprimeix el arxiu <tt>live-image-i386.netboot.tar</tt> generat al directori <tt>/srv/debian-live</tt>, es trobarà la imatge del sistema de fitxers a <tt>live/filesystem.squashfs</tt> i el nucli, initrd i carregador d'arrencada pxelinux a <tt>tftpboot/</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#257" class="lnkocn">257</a></label>
+  <p class="i0" id="257">
+    Ara hem de configurar els tres serveis al servidor per a l'arrencada en xarxa: el servidor DHCP, servidor TFTP i el servidor NFS.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#258" class="lnkocn">258</a></label>
+  <p class="bold" id="258"><a name="258"></a> <a id="hc4.8.1"></a>
+    <a name="c4.8.1" ></a><a name="h4.8.1" ></a>4.8.1 Servidor DHCP
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#259" class="lnkocn">259</a></label>
+  <p class="i0" id="259">
+    S'ha de configurar el servidor DHCP de la xarxa per a assegurar-se que dona una adreça IP per al client del sistema d'arrencada en xarxa, i per a anunciar la ubicació del carregador d'arrencada PXE.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#260" class="lnkocn">260</a></label>
+  <p class="i0" id="260">
+    Heus aquí un exemple per a servir d'inspiració, escrit per al servidor ISC DHCP <tt>isc-dhcp-server</tt> al fitxer de configuració <tt>/etc/dhcp/dhcpd.conf</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#261" class="lnkocn">261</a></label>
+  <p class="code" id="261">
+    # /etc/dhcp/dhcpd.conf - configuration file for isc-dhcp-server<br><br>
+ddns-update-style none;<br><br>
+option domain-name "example.org";<br>
+option domain-name-servers ns1.example.org, ns2.example.org;<br><br>
+default-lease-time 600;<br>
+max-lease-time 7200;<br><br>
+log-facility local7;<br><br>
+subnet 192.168.0.0 netmask 255.255.255.0 {<br>
+&nbsp;&nbsp;&nbsp;range 192.168.0.1 192.168.0.254;<br>
+&nbsp;&nbsp;&nbsp;filename "pxelinux.0";<br>
+&nbsp;&nbsp;&nbsp;next-server 192.168.0.2;<br>
+&nbsp;&nbsp;&nbsp;option subnet-mask 255.255.255.0;<br>
+&nbsp;&nbsp;&nbsp;option broadcast-address 192.168.0.255;<br>
+&nbsp;&nbsp;&nbsp;option routers 192.168.0.1;<br>
+}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#262" class="lnkocn">262</a></label>
+  <p class="bold" id="262"><a name="262"></a> <a id="hc4.8.2"></a>
+    <a name="c4.8.2" ></a><a name="h4.8.2" ></a>4.8.2 Servidor TFTP
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#263" class="lnkocn">263</a></label>
+  <p class="i0" id="263">
+    Aquest serveix el nucli i el disc ram inicial per al sistema en temps d'execució.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#264" class="lnkocn">264</a></label>
+  <p class="i0" id="264">
+    S'ha d'instal·lar el paquet <i>tftpd-hpa</i>. Aquest pot servir tots els fitxers continguts dins d'un directori arrel, per regla general <tt>/srv/tftp</tt>. Per tal que es serveixin els fitxers dins de <tt>/srv/debian-live/tftpboot</tt>, s'ha d'executar com a superusuari la següent ordre:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#265" class="lnkocn">265</a></label>
+  <p class="code" id="265">
+    # dpkg-reconfigure -plow tftpd-hpa<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#266" class="lnkocn">266</a></label>
+  <p class="i0" id="266">
+    i omplir el nou directori del servidor tftp quan ho hàgim de fer.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#267" class="lnkocn">267</a></label>
+  <p class="bold" id="267"><a name="267"></a> <a id="hc4.8.3"></a>
+    <a name="c4.8.3" ></a><a name="h4.8.3" ></a>4.8.3 Servidor NFS
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#268" class="lnkocn">268</a></label>
+  <p class="i0" id="268">
+    Un cop l'ordinador ha descarregat, ha arrencat el nucli de Linux i ha carregat el initrd, intentarà muntar la imatge del sistema de fitxers en viu a través d'un servidor NFS.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#269" class="lnkocn">269</a></label>
+  <p class="i0" id="269">
+    S'ha d'instal·lar el paquet <i>nfs-kernel-server</i>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#270" class="lnkocn">270</a></label>
+  <p class="i0" id="270">
+    Llavors, fer que la imatge del sistema de fitxers estigui disponible a través de NFS afegint una línia com la següent a <tt>/etc/exports</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#271" class="lnkocn">271</a></label>
+  <p class="code" id="271">
+    /srv/debian-live *(ro,async,no_root_squash,no_subtree_check)<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#272" class="lnkocn">272</a></label>
+  <p class="i0" id="272">
+    i informar al servidor NFS sobre aquesta nova exportació amb la següent ordre:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#273" class="lnkocn">273</a></label>
+  <p class="code" id="273">
+    # exportfs -rv<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#274" class="lnkocn">274</a></label>
+  <p class="i0" id="274">
+    La configuració d'aquests tres serveis pot ser una mica difícil. És possible que es necessiti una mica de paciència per a aconseguir que tots tres funcionin plegats. Per a obtenir més informació, veure el wiki de syslinux a ‹<a href="http://www.syslinux.org/wiki/index.php/PXELINUX" target="_top">http://www.syslinux.org/wiki/index.php/PXELINUX</a>› o la secció TFTP Net Booting al Manual del Instal·lador de Debian a ‹<a href="http://d-i.alioth.debian.org/manual/ca.i386/ch04s05.html" target="_top">http://d-i.alioth.debian.org/manual/ca.i386/ch04s05.html</a>›. Això pot ajudar, ja que els seus processos són molt similars.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#275" class="lnkocn">275</a></label>
+  <p class="bold" id="275"><a name="275"></a> <a id="hc4.8.4"></a>
+    <a name="c4.8.4" ></a><a name="h4.8.4" ></a>4.8.4 Com provar l'arrencada en xarxa
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#276" class="lnkocn">276</a></label>
+  <p class="i0" id="276">
+    La creació d'imatges d'arrencada en xarxa es senzilla amb <i>live-build</i>, però provar les imatges en màquines físiques pot costar molt de temps.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#277" class="lnkocn">277</a></label>
+  <p class="i0" id="277">
+    Per a fer la nostra vida més fàcil, podem utilitzar la virtualització.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#278" class="lnkocn">278</a></label>
+  <p class="bold" id="278"><a name="278"></a> <a id="hc4.8.5"></a>
+    <a name="c4.8.5" ></a><a name="h4.8.5" ></a>4.8.5 Qemu
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#279" class="lnkocn">279</a></label>
+  <ul>
+  <li class="bullet" id="279">
+    Instal·lar <i>qemu</i>, <i>bridge-utils</i>, <i>sudo</i>.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#280" class="lnkocn">280</a></label>
+  <p class="i0" id="280">
+    Editar <tt>/etc/qemu-ifup</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#281" class="lnkocn">281</a></label>
+  <p class="code" id="281">
+    #!/bin/sh<br>
+sudo -p "Password for $0:" /sbin/ifconfig $1 172.20.0.1<br>
+echo "Executing /etc/qemu-ifup"<br>
+echo "Bringing up $1 for bridged mode..."<br>
+sudo /sbin/ifconfig $1 0.0.0.0 promisc up<br>
+echo "Adding $1 to br0..."<br>
+sudo /usr/sbin/brctl addif br0 $1<br>
+sleep 2<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#282" class="lnkocn">282</a></label>
+  <p class="i0" id="282">
+    Descarregar o crear un <tt>grub-floppy-netboot</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#283" class="lnkocn">283</a></label>
+  <p class="i0" id="283">
+    Llançar <tt>qemu</tt> amb "<tt>-net nic,vlan=0 -net tap,vlan=0,ifname=tun0</tt>"
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#284" class="lnkocn">284</a></label>
+  <p class="bold" id="284"><a name="284"></a> <a id="hwebbooting"></a>
+    <a name="h4.9" ></a><a name="webbooting" ></a>4.9 Webbooting
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#285" class="lnkocn">285</a></label>
+  <p class="i0" id="285">
+    Webbooting és una manera convenient d'aconseguir i arrencar sistemes vius utilitzant internet com un mitjà. Els requisits per fer webbooting són molt pocs. D'una banda, es necessita un dispositiu amb un carregador d'arrencada, un disc ram inicial i un nucli. D'altra banda, un servidor web per emmagatzemar els fitxers squashfs que contenen el sistema de fitxers.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#286" class="lnkocn">286</a></label>
+  <p class="bold" id="286"><a name="286"></a> <a id="hc4.9.1"></a>
+    <a name="c4.9.1" ></a><a name="h4.9.1" ></a>4.9.1 Obtenir els fitxers webboot
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#287" class="lnkocn">287</a></label>
+  <p class="i0" id="287">
+    Com de costum, es pot construir les imatges un mateix o utilitzar els fitxers prefabricats, que estan disponibles a la pàgina principal del projecte a ‹<a href="http://debian-live.alioth.debian.org/" target="_top">http://debian-live.alioth.debian.org/</a>›. Les imatges prefabricades són adients per fer proves inicials fins que un pugui afinar les seves pròpies necessitats. Si ja s'ha construït una imatge en viu, els fitxers necessaris pel webbooting es troben al directori de construcció sota <tt>binary/live/</tt>. Els fitxers s'anomenen <tt>vmlinuz</tt>, <tt>initrd.img</tt> i <tt>filesystem.squashfs</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#288" class="lnkocn">288</a></label>
+  <p class="i0" id="288">
+    També és possible extreure els fitxers d'una imatge iso ja existent. Per tal d'aconseguir això, muntar la imatge de la següent manera:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#289" class="lnkocn">289</a></label>
+  <p class="code" id="289">
+    # mount -o loop image.iso /mnt<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#290" class="lnkocn">290</a></label>
+  <p class="i0" id="290">
+    Els fitxers es troben sota el directori <tt>live/</tt>. En aquest cas concret, seria <tt>/mnt/live/</tt>. Aquest mètode té el desavantatge que cal ser root per poder muntar la imatge. No obstant això, té l'avantatge que és fàcil de fer amb un script, i per tant es pot automatitzar.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#291" class="lnkocn">291</a></label>
+  <p class="i0" id="291">
+    Però, sens dubte, la forma més fàcil d'extreure els fitxers d'una imatge iso i pujar-los al servidor web a la vegada, és utilitzant el midnight commander o <i>mc</i>. Si es té el paquet <i>genisoimage</i> instal·lat, aquest gestor de fitxers de dos panells permet examinar el contingut d'un arxiu iso en un panell i pujar els fitxers via ftp en l'altre panell. Tot i que aquest mètode requereix fer un treball manual, no requereix privilegis de root.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#292" class="lnkocn">292</a></label>
+  <p class="bold" id="292"><a name="292"></a> <a id="hc4.9.2"></a>
+    <a name="c4.9.2" ></a><a name="h4.9.2" ></a>4.9.2 Arrencar imatges webboot
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#293" class="lnkocn">293</a></label>
+  <p class="i0" id="293">
+    Mentre que alguns usuaris prefereixen utilitzar la virtualització per prova el webbooting, en aquest cas utilitzem maquinari real perquè coincideixi amb el següent cas d'ús, que només ha de ser considerat com un exemple.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#294" class="lnkocn">294</a></label>
+  <p class="i0" id="294">
+    Per a arrencar una imatge webboot és suficient tenir els components esmentats anteriorment, és a dir, <tt>vmlinuz</tt> i <tt>initrd.img</tt> en una memòria usb dins d'un directori anomenat <tt>live/</tt> i instal·lar syslinux com a gestor d'arrencada. Després, arrencar des de la memòria usb i escriure <tt>fetch=URL/RUTA/AL/FITXER</tt> a les opcions d'arrencada. <i>live-boot</i> descarregarà l'arxiu squashfs i l'emmagatzemarà en la memòria ram. D'aquesta manera, és possible utilitzar el sistema de fitxers comprimit descarregat com si fos un sistema viu normal. Per exemple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#295" class="lnkocn">295</a></label>
+  <p class="code" id="295">
+    append boot=live components fetch=http://192.168.2.50/images/webboot/filesystem.squashfs<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#296" class="lnkocn">296</a></label>
+  <p class="i0" id="296">
+    <b>Cas d'ús:</b> Tenir un servidor web en el qual s'ha emmagatzemat dos arxius squashfs, un que conté un escriptori complet, com ara gnome, i un standard. Si es necessita un entorn gràfic per a una màquina, es pot connectar la memòria usb i arrencar la imatge gnome. Si es necessita una de les eines que s'inclouen en el segon tipus d'imatge, potser per a una altra màquina, arrencar des de internet la imatge standard.
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="installation.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="overview-of-tools.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

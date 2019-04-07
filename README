@@ -1,1 +1,15 @@
-fab-live
+# Search package
+apt-cache search chromium
+chromium - web browser
+chromium-driver - web browser - WebDriver support
+chromium-l10n - web browser - language packs
+chromium-shell - web browser - minimal shell
+chromium-bsu - fast paced, arcade-style, scrolling space shooter
+chromium-bsu-data - data pack for the Chromium B.S.U. game
+goopg - GPG for Chromium GMail
+chromium-lwn4chrome - Chromium extension for making LWN.net slightly easier to read
+chromium-ublock-origin - general-purpose lightweight ads, malware, trackers blocker (Chromium)
+cgpt - GPT manipulation tool with support for Chromium OS extensions
+
+docker build -t debian/live-build .
+docker run -v $PWD/build:/tmp -it debian/live-build bash

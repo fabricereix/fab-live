@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    bugs -
+    Manuel Live Systems
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Manuel Live Systems" />
+  <meta name="dc.author" content="Projet Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Projet Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="2015-09-22"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: Ce programme est un logiciel libre; vous pouvez le redistribuer ou le modifier suivant les termes de la Licence G&#233;n&#233;rale Publique GNU telle que publi&#233;e par la Free Software Foundation: soit la version 3 de cette licence, soit (&#224; votre gr&#233;) toute version ult&#233;rieure. \\  \\ Ce programme est distribu&#233; dans l&#8217;espoir qu&#8217;il vous sera utile, mais SANS AUCUNE GARANTIE: sans m&#234;me la garantie implicite de COMMERCIALISABILIT&#201; ni d&#8217;AD&#201;QUATION &#192; UN OBJECTIF PARTICULIER. Consultez la Licence G&#233;n&#233;rale Publique GNU pour plus de d&#233;tails. \\  \\ Vous devriez avoir re&#231;u une copie de la Licence G&#233;n&#233;rale Publique GNU avec ce programme ; si ce n&#8217;est pas le cas, consultez http://www.gnu.org/licenses/. \\  \\ Le texte complet de la Licence G&#233;n&#233;rale Publique GNU peut &#234;tre trouv&#233; dans le fichier / usr/share/common-licenses/GPL-3" />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="fr">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="contributing-to-project.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="coding-style.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Manuel Live Systems
+  </h1>
+
+<h1 class="minitoc">
+    À propos
+  </h1>
+
+<h1 class="minitoc">
+    À propos de ce manuel
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.fr.html" target="_top">
+    1. À propos de ce manuel
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#8">
+    1.1 Pour les impatients
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#12">
+    1.2 Terminologie
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#29">
+    1.3 Auteurs
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#44">
+    1.4 Contribuer à ce document
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.fr.html#46">
+  1.4.1 Appliquer des modifications
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.fr.html#60">
+  1.4.2 Traduction
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    À propos du Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.fr.html" target="_top">
+    2. À propos du Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#75">
+    2.1 Motivation
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#76">
+  2.1.1 Ce qui ne va pas avec les systèmes live actuels
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#86">
+  2.1.2 Pourquoi créer notre propre système live?
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#94">
+    2.2 Philosophie
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#95">
+  2.2.1 Seulement des paquets inchangés de Debian «main»
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#99">
+  2.2.2 Pas de configuration des paquets du système live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#103">
+    2.3 Contact
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Utilisateur
+  </h1>
+
+<h1 class="minitoc">
+    Installation
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.fr.html" target="_top">
+    3. Installation
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#110">
+    3.1 Exigences
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#118">
+    3.2 Installation de live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#124">
+  3.2.1 À partir du dépôt Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#127">
+  3.2.2 À partir du code source
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#138">
+  3.2.3 À partir des instantanés
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#140">
+    3.3 Installation de live-boot et live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#142">
+  3.3.1 À partir du dépôt Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#144">
+  3.3.2 À partir du code source
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#156">
+  3.3.3 À partir des instantanés
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Les bases
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.fr.html" target="_top">
+    4. Les bases
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#163">
+    4.1 Qu'est-ce qu'un système live?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#171">
+    4.2 Téléchargement des images précompilées
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#173">
+    4.3 Utiliser le constructeur web d'images live
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#175">
+  4.3.1 Utilisation du constructeur web et avertissements
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#179">
+    4.4 Premières étapes: la construction d'une image ISO  hybride
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#190">
+    4.5 Utilisation d'une image ISO hybride live
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#192">
+  4.5.1 Graver une image ISO sur un support physique
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#195">
+  4.5.2 Copie d'une image ISO hybride sur une clé USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#200">
+  4.5.3 Utilisation de l'espace disponible sur une clé USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#207">
+  4.5.4 Démarrer le support live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#211">
+    4.6 Utiliser une machine virtuelle pour les tests
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#218">
+  4.6.1 Test d'une image ISO avec QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#225">
+  4.6.2 Test d'une image ISO avec VirtualBox
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#233">
+    4.7 Construire et utiliser une image HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#245">
+    4.8 Construction d'une image netboot
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#258">
+  4.8.1 Serveur DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#262">
+  4.8.2 Serveur TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#267">
+  4.8.3 Serveur NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#275">
+  4.8.4 Guide pratique pour expérimenter avec une image Netboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#284">
+    4.9 Webbooting
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#286">
+  4.9.1 Obtenir les fichiers webboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#292">
+  4.9.2 Démarrer images webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Aperçu des outils
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.fr.html" target="_top">
+    5. Aperçu des outils
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#300">
+    5.1 Le paquet live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#310">
+  5.1.1 La commande <tt>lb config</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#320">
+  5.1.2 La commande <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#322">
+  5.1.3 La commande <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#324">
+    5.2 Le paquet live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#328">
+    5.3 Le paquet live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Gestion d'une configuration
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.fr.html" target="_top">
+    6. Gestion d'une configuration
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.fr.html#333">
+    6.1 Gérer les modifications de la configuration
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.fr.html#335">
+  6.1.1 Pourquoi utiliser des scripts auto? Que font-ils?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.fr.html#338">
+  6.1.2 Utiliser les scripts auto d'exemple
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.fr.html#345">
+    6.2 Cloner une configuration publiée via Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation des contenus
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.fr.html" target="_top">
+    7. Vue d'ensemble de la personnalisation
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#359">
+    7.1 Configuration pendant la construction vs. l'amorçage
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#362">
+    7.2 Étapes de la construction
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#365">
+    7.3 Supplément lb config avec des fichiers
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#367">
+    7.4 Tâches de personnalisation
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation de l'installation de paquets
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.fr.html" target="_top">
+    8. Personnalisation de l'installation de  paquets
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#372">
+    8.1 Sources des paquets
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#373">
+  8.1.1 Distribution, zones d'archive et mode
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#380">
+  8.1.2 Miroirs de distribution
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#382">
+  8.1.3 Miroirs de distribution utilisés lors de  la construction
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#386">
+  8.1.4 Miroirs de distribution utilisés pendant l'exécution
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#389">
+  8.1.5 Dépôts additionnels
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#397">
+    8.2 Choisir les paquets à installer
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#399">
+  8.2.1 Listes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#402">
+  8.2.2 Utilisation des métapaquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#410">
+  8.2.3 Listes de paquets locaux
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#414">
+  8.2.4 Listes de paquets locaux pour l'étape binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#416">
+  8.2.5 Listes de paquets générées
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#420">
+  8.2.6 Utiliser des conditions dans les listes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#429">
+  8.2.7 Suppression de paquets lors de l'installation
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#431">
+  8.2.8 Tâches de bureau et de langue
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#436">
+  8.2.9 Version et type de noyau
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#441">
+  8.2.10 Noyaux personnalisés
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#449">
+    8.3 Installation de paquets  modifiés ou tiers
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#456">
+  8.3.1 Utiliser <tt>packages.chroot</tt> pour installer des paquets personnalisés
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#463">
+  8.3.2 Utiliser un dépôt APT pour installer des paquets personnalisés.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#466">
+  8.3.3 Les paquets personnalisés et APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#469">
+    8.4 Configuration d'APT pendant la construction
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#471">
+  8.4.1 Choisir apt ou aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#475">
+  8.4.2 Utilisation d'un proxy avec APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#478">
+  8.4.3 Régler APT pour économiser de l'espace
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#487">
+  8.4.4 Passer des options à apt ou aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#492">
+  8.4.5 APT pinning
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personnalisation des contenus
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.fr.html" target="_top">
+    9. Personnalisation des contenus
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#506">
+  9.1.1 Live/chroot local includes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#513">
+  9.1.2 Binary local includes
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#517">
+    9.2 Hooks
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#520">
+  9.2.1 Chroot local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#522">
+  9.2.2 Binary local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#524">
+  9.2.3 Hooks pendant le démarrage
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#526">
+    9.3 Préconfigurer questions de debconf
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation des comportements pendant l'exécution
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html" target="_top">
+    10. Personnalisation des comportements pendant  l'exécution
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#532">
+    10.1 Personnalisation de l'utilisateur live
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#541">
+    10.2 Personnalisation des paramètres régionaux  et de la langue
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#558">
+    10.3 Persistance
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#580">
+  10.3.1 Le fichier persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#585">
+  10.3.2 Utilisation de plusieurs dispositifs de persistance
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#591">
+  10.3.3 Utilisation de la persistance avec chiffrement
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personnalisation de l'image binaire
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.fr.html" target="_top">
+    11. Personnalisation de l'image binaire
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.fr.html#619">
+    11.1 Chargeurs d'amorçage
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.fr.html#626">
+    11.2 Métadonnées ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation de l'installateur Debian
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.fr.html" target="_top">
+    12. Personnalisation du contenu pour l'installateur  Debian
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#636">
+    12.1 Types d'installateur Debian
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#648">
+    12.2 Personnalisation de l'installateur Debian par préconfiguration
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#651">
+    12.3 Personnalisation de contenu pour l'Installateur Debian
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Projet
+  </h1>
+
+<h1 class="minitoc">
+    Contribuer au projet
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.fr.html" target="_top">
+    13. Contribuer au projet
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.fr.html#667">
+    13.1 Faire des changements
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.fr.html#682">
+    13.2 Traduction des pages de manuel
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Signaler des bogues
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.fr.html" target="_top">
+    14. Signaler des bogues
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#698">
+    14.1 Problèmes connus
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#703">
+    14.2 Reconstruire à partir de zéro
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#705">
+    14.3 Utiliser des paquets mis à jour
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#707">
+    14.4 Recueillir l'information
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#724">
+    14.5 Isoler le cas qui échoue, si possible
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#726">
+    14.6 Utiliser le paquet adéquat pour rapporter un bogue
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#729">
+  14.6.1 Pendant la construction durant l'amorçage
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#732">
+  14.6.2 Pendant la construction durant l'installation de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#736">
+  14.6.3 Pendant le démarrage
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#738">
+  14.6.4 Pendant l'exécution
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#740">
+    14.7 Effectuer une recherche
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#744">
+    14.8 Où rapporter les bogues
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Style de code
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.fr.html" target="_top">
+    15. Style du code
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#751">
+    15.1 Compatibilité
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#756">
+    15.2 Indentation
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#758">
+    15.3 Adaptateur
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#770">
+    15.4 Variables
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#789">
+    15.5 Autres
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procédures
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.fr.html" target="_top">
+    16. Procédures
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.fr.html#797">
+    16.1 Évolutions majeures
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.fr.html#803">
+    16.2 Évolutions mineures
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.fr.html#807">
+  16.2.1 Dernière évolution mineure d'une version Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.fr.html#809">
+  16.2.2 Modèle pour l'annonce d'une évolution mineure
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Dépôts Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.fr.html" target="_top">
+    17. Dépôts Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.fr.html#829">
+    17.1 Gestion de multiples dépôts
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.fr.html" target="_top">
+    18. Exemples
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#837">
+    18.1 Utiliser les exemples
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#841">
+    18.2 Tutoriel 1: Une image par défaut
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#850">
+    18.3 Tutoriel 2: Un utilitaire d'un navigateur Web
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#858">
+    18.4 Tutoriel 3: Une image personnalisée
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.fr.html#861">
+  18.4.1 Première révision
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.fr.html#875">
+  18.4.2 Deuxième révision
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#887">
+    18.5 Un client kioske VNC
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#901">
+    18.6 Une image de base pour une clé USB de 128 Mo
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#912">
+    18.7 Un bureau GNOME localisé avec un installateur
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Appendix
+  </h1>
+
+<h1 class="minitoc">
+    Guide de style
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.fr.html" target="_top">
+    19. Guide de style
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.fr.html#927">
+    19.1 Lignes directrices pour les auteurs
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#930">
+  19.1.1 Caractéristiques linguistiques
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#963">
+  19.1.2 Procédures
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.fr.html#1002">
+    19.2 Lignes directrices pour les traducteurs
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#1006">
+  19.2.1 Conseils de traduction
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.fr.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.fr.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Manuel Live Systems
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Signaler des bogues
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#692" class="lnkocn">692</a></label>
+  <h1 class="norm" id="692"><a name="692"></a>
+    14. Signaler des bogues
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#693" class="lnkocn">693</a></label>
+  <p class="i0" id="693">
+    Les systèmes live sont loin d'être parfaits, mais nous voulons les rendre aussi parfaits que possible − avec votre aide. N'hésitez pas à signaler un bogue. Il est préférable de remplir un rapport deux fois plus que jamais. Toutefois, ce chapitre contient des recommandations pour présenter de bons rapports de bogues.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#694" class="lnkocn">694</a></label>
+  <p class="i0" id="694">
+    Pour les impatients:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#695" class="lnkocn">695</a></label>
+  <ul>
+  <li class="bullet" id="695">
+    Commencez toujours par vérifier les mises à jour du statut de l'image sur notre page d'accueil ‹<a href="http://debian-live.alioth.debian.org/" target="_top">http://debian-live.alioth.debian.org/</a>› pour voir les problèmes connus.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#696" class="lnkocn">696</a></label>
+  <ul>
+  <li class="bullet" id="696">
+    Avant de présenter un rapport de bogue, toujours essayer de reproduire le bogue avec <b>les versions les plus récentes</b> de la branche de <i>live-build</i>, <i>live-boot</i>, <i>live-config</i> et <i>live-tools</i> que vous utilisez (comme la dernière version 4.x de <i>live-build</i> si vous utilisez <i>live-build</i> 4).
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#697" class="lnkocn">697</a></label>
+  <ul>
+  <li class="bullet" id="697">
+    Essayez de donner des informations aussi précises que possible sur le bogue. Cela comprend (au moins) la version de <i>live-build</i>, <i>live-boot</i>, <i>live-config</i> et <i>live-tools</i>, de la distribution utilisée et du système live que vous construisez.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#698" class="lnkocn">698</a></label>
+  <p class="bold" id="698"><a name="698"></a> <a id="hc14.1"></a>
+    <a name="c14.1" ></a><a name="h14.1" ></a>14.1 Problèmes connus
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#699" class="lnkocn">699</a></label>
+  <p class="i0" id="699">
+    Puisque les distributions Debian <b>testing</b> et Debian <b>unstable</b> sont des cibles mouvantes, quand vous les indiquez comme distributions du système cible, une construction avec succès n'est pas toujours possible.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#700" class="lnkocn">700</a></label>
+  <p class="i0" id="700">
+    Si cela vous pose trop de difficulté, ne construisez pas un système basé sur <b>testing</b> ou <b>unstable</b>, mais utilisez plutôt <b>stable</b>. <i>live-build</i> utilise toujours la version <b>stable</b> par défaut.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#701" class="lnkocn">701</a></label>
+  <p class="i0" id="701">
+    Les problèmes connus sont énumérés dans la section «statut» sur notre page ‹<a href="http://debian-live.alioth.debian.org/" target="_top">http://debian-live.alioth.debian.org/</a>›.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#702" class="lnkocn">702</a></label>
+  <p class="i0" id="702">
+    Le sujet de ce manuel n'est pas de vous former à identifier et corriger correctement les problèmes dans les paquets des distributions de développement. Cependant, il y a deux choses que vous pouvez toujours essayer: Si une construction échoue lorsque la distribution cible est <b>testing</b>, essayez <b>unstable</b>. Si <b>unstable</b> ne fonctionne pas non plus, revenez à <b>testing</b> et fixez la nouvelle version du paquet qui échoue de <b>unstable</b> (voir  <a href="customizing-package-installation.fr.html#apt-pinning">APT pinning</a>  pour plus de détails).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#703" class="lnkocn">703</a></label>
+  <p class="bold" id="703"><a name="703"></a> <a id="hc14.2"></a>
+    <a name="c14.2" ></a><a name="h14.2" ></a>14.2 Reconstruire à partir de zéro
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#704" class="lnkocn">704</a></label>
+  <p class="i0" id="704">
+    Afin de vous assurer qu'un bogue en particulier n'est pas causé par un système mal construit, veuillez toujours reconstruire l'ensemble du système live à partir de zéro pour voir si le bogue est reproductible.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#705" class="lnkocn">705</a></label>
+  <p class="bold" id="705"><a name="705"></a> <a id="hc14.3"></a>
+    <a name="c14.3" ></a><a name="h14.3" ></a>14.3 Utiliser des paquets mis à jour
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#706" class="lnkocn">706</a></label>
+  <p class="i0" id="706">
+    L'utilisation de paquets obsolètes peut causer des problèmes importants en essayant de reproduire (et finalement régler) votre problème. Assurez-vous que votre système de construction est mis à jour et tous les paquets inclus dans votre image sont mis à jour aussi.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#707" class="lnkocn">707</a></label>
+  <p class="bold" id="707"><a name="707"></a> <a id="hcollect-information"></a>
+    <a name="h14.4" ></a><a name="collect-information" ></a>14.4 Recueillir l'information
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#708" class="lnkocn">708</a></label>
+  <p class="i0" id="708">
+    Veuillez fournir assez d'informations avec votre rapport. Incluez au moins la version exacte de <i>live-build</i> où le bogue est rencontré et les mesures pour le reproduire. Veuillez utiliser votre bon sens et incluez d'autres renseignements pertinents, si vous pensez que cela pourrait aider à résoudre le problème.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#709" class="lnkocn">709</a></label>
+  <p class="i0" id="709">
+    Pour tirer le meilleur parti de votre rapport de bogue, nous avons au moins besoin des informations suivantes:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#710" class="lnkocn">710</a></label>
+  <ul>
+  <li class="bullet" id="710">
+    L'architecture du système hôte
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#711" class="lnkocn">711</a></label>
+  <ul>
+  <li class="bullet" id="711">
+    Distribution du système hôte
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#712" class="lnkocn">712</a></label>
+  <ul>
+  <li class="bullet" id="712">
+    Version de <i>live-build</i> sur le système hôte
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#713" class="lnkocn">713</a></label>
+  <ul>
+  <li class="bullet" id="713">
+    Version de <i>debootstrap</i> sur le système hôte
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#714" class="lnkocn">714</a></label>
+  <ul>
+  <li class="bullet" id="714">
+    L'architecture du système live
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#715" class="lnkocn">715</a></label>
+  <ul>
+  <li class="bullet" id="715">
+    Répartition du système live
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#716" class="lnkocn">716</a></label>
+  <ul>
+  <li class="bullet" id="716">
+    Version de <i>live-boot</i> sur le système live
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#717" class="lnkocn">717</a></label>
+  <ul>
+  <li class="bullet" id="717">
+    Version de <i>live-config</i> sur le système live
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#718" class="lnkocn">718</a></label>
+  <ul>
+  <li class="bullet" id="718">
+    Version de <i>live-tools</i> sur le système live
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#719" class="lnkocn">719</a></label>
+  <p class="i0" id="719">
+    Vous pouvez générer un journal du processus de construction en utilisant la commande <tt>tee</tt>. Nous recommandons de faire cela automatiquement avec un script <tt>auto/build</tt> (voir  <a href="managing-a-configuration.fr.html#managing-a-configuration">Gestion d'une configuration</a>  pour les détails).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#720" class="lnkocn">720</a></label>
+  <p class="code" id="720">
+    # lb build 2&gt;&amp;1 | tee build.log<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#721" class="lnkocn">721</a></label>
+  <p class="i0" id="721">
+    Au démarrage, <i>live-boot</i> et <i>live-config</i> stockent un journal dans <tt>/var/log/live/boot.log</tt>. Vérifiez-les pour des messages d'erreur.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#722" class="lnkocn">722</a></label>
+  <p class="i0" id="722">
+    Par ailleurs, pour écarter d'autres erreurs, c'est toujours une bonne idée de faire un tar de votre répertoire <tt>config/</tt> et de le télécharger quelque part (<b>ne pas</b> l'envoyer en pièce jointe à la liste de diffusion), de sorte que nous puissions essayer de reproduire les erreurs que vous rencontrez. Si cela est difficile (en raison par exemple de la taille) vous pouvez utiliser la sortie de <tt>lb config --dump</tt> qui produit un résumé de votre arbre de config (c'est-à-dire les listes des fichiers dans les sous-répertoires de <tt>config/</tt> mais ne les inclut pas).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#723" class="lnkocn">723</a></label>
+  <p class="i0" id="723">
+    N'oubliez pas d'envoyer tous les journaux produits avec les paramètres régionaux anglais. Par exemple, exécutez vos commandes <i>live-build</i> précédées par <tt>LC_ALL=C</tt> ou <tt>LC_ALL=en_US</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#724" class="lnkocn">724</a></label>
+  <p class="bold" id="724"><a name="724"></a> <a id="hc14.5"></a>
+    <a name="c14.5" ></a><a name="h14.5" ></a>14.5 Isoler le cas qui échoue, si possible
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#725" class="lnkocn">725</a></label>
+  <p class="i0" id="725">
+    Si possible, isolez le cas qui échoue au plus petit changement possible. Il n'est pas toujours facile de faire cela, donc si vous ne pouvez pas le gérer pour votre rapport, ne vous inquiétez pas. Toutefois, si vous planifiez bienvotre cycle de développement, en utilisant de petits ensembles de changements par itération, vous pourriez être capable d'isoler le problème en construisant une configuration simple «base» qui correspond étroitement à la configuration réelle avec seulement le changement cassé ajouté. S'il est difficile de trier vos modifications qui cassent, il est possible que vous incluiez trop dans chaque ensemble de modifications et vous devriez développer en petits incréments.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#726" class="lnkocn">726</a></label>
+  <p class="bold" id="726"><a name="726"></a> <a id="hc14.6"></a>
+    <a name="c14.6" ></a><a name="h14.6" ></a>14.6 Utiliser le paquet adéquat pour rapporter un bogue
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#727" class="lnkocn">727</a></label>
+  <p class="i0" id="727">
+    Si vous ne savez pas quel composant est responsable du bogue ou si le bogue est un bogue général concernant les systèmes live, vous pouvez remplir un rapport de bogue sur le pseudo-paquet debian-live.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#728" class="lnkocn">728</a></label>
+  <p class="i0" id="728">
+    Toutefois, nous apprécierions que vous essayiez de le réduire en fonction de l'endroit où le bogue apparaît.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#729" class="lnkocn">729</a></label>
+  <p class="bold" id="729"><a name="729"></a> <a id="hc14.6.1"></a>
+    <a name="c14.6.1" ></a><a name="h14.6.1" ></a>14.6.1 Pendant la construction durant l'amorçage
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#730" class="lnkocn">730</a></label>
+  <p class="i0" id="730">
+    <i>live-build</i> amorce d'abord un système Debian de base avec <i>debootstrap</i>. Si un bogue apparaît ici, vérifiez si l'erreur est liée à un paquet Debian spécifique (plus probable), ou si elle est liée à l'outil d'amorçage lui-même.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#731" class="lnkocn">731</a></label>
+  <p class="i0" id="731">
+    Dans les deux cas, ce n'est pas un bogue dans le système live, mais plutôt dans Debian lui-même que probablement nous ne pouvons pas le résoudre directement. Veuillez signaler un bogue sur l'outil d'amorçage ou du paquet défaillant.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#732" class="lnkocn">732</a></label>
+  <p class="bold" id="732"><a name="732"></a> <a id="hc14.6.2"></a>
+    <a name="c14.6.2" ></a><a name="h14.6.2" ></a>14.6.2 Pendant la construction durant l'installation de paquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#733" class="lnkocn">733</a></label>
+  <p class="i0" id="733">
+    <i>live-build</i> installe des paquets supplémentaires de l'archive Debian et en fonction de la distribution Debian utilisée et l'état quotidien de l'archive, il peut échouer. Si un bogue apparaît ici, vérifiez si l'erreur est également reproductible sur un système normal.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#734" class="lnkocn">734</a></label>
+  <p class="i0" id="734">
+    Si c'est le cas, ce n'est pas un bogue dans le système live, mais plutôt dans Debian − veuillez envoyer le rapport sur le paquet défaillant. L'exécution de <i>debootstrap</i> séparément du système de construction ou l'exécution de <tt>lb bootstrap --debug</tt> vous donnera plus d'informations.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#735" class="lnkocn">735</a></label>
+  <p class="i0" id="735">
+    Aussi, si vous utilisez un miroir local et/ou un proxy et vous rencontrez un problème, veuillez toujours le reproduire en amorçant d'abord sur un miroir officiel.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#736" class="lnkocn">736</a></label>
+  <p class="bold" id="736"><a name="736"></a> <a id="hc14.6.3"></a>
+    <a name="c14.6.3" ></a><a name="h14.6.3" ></a>14.6.3 Pendant le démarrage
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#737" class="lnkocn">737</a></label>
+  <p class="i0" id="737">
+    Si votre image ne démarre pas, veuillez le signaler à la liste de diffusion avec les informations demandées dans  <a href="bugs.fr.html#collect-information">Recueillir l'information</a>.  N'oubliez pas de mentionner, comment/quand l'image a échoué, soit en virtualisation ou sur du matériel réel. Si vous utilisez une technologie de virtualisation de quelconque sorte, veuillez toujours tester sur du matériel réel avant de signaler un bogue. Fournir une copie d'écran de l'échec est également très utile.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#738" class="lnkocn">738</a></label>
+  <p class="bold" id="738"><a name="738"></a> <a id="hc14.6.4"></a>
+    <a name="c14.6.4" ></a><a name="h14.6.4" ></a>14.6.4 Pendant l'exécution
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#739" class="lnkocn">739</a></label>
+  <p class="i0" id="739">
+    Si un paquet a été installé avec succès, mais qu'il échoue lors de l'exécution du système Live, il s'agit probablement d'un bogue dans le système live. Cependant:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#740" class="lnkocn">740</a></label>
+  <p class="bold" id="740"><a name="740"></a> <a id="hc14.7"></a>
+    <a name="c14.7" ></a><a name="h14.7" ></a>14.7 Effectuer une recherche
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#741" class="lnkocn">741</a></label>
+  <p class="i0" id="741">
+    Avant de présenter le bogue, veuillez rechercher sur le web le message d'erreur ou un symptôme particulier que vous obtenez. Comme il est hautement improbable que vous soyez la seule personne faisant l'expérience d'un problème particulier, il y a toujours une chance qu'il ait été discuté ailleurs, et qu'une solution possible, un correctif, ou une solution de contournement ait été proposés.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#742" class="lnkocn">742</a></label>
+  <p class="i0" id="742">
+    Vous devez prêter une attention particulière à la liste de diffusion du système live, ainsi qu'à la page d'accueil, car elles sont susceptibles de contenir des informations à jour. Si ces informations existent, incluez toujours les références au sein de vos rapports de bogues.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#743" class="lnkocn">743</a></label>
+  <p class="i0" id="743">
+    En outre, vous devriez vérifier les listes de bogues en cours de <i>live-build</i>, <i>live-boot</i>, <i>live-config</i> et <i>live-tools</i> pour voir si quelque chose de semblable n'a pas déjà été signalée.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#744" class="lnkocn">744</a></label>
+  <p class="bold" id="744"><a name="744"></a> <a id="hc14.8"></a>
+    <a name="c14.8" ></a><a name="h14.8" ></a>14.8 Où rapporter les bogues
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#745" class="lnkocn">745</a></label>
+  <p class="i0" id="745">
+    Le Live Systems Project conserve la trace de tous les bogues dans le système de suivi des bogues (BTS). Pour plus d'informations sur la façon d'utiliser le système, veuillez consulter ‹<a href="https://bugs.debian.org/" target="_top">https://bugs.debian.org/</a>›. Vous pouvez également soumettre les bogues en utilisant la commande <tt>reportbug</tt> du paquet du même nom.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#746" class="lnkocn">746</a></label>
+  <p class="i0" id="746">
+    En général, vous devez signaler les erreurs de construction contre le paquet <i>live-build</i>, les erreurs lors du démarrage contre <i>live-boot</i>, et les erreurs d'exécution contre <i>live-config</i>. Si vous n'êtes pas sûr du paquet approprié ou si vous avez besoin d'aide avant de soumettre un rapport de bogue, veuillez signaler le bogue contre le pseudo-paquet debian-live. Nous le réattribuerons s'il y a lieu.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#747" class="lnkocn">747</a></label>
+  <p class="i0" id="747">
+    Veuillez noter que les bogues trouvés dans les distributions dérivées de Debian (comme Ubuntu et autres) <b>ne</b> doivent <b>pas</b> être rapportés au BTS de Debian, sauf s'ils peuvent être également reproduits sur un système Debian en utilisant les paquets Debian officiels.
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="contributing-to-project.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="coding-style.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

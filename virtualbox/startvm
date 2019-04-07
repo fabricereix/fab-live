@@ -1,0 +1,11 @@
+#!/bin/bash
+
+VM_NAME=Fabiso
+IP_ADDRESS=192.168.56.102
+
+vboxmanage controlvm $VM_NAME poweroff soft
+vboxmanage startvm $VM_NAME --type headless
+
+ping -v "$IP_ADDRESS" | grep --line-buffered "bytes from" | head -1
+
+

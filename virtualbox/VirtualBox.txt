@@ -1,0 +1,31 @@
+VM=Fabiso
+ISO_FILE=build/debian-custom.iso
+
+# List of vms
+VBoxManage list vms
+
+# Delete VM
+VBoxManage unregistervm --delete $VM
+
+# Create VM
+VBoxManage createvm --name $VM --ostype "Debian" --register
+
+# Attach disk iso file
+VBoxManage storagectl $VM --name IDE --add ide
+VBoxManage storageattach $VM --storagectl IDE --port 0 --device 0 --type dvddrive --medium $ISO_FILE
+
+# Restart VM (after iso update)
+vboxmanage controlvm $VM poweroff soft
+vboxmanage startvm $VM --type headless
+
+
+
+# Network
+# Host-only Adapter
+# interface 'vboxnet0'
+# Add Network Adapter 3
+VBoxManage   modifyvm "$VM" --nic3 hostonly
+
+# get IP@
+nmap -T5 -sP 192.168.56.0-255
+

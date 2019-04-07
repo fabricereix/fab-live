@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    the-basics -
+    Manuel Live Systems
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Manuel Live Systems" />
+  <meta name="dc.author" content="Projet Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Projet Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="2015-09-22"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: Ce programme est un logiciel libre; vous pouvez le redistribuer ou le modifier suivant les termes de la Licence G&#233;n&#233;rale Publique GNU telle que publi&#233;e par la Free Software Foundation: soit la version 3 de cette licence, soit (&#224; votre gr&#233;) toute version ult&#233;rieure. \\  \\ Ce programme est distribu&#233; dans l&#8217;espoir qu&#8217;il vous sera utile, mais SANS AUCUNE GARANTIE: sans m&#234;me la garantie implicite de COMMERCIALISABILIT&#201; ni d&#8217;AD&#201;QUATION &#192; UN OBJECTIF PARTICULIER. Consultez la Licence G&#233;n&#233;rale Publique GNU pour plus de d&#233;tails. \\  \\ Vous devriez avoir re&#231;u une copie de la Licence G&#233;n&#233;rale Publique GNU avec ce programme ; si ce n&#8217;est pas le cas, consultez http://www.gnu.org/licenses/. \\  \\ Le texte complet de la Licence G&#233;n&#233;rale Publique GNU peut &#234;tre trouv&#233; dans le fichier / usr/share/common-licenses/GPL-3" />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="fr">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="installation.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="overview-of-tools.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Manuel Live Systems
+  </h1>
+
+<h1 class="minitoc">
+    À propos
+  </h1>
+
+<h1 class="minitoc">
+    À propos de ce manuel
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.fr.html" target="_top">
+    1. À propos de ce manuel
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#8">
+    1.1 Pour les impatients
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#12">
+    1.2 Terminologie
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#29">
+    1.3 Auteurs
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.fr.html#44">
+    1.4 Contribuer à ce document
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.fr.html#46">
+  1.4.1 Appliquer des modifications
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.fr.html#60">
+  1.4.2 Traduction
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    À propos du Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.fr.html" target="_top">
+    2. À propos du Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#75">
+    2.1 Motivation
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#76">
+  2.1.1 Ce qui ne va pas avec les systèmes live actuels
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#86">
+  2.1.2 Pourquoi créer notre propre système live?
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#94">
+    2.2 Philosophie
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#95">
+  2.2.1 Seulement des paquets inchangés de Debian «main»
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.fr.html#99">
+  2.2.2 Pas de configuration des paquets du système live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.fr.html#103">
+    2.3 Contact
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Utilisateur
+  </h1>
+
+<h1 class="minitoc">
+    Installation
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.fr.html" target="_top">
+    3. Installation
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#110">
+    3.1 Exigences
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#118">
+    3.2 Installation de live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#124">
+  3.2.1 À partir du dépôt Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#127">
+  3.2.2 À partir du code source
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#138">
+  3.2.3 À partir des instantanés
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.fr.html#140">
+    3.3 Installation de live-boot et live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#142">
+  3.3.1 À partir du dépôt Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#144">
+  3.3.2 À partir du code source
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.fr.html#156">
+  3.3.3 À partir des instantanés
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Les bases
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.fr.html" target="_top">
+    4. Les bases
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#163">
+    4.1 Qu'est-ce qu'un système live?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#171">
+    4.2 Téléchargement des images précompilées
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#173">
+    4.3 Utiliser le constructeur web d'images live
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#175">
+  4.3.1 Utilisation du constructeur web et avertissements
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#179">
+    4.4 Premières étapes: la construction d'une image ISO  hybride
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#190">
+    4.5 Utilisation d'une image ISO hybride live
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#192">
+  4.5.1 Graver une image ISO sur un support physique
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#195">
+  4.5.2 Copie d'une image ISO hybride sur une clé USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#200">
+  4.5.3 Utilisation de l'espace disponible sur une clé USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#207">
+  4.5.4 Démarrer le support live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#211">
+    4.6 Utiliser une machine virtuelle pour les tests
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#218">
+  4.6.1 Test d'une image ISO avec QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#225">
+  4.6.2 Test d'une image ISO avec VirtualBox
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#233">
+    4.7 Construire et utiliser une image HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#245">
+    4.8 Construction d'une image netboot
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#258">
+  4.8.1 Serveur DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#262">
+  4.8.2 Serveur TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#267">
+  4.8.3 Serveur NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#275">
+  4.8.4 Guide pratique pour expérimenter avec une image Netboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.fr.html#284">
+    4.9 Webbooting
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#286">
+  4.9.1 Obtenir les fichiers webboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.fr.html#292">
+  4.9.2 Démarrer images webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Aperçu des outils
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.fr.html" target="_top">
+    5. Aperçu des outils
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#300">
+    5.1 Le paquet live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#310">
+  5.1.1 La commande <tt>lb config</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#320">
+  5.1.2 La commande <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.fr.html#322">
+  5.1.3 La commande <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#324">
+    5.2 Le paquet live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.fr.html#328">
+    5.3 Le paquet live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Gestion d'une configuration
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.fr.html" target="_top">
+    6. Gestion d'une configuration
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.fr.html#333">
+    6.1 Gérer les modifications de la configuration
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.fr.html#335">
+  6.1.1 Pourquoi utiliser des scripts auto? Que font-ils?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.fr.html#338">
+  6.1.2 Utiliser les scripts auto d'exemple
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.fr.html#345">
+    6.2 Cloner une configuration publiée via Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation des contenus
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.fr.html" target="_top">
+    7. Vue d'ensemble de la personnalisation
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#359">
+    7.1 Configuration pendant la construction vs. l'amorçage
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#362">
+    7.2 Étapes de la construction
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#365">
+    7.3 Supplément lb config avec des fichiers
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.fr.html#367">
+    7.4 Tâches de personnalisation
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation de l'installation de paquets
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.fr.html" target="_top">
+    8. Personnalisation de l'installation de  paquets
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#372">
+    8.1 Sources des paquets
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#373">
+  8.1.1 Distribution, zones d'archive et mode
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#380">
+  8.1.2 Miroirs de distribution
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#382">
+  8.1.3 Miroirs de distribution utilisés lors de  la construction
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#386">
+  8.1.4 Miroirs de distribution utilisés pendant l'exécution
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#389">
+  8.1.5 Dépôts additionnels
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#397">
+    8.2 Choisir les paquets à installer
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#399">
+  8.2.1 Listes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#402">
+  8.2.2 Utilisation des métapaquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#410">
+  8.2.3 Listes de paquets locaux
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#414">
+  8.2.4 Listes de paquets locaux pour l'étape binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#416">
+  8.2.5 Listes de paquets générées
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#420">
+  8.2.6 Utiliser des conditions dans les listes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#429">
+  8.2.7 Suppression de paquets lors de l'installation
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#431">
+  8.2.8 Tâches de bureau et de langue
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#436">
+  8.2.9 Version et type de noyau
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#441">
+  8.2.10 Noyaux personnalisés
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#449">
+    8.3 Installation de paquets  modifiés ou tiers
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#456">
+  8.3.1 Utiliser <tt>packages.chroot</tt> pour installer des paquets personnalisés
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#463">
+  8.3.2 Utiliser un dépôt APT pour installer des paquets personnalisés.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#466">
+  8.3.3 Les paquets personnalisés et APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.fr.html#469">
+    8.4 Configuration d'APT pendant la construction
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#471">
+  8.4.1 Choisir apt ou aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#475">
+  8.4.2 Utilisation d'un proxy avec APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#478">
+  8.4.3 Régler APT pour économiser de l'espace
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#487">
+  8.4.4 Passer des options à apt ou aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.fr.html#492">
+  8.4.5 APT pinning
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personnalisation des contenus
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.fr.html" target="_top">
+    9. Personnalisation des contenus
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#506">
+  9.1.1 Live/chroot local includes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#513">
+  9.1.2 Binary local includes
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#517">
+    9.2 Hooks
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#520">
+  9.2.1 Chroot local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#522">
+  9.2.2 Binary local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.fr.html#524">
+  9.2.3 Hooks pendant le démarrage
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.fr.html#526">
+    9.3 Préconfigurer questions de debconf
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation des comportements pendant l'exécution
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html" target="_top">
+    10. Personnalisation des comportements pendant  l'exécution
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#532">
+    10.1 Personnalisation de l'utilisateur live
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#541">
+    10.2 Personnalisation des paramètres régionaux  et de la langue
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#558">
+    10.3 Persistance
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#580">
+  10.3.1 Le fichier persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#585">
+  10.3.2 Utilisation de plusieurs dispositifs de persistance
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.fr.html#591">
+  10.3.3 Utilisation de la persistance avec chiffrement
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personnalisation de l'image binaire
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.fr.html" target="_top">
+    11. Personnalisation de l'image binaire
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.fr.html#619">
+    11.1 Chargeurs d'amorçage
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.fr.html#626">
+    11.2 Métadonnées ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personnalisation de l'installateur Debian
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.fr.html" target="_top">
+    12. Personnalisation du contenu pour l'installateur  Debian
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#636">
+    12.1 Types d'installateur Debian
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#648">
+    12.2 Personnalisation de l'installateur Debian par préconfiguration
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.fr.html#651">
+    12.3 Personnalisation de contenu pour l'Installateur Debian
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Projet
+  </h1>
+
+<h1 class="minitoc">
+    Contribuer au projet
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.fr.html" target="_top">
+    13. Contribuer au projet
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.fr.html#667">
+    13.1 Faire des changements
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.fr.html#682">
+    13.2 Traduction des pages de manuel
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Signaler des bogues
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.fr.html" target="_top">
+    14. Signaler des bogues
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#698">
+    14.1 Problèmes connus
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#703">
+    14.2 Reconstruire à partir de zéro
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#705">
+    14.3 Utiliser des paquets mis à jour
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#707">
+    14.4 Recueillir l'information
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#724">
+    14.5 Isoler le cas qui échoue, si possible
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#726">
+    14.6 Utiliser le paquet adéquat pour rapporter un bogue
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#729">
+  14.6.1 Pendant la construction durant l'amorçage
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#732">
+  14.6.2 Pendant la construction durant l'installation de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#736">
+  14.6.3 Pendant le démarrage
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.fr.html#738">
+  14.6.4 Pendant l'exécution
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#740">
+    14.7 Effectuer une recherche
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.fr.html#744">
+    14.8 Où rapporter les bogues
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Style de code
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.fr.html" target="_top">
+    15. Style du code
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#751">
+    15.1 Compatibilité
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#756">
+    15.2 Indentation
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#758">
+    15.3 Adaptateur
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#770">
+    15.4 Variables
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.fr.html#789">
+    15.5 Autres
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procédures
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.fr.html" target="_top">
+    16. Procédures
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.fr.html#797">
+    16.1 Évolutions majeures
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.fr.html#803">
+    16.2 Évolutions mineures
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.fr.html#807">
+  16.2.1 Dernière évolution mineure d'une version Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.fr.html#809">
+  16.2.2 Modèle pour l'annonce d'une évolution mineure
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Dépôts Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.fr.html" target="_top">
+    17. Dépôts Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.fr.html#829">
+    17.1 Gestion de multiples dépôts
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.fr.html" target="_top">
+    18. Exemples
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#837">
+    18.1 Utiliser les exemples
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#841">
+    18.2 Tutoriel 1: Une image par défaut
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#850">
+    18.3 Tutoriel 2: Un utilitaire d'un navigateur Web
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#858">
+    18.4 Tutoriel 3: Une image personnalisée
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.fr.html#861">
+  18.4.1 Première révision
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.fr.html#875">
+  18.4.2 Deuxième révision
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#887">
+    18.5 Un client kioske VNC
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#901">
+    18.6 Une image de base pour une clé USB de 128 Mo
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.fr.html#912">
+    18.7 Un bureau GNOME localisé avec un installateur
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Appendix
+  </h1>
+
+<h1 class="minitoc">
+    Guide de style
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.fr.html" target="_top">
+    19. Guide de style
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.fr.html#927">
+    19.1 Lignes directrices pour les auteurs
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#930">
+  19.1.1 Caractéristiques linguistiques
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#963">
+  19.1.2 Procédures
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.fr.html#1002">
+    19.2 Lignes directrices pour les traducteurs
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.fr.html#1006">
+  19.2.1 Conseils de traduction
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.fr.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.fr.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Manuel Live Systems
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Les bases
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#159" class="lnkocn">159</a></label>
+  <h1 class="norm" id="159"><a name="159"></a>
+    4. Les bases
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#160" class="lnkocn">160</a></label>
+  <p class="i0" id="160">
+    Ce chapitre contient un bref aperçu du processus de construction et des instructions pour utiliser les trois types d'images les plus couramment utilisées. Le type d'image le plus polyvalent, <tt>iso-hybrid</tt>, peut être utilisé sur une machine virtuelle, un support optique ou un périphérique USB de stockage portable. Dans certains cas particuliers, comme expliqué plus loin, le type <tt>hdd</tt> peut être plus approprié. Le chapitre contient des instructions détaillées pour la construction et l'utilisation d'une image <tt>netboot</tt>, qui est un peu plus compliquée en raison de la configuration requise sur le serveur. C'est un sujet un peu avancé pour tous ceux qui ne connaissent pas déjà le démarrage sur le réseau, mais est inclus ici car une fois la configuration terminée, c'est un moyen très pratique pour tester et déployer des images pour le démarrage sur le réseau local sans le tracas des supports d'images.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#161" class="lnkocn">161</a></label>
+  <p class="i0" id="161">
+    La section se termine par une brève introduction à webbooting qui est, peut-être, la meilleure façon d'utiliser des images différentes à des fins différentes, changeant de l'un à l'autre en fonction des besoins en utilisant l'Internet comme un moyen.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#162" class="lnkocn">162</a></label>
+  <p class="i0" id="162">
+    Tout au long du chapitre, nous ferons souvent référence à la valeur par défaut des noms des fichiers produits par <i>live-build</i>. Si vous  <a href="the-basics.fr.html#downloading-prebuilt-images">téléchargez une image précompilée</a>,  les noms des fichiers peuvent varier.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#163" class="lnkocn">163</a></label>
+  <p class="bold" id="163"><a name="163"></a> <a id="hwhat-is-live"></a>
+    <a name="h4.1" ></a><a name="what-is-live" ></a>4.1 Qu'est-ce qu'un système live?
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#164" class="lnkocn">164</a></label>
+  <p class="i0" id="164">
+    Un système live signifie généralement un système d'exploitation démarré sur un ordinateur à partir d'un support amovible, tel qu'un CD-ROM, une clé USB ou sur un réseau, prêt à l'emploi sans aucune installation sur le disque habituel, avec auto-configuration fait lors de l'exécution (voir  <a href="about-manual.fr.html#terms">Termes</a>).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#165" class="lnkocn">165</a></label>
+  <p class="i0" id="165">
+    Avec les systèmes live, c'est un système d'exploitation, construit pour une des architectures prises en charge (actuellement amd64 et i386). Il est fait à partir des éléments suivants:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#166" class="lnkocn">166</a></label>
+  <ul>
+  <li class="bullet" id="166">
+    <b>Image du noyau Linux</b>, d'habitude appelé <tt>vmlinuz*</tt>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#167" class="lnkocn">167</a></label>
+  <ul>
+  <li class="bullet" id="167">
+    <b>Image du RAM-disque initiale (initrd)</b>: Un disque virtuel RAM configuré pour le démarrage de Linux, contenant possiblement des modules nécessaires pour monter l'image du système et certains scripts pour le faire.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#168" class="lnkocn">168</a></label>
+  <ul>
+  <li class="bullet" id="168">
+    <b>Image du système</b>: L'image du système de fichiers du système d'exploitation. Habituellement, un système de fichiers SquashFS comprimé est utilisé pour réduire au minimum la taille de l'image live. Notez qu'il est en lecture seulement. Ainsi, lors du démarrage le système live va utiliser un disque RAM et un mécanisme "union" pour permettre l'écriture de fichiers dans le système en marche. Cependant, toutes les modifications seront perdues lors de l'arrêt à moins que l'option «persistance» soit utilisée (voir  <a href="customizing-run-time-behaviours.fr.html#persistence">Persistance</a>).
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#169" class="lnkocn">169</a></label>
+  <ul>
+  <li class="bullet" id="169">
+    <b>Chargeur d'amorçage</b>: Un petit morceau de code conçu pour démarrer à partir du support choisi, il peut présenter un menu rapide ou permettre la sélection des options/configurations. Il charge le noyau Linux et son initrd pour fonctionner avec un système de fichiers associé. Différentes solutions peuvent être utilisées, selon le support de destination et le format du système de fichiers contenant les composants mentionnés précédemment: isolinux pour démarrer à partir d'un CD ou DVD au format ISO9660, syslinux pour démarrer un disque dur ou une clé USB à partir d'une partition VFAT, extlinux pour partitions ext2/3/4 et btrfs, pxelinux pour netboot PXE, GRUB pour partitions ext2/3/4, etc.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#170" class="lnkocn">170</a></label>
+  <p class="i0" id="170">
+    Vous pouvez utiliser <i>live-build</i> pour construire l'image du système à partir de vos spécifications, configurer un noyau Linux, son initrd, et un chargeur d'amorçage pour les exécuter, tout dans un format en fonction du support (image ISO9660, image disque, etc.).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#171" class="lnkocn">171</a></label>
+  <p class="bold" id="171"><a name="171"></a> <a id="hdownloading-prebuilt-images"></a>
+    <a name="h4.2" ></a><a name="downloading-prebuilt-images" ></a>4.2 Téléchargement des images précompilées
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#172" class="lnkocn">172</a></label>
+  <p class="i0" id="172">
+    Bien que l'objectif de ce manuel soit le développement et la création de vos propres images live, vous pouvez simplement vouloir tester une de nos images précompilées comme une introduction à leur utilisation ou à la construction de vos propres images. Ces images sont construites à l'aide de notre  <a href="managing-a-configuration.fr.html#clone-configuration-via-git">dépôt git live-images</a>  et les versions officielles stables sont publiées sur ‹<a href="https://www.debian.org/CD/live/" target="_top">https://www.debian.org/CD/live/</a>›. En outre, les versions plus anciennes et les futures, et des images non officielles contenant micrologiciels et pilotes non libres sont disponibles sur ‹<a href="http://debian-live.alioth.debian.org/cdimage/release/" target="_top">http://debian-live.alioth.debian.org/cdimage/release/</a>›.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#173" class="lnkocn">173</a></label>
+  <p class="bold" id="173"><a name="173"></a> <a id="husing-web-builder"></a>
+    <a name="h4.3" ></a><a name="using-web-builder" ></a>4.3 Utiliser le constructeur web d'images live
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#174" class="lnkocn">174</a></label>
+  <p class="i0" id="174">
+    En tant que service à la communauté, nous gérons un service de construction d'images web sur ‹<a href="http://debian-live.alioth.debian.org/build/" target="_top">http://debian-live.alioth.debian.org/build/</a>›. Ce site est maintenu sur la base du meilleur effort. Autrement dit, même si nous nous efforçons de le maintenir à jour et opérationnel à tout moment, et de publier des avis d'importantes interruptions du service, nous ne pouvons pas garantir une disponibilité de 100% ou des constructions d'images rapides, et le service peut parfois avoir des problèmes dont la résolution prend un certain temps. Si vous avez des problèmes ou des questions au sujet du service, veuillez  <a href="about-project.fr.html#contact">nous contacter</a>  en donnant le lien vers votre construction.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#175" class="lnkocn">175</a></label>
+  <p class="bold" id="175"><a name="175"></a> <a id="hc4.3.1"></a>
+    <a name="c4.3.1" ></a><a name="h4.3.1" ></a>4.3.1 Utilisation du constructeur web et avertissements
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#176" class="lnkocn">176</a></label>
+  <p class="i0" id="176">
+    L'interface web ne permet actuellement pas d'empêcher l'utilisation de combinaisons d'options invalides, en particulier quand le changement d'une option (c'est-à-dire en utilisant <i>live-build</i> directement) modifie les valeurs des autres options énumérées dans le formulaire web, le constructeur web ne modifie pas ces valeurs par défaut. Plus particulièrement, si vous changez la valeur <tt>--architectures</tt> qui est par défaut <tt>i386</tt> pour <tt>amd64</tt>, vous devez modifier l'option correspondante <tt>--linux-flavours</tt> de la valeur par défaut <tt>586</tt> pour <tt>amd64</tt>. Voir la page de manuel <tt>lb_config</tt> pour la version de <i>live-build</i> installée sur le constructeur web pour plus de détails. Le numéro de version de <i>live-build</i> est indiqué au bas de la page web.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#177" class="lnkocn">177</a></label>
+  <p class="i0" id="177">
+    L'estimation du temps donné par le constructeur web est une estimation brute et peut ne pas refléter la durée effective de votre construction. Cette estimation n'est pas actualisée une fois qu'elle est affichée. Soyez patient. Ne rechargez pas la page de la construction, car cela peut soumettre une nouvelle construction avec les mêmes paramètres. Vous devez  <a href="about-project.fr.html#contact">nous contacter</a>  si vous ne recevez pas la notification de votre construction mais seulement une fois que vous êtes sûr que vous avez attendu assez longtemps et vérifié que la notification par e-mail n'a pas été détectée par votre filtre anti-spam.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#178" class="lnkocn">178</a></label>
+  <p class="i0" id="178">
+    Le constructeur web est limité dans les types d'images qu'il peut construire. Cela permet de garder les choses simples et efficaces à utiliser et à maintenir. Si vous souhaitez effectuer des personnalisations qui ne sont pas prévues par l'interface web, le reste de ce manuel explique comment construire vos propres images en utilisant <i>live-build</i>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#179" class="lnkocn">179</a></label>
+  <p class="bold" id="179"><a name="179"></a> <a id="hbuilding-iso-hybrid"></a>
+    <a name="h4.4" ></a><a name="building-iso-hybrid" ></a>4.4 Premières étapes: la construction d'une image ISO  hybride
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#180" class="lnkocn">180</a></label>
+  <p class="i0" id="180">
+    Quel que soit le type d'image, vous devrez effectuer les mêmes étapes de base pour créer une image à chaque fois. Comme premier exemple, créez un répertoire de travail, passez dans ce répertoire et exécutez la séquence suivante de commandes <i>live-build</i> pour créer une image ISO hybride de base contenant tout le système Debian par défaut sans X.org. Elle est appropriée pour être gravée sur CD ou DVD, et peut également être copiée sur une clé USB.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#181" class="lnkocn">181</a></label>
+  <p class="i0" id="181">
+    Le nom du répertoire de travail dépend totalement de vous, mais si vous jetez un œil aux exemples utilisés dans <i>live-manual</i>, c'est une bonne idée d'utiliser un nom qui vous aide à identifier l'image avec laquelle vous travaillez dans chaque répertoire, surtout si vous travaillez ou expérimentez avec différents types d'images. Dans ce cas, vous allez construire un système par défaut, nous allons donc l'appeler, par exemple, live-default.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#182" class="lnkocn">182</a></label>
+  <p class="code" id="182">
+    $ mkdir live-default &amp;&amp; cd live-default<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#183" class="lnkocn">183</a></label>
+  <p class="i0" id="183">
+    Ensuite, exécutez la commande <tt>lb config</tt>. Cela va créer une hiérarchie "config/" dans le répertoire courant pour être utilisée par d'autres commandes:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#184" class="lnkocn">184</a></label>
+  <p class="code" id="184">
+    $ lb config<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#185" class="lnkocn">185</a></label>
+  <p class="i0" id="185">
+    Aucun paramètre n'est passé à ces commandes, donc les défauts seront utilisés pour l'ensemble de ses diverses options. Consultez  <a href="overview-of-tools.fr.html#lb-config">La commande lb config</a>  pour plus de détails.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#186" class="lnkocn">186</a></label>
+  <p class="i0" id="186">
+    Maintenant que la hiérarchie "config/" existe, créez l'image avec la commande <tt>lb build</tt> :
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#187" class="lnkocn">187</a></label>
+  <p class="code" id="187">
+    # lb build<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#188" class="lnkocn">188</a></label>
+  <p class="i0" id="188">
+    Ce processus peut prendre un certain temps, en fonction de la vitesse de votre ordinateur et de votre connexion réseau. Une fois le processus terminé, il devrait y avoir un fichier image <tt>live-image-i386.hybrid.iso</tt> prêt à l'emploi, dans le répertoire courant.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#189" class="lnkocn">189</a></label>
+  <p class="i0" id="189">
+    <b>Remarque:</b> Si vous construisez sur un système amd64 le nom de l'image résultante sera <tt>live-image-amd64.hybrid.iso</tt>. Gardez à l'esprit cette convention de nommage tout au long du manuel.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#190" class="lnkocn">190</a></label>
+  <p class="bold" id="190"><a name="190"></a> <a id="husing-iso-hybrid"></a>
+    <a name="h4.5" ></a><a name="using-iso-hybrid" ></a>4.5 Utilisation d'une image ISO hybride live
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#191" class="lnkocn">191</a></label>
+  <p class="i0" id="191">
+    Après la construction ou le téléchargement d'une image ISO hybride, qui peut être obtenue sur ‹<a href="https://www.debian.org/CD/live/" target="_top">https://www.debian.org/CD/live/</a>›, l'étape suivante est d'habitude de préparer votre support pour le démarrage, soit sur CD-R(W) ou DVD-R(W), des supports optiques ou une clé USB.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#192" class="lnkocn">192</a></label>
+  <p class="bold" id="192"><a name="192"></a> <a id="hburning-iso-image"></a>
+    <a name="h4.5.1" ></a><a name="burning-iso-image" ></a>4.5.1 Graver une image ISO sur un support physique
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#193" class="lnkocn">193</a></label>
+  <p class="i0" id="193">
+    Graver une image ISO est facile. Il suffit d'installer /{xorriso} et de l'utiliser à partir de la ligne de commande pour graver l'image. Par exemple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#194" class="lnkocn">194</a></label>
+  <p class="code" id="194">
+    # apt-get install xorriso<br>
+$ xorriso -as cdrecord -v dev=/dev/sr0 blank=as_needed live-image-i386.hybrid.iso<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#195" class="lnkocn">195</a></label>
+  <p class="bold" id="195"><a name="195"></a> <a id="hcopying-iso-hybrid-to-usb"></a>
+    <a name="h4.5.2" ></a><a name="copying-iso-hybrid-to-usb" ></a>4.5.2 Copie d'une image ISO hybride sur une clé USB
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#196" class="lnkocn">196</a></label>
+  <p class="i0" id="196">
+    Les images ISO préparées avec <tt>xorriso</tt> peuvent être simplement copiées sur une clé USB avec <tt>cp</tt> ou un logiciel équivalent. Branchez une clé USB avec une capacité suffisamment grande pour votre fichier image et déterminez quel périphérique elle est, que nous appelons ci-dessous <tt>${USBSTICK}</tt>. C'est le fichier de périphérique de votre clé, tel que <tt>/dev/sdb</tt>, pas une partition, telle que <tt>/dev/sdb1</tt>! Vous pouvez trouver le nom du périphérique en regardant la sortie de <tt>dmesg</tt> après avoir branché le périphérique, ou mieux encore, <tt>ls -l /dev/disk/by-id</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#197" class="lnkocn">197</a></label>
+  <p class="i0" id="197">
+    Une fois que vous êtes sûr d'avoir le nom correct de l'appareil, utilisez la commande <tt>cp</tt> pour copier l'image sur la clé. <b>Ceci écrasera tout fichier déjà existant sur votre clé!</b>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#198" class="lnkocn">198</a></label>
+  <p class="code" id="198">
+    $ cp live-image-i386.hybrid.iso ${USBSTICK}<br>
+$ sync<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#199" class="lnkocn">199</a></label>
+  <p class="i0" id="199">
+    <b>Remarque:</b> La commande <i>sync</i> est utilisée pour s'assurer que toutes les données qui sont stockées dans la mémoire par le noyau lors de la copie de l'image, sont écrites sur la clé USB.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#200" class="lnkocn">200</a></label>
+  <p class="bold" id="200"><a name="200"></a> <a id="husing-usb-extra-space"></a>
+    <a name="h4.5.3" ></a><a name="using-usb-extra-space" ></a>4.5.3 Utilisation de l'espace disponible sur une clé USB
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#201" class="lnkocn">201</a></label>
+  <p class="i0" id="201">
+    Après avoir copié <tt>live-image-i386.hybrid.iso</tt> sur une clé USB, la première partition sera utilisée par le système live. Pour utiliser l'espace libre restant, utilisez un outil de partitionnement tel que <i>gparted</i> ou <i>parted</i> afin de créer une nouvelle partition sur la clé.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#202" class="lnkocn">202</a></label>
+  <p class="code" id="202">
+    # gparted ${USBSTICK}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#203" class="lnkocn">203</a></label>
+  <p class="i0" id="203">
+    Quand la partition est créée, vous devez y créer un système de fichiers où <tt>${PARTITION}</tt> est le nom de la partition, comme <tt>/dev/sdb2</tt>. Un choix possible serait ext4.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#204" class="lnkocn">204</a></label>
+  <p class="code" id="204">
+    # mkfs.ext4 ${PARTITION}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#205" class="lnkocn">205</a></label>
+  <p class="i0" id="205">
+    <b>Remarque:</b>  Si vous voulez utiliser l'espace supplémentaire avec Windows, ce système d'exploitation ne peut accéder normalement à aucune partition à part la première. Certaines solutions à ce problème ont été discutées sur notre  <a href="about-project.fr.html#contact">liste de diffusion</a>,  mais il semble qu'il n'y a pas de réponse facile.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#206" class="lnkocn">206</a></label>
+  <p class="i0" id="206">
+    <b>Rappelez-vous: Chaque fois que vous installez une nouvelle live-image-i386.hybrid.iso sur la clé, toutes les données sur la clé seront perdues parce que la table de partition est écrasée par le contenu de l'image, vous devez sauvegarder votre partition supplémentaire d'abord pour la restaurer à nouveau après la mise à jour de l'image live.</b>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#207" class="lnkocn">207</a></label>
+  <p class="bold" id="207"><a name="207"></a> <a id="hbooting-live-medium"></a>
+    <a name="h4.5.4" ></a><a name="booting-live-medium" ></a>4.5.4 Démarrer le support live
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#208" class="lnkocn">208</a></label>
+  <p class="i0" id="208">
+    La première fois que vous démarrez votre support live, qu'il s'agisse de CD, DVD, clé USB, ou du démarrage par PXE, une certaine configuration dans le BIOS de votre ordinateur peut être d'abord nécessaire. Puisque les BIOS varient grandement en fonctionnalités et raccourcis clavier, on ne peut pas aborder le sujet en profondeur ici. Certains BIOS fournissent une touche pour ouvrir un menu d'amorçage au démarrage, qui est le moyen le plus facile si elle est disponible sur votre système. Sinon, vous avez besoin d'entrer dans le menu de configuration du BIOS et modifier l'ordre de démarrage pour placer le dispositif de démarrage pour le système live devant votre périphérique de démarrage normal.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#209" class="lnkocn">209</a></label>
+  <p class="i0" id="209">
+    Une fois que vous avez démarré le support, un menu de démarrage vous est présenté. Si vous appuyez simplement sur entrée ici, le système va démarrer en utilisant l'entrée par défaut, <tt>Live</tt>. Pour plus d'informations sur les options de démarrage, consultez l'entrée «Help» dans le menu et aussi les pages de manuel de <i>live-boot</i> et <i>live-config</i> dans le système live.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#210" class="lnkocn">210</a></label>
+  <p class="i0" id="210">
+    En supposant que vous ayez sélectionné <tt>Live</tt> et démarré une image de bureau live par défaut, après que les messages de démarrage aient défilé, vous devriez être automatiquement connecté au compte <tt>user</tt> et voir un bureau, prêt à l'emploi. Si vous avez démarré une image de la console uniquement, tel que le type <tt>standard</tt> des  <a href="the-basics.fr.html#downloading-prebuilt-images">images précompilées</a>,  vous devriez être automatiquement connecté à la console pour le compte <tt>user</tt> et voir une invite du shell, prête à l'emploi.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#211" class="lnkocn">211</a></label>
+  <p class="bold" id="211"><a name="211"></a> <a id="husing-virtual-machine"></a>
+    <a name="h4.6" ></a><a name="using-virtual-machine" ></a>4.6 Utiliser une machine virtuelle pour les tests
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#212" class="lnkocn">212</a></label>
+  <p class="i0" id="212">
+    Exécuter les images live dans une machine virtuelle (VM) peut faire gagner beaucoup de temps. Cela ne vient pas sans avertissements:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#213" class="lnkocn">213</a></label>
+  <ul>
+  <li class="bullet" id="213">
+    L'exécution d'une VM demande assez de RAM pour le système d'exploitation client et l'hôte et un CPU avec support matériel pour la virtualisation est recommandé.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#214" class="lnkocn">214</a></label>
+  <ul>
+  <li class="bullet" id="214">
+    Il y a quelques limitations inhérentes à l'exécution sur une VM, par exemple des performances vidéo médiocres, ou un choix limité de matériel émulé.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#215" class="lnkocn">215</a></label>
+  <ul>
+  <li class="bullet" id="215">
+    Lors du développement d'un matériel spécifique, il n'existe aucun substitut pour l'exécution que le matériel lui-même.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#216" class="lnkocn">216</a></label>
+  <ul>
+  <li class="bullet" id="216">
+    Certains ne deviennent visibles que pendant l'exécution dans une VM. En cas de doute, testez votre image directement sur le matériel.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#217" class="lnkocn">217</a></label>
+  <p class="i0" id="217">
+    À condition de pouvoir travailler avec ces contraintes, examinez les logiciels VM disponibles et choisissez celui qui convient à vos besoins.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#218" class="lnkocn">218</a></label>
+  <p class="bold" id="218"><a name="218"></a> <a id="htesting-iso-with-qemu"></a>
+    <a name="h4.6.1" ></a><a name="testing-iso-with-qemu" ></a>4.6.1 Test d'une image ISO avec QEMU
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#219" class="lnkocn">219</a></label>
+  <p class="i0" id="219">
+    La VM la plus polyvalente de Debian est QEMU. Si votre processeur dispose d'une gestion matérielle de la virtualisation, vous pouvez utiliser le paquet <i>qemu-kvm</i>; La description du paquet <i>qemu-kvm</i> énumère brièvement les exigences.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#220" class="lnkocn">220</a></label>
+  <p class="i0" id="220">
+    Tout d'abord, installez <i>qemu-kvm</i> si votre processeur le gère. Sinon, installez <i>qemu</i>. Dans ce cas, le nom du programme est <tt>qemu</tt> au lieu de <tt>kvm</tt> dans les exemples suivants. Le paquet <i>qemu-utils</i> est également valable pour créer des images de disques virtuels avec <tt>qemu-img</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#221" class="lnkocn">221</a></label>
+  <p class="code" id="221">
+    # apt-get install qemu-kvm qemu-utils<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#222" class="lnkocn">222</a></label>
+  <p class="i0" id="222">
+    Démarrer une image ISO est simple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#223" class="lnkocn">223</a></label>
+  <p class="code" id="223">
+    $ kvm -cdrom live-image-i386.hybrid.iso<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#224" class="lnkocn">224</a></label>
+  <p class="i0" id="224">
+    Voir les pages de manuel pour plus de détails.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#225" class="lnkocn">225</a></label>
+  <p class="bold" id="225"><a name="225"></a> <a id="htesting-iso-with-virtualbox"></a>
+    <a name="h4.6.2" ></a><a name="testing-iso-with-virtualbox" ></a>4.6.2 Test d'une image ISO avec VirtualBox
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#226" class="lnkocn">226</a></label>
+  <p class="i0" id="226">
+    Afin de tester l'ISO avec <i>virtualbox</i>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#227" class="lnkocn">227</a></label>
+  <p class="code" id="227">
+    # apt-get install virtualbox virtualbox-qt virtualbox-dkms<br>
+$ virtualbox<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#228" class="lnkocn">228</a></label>
+  <p class="i0" id="228">
+    Créez une nouvelle machine virtuelle, modifiez les paramètres de stockage pour utiliser <tt>live-image-i386.hybrid.iso</tt> comme le périphérique CD/DVD et démarrez la machine.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#229" class="lnkocn">229</a></label>
+  <p class="i0" id="229">
+    <b>Remarque:</b> Pour les systèmes live contenant X.org que vous voulez essayer avec <i>virtualbox</i>, vous pouvez inclure le paquet des pilotes VirtualBox X.org, <i>virtualbox-guest-dkms</i> et <i>virtualbox-guest-x11</i>, dans votre configuration de <i>live-build</i>. Sinon, la résolution est limitée à 800x600.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#230" class="lnkocn">230</a></label>
+  <p class="code" id="230">
+    $ echo "virtualbox-guest-dkms virtualbox-guest-x11" &gt;&gt; config/package-lists/my.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#231" class="lnkocn">231</a></label>
+  <p class="i0" id="231">
+    Pour faire fonctionner le paquet dmks, il faut également installer le paquet linux-headers pour le noyau utilisé dans l'image. Au lieu de lister manuellement le paquet <i>linux-headers</i> correct dans la liste de paquets crée ci-dessus, <i>live-build</i> peut faire cela automatiquement.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#232" class="lnkocn">232</a></label>
+  <p class="code" id="232">
+    &nbsp;&nbsp;$ lb config --linux-packages "linux-image linux-headers"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#233" class="lnkocn">233</a></label>
+  <p class="bold" id="233"><a name="233"></a> <a id="husing-hdd-image"></a>
+    <a name="h4.7" ></a><a name="using-hdd-image" ></a>4.7 Construire et utiliser une image HDD
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#234" class="lnkocn">234</a></label>
+  <p class="i0" id="234">
+    La construction d'une image HDD est similaire à une ISO hybride à tous les regards, sauf que vous spécifiez <tt>-b hdd</tt> et le nom du fichier résultant est <tt>live-image-i386.img</tt> qui ne peut être gravé sur des supports optiques. Il convient pour le démarrage à partir de clés USB, disques durs USB, et divers autres dispositifs de stockage portables. Normalement, une image ISO hybride peut être utilisée à cette fin, mais si vous avez un BIOS qui ne gère pas correctement les images hybrides, vous devez utiliser une image HDD.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#235" class="lnkocn">235</a></label>
+  <p class="i0" id="235">
+    <b>Remarque:</b>  si vous avez créé une image ISO hybride avec l'exemple précédent, vous devrez nettoyer votre répertoire de travail avec la commande <tt>lb clean</tt> (voir  <a href="overview-of-tools.fr.html#lb-clean">La commande lb clean</a>):
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#236" class="lnkocn">236</a></label>
+  <p class="code" id="236">
+    # lb clean --binary<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#237" class="lnkocn">237</a></label>
+  <p class="i0" id="237">
+    Exécutez la commande <tt>lb config</tt> comme avant, sauf que cette fois en spécifiant le type d'image HDD:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#238" class="lnkocn">238</a></label>
+  <p class="code" id="238">
+    $ lb config -b hdd<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#239" class="lnkocn">239</a></label>
+  <p class="i0" id="239">
+    Construisez maintenant l'image avec la commande <tt>lb build</tt>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#240" class="lnkocn">240</a></label>
+  <p class="code" id="240">
+    # lb build<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#241" class="lnkocn">241</a></label>
+  <p class="i0" id="241">
+    Quand la création de l'image est finie, un fichier <tt>live-image-i386.img</tt> doit être présent dans le répertoire courant.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#242" class="lnkocn">242</a></label>
+  <p class="i0" id="242">
+    L'image binaire générée contient une partition VFAT et le chargeur d'amorçage syslinux, prêts à être écrits directement sur une clé USB. Encore une fois, comme l'utilisation d'une image HDD est juste comme l'utilisation d'une image ISO hybride sur USB, suivez les instructions  <a href="the-basics.fr.html#using-iso-hybrid">Utiliser une image live ISO hybride</a>,  en utilisant le nom de fichier <tt>live-image-i386.img</tt> au lieu de <tt>live-image-i386.hybrid.iso</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#243" class="lnkocn">243</a></label>
+  <p class="i0" id="243">
+    De même, pour tester une image HDD avec Qemu, installez <i>qemu</i> comme décrit ci-dessus dans  <a href="the-basics.fr.html#testing-iso-with-qemu">Test d'une image ISO avec QEMU</a>.  Ensuite, exécutez <tt>kvm</tt> ou <tt>qemu</tt>, selon la version dont votre système hôte a besoin en précisant <tt>live-image-i386.img</tt> comme le premier disque dur.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#244" class="lnkocn">244</a></label>
+  <p class="code" id="244">
+    $ kvm -hda live-image-i386.img<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#245" class="lnkocn">245</a></label>
+  <p class="bold" id="245"><a name="245"></a> <a id="hbuilding-netboot-image"></a>
+    <a name="h4.8" ></a><a name="building-netboot-image" ></a>4.8 Construction d'une image netboot
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#246" class="lnkocn">246</a></label>
+  <p class="i0" id="246">
+    La séquence de commandes suivante va créer une image NetBoot de base contenant le système Debian par défaut sans X.org. Elle peut être démarrée sur le réseau.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#247" class="lnkocn">247</a></label>
+  <p class="i0" id="247">
+    <b>Remarque:</b> Si vous avez réalisé quelques-uns des exemples précédents, vous aurez besoin de nettoyer votre répertoire de travail avec la commande <tt>lb clean</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#248" class="lnkocn">248</a></label>
+  <p class="code" id="248">
+    # lb clean<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#249" class="lnkocn">249</a></label>
+  <p class="i0" id="249">
+    Dans ce cas spécifique, un <tt>lb clean --binary</tt> ne serait pas suffisant pour nettoyer les étapes nécessaires. La raison est que dans les configurations de netboot, une configuration initramfs différente doit être utilisée, laquelle <i>live-build</i> exécute automatiquement lors de la construction des images netboot. Puisque la création d'initramfs appartient à l'étape chroot, si on change à netboot dans un répertoire existant, il faut reconstruire le chroot. Par conséquent, il faut faire un <tt>lb clean</tt>, (qui permettra d'éliminer l'étape chroot, aussi).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#250" class="lnkocn">250</a></label>
+  <p class="i0" id="250">
+    Exécutez la commande suivante pour configurer votre image pour démarrer sur le réseau:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#251" class="lnkocn">251</a></label>
+  <p class="code" id="251">
+    $ lb config -b netboot --net-root-path "/srv/debian-live" --net-root-server "192.168.0.2"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#252" class="lnkocn">252</a></label>
+  <p class="i0" id="252">
+    Contrairement aux images ISO et HDD, le démarrage sur le réseau ne sert pas l'image du système de fichiers pour le client. Pour cette raison, les fichiers doivent être servis via NFS. Différents systèmes de fichiers réseau peuvent être choisis avec lb config. Les options <tt>--net-root-path</tt> et <tt>--net-root-server</tt> indiquent l'emplacement et le serveur, respectivement, du serveur NFS sur lequel l'image du système de fichiers sera située au moment du démarrage. Assurez-vous que ceux-ci sont fixées à des valeurs appropriées pour votre réseau et serveur.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#253" class="lnkocn">253</a></label>
+  <p class="i0" id="253">
+    Construisez maintenant l'image avec la commande <tt>lb build</tt>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#254" class="lnkocn">254</a></label>
+  <p class="code" id="254">
+    # lb build<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#255" class="lnkocn">255</a></label>
+  <p class="i0" id="255">
+    Dans un démarrage réseau, le client exécute un petit morceau de logiciel qui réside habituellement sur l'EPROM de la carte Ethernet. Ce programme envoie une requête DHCP pour obtenir une adresse IP et les informations sur ce qu'il faut faire ensuite. Typiquement, la prochaine étape est d'obtenir un chargeur d'amorçage de niveau supérieur via le protocole TFTP. Cela pourrait être pxelinux, GRUB, ou démarrer directement à un système d'exploitation comme Linux.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#256" class="lnkocn">256</a></label>
+  <p class="i0" id="256">
+    Par exemple, si vous décompressez l'archive généré <tt>live-image-i386.netboot.tar</tt> dans le répertoire <tt>/srv/debian-live</tt>, vous trouverez l'image du système de fichiers dans <tt>live/filesystem.squashfs</tt> et le noyau, initrd et le chargeur d'amorçage pxelinux dans <tt>tftpboot/</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#257" class="lnkocn">257</a></label>
+  <p class="i0" id="257">
+    Nous devons maintenant configurer trois services sur le serveur pour activer le démarrage sur le réseau: le serveur DHCP, le serveur TFTP et le serveur NFS.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#258" class="lnkocn">258</a></label>
+  <p class="bold" id="258"><a name="258"></a> <a id="hc4.8.1"></a>
+    <a name="c4.8.1" ></a><a name="h4.8.1" ></a>4.8.1 Serveur DHCP
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#259" class="lnkocn">259</a></label>
+  <p class="i0" id="259">
+    Nous devons configurer le serveur DHCP de notre réseau pour être sûr de donner une adresse IP au client du système du démarrage sur le réseau, et pour annoncer l'emplacement du chargeur d'amorçage PXE.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#260" class="lnkocn">260</a></label>
+  <p class="i0" id="260">
+    Voici un exemple source d'inspiration, écrit pour le serveur ISC DHCP <tt>isc-dhcp-server</tt> dans le fichier de configuration <tt>/etc/dhcp/dhcpd.conf</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#261" class="lnkocn">261</a></label>
+  <p class="code" id="261">
+    # /etc/dhcp/dhcpd.conf - configuration file for isc-dhcp-server<br><br>
+ddns-update-style none;<br><br>
+option domain-name "example.org";<br>
+option domain-name-servers ns1.example.org, ns2.example.org;<br><br>
+default-lease-time 600;<br>
+max-lease-time 7200;<br><br>
+log-facility local7;<br><br>
+subnet 192.168.0.0 netmask 255.255.255.0 {<br>
+&nbsp;&nbsp;&nbsp;range 192.168.0.1 192.168.0.254;<br>
+&nbsp;&nbsp;&nbsp;filename "pxelinux.0";<br>
+&nbsp;&nbsp;&nbsp;next-server 192.168.0.2;<br>
+&nbsp;&nbsp;&nbsp;option subnet-mask 255.255.255.0;<br>
+&nbsp;&nbsp;&nbsp;option broadcast-address 192.168.0.255;<br>
+&nbsp;&nbsp;&nbsp;option routers 192.168.0.1;<br>
+}<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#262" class="lnkocn">262</a></label>
+  <p class="bold" id="262"><a name="262"></a> <a id="hc4.8.2"></a>
+    <a name="c4.8.2" ></a><a name="h4.8.2" ></a>4.8.2 Serveur TFTP
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#263" class="lnkocn">263</a></label>
+  <p class="i0" id="263">
+    Cela sert le noyau et le ramdisk initial pour le système pendant l'exécution.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#264" class="lnkocn">264</a></label>
+  <p class="i0" id="264">
+    Vous devriez installer le paquet <i>tftpd-hpa</i>. Il peut servir tous les fichiers contenus dans un répertoire racine, d'habitude <tt>/srv/tftp</tt>. Pour le laisser servir des fichiers dans <tt>/srv/debian-live/tftpboot</tt>, exécutez comme utilisateur root la commande suivante:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#265" class="lnkocn">265</a></label>
+  <p class="code" id="265">
+    # dpkg-reconfigure -plow tftpd-hpa<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#266" class="lnkocn">266</a></label>
+  <p class="i0" id="266">
+    et remplissez le nouveau répertoire du serveur tftp
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#267" class="lnkocn">267</a></label>
+  <p class="bold" id="267"><a name="267"></a> <a id="hc4.8.3"></a>
+    <a name="c4.8.3" ></a><a name="h4.8.3" ></a>4.8.3 Serveur NFS
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#268" class="lnkocn">268</a></label>
+  <p class="i0" id="268">
+    Quand l'ordinateur hôte a téléchargé et démarré un noyau Linux et chargé son initrd, il va essayer de monter l'image du système de fichiers live via un serveur NFS.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#269" class="lnkocn">269</a></label>
+  <p class="i0" id="269">
+    Vous devez installer le paquet <i>nfs-kernel-server</i>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#270" class="lnkocn">270</a></label>
+  <p class="i0" id="270">
+    Ensuite, rendez l'image du système de fichiers disponible via NFS en ajoutant une ligne comme la suivante <tt>/etc/exports</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#271" class="lnkocn">271</a></label>
+  <p class="code" id="271">
+    /srv/debian-live *(ro,async,no_root_squash,no_subtree_check)<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#272" class="lnkocn">272</a></label>
+  <p class="i0" id="272">
+    et indiquez cette exportation au serveur NFS avec la commande suivante:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#273" class="lnkocn">273</a></label>
+  <p class="code" id="273">
+    # exportfs -rv<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#274" class="lnkocn">274</a></label>
+  <p class="i0" id="274">
+    La configuation de ces trois services peut être un peu dificile. Vous pourriez avoir besoin de patience pour obtenir que tous fonctionnent ensemble. Pour plus d'informations, consultez le wiki syslinux sur ‹<a href="http://www.syslinux.org/wiki/index.php/PXELINUX" target="_top">http://www.syslinux.org/wiki/index.php/PXELINUX</a>› ou la section Debian Installer Manual's TFTP Net Booting sur ‹<a href="http://d-i.alioth.debian.org/manual/fr.i386/ch04s05.html" target="_top">http://d-i.alioth.debian.org/manual/fr.i386/ch04s05.html</a>›. Ils pourraient aider parce que leurs processus sont très semblables.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#275" class="lnkocn">275</a></label>
+  <p class="bold" id="275"><a name="275"></a> <a id="hc4.8.4"></a>
+    <a name="c4.8.4" ></a><a name="h4.8.4" ></a>4.8.4 Guide pratique pour expérimenter avec une image Netboot
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#276" class="lnkocn">276</a></label>
+  <p class="i0" id="276">
+    La création d'images netboot est facile avec <i>live-build</i>, mais les tests des images sur des machines physiques peuvent prendre vraiment beaucoup de temps.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#277" class="lnkocn">277</a></label>
+  <p class="i0" id="277">
+    Afin de rendre notre vie plus facile, nous pouvons utiliser la virtualisation.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#278" class="lnkocn">278</a></label>
+  <p class="bold" id="278"><a name="278"></a> <a id="hc4.8.5"></a>
+    <a name="c4.8.5" ></a><a name="h4.8.5" ></a>4.8.5 Qemu
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#279" class="lnkocn">279</a></label>
+  <ul>
+  <li class="bullet" id="279">
+    Installer <i>qemu</i>, <i>bridge-utils</i>, <i>sudo</i>.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#280" class="lnkocn">280</a></label>
+  <p class="i0" id="280">
+    Éditer <tt>/etc/qemu-ifup</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#281" class="lnkocn">281</a></label>
+  <p class="code" id="281">
+    #!/bin/sh<br>
+sudo -p "Password for $0:" /sbin/ifconfig $1 172.20.0.1<br>
+echo "Executing /etc/qemu-ifup"<br>
+echo "Bringing up $1 for bridged mode..."<br>
+sudo /sbin/ifconfig $1 0.0.0.0 promisc up<br>
+echo "Adding $1 to br0..."<br>
+sudo /usr/sbin/brctl addif br0 $1<br>
+sleep 2<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#282" class="lnkocn">282</a></label>
+  <p class="i0" id="282">
+    Obtenir, ou construire un <tt>grub-floppy-netboot</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#283" class="lnkocn">283</a></label>
+  <p class="i0" id="283">
+    Lancer <tt>qemu</tt> avec "<tt>-net nic,vlan=0 -net tap,vlan=0,ifname=tun0</tt>"
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#284" class="lnkocn">284</a></label>
+  <p class="bold" id="284"><a name="284"></a> <a id="hwebbooting"></a>
+    <a name="h4.9" ></a><a name="webbooting" ></a>4.9 Webbooting
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#285" class="lnkocn">285</a></label>
+  <p class="i0" id="285">
+    Webbooting est une manière très pratique de télécharger et d'amorcer les systèmes live en utilisant l'Internet comme un moyen. Il ya très peu d'exigences pour webbooting. D'une part, vous avez besoin d'un support avec un chargeur d'amorçage, un disque ram initial et un noyau. D'autre part, un serveur web pour stocker les fichiers squashfs qui contiennent le système de fichiers.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#286" class="lnkocn">286</a></label>
+  <p class="bold" id="286"><a name="286"></a> <a id="hc4.9.1"></a>
+    <a name="c4.9.1" ></a><a name="h4.9.1" ></a>4.9.1 Obtenir les fichiers webboot
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#287" class="lnkocn">287</a></label>
+  <p class="i0" id="287">
+    Comme d'habitude, vous pouvez construire les images vous-même ou utiliser les fichiers précompilés, qui sont disponibles sur le site du projet sur ‹<a href="http://debian-live.alioth.debian.org/" target="_top">http://debian-live.alioth.debian.org/</a>›. L'utilisation des images précompilées serait pratique pour faire l'essai initial jusqu'à ce que l'on peut affiner leurs propres besoins. Si vous avez construit une image live, vous trouverez les fichiers nécessaires pour webbooting dans le répertoire de construction sous <tt>binary/live/</tt>. Les fichiers sont appelés <tt>vmlinuz</tt>, <tt>initrd.img</tt> et <tt>filesystem.squashfs</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#288" class="lnkocn">288</a></label>
+  <p class="i0" id="288">
+    Il est également possible d'extraire les fichiers d'une image iso déjà existant. Pour ce faire, on doit monter l'image comme suit:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#289" class="lnkocn">289</a></label>
+  <p class="code" id="289">
+    # mount -o loop image.iso /mnt<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#290" class="lnkocn">290</a></label>
+  <p class="i0" id="290">
+    Les fichiers se trouvent sous le répertoire <tt>live/</tt>. Dans ce cas précis, il serait <tt>/mnt/live/</tt>. Cette méthode présente l'inconvénient que vous avez besoin d'être root pour pouvoir monter l'image. Cependant, il présente l'avantage qu'elle est facilement scriptable et ainsi, facilement automatisée.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#291" class="lnkocn">291</a></label>
+  <p class="i0" id="291">
+    Mais sans aucun doute, la meilleure façon d'extraire les fichiers d'une image iso et les télécharger sur le serveur web au même temps, est d'utiliser le midnight commander ou <i>mc</i>. Si vous avez le paquet <i>genisoimage</i> installé, le gestionnaire de fichiers à deux panneaux vous permet de voir le contenu d'un fichier iso dans un panneau et de télécharger les fichiers via FTP dans l'autre panneau. Même si cette méthode nécessite un travail manuel, elle ne nécessite pas les privilèges root.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#292" class="lnkocn">292</a></label>
+  <p class="bold" id="292"><a name="292"></a> <a id="hc4.9.2"></a>
+    <a name="c4.9.2" ></a><a name="h4.9.2" ></a>4.9.2 Démarrer images webboot
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#293" class="lnkocn">293</a></label>
+  <p class="i0" id="293">
+    Tandis que certains utilisateurs vont utiliser la virtualisation pour tester le webbooting, nous utilisons du matériel réel ici pour correspondre au possible cas d'utilisation suivant qui seulement devrait être considéré comme un exemple.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#294" class="lnkocn">294</a></label>
+  <p class="i0" id="294">
+    Afin de démarrer une image webboot il suffit d'avoir les éléments mentionnés ci-dessus, c'est-à-dire, <tt>vmlinuz</tt> et <tt>initrd.img</tt> sur une clé usb dans un répertoire nommé <tt>live/</tt> et installer syslinux comme chargeur de démarrage. Ensuite, démarrer à partir de la clé usb et taper <tt>fetch=URL/CHEMIN/DU/FICHIER</tt> aux options de démarrage. <i>live-boot</i> va télécharger le fichier squashfs et le stocker dans la ram. De cette façon, il est possible d'utiliser le système de fichiers compressé téléchargé comme un système live normal. Par exemple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#295" class="lnkocn">295</a></label>
+  <p class="code" id="295">
+    append boot=live components fetch=http://192.168.2.50/images/webboot/filesystem.squashfs<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#296" class="lnkocn">296</a></label>
+  <p class="i0" id="296">
+    <b>Cas d'utilisation:</b> Vous avez un serveur web dans lequel vous avez stocké deux fichiers squashfs, un qui contient un bureau complet, comme par exemple gnome, et un d'un système standard. Si vous avez besoin d'un environnement graphique pour une machine, vous pouvez brancher votre clé usb et télécharger l'image qui contient gnome. Si vous avez besoin des outils inclus dans le deuxième type d'image, peut-être pour une autre machine, vous pouvez télécharger celle du système standard.
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="installation.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="overview-of-tools.fr.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

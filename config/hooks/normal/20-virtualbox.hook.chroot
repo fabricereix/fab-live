@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+cd /tmp
+
+DOWNLOAD_URL=https://download.virtualbox.org/virtualbox/6.0.4/virtualbox-6.0_6.0.4-128413~Debian~stretch_amd64.deb
+
+wget --no-verbose $DOWNLOAD_URL
+
+# TODO install dependencies in the live system
+#dpkg -i virtualbox-6.0_6.0.4-128413~Debian~stretch_amd64.deb
+
+

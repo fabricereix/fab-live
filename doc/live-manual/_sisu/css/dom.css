@@ -1,0 +1,695 @@
+/* SiSU css dom.xml default style */
+    document {
+      display: block;
+      margin-left: 0mm;
+      margin-right: 0mm;
+    }
+    head {
+      display: block;
+      margin-bottom: 20px;
+      background-color: #dddddd;
+    }
+    header {
+      display: block;
+    }
+    meta {
+      display: inline;
+      line-height: 1;
+      font-size: 10px;
+      color: #990000;
+      margin-right: 2mm;
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+    }
+    md {
+      display: inline;
+      line-height: 1;
+      font-size: 10px;
+      color: #000099;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    source_control {
+      display: block;
+    }
+    dc {
+      display: block;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      color: blue;
+      background-color: #dddddd;
+      font-weight: normal;
+      text-align: justify;
+      font-size: xx-small;
+      line-height: 120%;
+      margin-left: 5%;
+      margin-right: 5mm;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    sc {
+      display: inline;
+      color: green;
+    }
+    keywords,copyright {
+      display: block;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      color: red;
+      background-color: #dddddd;
+      font-weight: normal;
+      text-align: justify;
+      font-size: xx-small;
+      line-height: 120%;
+      margin-left: 5%;
+      margin-right: 5mm;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    body {
+      color: black;
+      background: #ffffff;
+    }
+    a:link {
+      color: #003399;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #003399;
+      text-decoration: none;
+      /* background-color: #e3ecef; */
+    }
+    a:hover {
+      color: #000000;
+      text-decoration: underline;
+      background-color: #fff3b6;
+    }
+    a:hover IMG {
+      background-color: #ffffff;
+    }
+    a:active {
+      color: #003399;
+      text-decoration: underline;
+    }
+    object {
+      display: block;
+      margin-left: 2mm;
+      margin-right: 2mm;
+      margin-top: 4px;
+      margin-bottom: 8px;
+    }
+    heading {
+      font-weight: bold;
+    }
+    contents {
+      font-weight: normal;
+    }
+    text {
+      display: block;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      text-align: justify;
+      font-size: 100%;
+      line-height: 150%;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 2px;
+      margin-bottom: 0px;
+    }
+    text[class|="norm"] {
+      font-weight: normal;
+    }
+    text[class|="h1"] {
+      font-size: 120%;
+      font-weight: bold;
+      text-align: left;
+      line-height: 120%;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    text[class|="h2"] {
+      font-weight: bold;
+      font-size: 110%;
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    text[class|="h3"] {
+      font-size: 110%;
+      font-weight: bold;
+      text-align: left;
+    }
+    text[class|="h4"] {
+      font-size: 110%;
+      font-weight: bold;
+      text-align: left;
+    }
+    text[class|="h5"] {
+      font-size: 110%;
+      font-weight: bold;
+      text-align: left;
+    }
+    text[class|="h6"] {
+      font-size: 110%;
+      font-weight: bold;
+      text-align: left;
+    }
+    text[class|="h7"] {
+      font-size: 110%;
+      font-weight: bold;
+      text-align: left;
+    }
+    text[class|="indent0"] {
+      padding-left: 10%;
+    }
+    text[class|="indent1"] {
+      padding-left: 15%;
+    }
+    text[class|="indent2"] {
+      padding-left: 20%;
+    }
+    text[class|="indent3"] {
+      padding-left: 25%;
+    }
+    text[class|="indent4"] {
+      padding-left: 30%;
+    }
+    text[class|="indent5"] {
+      padding-left: 35%;
+    }
+    text[class|="indent6"] {
+      padding-left: 40%;
+    }
+    text[class|="indent7"] {
+      padding-left: 45%;
+    }
+    text[class|="indent8"] {
+      padding-left: 50%;
+    }
+    text[class|="indent9"] {
+      padding-left: 55%;
+    }
+
+    text[class|="hang0_indent0"] {
+      padding-left: 10%;
+      text-indent:   0%;
+    }
+    text[class|="hang0_indent1"] {
+      padding-left: 15%;
+      text-indent:  -5%;
+    }
+    text[class|="hang0_indent2"] {
+      padding-left: 20%;
+      text-indent: -10%;
+    }
+    text[class|="hang0_indent3"] {
+      padding-left: 25%;
+      text-indent: -15%;
+    }
+    text[class|="hang0_indent4"] {
+      padding-left: 30%;
+      text-indent: -20%;
+    }
+    text[class|="hang0_indent5"] {
+      padding-left: 35%;
+      text-indent: -25%;
+    }
+    text[class|="hang0_indent6"] {
+      padding-left: 40%;
+      text-indent: -30%;
+    }
+    text[class|="hang0_indent7"] {
+      padding-left: 45%;
+      text-indent: -35%;
+    }
+    text[class|="hang0_indent8"] {
+      padding-left: 50%;
+      text-indent: -40%;
+    }
+    text[class|="hang0_indent9"] {
+      padding-left: 55%;
+      text-indent: -45%;
+    }
+
+    text[class|="hang1_indent0"] {
+      padding-left: 10%;
+      text-indent:   5%;
+    }
+    text[class|="hang1_indent1"] {
+      padding-left: 15%;
+      text-indent:   0%;
+    }
+    text[class|="hang1_indent2"] {
+      padding-left: 20%;
+      text-indent:  -5%;
+    }
+    text[class|="hang1_indent3"] {
+      padding-left: 25%;
+      text-indent: -10%;
+    }
+    text[class|="hang1_indent4"] {
+      padding-left: 30%;
+      text-indent: -15%;
+    }
+    text[class|="hang1_indent5"] {
+      padding-left: 35%;
+      text-indent: -20%;
+    }
+    text[class|="hang1_indent6"] {
+      padding-left: 40%;
+      text-indent: -25%;
+    }
+    text[class|="hang1_indent7"] {
+      padding-left: 45%;
+      text-indent: -30%;
+    }
+    text[class|="hang1_indent8"] {
+      padding-left: 50%;
+      text-indent: -35%;
+    }
+    text[class|="hang1_indent9"] {
+      padding-left: 55%;
+      text-indent: -40%;
+    }
+
+    text[class|="hang2_indent0"] {
+      padding-left: 10%;
+      text-indent:  10%;
+    }
+    text[class|="hang2_indent1"] {
+      padding-left: 15%;
+      text-indent:   5%;
+    }
+    text[class|="hang2_indent2"] {
+      padding-left: 20%;
+      text-indent:   0%;
+    }
+    text[class|="hang2_indent3"] {
+      padding-left: 25%;
+      text-indent:  -5%;
+    }
+    text[class|="hang2_indent4"] {
+      padding-left: 30%;
+      text-indent: -10%;
+    }
+    text[class|="hang2_indent5"] {
+      padding-left: 35%;
+      text-indent: -15%;
+    }
+    text[class|="hang2_indent6"] {
+      padding-left: 40%;
+      text-indent: -20%;
+    }
+    text[class|="hang2_indent7"] {
+      padding-left: 45%;
+      text-indent: -25%;
+    }
+    text[class|="hang2_indent8"] {
+      padding-left: 50%;
+      text-indent: -30%;
+    }
+    text[class|="hang2_indent9"] {
+      padding-left: 55%;
+      text-indent: -35%;
+    }
+
+    text[class|="hang3_indent0"] {
+      padding-left: 10%;
+      text-indent:  15%;
+    }
+    text[class|="hang3_indent1"] {
+      padding-left: 15%;
+      text-indent:  10%;
+    }
+    text[class|="hang3_indent2"] {
+      padding-left: 20%;
+      text-indent:   5%;
+    }
+    text[class|="hang3_indent3"] {
+      padding-left: 25%;
+      text-indent:   0%;
+    }
+    text[class|="hang3_indent4"] {
+      padding-left: 30%;
+      text-indent:  -5%;
+    }
+    text[class|="hang3_indent5"] {
+      padding-left: 35%;
+      text-indent: -10%;
+    }
+    text[class|="hang3_indent6"] {
+      padding-left: 40%;
+      text-indent: -15%;
+    }
+    text[class|="hang3_indent7"] {
+      padding-left: 45%;
+      text-indent: -20%;
+    }
+    text[class|="hang3_indent8"] {
+      padding-left: 50%;
+      text-indent: -25%;
+    }
+    text[class|="hang3_indent9"] {
+      padding-left: 55%;
+      text-indent: -30%;
+    }
+
+    text[class|="hang4_indent0"] {
+      padding-left: 10%;
+      text-indent:  20%;
+    }
+    text[class|="hang4_indent1"] {
+      padding-left: 15%;
+      text-indent:  15%;
+    }
+    text[class|="hang4_indent2"] {
+      padding-left: 20%;
+      text-indent:  10%;
+    }
+    text[class|="hang4_indent3"] {
+      padding-left: 25%;
+      text-indent:   5%;
+    }
+    text[class|="hang4_indent4"] {
+      padding-left: 30%;
+      text-indent:   0%;
+    }
+    text[class|="hang4_indent5"] {
+      padding-left: 35%;
+      text-indent:  -5%;
+    }
+    text[class|="hang4_indent6"] {
+      padding-left: 40%;
+      text-indent: -10%;
+    }
+    text[class|="hang4_indent7"] {
+      padding-left: 45%;
+      text-indent: -15%;
+    }
+    text[class|="hang4_indent8"] {
+      padding-left: 50%;
+      text-indent: -20%;
+    }
+    text[class|="hang4_indent9"] {
+      padding-left: 55%;
+      text-indent: -25%;
+    }
+
+    text[class|="hang5_indent0"] {
+      padding-left: 10%;
+      text-indent:  25%;
+    }
+    text[class|="hang5_indent1"] {
+      padding-left: 15%;
+      text-indent:  20%;
+    }
+    text[class|="hang5_indent2"] {
+      padding-left: 20%;
+      text-indent:  15%;
+    }
+    text[class|="hang5_indent3"] {
+      padding-left: 25%;
+      text-indent:  10%;
+    }
+    text[class|="hang5_indent4"] {
+      padding-left: 30%;
+      text-indent:   5%;
+    }
+    text[class|="hang5_indent5"] {
+      padding-left: 35%;
+      text-indent:   0%;
+    }
+    text[class|="hang5_indent6"] {
+      padding-left: 40%;
+      text-indent:  -5%;
+    }
+    text[class|="hang5_indent7"] {
+      padding-left: 45%;
+      text-indent: -10%;
+    }
+    text[class|="hang5_indent8"] {
+      padding-left: 50%;
+      text-indent: -15%;
+    }
+    text[class|="hang5_indent9"] {
+      padding-left: 55%;
+      text-indent: -20%;
+    }
+
+    text[class|="hang6_indent0"] {
+      padding-left: 10%;
+      text-indent:  30%;
+    }
+    text[class|="hang6_indent1"] {
+      padding-left: 15%;
+      text-indent:  25%;
+    }
+    text[class|="hang6_indent2"] {
+      padding-left: 20%;
+      text-indent:  20%;
+    }
+    text[class|="hang6_indent3"] {
+      padding-left: 25%;
+      text-indent:  15%;
+    }
+    text[class|="hang6_indent4"] {
+      padding-left: 30%;
+      text-indent:  10%;
+    }
+    text[class|="hang6_indent5"] {
+      padding-left: 35%;
+      text-indent:   5%;
+    }
+    text[class|="hang6_indent6"] {
+      padding-left: 40%;
+      text-indent:   0%;
+    }
+    text[class|="hang6_indent7"] {
+      padding-left: 45%;
+      text-indent:  -5%;
+    }
+    text[class|="hang6_indent8"] {
+      padding-left: 50%;
+      text-indent: -10%;
+    }
+    text[class|="hang6_indent9"] {
+      padding-left: 55%;
+      text-indent: -15%;
+    }
+
+    text[class|="hang7_indent0"] {
+      padding-left: 10%;
+      text-indent:  35%;
+    }
+    text[class|="hang7_indent1"] {
+      padding-left: 15%;
+      text-indent:  30%;
+    }
+    text[class|="hang7_indent2"] {
+      padding-left: 20%;
+      text-indent:  25%;
+    }
+    text[class|="hang7_indent3"] {
+      padding-left: 25%;
+      text-indent:  20%;
+    }
+    text[class|="hang7_indent4"] {
+      padding-left: 30%;
+      text-indent:  15%;
+    }
+    text[class|="hang7_indent5"] {
+      padding-left: 35%;
+      text-indent:  10%;
+    }
+    text[class|="hang7_indent6"] {
+      padding-left: 40%;
+      text-indent:   5%;
+    }
+    text[class|="hang7_indent7"] {
+      padding-left: 45%;
+      text-indent:   0%;
+    }
+    text[class|="hang7_indent8"] {
+      padding-left: 50%;
+      text-indent:  -5%;
+    }
+    text[class|="hang7_indent9"] {
+      padding-left: 55%;
+      text-indent: -10%;
+    }
+
+    text[class|="hang8_indent0"] {
+      padding-left: 10%;
+      text-indent:  40%;
+    }
+    text[class|="hang8_indent1"] {
+      padding-left: 15%;
+      text-indent:  35%;
+    }
+    text[class|="hang8_indent2"] {
+      padding-left: 20%;
+      text-indent:  30%;
+    }
+    text[class|="hang8_indent3"] {
+      padding-left: 25%;
+      text-indent:  25%;
+    }
+    text[class|="hang8_indent4"] {
+      padding-left: 30%;
+      text-indent:  20%;
+    }
+    text[class|="hang8_indent5"] {
+      padding-left: 35%;
+      text-indent:  15%;
+    }
+    text[class|="hang8_indent6"] {
+      padding-left: 40%;
+      text-indent:  10%;
+    }
+    text[class|="hang8_indent7"] {
+      padding-left: 45%;
+      text-indent:   5%;
+    }
+    text[class|="hang8_indent8"] {
+      padding-left: 50%;
+      text-indent:   0%;
+    }
+    text[class|="hang8_indent9"] {
+      padding-left: 55%;
+      text-indent:  -5%;
+    }
+
+    text[class|="hang9_indent0"] {
+      padding-left: 10%;
+      text-indent:  45%;
+    }
+    text[class|="hang9_indent1"] {
+      padding-left: 15%;
+      text-indent:  40%;
+    }
+    text[class|="hang9_indent2"] {
+      padding-left: 20%;
+      text-indent:  35%;
+    }
+    text[class|="hang9_indent3"] {
+      padding-left: 25%;
+      text-indent:  30%;
+    }
+    text[class|="hang9_indent4"] {
+      padding-left: 30%;
+      text-indent:  25%;
+    }
+    text[class|="hang9_indent5"] {
+      padding-left: 35%;
+      text-indent:  20%;
+    }
+    text[class|="hang9_indent6"] {
+      padding-left: 40%;
+      text-indent:  15%;
+    }
+    text[class|="hang9_indent7"] {
+      padding-left: 45%;
+      text-indent:  10%;
+    }
+    text[class|="hang9_indent8"] {
+      padding-left: 50%;
+      text-indent:   5%;
+    }
+    text[class|="hang9_indent9"] {
+      padding-left: 55%;
+      text-indent:   0%;
+    }
+
+    text[class|="indent_bullet"] {
+      text-indent: 0%;
+    }
+    text[class|="indent_bullet0"] {
+      text-indent: 0%;
+    }
+    text[class|="indent_bullet1"] {
+      padding-left: 10%;
+    }
+    text[class|="indent_bullet2"] {
+      padding-left: 15%;
+    }
+    text[class|="indent_bullet3"] {
+      padding-left: 20%;
+    }
+    text[class|="indent_bullet4"] {
+      padding-left: 25%;
+    }
+    text[class|="indent_bullet5"] {
+      padding-left: 30%;
+    }
+    text[class|="indent_bullet6"] {
+      padding-left: 35%;
+    }
+    text[class|="indent_bullet7"] {
+      padding-left: 40%;
+    }
+    text[class|="indent_bullet8"] {
+      padding-left: 45%;
+    }
+    text[class|="indent_bullet9"] {
+      padding-left: 50%;
+    }
+    text[class|="verse"], text[class|="block"], text[class|="group"], text[class|="code"] {
+      text-align: left;
+    }
+    table {
+      margin-left: 5%;
+      display: block;
+    }
+    tr {
+      display: block;
+    }
+    th, td {
+      display: inline;
+    }
+    nametag {
+      display: none;
+    }
+    number {
+      padding-right: 4px;
+    }
+    ocn {
+      font-weight: normal;
+      display: block;
+      text-align: right;
+      vertical-align: super;
+      color: #990000;
+      font-size: xx-small;
+      margin-right: 0mm;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    endnote {
+      display: block;
+      font-size: small;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      font-weight: normal;
+      line-height: 150%;
+      text-align: justify;
+      margin-left: 10%;
+      margin-right: 5%;
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    endnote_indent {
+      display: block;
+      font-size: small;
+      font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+      font-weight: normal;
+      line-height: 150%;
+      text-align: justify;
+      margin-left: 15%;
+      margin-right: 5%;
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    en {
+      font-size: xx-small;
+      vertical-align: super;
+    }
+    i { font-style: italic; }
+    b { font-style: bold; }
+    u { text-decoration: underline; }
+    br { display: block; }

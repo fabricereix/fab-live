@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+useradd -m -s /bin/bash fab
+usermod -a -G sudo fab
+usermod -a -G docker fab
+
+mkdir /home/fab/.ssh
+cat <<END >/home/fab/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCYYrzZ9PjDkXT0NWBKY6YwqRg268jApklqISXaqvZDDfWQb43VYZZedSVYDVSAa4gX4vQsBuS+WVHbu3QHUykdwo1uIh8sRp8TGsmipo6EK6FU7gsQba0Ctt55Gr15nphI7bBta6+m6V0hlukuwBDRuBQr4c8nwgB91ttKdhOs7AEM3RZKC3Owwic5ixsPyMRZZXRBMXsr6KYgoLXvzMABi78LSFral4lXI1wkux4RsYBvRlP0pNvWjexd333TGzl1yh0lqvf/ntcWVCSe8irtk0W1FyuuNvWQlUCwYqN1yWShZdYoPJKUJpqqRuQv65BTzvZGFuQQx/9/OlSFYGxv fab@nixhp
+END
+chown -R fab /home/fab

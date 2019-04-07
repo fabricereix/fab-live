@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    customizing-package-installation -
+    Manual de Live Systems
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Manual de Live Systems" />
+  <meta name="dc.author" content="Projecte Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Projecte Live Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="22.09.2015"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: Aquest programa &#233;s un programari lliure: es pot redistribuir i/o modificar sota els termes de la Llic&#232;ncia P&#251;blica General de la GNU com &#233;s publicada per la Free Software Foundation, ja sigui la versi&#243; 3 de la Llic&#232;ncia, o (si ho preferiu) qualsevol versi&#243; posterior. \\  \\ Aquest programa es distribueix amb l'esperan&#231;a que sigui &#251;til, per&#242; sense cap garantia, fins i tot sense la garantia impl&#237;cita de COMERCIALITZACI&#211; o ADEQUACI&#211; PER A PROP&#210;SITS DETERMINATS. Vegeu la Llic&#232;ncia General P&#251;blica de la GNU per a m&#233;s detalls. \\  \\ Haurieu de rebre una c&#242;pia de la Llic&#232;ncia P&#251;blica General de la GNU amb aquest programa. Si no &#233;s aix&#237;, consulteu http://www.gnu.org/licenses/. \\  \\ El text complet de la Llic&#232;ncia P&#251;blica General de la GNU es pot trobar a /usr/share/common-licenses/GPL-3." />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="ca">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="customization-overview.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-contents.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Manual de Live Systems
+  </h1>
+
+<h1 class="minitoc">
+    Sobre aquest manual
+  </h1>
+
+<h1 class="minitoc">
+    Sobre aquest manual
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.ca.html" target="_top">
+    1. Sobre aquest manual
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#8">
+    1.1 Per als impacients
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#12">
+    1.2 Termes
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#29">
+    1.3 Autors
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.ca.html#44">
+    1.4 Contribuir a aquest document
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.ca.html#46">
+  1.4.1 Aplicar canvis
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.ca.html#60">
+  1.4.2 Traducció
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Sobre el Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.ca.html" target="_top">
+    2. Sobre el Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.ca.html#75">
+    2.1 Motivació
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#76">
+  2.1.1 Què passa amb els sistemes vius actuals
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#86">
+  2.1.2 Per què crear el nostre pròpi sistema viu?
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ca.html#94">
+    2.2 Filosofia
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#95">
+  2.2.1 Només paquets Debian sense modificacions de la secció "main"
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.ca.html#99">
+  2.2.2 Paquets del sistema viu sense cap configuració
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.ca.html#103">
+    2.3 Contacte
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Usuari
+  </h1>
+
+<h1 class="minitoc">
+    Instal·lació
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.ca.html" target="_top">
+    3. Instal·lació
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.ca.html#110">
+    3.1 Requisits
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.ca.html#118">
+    3.2 Instal·lació de live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#124">
+  3.2.1 Des del repositori de Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#127">
+  3.2.2 A partir del codi font
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#138">
+  3.2.3 A partir d'instantànies
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.ca.html#140">
+    3.3 Instal.lació de live-boot i live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#142">
+  3.3.1 Des del repositori de Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#144">
+  3.3.2 A partir del codi font
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.ca.html#156">
+  3.3.3 A partir d'instantànies
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Conceptes bàsics
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.ca.html" target="_top">
+    4. Conceptes bàsics
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#163">
+    4.1 Què és un sistema viu?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#171">
+    4.2 Descàrrega d'imatges prefabricades
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#173">
+    4.3 Ús del servei de construcció d'imatges en viu web
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#175">
+  4.3.1 Ús i advertències sobre el servei web
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#179">
+    4.4 Primers passos: construcció d'una imatge ISO híbrida
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#190">
+    4.5 Usar una imatge ISO híbrida en viu
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#192">
+  4.5.1 Gravar una imatge ISO en un medi físic
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#195">
+  4.5.2 Copiar una imatge ISO híbrida en un dispositiu  USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#200">
+  4.5.3 Utilitzar l'espai lliure en una memòria USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#207">
+  4.5.4 Arrencar el medi en viu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#211">
+    4.6 Utilitzar una màquina virtual per a fer proves
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#218">
+  4.6.1 Provar una imatge ISO amb QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#225">
+  4.6.2 Provar una imatge ISO amb VirtualBox
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#233">
+    4.7 Construir i utilitzar una imatge HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#245">
+    4.8 Construir una imatge netboot
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#258">
+  4.8.1 Servidor DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#262">
+  4.8.2 Servidor TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#267">
+  4.8.3 Servidor NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#275">
+  4.8.4 Com provar l'arrencada en xarxa
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.ca.html#284">
+    4.9 Webbooting
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#286">
+  4.9.1 Obtenir els fitxers webboot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.ca.html#292">
+  4.9.2 Arrencar imatges webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Descripció general de les eines
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.ca.html" target="_top">
+    5. Descripció general de les eines
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ca.html#300">
+    5.1 El paquet live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ca.html#310">
+  5.1.1 L'ordre <tt>lb config</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ca.html#320">
+  5.1.2 L'ordre <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.ca.html#322">
+  5.1.3 L'ordre <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ca.html#324">
+    5.2 El paquet live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.ca.html#328">
+    5.3 El paquet live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Gestió d'una configuració
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.ca.html" target="_top">
+    6. Gestió d'una configuració
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ca.html#333">
+    6.1 Gestionar canvis en la configuració
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ca.html#335">
+  6.1.1 Per què utilitzar scripts auto? Què fan?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.ca.html#338">
+  6.1.2 Utilitzar scripts auto d'exemple
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.ca.html#345">
+    6.2 Clonar una configuració publicada via Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització dels continguts
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.ca.html" target="_top">
+    7. Visió general de la personalització
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#359">
+    7.1 Configuració durant la construcció vs. durant l'arrencada
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#362">
+    7.2 Etapes de la construcció
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#365">
+    7.3 Suplementar lb config amb fitxers
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.ca.html#367">
+    7.4 Tasques de personalització
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització de la instal·lació de paquets
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.ca.html" target="_top">
+    8. Personalització de la instal·lació de  paquets
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#372">
+    8.1 Fonts dels paquets
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#373">
+  8.1.1 Distribució, àrees d'arxiu i mode
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#380">
+  8.1.2 Miralls de distribució
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#382">
+  8.1.3 Miralls de distribució utilitzats en temps  de construcció
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#386">
+  8.1.4 Miralls de distribució utilitzats en temps d'execució
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#389">
+  8.1.5 Repositoris addicionals
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#397">
+    8.2 Selecció dels paquets a instal·lar
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#399">
+  8.2.1 Llistes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#402">
+  8.2.2 Ús dels metapaquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#410">
+  8.2.3 Llistes locals de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#414">
+  8.2.4 Llistes locals de paquets per a l'etapa binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#416">
+  8.2.5 Generar llistes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#420">
+  8.2.6 Ús de condicionals dins de les llistes de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#429">
+  8.2.7 Eliminar paquets durant la instal·lació
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#431">
+  8.2.8 Tasques d'escriptori i llenguatge
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#436">
+  8.2.9 Tipus i versió del nucli
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#441">
+  8.2.10 Nuclis personalitzats
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#449">
+    8.3 Instal·lació de paquets  modificats o de tercers
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#456">
+  8.3.1 Fer servir <tt>packages.chroot</tt> per a instaŀar paquets personalitzats
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#463">
+  8.3.2 Fer servir un repositori APT per a instal·lar paquets personalitzats
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#466">
+  8.3.3 Paquets personalitzats i APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.ca.html#469">
+    8.4 Configurar APT en temps de construcció
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#471">
+  8.4.1 Elegir apt o aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#475">
+  8.4.2 L'ús d'un proxy amb APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#478">
+  8.4.3 Afinar APT per a estalviar espai
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#487">
+  8.4.4 Passar opcions per a apt o aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.ca.html#492">
+  8.4.5 APT pinning
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personalització dels continguts
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.ca.html" target="_top">
+    9. Personalització dels continguts
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ca.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#506">
+  9.1.1 Live/chroot local includes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#513">
+  9.1.2 Binary local includes
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ca.html#517">
+    9.2 Scripts ganxo (Hooks)
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#520">
+  9.2.1 Chroot local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#522">
+  9.2.2 Binary local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.ca.html#524">
+  9.2.3 Scripts ganxo en temps d'arrencada
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.ca.html#526">
+    9.3 Preconfiguració de les preguntes de Debconf
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització dels comportaments en temps d'execució
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html" target="_top">
+    10. Personalització dels comportaments en  temps d'execució
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#532">
+    10.1 Personalitzar l'usuari en viu
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#541">
+    10.2 Personalització de l'entorn local i el  llenguatge
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#558">
+    10.3 Persistència
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#580">
+  10.3.1 El fitxer persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#585">
+  10.3.2 Utilitzar diversos medis persistents
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.ca.html#591">
+  10.3.3 Persistència amb xifratge
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personalització de la imatge binària
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.ca.html" target="_top">
+    11. Personalització de la imatge binària
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ca.html#619">
+    11.1 Carregadors d'arrencada
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.ca.html#626">
+    11.2 metadades ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalització de l'instal·lador de debian
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.ca.html" target="_top">
+    12. Personalització de l'instal·lador de debian
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ca.html#636">
+    12.1 Tipus d'instal·lador de Debian
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ca.html#648">
+    12.2 Personalització de l'instal·lador de Debian amb preconfiguració
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.ca.html#651">
+    12.3 Personalitzar el contingut de l'instal·lador de Debian
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Projecte
+  </h1>
+
+<h1 class="minitoc">
+    Contribuir al projecte
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.ca.html" target="_top">
+    13. Contribuir al projecte
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ca.html#667">
+    13.1 Fer canvis
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.ca.html#682">
+    13.2 Traducció de pàgines dels manuals
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Informar dels errors
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.ca.html" target="_top">
+    14. Informar dels errors
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#698">
+    14.1 Problemes coneguts
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#703">
+    14.2 Reconstruir des de zero
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#705">
+    14.3 Fer servir paquets actualitzats
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#707">
+    14.4 Recopilar informació
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#724">
+    14.5 Aïllar el cas que falla, si és possible
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#726">
+    14.6 Utilitzar el paquet correcte per a informar de l'error
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#729">
+  14.6.1 A l'hora de construir mentre bootstrapping
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#732">
+  14.6.2 A l'hora de construir, durant la instal·lació de paquets
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#736">
+  14.6.3 En el moment d'arrencar
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.ca.html#738">
+  14.6.4 En temps d'execució
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#740">
+    14.7 Fer la recerca
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.ca.html#744">
+    14.8 On informar dels errors
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Estil de Codi
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.ca.html" target="_top">
+    15. Estil de Codi
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#751">
+    15.1 Compatibilitat
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#756">
+    15.2 Indentació
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#758">
+    15.3 Ajust de línia
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#770">
+    15.4 Variables
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.ca.html#789">
+    15.5 Miscel·lània
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procediments
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.ca.html" target="_top">
+    16. Procediments
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.ca.html#797">
+    16.1 Publicacions majors
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.ca.html#803">
+    16.2 Publicacions puntuals
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.ca.html#807">
+  16.2.1 Ùltima publicació puntual d'una versió de Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.ca.html#809">
+  16.2.2 Plantilla per a anunciar una publicació puntual
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Repositoris Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.ca.html" target="_top">
+    17. Repositoris Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.ca.html#829">
+    17.1 Gestió de múltiples repositoris
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h1 class="minitoc">
+    Exemples
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.ca.html" target="_top">
+    18. Exemples
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#837">
+    18.1 Ús dels exemples
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#841">
+    18.2 Tutorial 1: Una imatge per defecte
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#850">
+    18.3 Tutorial 2: Una utilitat de navegador web
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#858">
+    18.4 Tutorial 3: Una imatge personalitzada
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.ca.html#861">
+  18.4.1 Primera revisió
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.ca.html#875">
+  18.4.2 Segona revisió
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#887">
+    18.5 Un client per a un quiosc VNC
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#901">
+    18.6 Una imatge bàsica per a un dispositiu USB de 128MB
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.ca.html#912">
+    18.7 Un escriptori GNOME localitzat i amb instal·lador
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Apèndix
+  </h1>
+
+<h1 class="minitoc">
+    Style guide
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.ca.html" target="_top">
+    19. Guia d'estil
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.ca.html#927">
+    19.1 Instruccions per als autors
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ca.html#930">
+  19.1.1 Característiques lingüístiques
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.ca.html#963">
+  19.1.2 Procediments
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.ca.html#1002">
+    19.2 Directrius per als traductors
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.ca.html#1006">
+  19.2.1 Consells de traducció
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.ca.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.ca.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Manual de Live Systems
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Personalització de la instal·lació de paquets
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#370" class="lnkocn">370</a></label>
+  <h1 class="norm" id="370"><a name="370"></a>
+    8. Personalització de la instal·lació de  paquets
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#371" class="lnkocn">371</a></label>
+  <p class="i0" id="371">
+    La personalització més bàsica d'un sistema en viu pot ser la selecció dels paquets que seran inclosos en la imatge. Aquest capítol explica les diverses opcions de <i>live-build</i> per a personalitzar la instal·lació de paquets durant la construcció. Les opcions més importants que influeixen en els paquets que estan disponibles per a ser instal·lats en la imatge són les àrees de distribució i el arxiu. Per a garantir velocitats de descàrrega decents, s'ha de triar un mirall de distribució proper. També es pot incloure repositoris de backports, paquets experimentals o personalitzats, o incloure paquets directament com si fossin fitxers. Es poden definir llistes de paquets, incloent-hi els metapaquets que instal·laran diversos paquets relacionats alhora, com ara paquets per a un ordinador d'escriptori o un llenguatge en particular. Finalment, una sèrie d'opcions donen un cert control sobre <i>apt</i> o si es prefereix <i>aptitude</i>, quan s'instal·len els paquets durant la construcció. Això pot ser útil si s'utilitza un proxy, es vol desactivar la instal·lació de paquets recomanats per a estalviar espai, o hi ha la necessitat de controlar quines versions dels paquets s'instal·len mitjançant la tècnica pinning d'APT, per nomenar algunes possibilitats.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#372" class="lnkocn">372</a></label>
+  <p class="bold" id="372"><a name="372"></a> <a id="hc8.1"></a>
+    <a name="c8.1" ></a><a name="h8.1" ></a>8.1 Fonts dels paquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#373" class="lnkocn">373</a></label>
+  <p class="bold" id="373"><a name="373"></a> <a id="hc8.1.1"></a>
+    <a name="c8.1.1" ></a><a name="h8.1.1" ></a>8.1.1 Distribució, àrees d'arxiu i mode
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#374" class="lnkocn">374</a></label>
+  <p class="i0" id="374">
+    La distribució que es tria té una gran importància en els paquets que estan disponibles per a incloure en una imatge en viu. Només cal especificar el nom en clau, que per defecte és <b>buster</b> per a la versió <b>buster</b> de <i>live-build</i>. Qualsevol distribució disponible a l'arxiu pot ser especificada pel seu nom en clau aquí. (Veure  <a href="about-manual.ca.html#terms">Termes</a>  per a més detalls.) L'opció <tt>--distribution</tt> no només influeix en l'origen dels paquets dins l'arxiu, sinó que també instrueix a <i>live-build</i> per a comportar-se segons sigui necessari per a construir cada distribució suportada. Per exemple, per a construir la distribució <b>unstable</b>, <b>sid</b>, s'ha d'especificar:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#375" class="lnkocn">375</a></label>
+  <p class="code" id="375">
+    $ lb config --distribution sid<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#376" class="lnkocn">376</a></label>
+  <p class="i0" id="376">
+    A l'arxiu de la distribució, les àrees són les divisions principals de l'arxiu. A Debian, es tracta de <tt>main</tt>, <tt>contrib</tt> i <tt>non-free</tt>. Només <tt>main</tt> conté el programari que és part de la distribució Debian, per tant és el valor per defecte. Es poden especificar un o més valors, per exemple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#377" class="lnkocn">377</a></label>
+  <p class="code" id="377">
+    $ lb config --archive-areas "main contrib non-free"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#378" class="lnkocn">378</a></label>
+  <p class="i0" id="378">
+    És dona suport experimental a alguns derivats de Debian a través de l'opció <tt>--mode</tt>. Per defecte, aquesta opció és <tt>debian</tt> però només si s'està construint en un sistema Debian o en un sistema desconegut. Si s'especifica amb <tt>lb config</tt> que es vol construir un dels derivats suportats alehores es modificaran les opcions per a crear aquest derivat. Si per exemple s'utilitza <tt>lb config</tt> amb el mode <tt>ubuntu</tt>, s'utilitzarà el nom de la distribució i les àrees dels arxius del derivat especificat en lloc dels de Debian. El «mode» també modifica el comportament de <i>live-build</i> per a adaptar-lo als derivats.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#379" class="lnkocn">379</a></label>
+  <p class="i0" id="379">
+    <b>Nota:</b> Els projectes per als quals s'han afegit aquests modes són els principals responsables de donar suport als usuaris d'aquestes opcions. El Live Systems Project, al seu torn, dona suport de desenvolupament només sobre una base de millor esforç, basada en les informacions proporcionades pels projectes derivats ja que nosaltres no desenvolupem ni donem suport a aquests derivats.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#380" class="lnkocn">380</a></label>
+  <p class="bold" id="380"><a name="380"></a> <a id="hc8.1.2"></a>
+    <a name="c8.1.2" ></a><a name="h8.1.2" ></a>8.1.2 Miralls de distribució
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#381" class="lnkocn">381</a></label>
+  <p class="i0" id="381">
+    L'arxiu de Debian es replica a través d'una àmplia xarxa de miralls a tot el món perquè la gent de cada regió pugui triar un mirall proper amb la millor velocitat de descàrrega. Cadascuna de les opcions <tt>--mirror-*</tt> governa quin mirall de distribució s'utilitzarà en les diverses etapes de la construcció. Recordar de  <a href="customization-overview.ca.html#stages-of-the-build">Etapes de la construcció</a>  que l'etapa <b>bootstrap</b> es quan el chroot s'omple inicialment per <i>debootstrap</i> amb un sistema mínim i l'etapa <b>chroot</b> és quan s'utilitza el chroot per a la construcció del sistema de fitxers del sistema en viu. D'aquesta manera, s'utilitzen els miralls corresponents per a aquestes etapes, i més tard, durant l'etapa <b>binary</b> s'utilitzen els valors <tt>--mirror-binary</tt> i <tt>--mirror-binary-security</tt> substituint qualsevol mirall utilitzat en una etapa anterior.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#382" class="lnkocn">382</a></label>
+  <p class="bold" id="382"><a name="382"></a> <a id="hdistribution-mirrors-build-time"></a>
+    <a name="h8.1.3" ></a><a name="distribution-mirrors-build-time" ></a>8.1.3 Miralls de distribució utilitzats en temps  de construcció
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#383" class="lnkocn">383</a></label>
+  <p class="i0" id="383">
+    Per a establir els miralls de la distrubució utilitzats en temps de construcció perquè apuntin a una rèplica local, és suficient establir <tt>--mirror-bootstrap</tt> i <tt>--mirror-chroot-security</tt> de la manera següent.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#384" class="lnkocn">384</a></label>
+  <p class="code" id="384">
+    $ lb config --mirror-bootstrap http://localhost/debian/ \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--mirror-chroot-security http://localhost/debian-security/<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#385" class="lnkocn">385</a></label>
+  <p class="i0" id="385">
+    El mirall per al chroot, especificat per l'opció <tt>--mirror-chroot</tt>, per defecte pren el mateix valor que <tt>--mirror-bootstrap</tt>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#386" class="lnkocn">386</a></label>
+  <p class="bold" id="386"><a name="386"></a> <a id="hc8.1.4"></a>
+    <a name="c8.1.4" ></a><a name="h8.1.4" ></a>8.1.4 Miralls de distribució utilitzats en temps d'execució
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#387" class="lnkocn">387</a></label>
+  <p class="i0" id="387">
+    Les opcions <tt>--mirror-binary*</tt> governen els miralls de distribució que acaben a la imatge binària. Aquestes poden ser utilitzades per a instal·lar paquets addicionals mentre s'executa el sistema en viu. Els valors per defecte fan servir <tt>httpredir.debian.org</tt>, un servei que tria un mirall geogràficament a prop en funció, entre altres coses, de la familia de la IP de l'usuari i de la disponibilitat del mirall. Aquesta és una opció adequada quan no es pot predir quin serà el millor mirall per a tots els usuaris. O es pot especificar els valors propis com es mostra en l'exemple següent. Una imatge construïda a partir d'aquesta configuració només seria convenient per als usuaris en una xarxa on "<tt>mirror</tt>" és abastable.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#388" class="lnkocn">388</a></label>
+  <p class="code" id="388">
+    $ lb config --mirror-binary http://mirror/debian/ \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--mirror-binary-security http://mirror/debian-security/ \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--mirror-binary-backports http://mirror/debian-backports/<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#389" class="lnkocn">389</a></label>
+  <p class="bold" id="389"><a name="389"></a> <a id="hadditional-repositories"></a>
+    <a name="h8.1.5" ></a><a name="additional-repositories" ></a>8.1.5 Repositoris addicionals
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#390" class="lnkocn">390</a></label>
+  <p class="i0" id="390">
+    És possible afegir més repositoris, ampliant les opcions de paquets més enllà dels disponibles en la pròpia distribució de destinació. Aquests poden ser, per exemple, per a backports, experimentals o paquets personalitzats. Per a configurar repositoris addicionals, crear els fitxers <tt>config/archives/your-repository.list.chroot</tt>, i/o <tt>config/archives/your-repository.list.binary</tt>. Igual que amb les opcions <tt>--mirror-*</tt> aquest regeix els repositoris utilitzats en l'étapa <b>chroot</b> durant la construcció de la imatge, i a l'étapa <b>binary</b>, és a dir, per a ser utilitzades quan s'executa el sistema en viu.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#391" class="lnkocn">391</a></label>
+  <p class="i0" id="391">
+    Per exemple, <tt>config/archives/live.list.chroot</tt> permet instal·lar paquets des del repositori d'instantànies de debian-live en el moment de construcció del sistema viu.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#392" class="lnkocn">392</a></label>
+  <p class="code" id="392">
+    deb http://debian-live.alioth.debian.org/ sid-snapshots main contrib non-free<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#393" class="lnkocn">393</a></label>
+  <p class="i0" id="393">
+    Si s'afegeix la mateixa línia a <tt>config/archives/live.list.binary</tt>, el repositori sera afegit al directori <tt>/etc/apt/sources.list.d/</tt> del sistema viu.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#394" class="lnkocn">394</a></label>
+  <p class="i0" id="394">
+    Si aquests fitxers existeixen, són utilitzats de forma automàtica.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#395" class="lnkocn">395</a></label>
+  <p class="i0" id="395">
+    També s'ha de posar la clau GPG utilitzada per a signar el repositori en fitxers <tt>config/archives/your-repository.key.{binary,chroot}</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#396" class="lnkocn">396</a></label>
+  <p class="i0" id="396">
+    En cas de necessitar un APT pinning personalitzat, es poden col·locar les preferències APT en fitxers <tt>config/archives/your-repository.pref.{binary,chroot}</tt>, que seran afegits automàticament al sistema en viu al directori <tt>/etc/apt/preferences.d/</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#397" class="lnkocn">397</a></label>
+  <p class="bold" id="397"><a name="397"></a> <a id="hchoosing-packages-to-install"></a>
+    <a name="h8.2" ></a><a name="choosing-packages-to-install" ></a>8.2 Selecció dels paquets a instal·lar
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#398" class="lnkocn">398</a></label>
+  <p class="i0" id="398">
+    Hi ha una sèrie de formes de triar els paquets que <i>live-build</i> instal·larà en la imatge, que abasta una varietat de necessitats diferents. Es pot simplement anomenar paquets individualment per a instal·lar en una llista de paquets. També es pot optar per utilitzar metapaquets a les llistes, o seleccionar-los utilitzant camps de control de fitxers de paquets. I, finalment, es poden copiar paquets com si fossin fitxers dins del arbre <tt>config/</tt>, que és un mètode que s'adapta perfectament a fer proves amb paquets nous o experimentals abans de afegirlos a un repositori.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#399" class="lnkocn">399</a></label>
+  <p class="bold" id="399"><a name="399"></a> <a id="hpackage-lists"></a>
+    <a name="h8.2.1" ></a><a name="package-lists" ></a>8.2.1 Llistes de paquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#400" class="lnkocn">400</a></label>
+  <p class="i0" id="400">
+    Les llistes de paquets són una forma eficaç d'expressar quins paquets han de ser instal·lats. La sintaxi de la llista suporta seccions condicionals que fa que sigui fàcil construir llistes i adaptar-les per al propi ús en múltiples configuracions. Els noms dels paquets també poden ser injectats a la llista amb ajudants de l'intèrpret d'ordres en temps de construcció.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#401" class="lnkocn">401</a></label>
+  <p class="i0" id="401">
+    <b>Nota:</b>  El comportament de <i>live-build</i> a l'hora d'especificar un paquet que no existeix està determinat per la elecció que es faci de l'eina APT. Veure  <a href="customizing-package-installation.ca.html#choosing-apt-or-aptitude">Elegir apt or aptitude</a>  per a més detalls.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#402" class="lnkocn">402</a></label>
+  <p class="bold" id="402"><a name="402"></a> <a id="husing-metapackages"></a>
+    <a name="h8.2.2" ></a><a name="using-metapackages" ></a>8.2.2 Ús dels metapaquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#403" class="lnkocn">403</a></label>
+  <p class="i0" id="403">
+    La forma més senzilla per a omplir la llista de paquets és utilitzar una tasca metapaquet mantinguda per una distribució. Per exemple:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#404" class="lnkocn">404</a></label>
+  <p class="code" id="404">
+    $ lb config<br>
+$ echo task-gnome-desktop &gt; config/package-lists/desktop.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#405" class="lnkocn">405</a></label>
+  <p class="i0" id="405">
+    Això reemplaça l'antic mètode de llistes predefinides de <tt>live-build</tt> 2.x. A diferència de les llistes predefinides, els metapaquets no són específics del projecte Live Systems. Per contra, són mantinguts per grups d'especialistes que treballen dins la distribució i per tant, reflecteixen el consens de cada grup sobre els paquets que serviran millor a les necessitats dels usuaris. A més, abasten una gamma molt més àmplia de casos d'ús que les llistes predefinides que substitueixen.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#406" class="lnkocn">406</a></label>
+  <p class="i0" id="406">
+    Tots els metapaquets tenen el prefix <tt>task-</tt>, de manera que una forma ràpida de determinar quins estan disponibles (encara que pot contenir un grapat d'entrades falses que coincideixin amb el nom, però que no són metapaquets) és fer coincidir el nom del paquet amb:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#407" class="lnkocn">407</a></label>
+  <p class="code" id="407">
+    $ apt-cache search --names-only ^task-<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#408" class="lnkocn">408</a></label>
+  <p class="i0" id="408">
+    A més d'aquests, es troben altres metapaquets amb diverses finalitats. Alguns són subconjunts de paquets de tasques més àmplies, com <tt>gnome-core</tt>, mentre que altres són parts individuals especialitzades de un Debian Pure Blend, com els metapaquets <tt>education-*</tt>. Per a obtenir una llista de tots els metapaquets que hi ha a l'arxiu, instal·lar el paquet <tt>debtags</tt> i llistar tots els paquets amb l'etiqueta <tt>role::metapackage</tt> de la següent manera:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#409" class="lnkocn">409</a></label>
+  <p class="code" id="409">
+    $ debtags search role::metapackage<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#410" class="lnkocn">410</a></label>
+  <p class="bold" id="410"><a name="410"></a> <a id="hc8.2.3"></a>
+    <a name="c8.2.3" ></a><a name="h8.2.3" ></a>8.2.3 Llistes locals de paquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#411" class="lnkocn">411</a></label>
+  <p class="i0" id="411">
+    Ja sigui afegint metapaquets a una llista, paquets individuals, o una combinació d'ambdós, totes les llistes de paquets locals s'emmagatzemen a <tt>config/package-lists/</tt>. Es pot utilitzar més d'una llista i això es presta molt bé als dissenys modulars. Per exemple, es pot decidir dedicar una llista a una elecció particular d'escriptori, l'altra a una col·lecció de paquets relacionats que puguin ser fàcilment utilitzats al damunt d'un escriptori diferent. Això permet experimentar amb diferents combinacions de conjunts de paquets amb un mínim d'esforç, intercanviant llistes comunes entre els diferents projectes d'imatges en viu.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#412" class="lnkocn">412</a></label>
+  <p class="i0" id="412">
+    Les llistes de paquets que es troben en aquest directori han de tenir el sufix <tt>.list</tt> per a ser processades, i a més a més un sufix d'etapa adicional <tt>.chroot</tt> o <tt>.binary</tt> per a indicar per a quina etapa és la llista.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#413" class="lnkocn">413</a></label>
+  <p class="i0" id="413">
+    <b>Nota:</b> Si no s'especifica el sufix d'etapa, la llista s'utilitzarà per a ambdues etapes. Normalment, s'especifica <tt>.list.chroot</tt> de manera que els paquets només s'instal·laran al sistema de fitxers en viu i no hi haura una còpia extra del <tt>.deb</tt> en el medi.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#414" class="lnkocn">414</a></label>
+  <p class="bold" id="414"><a name="414"></a> <a id="hc8.2.4"></a>
+    <a name="c8.2.4" ></a><a name="h8.2.4" ></a>8.2.4 Llistes locals de paquets per a l'etapa binary
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#415" class="lnkocn">415</a></label>
+  <p class="i0" id="415">
+    Per a crear una llista per a l'etapa binary, crear un fitxer amb el sufix <tt>.list.binary</tt> a <tt>config/package-lists/</tt>. Aquests paquets no s'instal·len al sistema de fitxers en viu però s'inclouen en el medi en viu al directori <tt>pool/</tt>. Un ús típic d'aquesta llista seria amb una de les variants del instal·lador non-live. Com s'ha esmentat anteriorment, si es vol que aquesta llista sigui la mateixa que la llista de l'etapa chroot, simplement utilitzar el sufix <tt>.list</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#416" class="lnkocn">416</a></label>
+  <p class="bold" id="416"><a name="416"></a> <a id="hgenerated-package-lists"></a>
+    <a name="h8.2.5" ></a><a name="generated-package-lists" ></a>8.2.5 Generar llistes de paquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#417" class="lnkocn">417</a></label>
+  <p class="i0" id="417">
+    De vegades passa que la millor manera de crear una llista és generar-la amb un script. Qualsevol línia que comença amb un signe d'exclamació indica una ordre que s'executarà dins del chroot quan la imatge es construeix. Per exemple, es podria incloure la línia <tt>! grep-aptavail -n -sPackage -FPriority standard | sort</tt> en una llista de paquets per a produir una llista ordenada de paquets disponibles amb <tt>Priority: standard</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#418" class="lnkocn">418</a></label>
+  <p class="i0" id="418">
+    De fet, la selecció de paquets amb l'ordre <tt>grep-aptavail</tt> (del paquet <tt>dctrl-tools</tt>) és tan útil que <tt>live-build</tt> proporciona un script <tt>Packages</tt> d'ajuda per motius de comoditat. Aquest script accepta dos arguments: <tt>field</tt> i <tt>pattern</tt>. Per tant, es pot crear una llista amb els següents continguts:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#419" class="lnkocn">419</a></label>
+  <p class="code" id="419">
+    $ lb config<br>
+$ echo '! Packages Priority standard' &gt; config/package-lists/standard.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#420" class="lnkocn">420</a></label>
+  <p class="bold" id="420"><a name="420"></a> <a id="hc8.2.6"></a>
+    <a name="c8.2.6" ></a><a name="h8.2.6" ></a>8.2.6 Ús de condicionals dins de les llistes de paquets
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#421" class="lnkocn">421</a></label>
+  <p class="i0" id="421">
+    Qualsevol de les variables de configuració de <i>live-build</i> emmagatzemades a <tt>config/*</tt> (menys el prefix <tt>LB_</tt>) poden ser utilitzades en sentències condicionals en les llistes de paquets. En general, això significa qualsevol opció <tt>lb config</tt> en lletres majuscules i amb guions canviats a guions baixos. Però a la pràctica, només tenen sentit les que influeixen en la selecció de paquets, com ara <tt>DISTRIBUTION</tt>, <tt>ARCHITECTURES</tt> o <tt>ARCHIVE_AREAS</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#422" class="lnkocn">422</a></label>
+  <p class="i0" id="422">
+    Per exemple, per a instal·lar <tt>ia32-libs</tt> si s'especifica <tt>--architectures amd64</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#423" class="lnkocn">423</a></label>
+  <p class="code" id="423">
+    #if ARCHITECTURES amd64<br>
+ia32-libs<br>
+#endif<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#424" class="lnkocn">424</a></label>
+  <p class="i0" id="424">
+    És possible fer un test d'un nombre de valors, per exemple per a instal·lar <i>memtest86+</i> si s'especifica <tt>--architectures i386</tt> o <tt>--architectures amd64</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#425" class="lnkocn">425</a></label>
+  <p class="code" id="425">
+    #if ARCHITECTURES i386 amd64<br>
+memtest86+<br>
+#endif<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#426" class="lnkocn">426</a></label>
+  <p class="i0" id="426">
+    També es pot provar amb variables que poden contenir més d'un valor, per exemple, per a instal·lar <i>vrms</i> si s'especifica o <tt>contrib</tt> o <tt>non-free</tt> a través de l'opció <tt>--archive-areas</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#427" class="lnkocn">427</a></label>
+  <p class="code" id="427">
+    #if ARCHIVE_AREAS contrib non-free<br>
+vrms<br>
+#endif<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#428" class="lnkocn">428</a></label>
+  <p class="i0" id="428">
+    No és possible el anidament dels condicionals.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#429" class="lnkocn">429</a></label>
+  <p class="bold" id="429"><a name="429"></a> <a id="hc8.2.7"></a>
+    <a name="c8.2.7" ></a><a name="h8.2.7" ></a>8.2.7 Eliminar paquets durant la instal·lació
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#430" class="lnkocn">430</a></label>
+  <p class="i0" id="430">
+    Es pot crear llistes de paquets en fitxers amb els sufixos <tt>.list.chroot_live</tt> i <tt>.list.chroot_install</tt> dins del directori <tt>config/package-lists</tt>. Si hi ha una llista «live» i una llista «install» els paquets de la llista <tt>.list.chroot_live</tt> s'eliminaran amb un script ganxo després de la instal·lació (si l'usuari utilitza l'instal·lador). Els paquets de la llista <tt>.list.chroot_install</tt> seran presents tant en el sistema en viu com en el sistema instal·lat. Aquest és un cas especial per al programa d'instal·lació i pot ser útil si es té <tt>--debian-installer live</tt> establert en la configuració i es desitja eliminar paquets específics del sistema en viu durant la instal·lació.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#431" class="lnkocn">431</a></label>
+  <p class="bold" id="431"><a name="431"></a> <a id="hdesktop-and-language-tasks"></a>
+    <a name="h8.2.8" ></a><a name="desktop-and-language-tasks" ></a>8.2.8 Tasques d'escriptori i llenguatge
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#432" class="lnkocn">432</a></label>
+  <p class="i0" id="432">
+    Les tasques d'escriptori i el llenguatge són casos especials que necessiten una mica de planificació i configuració extra. Les imatges en viu són diferentes de les imatges de l'instal·lador de Debian en aquest sentit. A l'instal·lador de Debian, si el medi es va preparar per a obtenir un tipus d'entorn d'escriptori en particular, la tasca corresponent s'instal·larà automàticament. Per tant hi ha tasques internes <tt>gnome-desktop</tt>, <tt>kde-desktop</tt>, <tt>lxde-desktop</tt> i <tt>xfce-desktop</tt>, cap de les quals s'ofereixen al menú de <tt>tasksel</tt>. De la mateixa manera, no hi ha cap entrada de menú per a tasques de llengües, però l'elecció del idioma de l'usuari durant la instal·lació influeix en la selecció de les tasques de les llengües corresponents.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#433" class="lnkocn">433</a></label>
+  <p class="i0" id="433">
+    En el desenvolupament d'una imatge en viu d'escriptori, la imatge sol arrencar directament a un escriptori de treball, les opcions d'escriptori i de llengua han estat fetes en temps de construcció, no en temps d'execució com en el cas del instal·lador de Debian. Això no vol dir que una imatge en viu no es pugui construir per a donar suport a diversos equips d'escriptori o diversos idiomes i oferir a l'usuari una opció, però això no és el comportament de <i>live-build</i> per defecte.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#434" class="lnkocn">434</a></label>
+  <p class="i0" id="434">
+    Com que no hi ha cap ajust automàtic per a les tasques de llengua que incloguin coses com ara tipus de lletres específics per a una llengua o paquets de mètode d'entrada, si es vol, cal especificar-ho en la configuració. Per exemple, una imatge d'escriptori GNOME que contingui suport per al alemany podrie incloure les següents tasques metapaquets:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#435" class="lnkocn">435</a></label>
+  <p class="code" id="435">
+    $ lb config<br>
+$ echo "task-gnome-desktop task-laptop" &gt;&gt; config/package-lists/my.list.chroot<br>
+$ echo "task-german task-german-desktop task-german-gnome-desktop" &gt;&gt; config/package-lists/my.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#436" class="lnkocn">436</a></label>
+  <p class="bold" id="436"><a name="436"></a> <a id="hkernel-flavour-and-version"></a>
+    <a name="h8.2.9" ></a><a name="kernel-flavour-and-version" ></a>8.2.9 Tipus i versió del nucli
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#437" class="lnkocn">437</a></label>
+  <p class="i0" id="437">
+    Depenent de l'arquitectura, s'inclouran per defecte en la imatge un o més tipus de nuclis. Es pot triar diferents tipus a través de l'opció <tt>--linux-flavours</tt>. Cada tipus té un sufix per a l'arrel per defecte <tt>linux-image</tt> per a formar el nom de cada metapaquet que al seu torn depèn d'un paquet del nucli exacte que s'ha d'incloure en la imatge.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#438" class="lnkocn">438</a></label>
+  <p class="i0" id="438">
+    Així, per defecte, una imatge per a l'arquitectura <tt>amd64</tt> inclourà el metapaquet <tt>linux-image-amd64</tt> i una imatge per a l'arquitectura <tt>i386</tt> inclourà el metapaquet <tt>linux-image-586</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#439" class="lnkocn">439</a></label>
+  <p class="i0" id="439">
+    Quan hi ha més d'una versió del paquet del nucli disponible en els arxius configurats, es pot especificar el nom d'un paquet del nucli amb l'opció <tt>--linux-packages</tt>. Per exemple, suposem que s'està construint una imatge d'arquitectura <tt>amd64</tt> i es vol afegir l'arxiu experimental amb propòsits de fer proves. Perquè es pugui instal·lar el nucli <tt>linux-image-3.18.0-trunk-amd64</tt> es podria configurar la imatge de la següent manera:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#440" class="lnkocn">440</a></label>
+  <p class="code" id="440">
+    $ lb config --linux-packages linux-image-3.18.0-trunk<br>
+$ echo "deb http://ftp.debian.org/debian/ experimental main" &gt; config/archives/experimental.list.chroot<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#441" class="lnkocn">441</a></label>
+  <p class="bold" id="441"><a name="441"></a> <a id="hcustom-kernels"></a>
+    <a name="h8.2.10" ></a><a name="custom-kernels" ></a>8.2.10 Nuclis personalitzats
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#442" class="lnkocn">442</a></label>
+  <p class="i0" id="442">
+    Es pot construir i incloure nuclis propis personalitzats, sempre que s'integrin en el sistema de gestió de paquets de Debian. El sistema de <i>live-build</i> no és compatible amb nuclis no construïts com paquets <tt>.deb</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#443" class="lnkocn">443</a></label>
+  <p class="i0" id="443">
+    La manera apropiada i recomanable d'implementar els propis paquets del nucli és seguir les instruccions del <tt>kernel-handbook</tt>. Recordar que s'ha de modificar l'ABI i els sufixos del tipus apropiadament, i a continuació, incloure un conjunt complet dels packets que corresponen amb <tt>linux</tt> i <tt>linux-latest</tt> al repositori.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#444" class="lnkocn">444</a></label>
+  <p class="i0" id="444">
+    Si s'opta per construir els paquets del nucli sense els metapaquets a joc, cal especificar una arrel <tt>--linux-packages</tt> apropiada com s'indica a  <a href="customizing-package-installation.ca.html#kernel-flavour-and-version">Tipus i versió del nucli</a>.  Com expliquem a  <a href="customizing-package-installation.ca.html#installing-modified-or-third-party-packages">Instal·lació de paquets modificats o de tercers</a>,  és millor si s'inclouen els paquets del nucli personalitzat en un repositori propi, tot i que les alternatives discutides en aquella secció també funcionen.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#445" class="lnkocn">445</a></label>
+  <p class="i0" id="445">
+    Està més enllà de l'abast d'aquest document donar consells sobre com personalitzar un nucli. No obstant això, cal, almenys, assegurar-se que la configuració compleix els següents requisits mínims:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#446" class="lnkocn">446</a></label>
+  <ul>
+  <li class="bullet" id="446">
+    Utilitzar una ramdisk inicial.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#447" class="lnkocn">447</a></label>
+  <ul>
+  <li class="bullet" id="447">
+    Incloure el mòdul d'unió del sistema de fitxers (normalment <tt>aufs</tt>).
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#448" class="lnkocn">448</a></label>
+  <ul>
+  <li class="bullet" id="448">
+    Incloure tots els mòduls del sistema d'arxius requerits per la configuració (normalment <tt>squashfs</tt>).
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#449" class="lnkocn">449</a></label>
+  <p class="bold" id="449"><a name="449"></a> <a id="hinstalling-modified-or-third-party-packages"></a>
+    <a name="h8.3" ></a><a name="installing-modified-or-third-party-packages" ></a>8.3 Instal·lació de paquets  modificats o de tercers
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#450" class="lnkocn">450</a></label>
+  <p class="i0" id="450">
+    Si bé està en contra de la filosofia d'un sistema en viu, de vegades pot ser necessària la construcció d'un sistema amb versions modificades dels paquets que es troben al arxiu de Debian. Pot ser per a modificar o donar suport a funcions addicionals, les llengües o les marques, o fins i tot per a eliminar elements dels paquets existents que són indesitjables. De la mateixa manera, es poden utilitzar paquets de tercers per a afegir alguna funcionalitat personalitzada i/o propietària.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#451" class="lnkocn">451</a></label>
+  <p class="i0" id="451">
+    Aquesta secció no cobreix l'assessorament en matèria de construcció o manteniment de paquets modificats. Però el métode de Joachim Breitner's 'How to fork privately' a ‹<a href="http://www.joachim-breitner.de/blog/archives/282-How-to-fork-privately.html" target="_top">http://www.joachim-breitner.de/blog/archives/282-How-to-fork-privately.html</a>› pot ser d'interès. La creació de paquets personalitzats es tracta a Debian New Maintainers' Guide at ‹<a href="https://www.debian.org/doc/maint-guide/" target="_top">https://www.debian.org/doc/maint-guide/</a>› i en altres llocs.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#452" class="lnkocn">452</a></label>
+  <p class="i0" id="452">
+    Hi ha dues formes d'instal·lar paquets personalitzats modificats:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#453" class="lnkocn">453</a></label>
+  <ul>
+  <li class="bullet" id="453">
+    <tt>packages.chroot</tt>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#454" class="lnkocn">454</a></label>
+  <ul>
+  <li class="bullet" id="454">
+    L'ús d'un repositori APT personalitzat
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#455" class="lnkocn">455</a></label>
+  <p class="i0" id="455">
+    Utilitzar <tt>packages.chroot</tt> és més fàcil d'aconseguir i útil per a personalitzacions "ràpides", però té una sèrie d'inconvenients, mentre que l'ús d'un repositori APT personalitzat és més costós en la quantitat de temps necessari per a posar-lo en marxa.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#456" class="lnkocn">456</a></label>
+  <p class="bold" id="456"><a name="456"></a> <a id="hc8.3.1"></a>
+    <a name="c8.3.1" ></a><a name="h8.3.1" ></a>8.3.1 Fer servir <tt>packages.chroot</tt> per a instaŀar paquets personalitzats
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#457" class="lnkocn">457</a></label>
+  <p class="i0" id="457">
+    Per a instaŀar un paquet personalitzat, només s'ha de copiar al directori <tt>config/packages.chroot/</tt>. Els paquets que es troben dins d'aquest directori s'instal·laran automàticament en el sistema en viu durant la construcció - no cal especificar res més en cap altre lloc.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#458" class="lnkocn">458</a></label>
+  <p class="i0" id="458">
+    Els paquets <b>han de</b> ser nomenats en la forma prescrita. Una manera simple de fer això és utilitzar <tt>dpkg-name</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#459" class="lnkocn">459</a></label>
+  <p class="i0" id="459">
+    Utilitzar <tt>packages.chroot</tt> per a la instal·lació de paquets personalitzats té els seus desavantatges:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#460" class="lnkocn">460</a></label>
+  <ul>
+  <li class="bullet" id="460">
+    No és possible utilitzar APT segur.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#461" class="lnkocn">461</a></label>
+  <ul>
+  <li class="bullet" id="461">
+    Cal posar tots els paquets apropiats al directori <tt>config/packages.chroot/</tt>.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#462" class="lnkocn">462</a></label>
+  <ul>
+  <li class="bullet" id="462">
+    No es adient per a l'emmagatzematge de configuracions de sistemes en viu en el control de revisió.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#463" class="lnkocn">463</a></label>
+  <p class="bold" id="463"><a name="463"></a> <a id="hc8.3.2"></a>
+    <a name="c8.3.2" ></a><a name="h8.3.2" ></a>8.3.2 Fer servir un repositori APT per a instal·lar paquets personalitzats
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#464" class="lnkocn">464</a></label>
+  <p class="i0" id="464">
+    A diferència de <tt>packages.chroot</tt>, quan s'utilitza un repositori APT personalitzat s'ha d'assegurar que s'especifiquen els paquets en un altre lloc. Veure  <a href="customizing-package-installation.ca.html#choosing-packages-to-install">Selecció dels paquets a instal·lar</a>  per a més detalls.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#465" class="lnkocn">465</a></label>
+  <p class="i0" id="465">
+    Si bé crear un repositori APT per a instal·lar paquets personalitzats pot semblar un esforç innecessari, la infraestructura pot ser fàcilment reutilitzada en una data posterior per a oferir actualitzacions dels paquets modificats.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#466" class="lnkocn">466</a></label>
+  <p class="bold" id="466"><a name="466"></a> <a id="hc8.3.3"></a>
+    <a name="c8.3.3" ></a><a name="h8.3.3" ></a>8.3.3 Paquets personalitzats i APT
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#467" class="lnkocn">467</a></label>
+  <p class="i0" id="467">
+    <i>live-build</i> utilitza APT per a instal·lar tots els paquets al sistema en viu, per tant, heretarà els comportaments d'aquest programa. Un exemple rellevant és que (assumint una configuració per defecte) si es dóna el cas que un paquet està disponible en dos repositoris diferents, amb diferents números de versió, APT triarà per a instal·lar el paquet amb la versió més alta.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#468" class="lnkocn">468</a></label>
+  <p class="i0" id="468">
+    A causa d'això, s'aconsella augmentar el nombre de la versió dels paquets personalitzats als fixers <tt>debian/changelog</tt> per a assegurar-se que la versió modificada és la que s'instal·la en lloc d'una dels repositoris oficials de Debian. Això també es pot aconseguir mitjançant l'alteració de les preferències d'APT del sistema en viu - veure  <a href="customizing-package-installation.ca.html#apt-pinning">APT pinning</a>  per a més informació.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#469" class="lnkocn">469</a></label>
+  <p class="bold" id="469"><a name="469"></a> <a id="hc8.4"></a>
+    <a name="c8.4" ></a><a name="h8.4" ></a>8.4 Configurar APT en temps de construcció
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#470" class="lnkocn">470</a></label>
+  <p class="i0" id="470">
+    Es pot configurar APT a través d'una sèrie d'opcions que només s'apliquen en temps de construcció. (La configuració d'APT al sistema en funcionament en viu es pot fer de forma normal per als continguts del sistema en viu, és a dir, mitjançant la inclusió de les configuracions adequades a través de <tt>config/includes.chroot/</tt>.) Per a obtenir una llista completa, buscar les opcions que comencen amb <tt>apt</tt> a la pàgina del manual de <tt>lb_config</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#471" class="lnkocn">471</a></label>
+  <p class="bold" id="471"><a name="471"></a> <a id="hchoosing-apt-or-aptitude"></a>
+    <a name="h8.4.1" ></a><a name="choosing-apt-or-aptitude" ></a>8.4.1 Elegir apt o aptitude
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#472" class="lnkocn">472</a></label>
+  <p class="i0" id="472">
+    Es pot optar per utilitzar <i>apt</i> o <i>aptitude</i> a l'hora d'instal·lar paquets en temps de construcció. Quina utilitat s'usa es configura gràcies al argument <tt>--apt</tt> de <tt>lb config</tt>. Escollir el mètode d'implementació per al comportament preferit durant la instal·lació de paquets, la diferència notable és la forma en que es manegen els paquets que falten.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#473" class="lnkocn">473</a></label>
+  <ul>
+  <li class="bullet" id="473">
+    <tt>apt</tt>: Amb aquest mètode, si un paquet que s'especifica falta, l'instal·lació de paquets fallarà. Aquesta és la configuració per defecte.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#474" class="lnkocn">474</a></label>
+  <ul>
+  <li class="bullet" id="474">
+    <tt>aptitude</tt>: Amb aquest mètode, si s'especifica un paquet que falta, l'instal·lació de paquets tindrà èxit.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#475" class="lnkocn">475</a></label>
+  <p class="bold" id="475"><a name="475"></a> <a id="hc8.4.2"></a>
+    <a name="c8.4.2" ></a><a name="h8.4.2" ></a>8.4.2 L'ús d'un proxy amb APT
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#476" class="lnkocn">476</a></label>
+  <p class="i0" id="476">
+    Una configuració típica d'APT és per a fer front a la construcció d'una imatge darrere d'un proxy. Es pot especificar el proxy per a APT amb les opcions <tt>--apt-ftp-proxy</tt> o <tt>--apt-http-proxy</tt> segons sigui necessari, per exemple,
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#477" class="lnkocn">477</a></label>
+  <p class="code" id="477">
+    $ lb config --apt-http-proxy http://proxy/<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#478" class="lnkocn">478</a></label>
+  <p class="bold" id="478"><a name="478"></a> <a id="htweaking-apt-to-save-space"></a>
+    <a name="h8.4.3" ></a><a name="tweaking-apt-to-save-space" ></a>8.4.3 Afinar APT per a estalviar espai
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#479" class="lnkocn">479</a></label>
+  <p class="i0" id="479">
+    Pot ser necessari estalviar espai en el medi destinat a la imatge, en aquest cas una o altra o ambdós de les següentes opcions poden ser d'interès.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#480" class="lnkocn">480</a></label>
+  <p class="i0" id="480">
+    Si no es vol incloure els índexs d'APT en la imatge, es poden omitir amb:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#481" class="lnkocn">481</a></label>
+  <p class="code" id="481">
+    $ lb config --apt-indices false<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#482" class="lnkocn">482</a></label>
+  <p class="i0" id="482">
+    Això no influirà en les entrades de <tt>/etc/apt/sources.list</tt>, sinó simplement si <tt>/var/lib/apt</tt> conté els fitxers dels índexs o no. El desavantatge és que APT necessita aquests índexs per tal d'operar en el sistema en viu, així que abans d'executar per exemple <tt>apt-cache search</tt> o <tt>apt-get install</tt>, l'usuari primer ha fer un <tt>apt-get update</tt> per a crear aquests índexs.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#483" class="lnkocn">483</a></label>
+  <p class="i0" id="483">
+    Si es considera que la instal·lació de tots els paquets recomanats infla massa la imatge, sempre que s'estigui preparat per a fer front a les conseqüències que s'analitzen a continuació, es pot desactivar aquesta opció per defecte d'APT amb:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#484" class="lnkocn">484</a></label>
+  <p class="code" id="484">
+    $ lb config --apt-recommends false<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#485" class="lnkocn">485</a></label>
+  <p class="i0" id="485">
+    La conseqüència més important de desactivar els «recommends» és que <tt>live-boot</tt> i <tt>live-config</tt> recomanen alguns paquets que proporcionen una funcionalitat important utilitzada per la majoria de configuracions Live, com per exemple <tt>user-setup</tt> recomanat per <tt>live-config</tt> i que s'utilitza per a crear l'usuari en viu. En tots menys en els casos més excepcionals es necessita tornar a afexir almenys alguns dels recommends a les llistes de paquets o en cas contrari la imatge no funcionarà com s'espera, si és que funciona. Mirar els paquets recomanats per a cada un dels paquets inclosos en la construcció i si no s'està segur que es poden ometre, tornar a afegir-los a les llistes de paquets.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#486" class="lnkocn">486</a></label>
+  <p class="i0" id="486">
+    La conseqüència més general aquí és que si no s'instal·len els paquets recomanats per un paquet determinat, és a dir, "els paquets que es troben junts amb aquest en totes les instal·lacions a menys que siguin inusuals" (Debian Policy Manual, secció 7.2), alguns paquets que en realitat són necessaris per als usuaris del sistema Live poden ser omesos. Per tant, suggerim revisar la diferència que desactivar els paquets recomanats té en la llista de paquets (veure el fitxer <tt>binary.packages</tt> generat per <tt>lb build</tt>) i tornar a incloure a la llista els paquets que falten que haurien de ser instal·lats. Si només es vol deixar de banda un petit nombre de paquets recomanats, es pot deixar els «recommends» activats i establir una prioritat pin d'APT negativa en els paquets seleccionats per a impedir la seva instal·lació, com s'explica a  <a href="customizing-package-installation.ca.html#apt-pinning">APT pinning</a>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#487" class="lnkocn">487</a></label>
+  <p class="bold" id="487"><a name="487"></a> <a id="hc8.4.4"></a>
+    <a name="c8.4.4" ></a><a name="h8.4.4" ></a>8.4.4 Passar opcions per a apt o aptitude
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#488" class="lnkocn">488</a></label>
+  <p class="i0" id="488">
+    Si no hi ha cap opció <tt>lb config</tt> per a modificar el comportament d'APT de la manera què es necessita, es pot utilitzar <tt>--apt-options</tt> o <tt>--aptitude-options</tt> per a passar opcions a l'eina APT configurada. Consultar les pàgines dels manual <tt>apt</tt> i <tt>aptitude</tt> per a més detalls. Tenir en compte que ambdues opcions tenen valors per defecte que s'hauran de mantenir, a més de les opcions que es proporcionen. Així, per exemple, suposant que s'ha inclòs algun paquet de <tt>snapshot.debian.org</tt> per a fer proves i es vol especificar <tt>Acquire::Check-Valid-Until=false</tt> perquè APT no es queixe de que el fitxer <tt>Release</tt> ja ha caducat es podria fer com en el exemple següent, afegint la nova opció després del valor per defecte <tt>--yes</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#489" class="lnkocn">489</a></label>
+  <p class="code" id="489">
+    $ lb config --apt-options "--yes -oAcquire::Check-Valid-Until=false"<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#490" class="lnkocn">490</a></label>
+  <p class="i0" id="490">
+    Consultar les pàgines del manual per a entendre completament aquestes opcions i quan utilitzar-les. Això és només un exemple i no s'ha d'interpretar com un consell per a configurar la imatge. Aquesta opció no seria adequada, per exemple, per a una versió final d'una imatge en viu.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#491" class="lnkocn">491</a></label>
+  <p class="i0" id="491">
+    Per a configuracions més complicades que impliquen opcions <tt>apt.conf</tt> pot ser adequat crear un fitxer <tt>config/apt/apt.conf</tt>. Consultar també les altres opcions <tt>apt-*</tt> per a tenir algunes dreceres convenients per a les opcions que es necessiten amb freqüència.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#492" class="lnkocn">492</a></label>
+  <p class="bold" id="492"><a name="492"></a> <a id="hapt-pinning"></a>
+    <a name="h8.4.5" ></a><a name="apt-pinning" ></a>8.4.5 APT pinning
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#493" class="lnkocn">493</a></label>
+  <p class="i0" id="493">
+    Com a referència, llegir primer la pàgina del manual <tt>apt_preferences(5)</tt>. Es pot configurar APT pinning durant la construcció, o bé durant l'execució. En el primer cas, crear <tt>config/archives/*.pref</tt>, <tt>config/archives/*.pref.chroot</tt>, i <tt>config/apt/preferences</tt>. Per al segon cas, crear <tt>config/includes.chroot/etc/apt/preferences</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#494" class="lnkocn">494</a></label>
+  <p class="i0" id="494">
+    Suposem que s'està construint un sistema en viu <b>buster</b> però es necessita que tots els paquets «live-» que acaben dins de la imatge binària s'instal·lin desde <b>sid</b> en temps de construcció. Cal afegir <b>sid</b> a les fonts d'APT i fer un pin dels paquets live amb una prioritat més alta, però tots els altres paquets amb una prioritat més baixa que la prioritat per defecte de manera que només els paquets que es vol s'instal·lin desde <b>sid</b> en el moment de la construcció i tots els altres es prenguin de la distribució de destinació, <b>buster</b>. Això es pot aconseguir de la manera següent:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#495" class="lnkocn">495</a></label>
+  <p class="code" id="495">
+    $ echo "deb http://mirror/debian/ sid main" &gt; config/archives/sid.list.chroot<br>
+$ cat &gt;&gt; config/archives/sid.pref.chroot &lt;&lt; EOF<br>
+Package: live-*<br>
+Pin: release n=sid<br>
+Pin-Priority: 600<br><br>
+Package: *<br>
+Pin: release n=sid<br>
+Pin-Priority: 1<br>
+EOF<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#496" class="lnkocn">496</a></label>
+  <p class="i0" id="496">
+    Una prioritat pin negativa evitarà que un paquet s'instal·li, com en el cas que no es vulgui un paquet que és recomanat per un altre paquet. Suposem que s'està construint una imatge LXDE afegint <tt>task-lxde-desktop</tt> a <tt>config/package-lists/desktop.list.chroot</tt> però no es desitja que al usuari se li demani que guardi les contrasenyes wifi al keyring. Aquesta llista depèn de <i>lxde-core</i>, que recomana <i>gksu</i>, que al seu torn recomana <i>gnome-keyring</i>. Si es vol omitir el paquet recomanat <i>gnome-keyring</i>, es pot fer mitjançant l'addició de les següents línies a <tt>config/apt/preferences</tt>:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#497" class="lnkocn">497</a></label>
+  <p class="code" id="497">
+    Package: gnome-keyring<br>
+Pin: version *<br>
+Pin-Priority: -1<br>
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="customization-overview.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="customizing-contents.ca.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

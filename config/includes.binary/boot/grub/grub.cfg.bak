@@ -1,0 +1,78 @@
+set default=200
+
+loadfont $prefix/dejavu-bold-16.pf2
+loadfont $prefix/dejavu-bold-14.pf2
+loadfont $prefix/unicode.pf2
+set gfxmode=auto
+insmod all_video
+insmod gfxterm
+insmod png
+
+set color_normal=light-gray/black
+set color_highlight=white/black
+
+if [ -e /isolinux/splash.png ]; then
+    # binary_syslinux modifies the theme file to point to the correct
+    # background picture
+    set theme=/boot/grub/live-theme/theme.txt
+elif [ -e /boot/grub/splash.png ]; then
+    set theme=/boot/grub/live-theme/theme.txt
+else
+    set menu_color_normal=cyan/blue
+    set menu_color_highlight=white/blue
+fi
+
+terminal_output gfxterm
+
+
+# Live boot
+menuentry "Live system" {
+	linux	/live/vmlinuz boot=live components quiet splash
+	initrd	/live/initrd.img
+}
+
+menuentry "Fab-Live" {
+	linux	/live/vmlinuz boot=live components quiet splash hostname=fab-live timezone=Europe/Paris keyboard-layouts=fr,uk persistence 
+	initrd	/live/initrd.img
+}
+
+menuentry "Fab-Live 2" {
+	linux	/live/vmlinuz boot=live components quiet splash hostname=fab-live timezone=Europe/Paris keyboard-layouts=fr
+	initrd	/live/initrd.img
+}
+
+
+menuentry "Live system (fail-safe mode)" {
+	linux	/live/vmlinuz boot=live components memtest noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal
+	initrd	/live/initrd.img
+}
+
+
+
+
+# You can add more entries like this
+# menuentry "Alternate live boot" {
+# linux /live/vmlinuz-4.9.0-8-686-pae boot=live components quiet splash custom options here
+# initrd /live/initrd.img-4.9.0-8-686-pae
+# }
+# menuentry "Alternate graphical installer" {
+# linux   custom options here
+# initrd
+# }
+# menuentry "Alternate textual installer" {
+# linux   custom options here
+# initrd
+# }
+
+# Installer (if any)
+
+
+submenu 'Advanced options...' {
+
+# More installer entries (if any)
+
+
+# Memtest (if any)
+
+
+}

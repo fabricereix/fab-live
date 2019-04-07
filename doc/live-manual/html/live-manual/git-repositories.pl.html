@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    git-repositories -
+    Podręcznik Systemów Live
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Podręcznik Systemów Live" />
+  <meta name="dc.author" content="Projekt System&#243;w Live&#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Projekt System&#243;w Live&#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="2015-09-22"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Projekt System&#243;w Live \\ License: Ten program jest wolnym oprogramowaniem: możesz go rozprowadzać dalej i / lub modyfikować zgodnie z warunkami Powszechnej Licencji Publicznej GNU opublikowanej przez Free Software Foundation, według wersji 3 tej Licencji lub (według Twojego wyboru) dowolnej p&#243;źniejszej wersji \\  \\ Ten program jest rozpowszechniany w nadziei, że będzie użyteczny, ale BEZ JAKIEJKOLWIEK GWARANCJI; bez nawet domyślnej gwarancji PRZYDATNOŚCI HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH ZASTOSOWAŃ. Patrz GNU General Public License aby uzyskać więcej szczeg&#243;ł&#243;w. \\  \\ Powinieneś otrzymać kopię Licencji GNU General Public License wraz z tym programem. Jeśli nie, odwiedź http://www.gnu.org/licenses/. \\  \\ Pełny tekst licencji GNU General Public można znaleźć w pliku /usr/share/common-licenses/GPL-3." />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="pl">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="procedures.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="examples.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Podręcznik Systemów Live
+  </h1>
+
+<h1 class="minitoc">
+    O tym podręczniku
+  </h1>
+
+<h1 class="minitoc">
+    O tym podręczniku
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.pl.html" target="_top">
+    1. O tym podręczniku
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.pl.html#8">
+    1.1 Dla niecierpliwych
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.pl.html#12">
+    1.2 Definicje
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.pl.html#29">
+    1.3 Autorzy
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.pl.html#44">
+    1.4 Wnoszenie wkładu do tego dokumentu
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.pl.html#46">
+  1.4.1 Nanoszenie zmian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.pl.html#60">
+  1.4.2 Tłumaczenie
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    O Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.pl.html" target="_top">
+    2. O Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.pl.html#75">
+    2.1 Motywacja
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.pl.html#76">
+  2.1.1 Co jest nie tak w moim dotychczasowym systemie live?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.pl.html#86">
+  2.1.2 Czemu tworzyć nasz własny system live?
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.pl.html#94">
+    2.2 Filozofia
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.pl.html#95">
+  2.2.1 Tylko niezmienione pakiety z działu Debian "main"
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.pl.html#99">
+  2.2.2 Bez konfiguracji pakietów systemu live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.pl.html#103">
+    2.3 Kontakt
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Użytkownik
+  </h1>
+
+<h1 class="minitoc">
+    Instalacja
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.pl.html" target="_top">
+    3. Instalacja
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.pl.html#110">
+    3.1 Wymagania
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.pl.html#118">
+    3.2 Instalowanie live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#124">
+  3.2.1 Z repozytorium Debiana
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#127">
+  3.2.2 Ze źródła
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#138">
+  3.2.3 Ze zrzutów deweloperskich
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.pl.html#140">
+    3.3 Instalowanie live-boot i live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#142">
+  3.3.1 Z repozytorium Debiana
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#144">
+  3.3.2 Ze źródła
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#156">
+  3.3.3 Ze zrzutów deweloperskich
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Podstawy
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.pl.html" target="_top">
+    4. Podstawy
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#163">
+    4.1 Co to jest system live?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#171">
+    4.2 Pobieranie prekompilowanych obrazów
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#173">
+    4.3 Using the web live image builder
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#175">
+  4.3.1 Używanie i przestrogi dotyczące Web buildera
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#179">
+    4.4 Pierwsze kroki: budowanie obrazu ISO-hybrydy
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#190">
+    4.5 Korzystanie z hybrydowego obrazu ISO live
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#192">
+  4.5.1 Wypalanie obrazu ISO na fizycznym nośniku
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#195">
+  4.5.2 Kopiowanie obrazu ISO-hybrydy na nośnik USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#200">
+  4.5.3 Wykorzystanie przestrzeni pozostałej na nośniku USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#207">
+  4.5.4 Uruchamianie nośnika live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#211">
+    4.6 Używanie wirtualnej maszyny do testowania
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#218">
+  4.6.1 Testowanie obrazu ISO z użyciem QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#225">
+  4.6.2 Testowanie obrazu ISO z użyciem VirtualBox'a
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#233">
+    4.7 Budowanie i używanie obrazu HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#245">
+    4.8 Budowanie obrazu netboot
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#258">
+  4.8.1 Serwer DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#262">
+  4.8.2 Serwer TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#267">
+  4.8.3 Serwer NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#275">
+  4.8.4 Netboot testing HowTo
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#284">
+    4.9 Webbooting
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#286">
+  4.9.1 Getting the webboot files
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#292">
+  4.9.2 Uruchamianie obrazów webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Przegląd narzędzi
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.pl.html" target="_top">
+    5. Przegląd narzędzi
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.pl.html#300">
+    5.1 Pakiet live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.pl.html#310">
+  5.1.1 Polecenie <tt>lb config</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.pl.html#314">
+    5.2 Wcięcia
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.pl.html#320">
+  5.2.1 Polecenie <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.pl.html#322">
+  5.2.2 Polecenie <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.pl.html#324">
+    5.3 Pakiet live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.pl.html#328">
+    5.4 Pakiet live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Zarządzanie konfiguracją
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.pl.html" target="_top">
+    6. Zarządzanie konfiguracją
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.pl.html#333">
+    6.1 Radzenie sobie ze zmianami konfiguracji
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.pl.html#335">
+  6.1.1 Czemu używać automatycznych skryptów? Co one robią?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.pl.html#338">
+  6.1.2 Użyj przykładowych automatycznych skryptów
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.pl.html#345">
+    6.2 Klonowanie konfiguracji opublikowanej przez  Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Dostosowywanie zawartości
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.pl.html" target="_top">
+    7. Opis dostosowywania
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.pl.html#359">
+    7.1 Konfiguracja podczas kompilacji vs. podczas uruchamiania systemu
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.pl.html#362">
+    7.2 Etapy kompilacji
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.pl.html#365">
+    7.3 Uzupełnienie lb config plikami
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.pl.html#367">
+    7.4 Zadania dostosowywania
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Dostosowywanie instalacji pakietów
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.pl.html" target="_top">
+    8. Dostosowywanie instalacji pakietów
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.pl.html#372">
+    8.1 Źródła pakietu
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#373">
+  8.1.1 Dystrybucja, działy archiwum i tryb
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#380">
+  8.1.2 Serwery lustrzane dystrybucji
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#382">
+  8.1.3 Serwery lustrzane dystrybucji używane  podczas budowania obrazu
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#386">
+  8.1.4 Serwery lustrzane dystrybucji użyte podczas uruchomienia
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#389">
+  8.1.5 Dodatkowe repozytoria
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.pl.html#397">
+    8.2 Wybieranie pakietów do instalacji
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#399">
+  8.2.1 Lista pakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#402">
+  8.2.2 Używanie metapakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#410">
+  8.2.3 Lokalna lista pakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#414">
+  8.2.4 Lokalna lista pakietów binarnych
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#416">
+  8.2.5 Wygenerowana lista pakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#420">
+  8.2.6 Używanie instrukcji warunkowych w listach pakietów.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#429">
+  8.2.7 Usuwanie pakietu podczas instalacji
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#431">
+  8.2.8 Pulpit i zadania językowe
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#436">
+  8.2.9 Rodzaj jądra i wersja
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#441">
+  8.2.10 Niestandardowe jądra
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.pl.html#449">
+    8.3 Instalowanie zmodyfikowanych  pakietów lub pakietów innych firm
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#456">
+  8.3.1 Używanie <tt>packages.chroot</tt>do instalacji niestandardowych pakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#463">
+  8.3.2 Używanie repozytoriium APT aby zainstalować niestandarkowe pakiety
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#466">
+  8.3.3 Niestandardowe pakiety i APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.pl.html#469">
+    8.4 Konfigurowanie APT podczas kompilacji
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#471">
+  8.4.1 Wybieranie apt lub aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#475">
+  8.4.2 Używanie serwera proxy z APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#478">
+  8.4.3 Podkręcanie APT celu zaoszczędzenia miejsca
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#487">
+  8.4.4 Przekazywanie opcji do apt lub aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#492">
+  8.4.5 Pinning APT
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Dostosowywanie zawartości
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.pl.html" target="_top">
+    9. Dostosowywanie zawartości
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.pl.html#501">
+    9.1 Uwzględnianie
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.pl.html#506">
+  9.1.1 Lokalnie uwzględniane w chroot/live
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.pl.html#513">
+  9.1.2 Lokalnie uwzględniane dane binarne
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.pl.html#517">
+    9.2 Haki
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.pl.html#520">
+  9.2.1 Chroot local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.pl.html#522">
+  9.2.2 Lokalne haki binarne
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.pl.html#524">
+  9.2.3 Haki podczas uruchamiania
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.pl.html#526">
+    9.3 Wstępne ustawienie pytań Debconfa (Preseeding)
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Dostosowywanie zdarzeń podczas uruchamiania systemu
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html" target="_top">
+    10. Dostosowywanie zdarzeń podczas  uruchamiania systemu
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#532">
+    10.1 Personalizacja użytkownika live
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#541">
+    10.2 Ustawianie lokalizacji i języka
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#558">
+    10.3 Persistence
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#580">
+  10.3.1 Plik persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#585">
+  10.3.2 Używanie więcej niż jednego magazynu persistence
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#591">
+  10.3.3 Using persistence with encryption
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Dostosowywanie obrazu binarnego
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.pl.html" target="_top">
+    11. Dostosowywanie obrazu binarnego
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.pl.html#619">
+    11.1 Programy ładujące (ang. Bootloadery)
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.pl.html#626">
+    11.2 Metadane ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Dostosowywanie Instalatora Debiana
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.pl.html" target="_top">
+    12. Dostosowywanie Instalatora Debiana
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.pl.html#636">
+    12.1 Typy Instalatora Debiana
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.pl.html#648">
+    12.2 Dostosowywanie Instalatora Debiana przez preseeding
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.pl.html#651">
+    12.3 Dostosowywanie zawartości Instalatora Debiana
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Projekt
+  </h1>
+
+<h1 class="minitoc">
+    Wnoszenie wkładu do tego projektu
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.pl.html" target="_top">
+    13. Wnoszenie wkładu do tego projektu
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.pl.html#667">
+    13.1 Wprowadzanie zmian
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.pl.html#682">
+    13.2 Translation of man pages
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Zgłaszanie błędów
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.pl.html" target="_top">
+    14. Zgłaszanie błędów
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#698">
+    14.1 Znane problemy
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#703">
+    14.2 Przebuduj od zera
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#705">
+    14.3 Używaj aktualnych pakietów
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#707">
+    14.4 Zbierz potrzebne informacje
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#724">
+    14.5 Wyizoluj prawdopodobną wadę, jeśli to możliwe
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#726">
+    14.6 Wybierz odpowiedni pakiet dla którego zgłaszasz błąd
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.pl.html#729">
+  14.6.1 W czasie budowania podczas ładowania początkowego (bootstrapping)
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.pl.html#732">
+  14.6.2 W czasie budowania podczas instalacji pakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.pl.html#736">
+  14.6.3 W czasie uruchamiania
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.pl.html#738">
+  14.6.4 W czasie gdy system jest już uruchomiony
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#740">
+    14.7 Spróbuj wykonać parę kroków
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#744">
+    14.8 Gdzie zgłaszać błędy
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Styl Kodowania
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.pl.html" target="_top">
+    15. Styl Kodowania
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.pl.html#751">
+    15.1 Kompatybilność
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.pl.html#756">
+    15.2 Wcięcia
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.pl.html#758">
+    15.3 Zawijanie
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.pl.html#770">
+    15.4 Zmienne
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.pl.html#789">
+    15.5 Różne
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procedury
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.pl.html" target="_top">
+    16. Procedury
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.pl.html#797">
+    16.1 Główne wydanie
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.pl.html#803">
+    16.2 Wydanie Docelowe
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.pl.html#807">
+  16.2.1 Ostatnie Wydanie Docelowe Debiana
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.pl.html#809">
+  16.2.2 Szablon obwieszczenia dla wydania docelowego
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Repozytorium Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.pl.html" target="_top">
+    17. Repozytorium Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.pl.html#829">
+    17.1 Obsługa wielu repozytoriów
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Przykłady
+  </h1>
+
+<h1 class="minitoc">
+    Przykłady
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.pl.html" target="_top">
+    18. Przykłady
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#837">
+    18.1 Używanie przykładów
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#841">
+    18.2 Samouczek 1: Domyślny obraz
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#850">
+    18.3 Samouczek 2: Narzędzie przeglądarka
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#858">
+    18.4 Samouczek 3: Spersonalizowany obraz
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.pl.html#861">
+  18.4.1 Pierwsza zmiana
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.pl.html#875">
+  18.4.2 Druga zmiana
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#887">
+    18.5 Kiosk-klient serwera VNC
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#901">
+    18.6 Bazowy obraz dla nośnika USB z 128MB pamięci.
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#912">
+    18.7 Pulpit GNOME w lokalnym języku oraz instalator
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Dodatek
+  </h1>
+
+<h1 class="minitoc">
+    Przewodnik redakcyjny
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.pl.html" target="_top">
+    19. Przewodnik redakcyjny
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.pl.html#927">
+    19.1 Wytyczne dla autorów
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.pl.html#930">
+  19.1.1 Funkcje językowe
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.pl.html#963">
+  19.1.2 Procedury
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.pl.html#1002">
+    19.2 Wytyczne dla tłumaczy
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.pl.html#1006">
+  19.2.1 Wskazówki tłumaczenia
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.pl.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.pl.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Podręcznik Systemów Live
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Repozytorium Git
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#815" class="lnkocn">815</a></label>
+  <h1 class="norm" id="815"><a name="815"></a>
+    17. Repozytorium Git
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#816" class="lnkocn">816</a></label>
+  <p class="i0" id="816">
+    Lista wszystkich dostępnych repozytoriów dla Live Systems Project można znaleźć na stronie ‹<a href="http://http://anonscm.debian.org/cgit/debian-live/" target="_top">http://http://anonscm.debian.org/cgit/debian-live/</a>›. Adres URL projektu git ma postać: <tt>protocol://http://anonscm.debian.org/git/debian-live/repository</tt>. Tak więc, w celu sklonowania <i>live-manual</i>, uruchom:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#817" class="lnkocn">817</a></label>
+  <p class="code" id="817">
+    $ git clone git://http://anonscm.debian.org/git/debian-live/live-manual.git<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#818" class="lnkocn">818</a></label>
+  <p class="i0" id="818">
+    Lub
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#819" class="lnkocn">819</a></label>
+  <p class="code" id="819">
+    $ git clone https://http://anonscm.debian.org/git/debian-live/live-manual.git<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#820" class="lnkocn">820</a></label>
+  <p class="i0" id="820">
+    Lub
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#821" class="lnkocn">821</a></label>
+  <p class="code" id="821">
+    $ git clone http://http://anonscm.debian.org/git/debian-live/live-manual.git<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#822" class="lnkocn">822</a></label>
+  <p class="i0" id="822">
+    Adres do sklonowania z uprawnieniami zapisu ma postać: <tt>ssh://git.debian.org/git/debian-live/repository</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#823" class="lnkocn">823</a></label>
+  <p class="i0" id="823">
+    A zatem jeszcze raz, aby sklonować <i>live-manual</i> po ssh wpisz:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#824" class="lnkocn">824</a></label>
+  <p class="code" id="824">
+    $ git clone ssh://git.debian.org/git/debian-live/live-manual.git<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#825" class="lnkocn">825</a></label>
+  <p class="i0" id="825">
+    Drzewo git składa się z wielu różnych gałęzi. Gałęzie, które szczególnie wymagają poświęcenia uwagi to <b>debian</b> i <b>debian-next</b>, ponieważ zawierają one rzeczywistą pracy, które ostatecznie będzie znajdować się w każdej nowej wersji.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#826" class="lnkocn">826</a></label>
+  <p class="i0" id="826">
+    Po sklonowaniu każdego z istniejących repozytoriów, będziesz w gałęzi <b>debian</b>. To jest właściwe, aby móc przyjrzeć się stanowi najnowszej wersji projektu, ale przed rozpoczęciem pracy ważne jest, aby przejść do gałęzi <b>debian-next</b>. Aby to zrobić:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#827" class="lnkocn">827</a></label>
+  <p class="code" id="827">
+    $ git checkout debian-next<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#828" class="lnkocn">828</a></label>
+  <p class="i0" id="828">
+    Gałąź <b>debian-next</b>, która nie zawsze porusza się do przodu, gdzie wszystkie zmiany są najpierw wprowadzane przed połączeniem w gałęzi <b>debian</b>. Aby dokonać analogii, to jest jak poligon doświadczalny. Jeśli pracujesz w tej branży i potrzebujesz wykonać polecenie pull (wyciągnąć), będzie trzeba użyć <tt>git pull --rebase</tt>, tak aby lokalne modyfikacje zostały zachowane przy wyciąganiu z serwera, a następnie Twoje zmiany zostaną wprowadzone na szczycie wszystkich innych.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#829" class="lnkocn">829</a></label>
+  <p class="bold" id="829"><a name="829"></a> <a id="hc17.1"></a>
+    <a name="c17.1" ></a><a name="h17.1" ></a>17.1 Obsługa wielu repozytoriów
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#830" class="lnkocn">830</a></label>
+  <p class="i0" id="830">
+    Jeśli masz zamiar sklonować kilka repozytoriów systemów live i chcesz przejść do gałęzi <b>debian-next</b> od razu aby sprawdzić najnowszy kod, napisać poprawkę lub przyczynić się z tłumaczeniem powinieneś wiedzieć, że serwer git zapewnia <tt>mrconfig</tt>. Plik,który ułatwia obsługę wielu repozytoriów. Aby z niego korzystać musisz zainstalować pakiet <i>mr</i> a po tym, uruchomić:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#831" class="lnkocn">831</a></label>
+  <p class="code" id="831">
+    $&nbsp;&nbsp;mr bootstrap http://debian-live.alioth.debian.org/other/mr/mrconfig<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#832" class="lnkocn">832</a></label>
+  <p class="i0" id="832">
+    Ta komenda automatycznie sklonuje i sprawdzi do gałęzi <b>debian-next</b> repozytorium rozwojowego pakietów Debiana wytworzonych w ramach projektu. Należą do nich, między innymi, repozytorium <i>live-images</i>, który zawiera konfiguracje, używane do gotowych obrazów, które projekt publikuje do ogólnego użytku. Aby uzyskać więcej informacji na temat korzystania z tego repozytorium, zobacz  <a href="managing-a-configuration.pl.html#clone-configuration-via-git">Klonowanie konfiguracji opublikowanej przez Git</a>
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="procedures.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="examples.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

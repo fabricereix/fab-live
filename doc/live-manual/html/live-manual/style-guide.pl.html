@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    style-guide -
+    Podręcznik Systemów Live
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Podręcznik Systemów Live" />
+  <meta name="dc.author" content="Projekt System&#243;w Live&#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Projekt System&#243;w Live&#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="2015-09-22"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Projekt System&#243;w Live \\ License: Ten program jest wolnym oprogramowaniem: możesz go rozprowadzać dalej i / lub modyfikować zgodnie z warunkami Powszechnej Licencji Publicznej GNU opublikowanej przez Free Software Foundation, według wersji 3 tej Licencji lub (według Twojego wyboru) dowolnej p&#243;źniejszej wersji \\  \\ Ten program jest rozpowszechniany w nadziei, że będzie użyteczny, ale BEZ JAKIEJKOLWIEK GWARANCJI; bez nawet domyślnej gwarancji PRZYDATNOŚCI HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH ZASTOSOWAŃ. Patrz GNU General Public License aby uzyskać więcej szczeg&#243;ł&#243;w. \\  \\ Powinieneś otrzymać kopię Licencji GNU General Public License wraz z tym programem. Jeśli nie, odwiedź http://www.gnu.org/licenses/. \\  \\ Pełny tekst licencji GNU General Public można znaleźć w pliku /usr/share/common-licenses/GPL-3." />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="pl">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="examples.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="metadata.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Podręcznik Systemów Live
+  </h1>
+
+<h1 class="minitoc">
+    O tym podręczniku
+  </h1>
+
+<h1 class="minitoc">
+    O tym podręczniku
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.pl.html" target="_top">
+    1. O tym podręczniku
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.pl.html#8">
+    1.1 Dla niecierpliwych
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.pl.html#12">
+    1.2 Definicje
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.pl.html#29">
+    1.3 Autorzy
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.pl.html#44">
+    1.4 Wnoszenie wkładu do tego dokumentu
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.pl.html#46">
+  1.4.1 Nanoszenie zmian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.pl.html#60">
+  1.4.2 Tłumaczenie
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    O Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.pl.html" target="_top">
+    2. O Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.pl.html#75">
+    2.1 Motywacja
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.pl.html#76">
+  2.1.1 Co jest nie tak w moim dotychczasowym systemie live?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.pl.html#86">
+  2.1.2 Czemu tworzyć nasz własny system live?
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.pl.html#94">
+    2.2 Filozofia
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.pl.html#95">
+  2.2.1 Tylko niezmienione pakiety z działu Debian "main"
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.pl.html#99">
+  2.2.2 Bez konfiguracji pakietów systemu live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.pl.html#103">
+    2.3 Kontakt
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Użytkownik
+  </h1>
+
+<h1 class="minitoc">
+    Instalacja
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.pl.html" target="_top">
+    3. Instalacja
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.pl.html#110">
+    3.1 Wymagania
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.pl.html#118">
+    3.2 Instalowanie live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#124">
+  3.2.1 Z repozytorium Debiana
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#127">
+  3.2.2 Ze źródła
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#138">
+  3.2.3 Ze zrzutów deweloperskich
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.pl.html#140">
+    3.3 Instalowanie live-boot i live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#142">
+  3.3.1 Z repozytorium Debiana
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#144">
+  3.3.2 Ze źródła
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.pl.html#156">
+  3.3.3 Ze zrzutów deweloperskich
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Podstawy
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.pl.html" target="_top">
+    4. Podstawy
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#163">
+    4.1 Co to jest system live?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#171">
+    4.2 Pobieranie prekompilowanych obrazów
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#173">
+    4.3 Using the web live image builder
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#175">
+  4.3.1 Używanie i przestrogi dotyczące Web buildera
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#179">
+    4.4 Pierwsze kroki: budowanie obrazu ISO-hybrydy
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#190">
+    4.5 Korzystanie z hybrydowego obrazu ISO live
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#192">
+  4.5.1 Wypalanie obrazu ISO na fizycznym nośniku
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#195">
+  4.5.2 Kopiowanie obrazu ISO-hybrydy na nośnik USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#200">
+  4.5.3 Wykorzystanie przestrzeni pozostałej na nośniku USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#207">
+  4.5.4 Uruchamianie nośnika live
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#211">
+    4.6 Używanie wirtualnej maszyny do testowania
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#218">
+  4.6.1 Testowanie obrazu ISO z użyciem QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#225">
+  4.6.2 Testowanie obrazu ISO z użyciem VirtualBox'a
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#233">
+    4.7 Budowanie i używanie obrazu HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#245">
+    4.8 Budowanie obrazu netboot
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#258">
+  4.8.1 Serwer DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#262">
+  4.8.2 Serwer TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#267">
+  4.8.3 Serwer NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#275">
+  4.8.4 Netboot testing HowTo
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.pl.html#284">
+    4.9 Webbooting
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#286">
+  4.9.1 Getting the webboot files
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.pl.html#292">
+  4.9.2 Uruchamianie obrazów webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Przegląd narzędzi
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.pl.html" target="_top">
+    5. Przegląd narzędzi
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.pl.html#300">
+    5.1 Pakiet live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.pl.html#310">
+  5.1.1 Polecenie <tt>lb config</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.pl.html#314">
+    5.2 Wcięcia
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.pl.html#320">
+  5.2.1 Polecenie <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.pl.html#322">
+  5.2.2 Polecenie <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.pl.html#324">
+    5.3 Pakiet live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.pl.html#328">
+    5.4 Pakiet live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Zarządzanie konfiguracją
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.pl.html" target="_top">
+    6. Zarządzanie konfiguracją
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.pl.html#333">
+    6.1 Radzenie sobie ze zmianami konfiguracji
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.pl.html#335">
+  6.1.1 Czemu używać automatycznych skryptów? Co one robią?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.pl.html#338">
+  6.1.2 Użyj przykładowych automatycznych skryptów
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.pl.html#345">
+    6.2 Klonowanie konfiguracji opublikowanej przez  Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Dostosowywanie zawartości
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.pl.html" target="_top">
+    7. Opis dostosowywania
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.pl.html#359">
+    7.1 Konfiguracja podczas kompilacji vs. podczas uruchamiania systemu
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.pl.html#362">
+    7.2 Etapy kompilacji
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.pl.html#365">
+    7.3 Uzupełnienie lb config plikami
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.pl.html#367">
+    7.4 Zadania dostosowywania
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Dostosowywanie instalacji pakietów
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.pl.html" target="_top">
+    8. Dostosowywanie instalacji pakietów
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.pl.html#372">
+    8.1 Źródła pakietu
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#373">
+  8.1.1 Dystrybucja, działy archiwum i tryb
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#380">
+  8.1.2 Serwery lustrzane dystrybucji
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#382">
+  8.1.3 Serwery lustrzane dystrybucji używane  podczas budowania obrazu
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#386">
+  8.1.4 Serwery lustrzane dystrybucji użyte podczas uruchomienia
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#389">
+  8.1.5 Dodatkowe repozytoria
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.pl.html#397">
+    8.2 Wybieranie pakietów do instalacji
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#399">
+  8.2.1 Lista pakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#402">
+  8.2.2 Używanie metapakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#410">
+  8.2.3 Lokalna lista pakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#414">
+  8.2.4 Lokalna lista pakietów binarnych
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#416">
+  8.2.5 Wygenerowana lista pakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#420">
+  8.2.6 Używanie instrukcji warunkowych w listach pakietów.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#429">
+  8.2.7 Usuwanie pakietu podczas instalacji
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#431">
+  8.2.8 Pulpit i zadania językowe
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#436">
+  8.2.9 Rodzaj jądra i wersja
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#441">
+  8.2.10 Niestandardowe jądra
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.pl.html#449">
+    8.3 Instalowanie zmodyfikowanych  pakietów lub pakietów innych firm
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#456">
+  8.3.1 Używanie <tt>packages.chroot</tt>do instalacji niestandardowych pakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#463">
+  8.3.2 Używanie repozytoriium APT aby zainstalować niestandarkowe pakiety
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#466">
+  8.3.3 Niestandardowe pakiety i APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.pl.html#469">
+    8.4 Konfigurowanie APT podczas kompilacji
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#471">
+  8.4.1 Wybieranie apt lub aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#475">
+  8.4.2 Używanie serwera proxy z APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#478">
+  8.4.3 Podkręcanie APT celu zaoszczędzenia miejsca
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#487">
+  8.4.4 Przekazywanie opcji do apt lub aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.pl.html#492">
+  8.4.5 Pinning APT
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Dostosowywanie zawartości
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.pl.html" target="_top">
+    9. Dostosowywanie zawartości
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.pl.html#501">
+    9.1 Uwzględnianie
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.pl.html#506">
+  9.1.1 Lokalnie uwzględniane w chroot/live
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.pl.html#513">
+  9.1.2 Lokalnie uwzględniane dane binarne
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.pl.html#517">
+    9.2 Haki
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.pl.html#520">
+  9.2.1 Chroot local hooks
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.pl.html#522">
+  9.2.2 Lokalne haki binarne
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.pl.html#524">
+  9.2.3 Haki podczas uruchamiania
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.pl.html#526">
+    9.3 Wstępne ustawienie pytań Debconfa (Preseeding)
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Dostosowywanie zdarzeń podczas uruchamiania systemu
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html" target="_top">
+    10. Dostosowywanie zdarzeń podczas  uruchamiania systemu
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#532">
+    10.1 Personalizacja użytkownika live
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#541">
+    10.2 Ustawianie lokalizacji i języka
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#558">
+    10.3 Persistence
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#580">
+  10.3.1 Plik persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#585">
+  10.3.2 Używanie więcej niż jednego magazynu persistence
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.pl.html#591">
+  10.3.3 Using persistence with encryption
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Dostosowywanie obrazu binarnego
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.pl.html" target="_top">
+    11. Dostosowywanie obrazu binarnego
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.pl.html#619">
+    11.1 Programy ładujące (ang. Bootloadery)
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.pl.html#626">
+    11.2 Metadane ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Dostosowywanie Instalatora Debiana
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.pl.html" target="_top">
+    12. Dostosowywanie Instalatora Debiana
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.pl.html#636">
+    12.1 Typy Instalatora Debiana
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.pl.html#648">
+    12.2 Dostosowywanie Instalatora Debiana przez preseeding
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.pl.html#651">
+    12.3 Dostosowywanie zawartości Instalatora Debiana
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Projekt
+  </h1>
+
+<h1 class="minitoc">
+    Wnoszenie wkładu do tego projektu
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.pl.html" target="_top">
+    13. Wnoszenie wkładu do tego projektu
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.pl.html#667">
+    13.1 Wprowadzanie zmian
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.pl.html#682">
+    13.2 Translation of man pages
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Zgłaszanie błędów
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.pl.html" target="_top">
+    14. Zgłaszanie błędów
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#698">
+    14.1 Znane problemy
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#703">
+    14.2 Przebuduj od zera
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#705">
+    14.3 Używaj aktualnych pakietów
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#707">
+    14.4 Zbierz potrzebne informacje
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#724">
+    14.5 Wyizoluj prawdopodobną wadę, jeśli to możliwe
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#726">
+    14.6 Wybierz odpowiedni pakiet dla którego zgłaszasz błąd
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.pl.html#729">
+  14.6.1 W czasie budowania podczas ładowania początkowego (bootstrapping)
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.pl.html#732">
+  14.6.2 W czasie budowania podczas instalacji pakietów
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.pl.html#736">
+  14.6.3 W czasie uruchamiania
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.pl.html#738">
+  14.6.4 W czasie gdy system jest już uruchomiony
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#740">
+    14.7 Spróbuj wykonać parę kroków
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.pl.html#744">
+    14.8 Gdzie zgłaszać błędy
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Styl Kodowania
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.pl.html" target="_top">
+    15. Styl Kodowania
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.pl.html#751">
+    15.1 Kompatybilność
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.pl.html#756">
+    15.2 Wcięcia
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.pl.html#758">
+    15.3 Zawijanie
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.pl.html#770">
+    15.4 Zmienne
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.pl.html#789">
+    15.5 Różne
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procedury
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.pl.html" target="_top">
+    16. Procedury
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.pl.html#797">
+    16.1 Główne wydanie
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.pl.html#803">
+    16.2 Wydanie Docelowe
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.pl.html#807">
+  16.2.1 Ostatnie Wydanie Docelowe Debiana
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.pl.html#809">
+  16.2.2 Szablon obwieszczenia dla wydania docelowego
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Repozytorium Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.pl.html" target="_top">
+    17. Repozytorium Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.pl.html#829">
+    17.1 Obsługa wielu repozytoriów
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Przykłady
+  </h1>
+
+<h1 class="minitoc">
+    Przykłady
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.pl.html" target="_top">
+    18. Przykłady
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#837">
+    18.1 Używanie przykładów
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#841">
+    18.2 Samouczek 1: Domyślny obraz
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#850">
+    18.3 Samouczek 2: Narzędzie przeglądarka
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#858">
+    18.4 Samouczek 3: Spersonalizowany obraz
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.pl.html#861">
+  18.4.1 Pierwsza zmiana
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.pl.html#875">
+  18.4.2 Druga zmiana
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#887">
+    18.5 Kiosk-klient serwera VNC
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#901">
+    18.6 Bazowy obraz dla nośnika USB z 128MB pamięci.
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.pl.html#912">
+    18.7 Pulpit GNOME w lokalnym języku oraz instalator
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Dodatek
+  </h1>
+
+<h1 class="minitoc">
+    Przewodnik redakcyjny
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.pl.html" target="_top">
+    19. Przewodnik redakcyjny
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.pl.html#927">
+    19.1 Wytyczne dla autorów
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.pl.html#930">
+  19.1.1 Funkcje językowe
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.pl.html#963">
+  19.1.2 Procedury
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.pl.html#1002">
+    19.2 Wytyczne dla tłumaczy
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.pl.html#1006">
+  19.2.1 Wskazówki tłumaczenia
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.pl.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.pl.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Podręcznik Systemów Live
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Przewodnik redakcyjny
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#926" class="lnkocn">926</a></label>
+  <h1 class="norm" id="926"><a name="926"></a>
+    19. Przewodnik redakcyjny
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#927" class="lnkocn">927</a></label>
+  <p class="bold" id="927"><a name="927"></a> <a id="hc19.1"></a>
+    <a name="c19.1" ></a><a name="h19.1" ></a>19.1 Wytyczne dla autorów
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#928" class="lnkocn">928</a></label>
+  <p class="i0" id="928">
+    Ten rozdział zajmuje się pewnymi ogólnymi rozważaniami, które należy wziąć pod uwagę podczas pisania dokumentacji technicznej dla live-instrukcji. Są one podzielone na funkcje językowe oraz zalecane procedury.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#929" class="lnkocn">929</a></label>
+  <p class="i0" id="929">
+    <b>Uwaga:</b>  Autorzy powinni najpierw przeczytać  <a href="about-manual.pl.html#how-to-contribute">Współtworzenie tego dokumentu</a>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#930" class="lnkocn">930</a></label>
+  <p class="bold" id="930"><a name="930"></a> <a id="hc19.1.1"></a>
+    <a name="c19.1.1" ></a><a name="h19.1.1" ></a>19.1.1 Funkcje językowe
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#931" class="lnkocn">931</a></label>
+  <ul>
+  <li class="bullet" id="931">
+    <i>Użyj zwykłego angielskiego</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#932" class="lnkocn">932</a></label>
+  <p class="i0" id="932">
+    Należy pamiętać, że wysoki procent czytelników nie są rodzimymi użytkownikami języka angielskiego. Więc jako generalną zasadę spróbuj używać krótkich, sensownych zdań, zakończonych kropką.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#933" class="lnkocn">933</a></label>
+  <p class="i0" id="933">
+    To nie znaczy, że trzeba korzystać z uproszczonego, naiwnego stylu. Proponuje się unikać, na ile to możliwe, złożonych zdań podrzędnych, które czynią tekst trudny do zrozumienia dla nie rodzimych użytkowników języka angielskiego.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#934" class="lnkocn">934</a></label>
+  <ul>
+  <li class="bullet" id="934">
+    <i>Różnorodność języka angielskiego</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#935" class="lnkocn">935</a></label>
+  <p class="i0" id="935">
+    The most widely spread varieties of English are British and American so it is very likely that most authors will use either one or the other. In a collaborative environment, the ideal variety would be "International English" but it is very difficult, not to say impossible, to decide on which variety among all the existing ones, is the best to use.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#936" class="lnkocn">936</a></label>
+  <p class="i0" id="936">
+    Spodziewamy się, że różne odmiany języka mogą mieszać się bez tworzenia nieporozumień, ale ogólnie należy starać się być spójnym i przed podjęciem decyzji o użyciu brytyjskiego, amerykańskiego lub innego dialektu języka angielskiego wedle uznania, proszę przyjrzeć się, jak inni ludzie piszą i postarać się ich naśladować.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#937" class="lnkocn">937</a></label>
+  <ul>
+  <li class="bullet" id="937">
+    <i>Bądź zbalansowany</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#938" class="lnkocn">938</a></label>
+  <p class="i0" id="938">
+    Nie być stronniczy. Unikaj w tym odniesienia do ideologii zupełnie niepowiązanych z <i>live-manual</i>. Pismo techniczne powinny być możliwie jak najbardziej neutralne. Jak to jest w naturze piśmiennictwa naukowego.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#939" class="lnkocn">939</a></label>
+  <ul>
+  <li class="bullet" id="939">
+    <i>Bądź poprawny politycznie</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#940" class="lnkocn">940</a></label>
+  <p class="i0" id="940">
+    Staraj się unikać seksistowskiego języka, jak to jest tylko możliwe. Jeśli potrzebujesz, odwołania do trzeciej osoby liczby pojedynczej najlepiej użyć jakiejś formy bezosobowej lub "wy" zamiast "on" , "ona" lub niewygodnych wynalazków, takie jak "mógłbyś/mogłabyś", "byłem/łam" i podobnych.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#941" class="lnkocn">941</a></label>
+  <ul>
+  <li class="bullet" id="941">
+    <i>Bądz zwięzły</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#942" class="lnkocn">942</a></label>
+  <p class="i0" id="942">
+    Go straight to the point and do not wander around aimlessly. Give as much information as necessary but do not give more information than necessary, this is to say, do not explain unnecessary details. Your readers are intelligent. Presume some previous knowledge on their part.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#943" class="lnkocn">943</a></label>
+  <ul>
+  <li class="bullet" id="943">
+    <i>Oszczędź pracy tłumaczącym</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#944" class="lnkocn">944</a></label>
+  <p class="i0" id="944">
+    Należy pamiętać, że cokolwiek napiszesz będzie musiało zostać przetłumaczone na kilka innych języków. Oznacza to, że sporo osób, będzie musiał wykonać dodatkową pracę jeśli dodasz bezużyteczne lub nadmiarowe informacje.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#945" class="lnkocn">945</a></label>
+  <ul>
+  <li class="bullet" id="945">
+    <i>Bądź zgodny</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#946" class="lnkocn">946</a></label>
+  <p class="i0" id="946">
+    As suggested before, it is almost impossible to standardize a collaborative document into a perfectly unified whole. However, every effort on your side to write in a coherent way with the rest of the authors will be appreciated.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#947" class="lnkocn">947</a></label>
+  <ul>
+  <li class="bullet" id="947">
+    <i>Be spójny</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#948" class="lnkocn">948</a></label>
+  <p class="i0" id="948">
+    Use as many text-forming devices as necessary to make your text cohesive and unambiguous. (Text-forming devices are linguistic markers such as connectors).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#949" class="lnkocn">949</a></label>
+  <ul>
+  <li class="bullet" id="949">
+    <i>Bądź opisowy</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#950" class="lnkocn">950</a></label>
+  <p class="i0" id="950">
+    It is preferable to describe the point in one or several paragraphs than merely using a number of sentences in a typical "changelog" style. Describe it! Your readers will appreciate it.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#951" class="lnkocn">951</a></label>
+  <ul>
+  <li class="bullet" id="951">
+    <i>Słownik</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#952" class="lnkocn">952</a></label>
+  <p class="i0" id="952">
+    Look up the meaning of words in a dictionary or encyclopedia if you do not know how to express certain concepts in English. But keep in mind that a dictionary can either be your best friend or can turn into your worst enemy if you do not know how to use it correctly.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#953" class="lnkocn">953</a></label>
+  <p class="i0" id="953">
+    English has the largest vocabulary that exists (with over one million words). Many of these words are borrowings from other languages. When looking up the meaning of words in a bilingual dictionary the tendency of a non-native speaker of English is to choose the one that sounds more similar in their mother tongue. This often turns into an excessively formal discourse which does not sound quite natural in English.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#954" class="lnkocn">954</a></label>
+  <p class="i0" id="954">
+    Zgodnie z ogólną zasadą, jeśli koncepcja może być wyrażony za pomocą różnych synonimów to dobrą radą będzie wybieranie pierwszego słowa zaproponowanego przez słownik. W razie wątpliwości, często słusznym jest wybieranie słowa pochodzenia germańskiego (zwykle jednosylabowe słowa). Ostrzegamy, że te dwie techniki, mogą produkować raczej mowę nieformalną, ale przynajmniej wybór słów będzie o szerokim zastosowaniu i ogólnie przyjęty.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#955" class="lnkocn">955</a></label>
+  <p class="i0" id="955">
+    Korzystanie ze słownika kolokacji jest zalecane. Są one bardzo pomocne, kiedy przychodzi do znajomości słów najczęściej występujących razem.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#956" class="lnkocn">956</a></label>
+  <p class="i0" id="956">
+    Ponownie; dobrą praktyką jest, aby uczyć się z pracy innych. Korzystanie z wyszukiwarki, aby sprawdzić, jak inni autorzy mogą korzystać z niektórych wyrażeń może bardzo pomóc.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#957" class="lnkocn">957</a></label>
+  <ul>
+  <li class="bullet" id="957">
+    <i>Fałszywi przyjaciele, idiomy i inne wyrażenia idiomatyczne</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#958" class="lnkocn">958</a></label>
+  <p class="i0" id="958">
+    Uważaj na fałszywych przyjaciół. Bez względu na to, jak biegły jesteś w obcym języku nie można pomóc wpadając od czasu do czasu w pułapkę tzw. "fałszywych przyjaciół", słowa, które wyglądają podobnie w dwóch językach, ale których znaczenie lub zastosowanie może być zupełnie inne.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#959" class="lnkocn">959</a></label>
+  <p class="i0" id="959">
+    Staraj się unikać idiomów w jak największym stopniu. "Idiomy" to wyrażenia, które mogą mieć znaczenie zupełnie odmienne od tego, co ich poszczególne słowa wydają się oznaczać. Czasami, idiomy, mogą być trudne do zrozumienia nawet dla rodzimych użytkowników języka angielskiego!
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#960" class="lnkocn">960</a></label>
+  <ul>
+  <li class="bullet" id="960">
+    <i>Unikaj slangu, skrótów, mowy potocznej...</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#961" class="lnkocn">961</a></label>
+  <p class="i0" id="961">
+    Nawet jeśli popierasz korzystanie ze zwykłego, codziennego języka angielskiego, pisanie techniczne należy do formalnej formy języka.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#962" class="lnkocn">962</a></label>
+  <p class="i0" id="962">
+    Staraj się unikać slangu, niepopularnych skrótów, które są trudne do zrozumienia, a przede wszystkim skrótów, które próbują naśladować język mówiony. Nie wspominając o typowych dla kanałów IRC i przyjaznych dla zamkniętych gron wyrażeń.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#963" class="lnkocn">963</a></label>
+  <p class="bold" id="963"><a name="963"></a> <a id="hc19.1.2"></a>
+    <a name="c19.1.2" ></a><a name="h19.1.2" ></a>19.1.2 Procedury
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#964" class="lnkocn">964</a></label>
+  <ul>
+  <li class="bullet" id="964">
+    <i>Przetestuj przed zapisaniem</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#965" class="lnkocn">965</a></label>
+  <p class="i0" id="965">
+    It is important that authors test their examples before adding them to <i>live-manual</i> to ensure that everything works as described. Testing on a clean chroot or VM can be a good starting point. Besides, it would be ideal if the tests were then carried out on different machines with different hardware to spot possible problems that may arise.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#966" class="lnkocn">966</a></label>
+  <ul>
+  <li class="bullet" id="966">
+    <i>Przykłady</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#967" class="lnkocn">967</a></label>
+  <p class="i0" id="967">
+    W przypadku dostarczania przykładu spróbuj być tak dokładny jak tylko możesz. Przykład jest, mimo wszystko, tylko przykładem.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#968" class="lnkocn">968</a></label>
+  <p class="i0" id="968">
+    It is often better to use a line that only applies to a specific case than using abstractions that may confuse your readers. In this case you can provide a brief explanation of the effects of the proposed example.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#969" class="lnkocn">969</a></label>
+  <p class="i0" id="969">
+    There may be some exceptions when the example suggests using some potentially dangerous commands that, if misused, may cause data loss or other similar undesirable effects. In this case you should provide a thorough explanation of the possible side effects.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#970" class="lnkocn">970</a></label>
+  <ul>
+  <li class="bullet" id="970">
+    <i>Linki zewnętrzne</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#971" class="lnkocn">971</a></label>
+  <p class="i0" id="971">
+    Links to external sites should only be used when the information on those sites is crucial when it comes to understanding a special point. Even so, try to use links to external sites as sparsely as possible. Internet links are likely to change from time to time resulting in broken links and leaving your arguments in an incomplete state.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#972" class="lnkocn">972</a></label>
+  <p class="i0" id="972">
+    Poza tym, ludzie, którzy czytają instrukcję w trybie offline nie będą mogli śledzić tych linków.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#973" class="lnkocn">973</a></label>
+  <ul>
+  <li class="bullet" id="973">
+    <i>Unikaj nadawania marki i rzeczy, które naruszają licencję zgodnie z którą podręcznik ten został opublikowany</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#974" class="lnkocn">974</a></label>
+  <p class="i0" id="974">
+    Try to avoid branding as much as possible. Keep in mind that other downstream projects might make use of the documentation you write. So you are complicating things for them if you add certain specific material.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#975" class="lnkocn">975</a></label>
+  <p class="i0" id="975">
+    <i>live-manual</i> jest oparty na licencji GNU GPL. Ma to wiele skutków, które odnoszą się do redystrybucji materiału (dowolnego rodzaju, w tym grafiki chronionej prawami autorskimi lub logo), który jest opublikowany wraz nim.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#976" class="lnkocn">976</a></label>
+  <ul>
+  <li class="bullet" id="976">
+    <i>Napisz pierwszy szkic, przeglądnij go, edytuj, popraw i cofnij zmiany jeżeli wymaga tego sytuacja</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#977" class="lnkocn">977</a></label>
+  <p class="i0" id="977">
+    - Burza mózgów!. Najpierw musisz zorganizować swoje pomysły w logicznej kolejności zdarzeń.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#978" class="lnkocn">978</a></label>
+  <p class="i0" id="978">
+    - Kiedy już w jakiś sposób masz zorganizowane te koncepcje w głowie napisz pierwszy szkic.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#979" class="lnkocn">979</a></label>
+  <p class="i0" id="979">
+    - Dokonaj przeglądu gramatyki, składni i pisowni. Należy pamiętać, że właściwe nazwy wydań, takich jak <b>buster</b> lub <b>sid</b> nie powinny być kapitalizowane, gdy odnosi się do nich jako nazw kodowych. Aby sprawdzić pisownię można uruchomić cel "spell". tj. polecenie <tt>make spell</tt>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#980" class="lnkocn">980</a></label>
+  <p class="i0" id="980">
+    - Udoskonalaj swoje wyrażenia, a jeśli to konieczne cofnij i przerób każdą część.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#981" class="lnkocn">981</a></label>
+  <ul>
+  <li class="bullet" id="981">
+    <i>Rozdziały</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#982" class="lnkocn">982</a></label>
+  <p class="i0" id="982">
+    Use the conventional numbering system for chapters and subtitles. e.g. 1, 1.1, 1.1.1, 1.1.2 ... 1.2, 1.2.1, 1.2.2 ... 2, 2.1 ... and so on. See markup below.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#983" class="lnkocn">983</a></label>
+  <p class="i0" id="983">
+    If you have to enumerate a series of steps or stages in your description, you can also use ordinal numbers: First, second, third ... or First, Then, After that, Finally ... Alternatively you can use bulleted items.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#984" class="lnkocn">984</a></label>
+  <ul>
+  <li class="bullet" id="984">
+    <i>Znaczniki</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#985" class="lnkocn">985</a></label>
+  <p class="i0" id="985">
+    And last but not least, <i>live-manual</i> uses  <a href="http://www.sisudoc.org/">SiSU</a>  to process the text files and produce a multiple format output. It is recommended to take a look at  <a href="http://www.sisudoc.org/sisu/en/html/sisu_manual/markup.html">SiSU's manual</a>  to get familiar with its markup, or else type:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#986" class="lnkocn">986</a></label>
+  <p class="code" id="986">
+    $ sisu --help markup<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#987" class="lnkocn">987</a></label>
+  <p class="i0" id="987">
+    To są przykłady znaczników, które mogą okazać się użyteczne:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#988" class="lnkocn">988</a></label>
+  <p class="i0" id="988">
+    - Dla pogrubienia użyj:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#989" class="lnkocn">989</a></label>
+  <p class="code" id="989">
+    *{foo}* lub !{foo}!<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#990" class="lnkocn">990</a></label>
+  <p class="i0" id="990">
+    powoduje: <b>foo</b> lub <b>foo</b>. Użyj tego by wyszczególnić określone słowa kluczowe.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#991" class="lnkocn">991</a></label>
+  <p class="i0" id="991">
+    - Dla kursywy użyj:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#992" class="lnkocn">992</a></label>
+  <p class="code" id="992">
+    /{foo}/<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#993" class="lnkocn">993</a></label>
+  <p class="i0" id="993">
+    powoduje: <i>foo</i>. Użyj tego dla np. nazw paczek Debiana.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#994" class="lnkocn">994</a></label>
+  <p class="i0" id="994">
+    - Dla czcionki o stałej szerokości użyj:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#995" class="lnkocn">995</a></label>
+  <p class="code" id="995">
+    #{foo}#<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#996" class="lnkocn">996</a></label>
+  <p class="i0" id="996">
+    powoduje: <tt>foo</tt>. Użyj tego np. dla nazw poleceń. A także aby uwidocznić poszczególne słowa kluczowe jak ścieżki dostępowe.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#997" class="lnkocn">997</a></label>
+  <p class="i0" id="997">
+    - Dla bloków z kodem użyj:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#998" class="lnkocn">998</a></label>
+  <p class="code" id="998">
+    code{<br><br>
+&nbsp;&nbsp;$ foo<br>
+&nbsp;&nbsp;# bar<br><br>
+}code<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#999" class="lnkocn">999</a></label>
+  <p class="i0" id="999">
+    powoduje:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1000" class="lnkocn">1000</a></label>
+  <p class="code" id="1000">
+    $ foo<br>
+# bar<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1001" class="lnkocn">1001</a></label>
+  <p class="i0" id="1001">
+    Użyj <tt>code{</tt> do otwarcia i #{}code# do zamknięcia tagu. Ważne jest, aby pamiętać, by zostawić miejsce na początku każdej linii kodu.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1002" class="lnkocn">1002</a></label>
+  <p class="bold" id="1002"><a name="1002"></a> <a id="hguidelines-translators"></a>
+    <a name="h19.2" ></a><a name="guidelines-translators" ></a>19.2 Wytyczne dla tłumaczy
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1003" class="lnkocn">1003</a></label>
+  <p class="i0" id="1003">
+    Ta sekcja zajmuje się pewnymi ogólnymi rozważaniami, które należy wziąć pod uwagę przy tłumaczeniu zawartości <i>live-manual</i>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1004" class="lnkocn">1004</a></label>
+  <p class="i0" id="1004">
+    Jako ogólne zalecenie, tłumacze powinni przeczytać i zrozumieć zasady tłumaczenia, które mają zastosowanie do ich specyficznych języków. Zazwyczaj, grupy i listy dyskusyjne tłumaczeń dostarczają informacji o tym, jak tworzyć przetłumaczone pracę zgodne z normami jakości Debiana.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1005" class="lnkocn">1005</a></label>
+  <p class="i0" id="1005">
+    <b>Uwaga:</b>  Tłumacze powinni również przeczytać  <a href="about-manual.pl.html#how-to-contribute">Współtworzenie tego dokumentu</a>.  W szczególności rozdział  <a href="about-manual.pl.html#translation">Tłumaczenie</a>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1006" class="lnkocn">1006</a></label>
+  <p class="bold" id="1006"><a name="1006"></a> <a id="hc19.2.1"></a>
+    <a name="c19.2.1" ></a><a name="h19.2.1" ></a>19.2.1 Wskazówki tłumaczenia
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1007" class="lnkocn">1007</a></label>
+  <ul>
+  <li class="bullet" id="1007">
+    <i>Komentarze</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#1008" class="lnkocn">1008</a></label>
+  <p class="i0" id="1008">
+    The role of the translator is to convey as faithfully as possible the meaning of words, sentences, paragraphs and texts as written by the original authors into their target language.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1009" class="lnkocn">1009</a></label>
+  <p class="i0" id="1009">
+    So they should refrain from adding personal comments or extra bits of information of their own. If they want to add a comment for other translators working on the same documents, they can leave it in the space reserved for that. That is, the header of the strings in the <b>po</b> files preceded by a number sign <b>#</b>. Most graphical translation programs can automatically handle those types of comments.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1010" class="lnkocn">1010</a></label>
+  <ul>
+  <li class="bullet" id="1010">
+    <i>UT, Uwagi Tłumacza</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#1011" class="lnkocn">1011</a></label>
+  <p class="i0" id="1011">
+    It is perfectly acceptable however, to include a word or an expression in brackets in the translated text if, and only if, that makes the meaning of a difficult word or expression clearer to the reader. Inside the brackets the translator should make evident that the addition was theirs using the abbreviation "TN" or "Translator's Note".
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1012" class="lnkocn">1012</a></label>
+  <ul>
+  <li class="bullet" id="1012">
+    <i>Wyrażenia w trybie bezosobowym</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#1013" class="lnkocn">1013</a></label>
+  <p class="i0" id="1013">
+    Documents written in English make an extensive use of the impersonal form "you". In some other languages that do not share this characteristic, this might give the false impression that the original texts are directly addressing the reader when they are actually not doing so. Translators must be aware of that fact and reflect it in their language as accurately as possible.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1014" class="lnkocn">1014</a></label>
+  <ul>
+  <li class="bullet" id="1014">
+    <i>Fałszywi przyjaciele</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#1015" class="lnkocn">1015</a></label>
+  <p class="i0" id="1015">
+    Pułapka "fałszywych przyjaciół" wyjaśnionych wcześniej szczególnie dotyczy tłumaczy. Dwukrotnie sprawdzić znaczenie podejrzanych fałszywych przyjaciół w razie wątpliwości.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1016" class="lnkocn">1016</a></label>
+  <ul>
+  <li class="bullet" id="1016">
+    <i>Znaczniki</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#1017" class="lnkocn">1017</a></label>
+  <p class="i0" id="1017">
+    Tłumacze pracujący początkowo nad plikami <b>pot</b>, a później z plikami *{po} * znajdą wiele znaczników w ciągach. Mogą oni przetłumaczyć tekst tak, jak to jest tylko możliwe do tłumaczenia, ale niezwykle ważnym jest, aby używali oni dokładnie takich samych znaczników jak w oryginalnej wersji angielskiej.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1018" class="lnkocn">1018</a></label>
+  <ul>
+  <li class="bullet" id="1018">
+    <i>Bloki kodowe</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#1019" class="lnkocn">1019</a></label>
+  <p class="i0" id="1019">
+    Mimo, że bloki z kodem są zazwyczaj nieprzetłumaczalne, zawarcie ich w tłumaczeniach jest jedynym sposobem, aby zdobyć 100% kompletne tłumaczenie. I mimo, że oznacza to więcej pracy na początku, bo to może wymagać interwencji od tłumaczy jeśli kod się zmieni, to jest to najlepszy sposób, w dłuższej perspektywie czasu na określenie, co już zostało przetłumaczone, a co nie podczas sprawdzania integralności plików .po.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1020" class="lnkocn">1020</a></label>
+  <ul>
+  <li class="bullet" id="1020">
+    <i>Nowe linijki</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#1021" class="lnkocn">1021</a></label>
+  <p class="i0" id="1021">
+    Przetłumaczone teksty muszą mieć te same znaki nowej linii jak teksty oryginalne. Należy uważać, aby nacisnąć klawisz "Enter" lub wpisać <b>\n</b> jeśli pojawią się one w oryginalnych plików. Znaki te często pojawiają się, na przykład, w blokach z kodem.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1022" class="lnkocn">1022</a></label>
+  <p class="i0" id="1022">
+    Nie popełniaj błedów, to nie znaczy, że przetłumaczony tekst musi mieć taką samą długość jak w wersji angielskiej. Jest to prawie niemożliwe.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1023" class="lnkocn">1023</a></label>
+  <ul>
+  <li class="bullet" id="1023">
+    <i>Nieprzetłumaczalne ciągi znaków</i>
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#1024" class="lnkocn">1024</a></label>
+  <p class="i0" id="1024">
+    Tłumacze nigdy nie powinni tłumaczyć:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1025" class="lnkocn">1025</a></label>
+  <p class="i0" id="1025">
+    - Nazw kodowych wydań (które powinny być pisane małymi literami)
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1026" class="lnkocn">1026</a></label>
+  <p class="i0" id="1026">
+    - Nazw programów
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1027" class="lnkocn">1027</a></label>
+  <p class="i0" id="1027">
+    - Komend podanych jako przykład
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1028" class="lnkocn">1028</a></label>
+  <p class="i0" id="1028">
+    - Metadanych (zazwyczaj pomiędzy dwukropkami <b>:metadata:</b>)
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1029" class="lnkocn">1029</a></label>
+  <p class="i0" id="1029">
+    - Linków
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#1030" class="lnkocn">1030</a></label>
+  <p class="i0" id="1030">
+    - Ścieżek dostępnowych
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="examples.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="metadata.pl.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

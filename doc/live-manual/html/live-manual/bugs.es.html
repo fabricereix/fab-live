@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    bugs -
+    Manual de Live Systems
+  </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="dc.title" content="Manual de Live Systems" />
+  <meta name="dc.author" content="Proyecto Live  Systems &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.publisher" content="Live Systems Project &#60;debian-live@lists.debian.org&#62;" />
+  <meta name="dc.date" content="22.09.2015"  />
+  <meta name="dc.rights" content="Copyright: Copyright (C) 2006-2015 Live Systems Project \\ License: Este programa es software libre: puede ser redistribuido y/o modificado bajo los t&#233;rminos de la GNU General Public License publicada por la Free Software Foundation, bien de la versi&#243;n 3 de la Licencia, o (a su elecci&#243;n) cualquier versi&#243;n posterior. \\  \\ Este programa se distribuye con la esperanza de que sea &#251;til, pero SIN NINGUNA GARANT&#205;A, incluso sin la garant&#237;a impl&#237;cita de COMERCIALIZACI&#211;N o IDONEIDAD PARA UN PROP&#211;SITO PARTICULAR. Consulte la GNU General Public License para m&#225;s detalles. \\  \\ Deber&#237;a haber recibido una copia de la General Public License GNU junto con este programa. Si no, vea http://www.gnu.org/licenses/. \\  \\ El texto completo de la GNU Licencia P&#251;blica General se pueden encontrar en /usr/share/common-licenses/GPL-3" />
+
+  <meta name="generator" content="SiSU 7.1.8 of 2016w08/5 (2016-02-26) (n*x and Ruby!)" />
+    <link rel="generator" href="http://www.sisudoc.org/" />
+  <link rel="shortcut icon" href="../_sisu/image/rb7.ico" />
+
+  <link href="../../_sisu/css/html.css" rel="stylesheet">
+</head>
+<body lang="es">
+<a name="top" id="top"></a><table summary="segment navigation band with banner" bgcolor="#ffffff" width="100%"><tr>
+<td width="20%" align="left">
+ <table summary="home button / home information" border="0" cellpadding="3" cellspacing="0">
+ <tr><td align="left" bgcolor="#ffffff">
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org/manual" target="_top">
+    Live manual
+  </a></p>
+  <p class="tiny_left"><a href="http://debian-live.alioth.debian.org" target="_top">
+    Live Systems
+  </a></p>
+ </td></tr>
+ </table>
+</td>
+<td width="75%" align="center">
+  
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+</td>
+<td width="5%" align="right">
+  <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="contributing-to-project.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="coding-style.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+</td></tr>
+</table><div class="toc"><h1 class="minitoc">
+    Manual de Live Systems
+  </h1>
+
+<h1 class="minitoc">
+    Acerca de este manual
+  </h1>
+
+<h1 class="minitoc">
+    Acerca de este manual
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-manual.es.html" target="_top">
+    1. Acerca de este manual
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-manual.es.html#8">
+    1.1 Para el impaciente.
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.es.html#12">
+    1.2 Términos
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.es.html#29">
+    1.3 Autores
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="about-manual.es.html#44">
+    1.4 Cómo contribuir a este documento
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-manual.es.html#46">
+  1.4.1 Aplicar cambios
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-manual.es.html#60">
+  1.4.2 Traducción
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Contribuir al Live Systems Project
+  </h1>
+
+<h4 class="minitoc">
+      <a href="about-project.es.html" target="_top">
+    2. Acerca del Live Systems Project
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="about-project.es.html#75">
+    2.1 Motivación
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.es.html#76">
+  2.1.1 Desventajas de los sistemas en vivo actuales
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.es.html#86">
+  2.1.2 El porqué de crear un sistema en vivo propio.
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.es.html#94">
+    2.2 Filosofía
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="about-project.es.html#95">
+  2.2.1 Solamente paquetes sin modificación alguna de Debian «main»
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="about-project.es.html#99">
+  2.2.2 Sin configuración especial para el sistema en vivo
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="about-project.es.html#103">
+    2.3 Contacto
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Usuario
+  </h1>
+
+<h1 class="minitoc">
+    Instalación
+  </h1>
+
+<h4 class="minitoc">
+      <a href="installation.es.html" target="_top">
+    3. Instalación
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="installation.es.html#110">
+    3.1 Requisitos
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="installation.es.html#118">
+    3.2 Instalación de live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#124">
+  3.2.1 Desde el repositorio Debian.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#127">
+  3.2.2 A partir del código fuente
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#138">
+  3.2.3 A partir de «instantáneas»
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="installation.es.html#140">
+    3.3 Instalación de live-boot y live-config
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#142">
+  3.3.1 Desde el repositorio Debian.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#144">
+  3.3.2 A partir del código fuente
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="installation.es.html#156">
+  3.3.3 A partir de «instantáneas»
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Conceptos básicos
+  </h1>
+
+<h4 class="minitoc">
+      <a href="the-basics.es.html" target="_top">
+    4. Conceptos básicos
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#163">
+    4.1 ¿Qué es un sistema en vivo?
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#171">
+    4.2 Descarga de imágenes prefabricadas
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#173">
+    4.3 Uso del servicio de creación de imágenes web
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#175">
+  4.3.1 Uso y advertencias del servicio de creación de imágenes web
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#179">
+    4.4 Primeros pasos: creación de una imagen ISO híbrida
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#190">
+    4.5 Usar una imagen ISO híbrida
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#192">
+  4.5.1 Grabar una imagen ISO en un medio físico.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#195">
+  4.5.2 Copiar una imagen ISO híbrida a un dispositivo  USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#200">
+  4.5.3 Usar el espacio libre en el dispositivo USB
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#207">
+  4.5.4 Arrancar el medio en vivo
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#211">
+    4.6 Usar una máquina virtual para pruebas
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#218">
+  4.6.1 Probar una imagen ISO con QEMU
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#225">
+  4.6.2 Probar una imagen ISO con VirtualBox
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#233">
+    4.7 Construir y utilizar una imágen HDD
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#245">
+    4.8 Creación de una imagen de arranque en red
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#258">
+  4.8.1 Servidor DHCP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#262">
+  4.8.2 Servidor TFTP
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#267">
+  4.8.3 Servidor NFS
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#275">
+  4.8.4 Cómo probar el arranque en red
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#278">
+  4.8.5 Qemu
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="the-basics.es.html#284">
+    4.9 Arrancar desde internet
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#286">
+  4.9.1 Conseguir los ficheros para arrancar desde internet
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="the-basics.es.html#292">
+  4.9.2 Arrancar imágenes webboot
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Descripción general de las herramientas
+  </h1>
+
+<h4 class="minitoc">
+      <a href="overview-of-tools.es.html" target="_top">
+    5. Descripción general de las herramientas
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.es.html#300">
+    5.1 El paquete live-build
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.es.html#310">
+  5.1.1 El comando <tt>lb config</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.es.html#320">
+  5.1.2 El comando <tt>lb build</tt>
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="overview-of-tools.es.html#322">
+  5.1.3 El comando <tt>lb clean</tt>
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.es.html#324">
+    5.2 El paquete live-boot
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="overview-of-tools.es.html#328">
+    5.3 El paquete live-config
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Gestionar una configuración
+  </h1>
+
+<h4 class="minitoc">
+      <a href="managing-a-configuration.es.html" target="_top">
+    6. Gestionar una configuración
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.es.html#333">
+    6.1 Gestionar cambios en la configuración
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.es.html#335">
+  6.1.1 ¿Por qué utilizar scripts auto? ¿Qué hacen?
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="managing-a-configuration.es.html#338">
+  6.1.2 Usar scripts auto de ejemplo
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="managing-a-configuration.es.html#345">
+    6.2 Clonar una configuración publicada a través de  Git
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalización de contenidos
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customization-overview.es.html" target="_top">
+    7. Descripción general de la personalización.
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customization-overview.es.html#359">
+    7.1 Configuración en el momento de la creación vs en el momento del arranque
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.es.html#362">
+    7.2 Etapas de la creación
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.es.html#365">
+    7.3 Opciones para lb config en ficheros
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customization-overview.es.html#367">
+    7.4 Tareas de personalización
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalización de la instalación de paquetes
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-package-installation.es.html" target="_top">
+    8. Personalización de la instalación de  paquetes
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.es.html#372">
+    8.1 Origen de los paquetes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#373">
+  8.1.1 Distribución, áreas de archivo y modo
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#380">
+  8.1.2 Réplicas de Distribución Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#382">
+  8.1.3 Réplicas de Distribution utilizadas  durante la creación
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#386">
+  8.1.4 Réplicas de distribución Debian utilizadas en la ejecución.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#389">
+  8.1.5 Repositorios adicionales
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.es.html#397">
+    8.2 Selección de los paquetes a instalar
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#399">
+  8.2.1 Listas de paquetes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#402">
+  8.2.2 Utilizar metapaquetes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#410">
+  8.2.3 Listas de paquetes locales
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#414">
+  8.2.4 Listas de paquetes locales para la etapa binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#416">
+  8.2.5 Generar listas de paquetes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#420">
+  8.2.6 Utilización de condiciones dentro de las listas de paquetes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#429">
+  8.2.7 Eliminación paquetes durante la instalación
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#431">
+  8.2.8 Tareas de Escritorio e Idioma
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#436">
+  8.2.9 Versión y tipo de kernel
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#441">
+  8.2.10 Kernels personalizados
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.es.html#449">
+    8.3 Instalar paquetes modificados  o de terceros
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#456">
+  8.3.1 Método <tt>packages.chroot</tt> para instalar paquetes personalizados
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#463">
+  8.3.2 Método de repositorio APT para instalar paquetes personalizados
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#466">
+  8.3.3 Paquetes personalizados y APT
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-package-installation.es.html#469">
+    8.4 Configurar APT en la creación
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#471">
+  8.4.1 Utilizar apt o aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#475">
+  8.4.2 Utilización de un proxy con APT
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#478">
+  8.4.3 Ajuste de APT para ahorrar espacio
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#487">
+  8.4.4 Pasar opciones a apt o a aptitude
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-package-installation.es.html#492">
+  8.4.5 APT pinning
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personalización de contenidos
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-contents.es.html" target="_top">
+    9. Personalización de contenidos
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.es.html#501">
+    9.1 Includes
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.es.html#506">
+  9.1.1 Includes locales en Live/chroot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.es.html#513">
+  9.1.2 Includes locales en Binary
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.es.html#517">
+    9.2 Scripts gancho (Hooks)
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.es.html#520">
+  9.2.1 Scripts gancho locales en el chroot
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.es.html#522">
+  9.2.2 Scripts gancho locales en Binary
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-contents.es.html#524">
+  9.2.3 Scripts gancho en tiempo de arranque
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="customizing-contents.es.html#526">
+    9.3 Preconfiguración de las preguntas de Debconf
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalización del comportamiento en tiempo de ejecución.
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html" target="_top">
+    10. Personalización del comportamiento en  tiempo de ejecución.
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#532">
+    10.1 Personalización del usuario por defecto del sistema en vivo
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#541">
+    10.2 Personalización de las variantes locales e  idioma
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#558">
+    10.3 Persistencia
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#580">
+  10.3.1 El fichero persistence.conf
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#585">
+  10.3.2 Utilizar varios medios persistentes
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="customizing-run-time-behaviours.es.html#591">
+  10.3.3 Utilizar persistencia con cifrado
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Personalización de la imagen binaria
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-binary.es.html" target="_top">
+    11. Personalización de la imagen binaria
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.es.html#619">
+    11.1 Gestores de arranque
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-binary.es.html#626">
+    11.2 Metadatos ISO
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Personalización del Instalador de Debian
+  </h1>
+
+<h4 class="minitoc">
+      <a href="customizing-installer.es.html" target="_top">
+    12. Personalización del Instalador de Debian
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.es.html#636">
+    12.1 Tipos de imágenes según el instalador
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.es.html#648">
+    12.2 Personalizando el Instalador de Debian mediante preconfiguración
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="customizing-installer.es.html#651">
+    12.3 Personalizar el contenido del Instalador de Debian
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Proyecto
+  </h1>
+
+<h1 class="minitoc">
+    Contribuir al proyecto
+  </h1>
+
+<h4 class="minitoc">
+      <a href="contributing-to-project.es.html" target="_top">
+    13. Contribuir al proyecto
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.es.html#667">
+    13.1 Realizar cambios
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="contributing-to-project.es.html#682">
+    13.2 Traducción de las páginas de manual
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Cómo informar acerca de errores.
+  </h1>
+
+<h4 class="minitoc">
+      <a href="bugs.es.html" target="_top">
+    14. Informes de errores.
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#698">
+    14.1 Problemas conocidos
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#703">
+    14.2 Reconstruir desde cero
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#705">
+    14.3 Utilizar paquetes actualizados
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#707">
+    14.4 Recopilar información
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#724">
+    14.5 Aislar el fallo si es posible
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#726">
+    14.6 Utilizar el paquete correcto sobre el que informar del error
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="bugs.es.html#729">
+  14.6.1 En la preinstalación (bootstrap) en tiempo de creación.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.es.html#732">
+  14.6.2 Mientras se instalan paquetes en tiempo de creación.
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.es.html#736">
+  14.6.3 En tiempo de arranque
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="bugs.es.html#738">
+  14.6.4 En tiempo de ejecución
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#740">
+    14.7 Hacer la investigación
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="bugs.es.html#744">
+    14.8 Dónde informar de los fallos
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Estilo de código
+  </h1>
+
+<h4 class="minitoc">
+      <a href="coding-style.es.html" target="_top">
+    15. Estilo de código
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="coding-style.es.html#751">
+    15.1 Compatibilidad
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.es.html#756">
+    15.2 Sangrado
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.es.html#758">
+    15.3 Ajuste de líneas
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.es.html#770">
+    15.4 Variables
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="coding-style.es.html#789">
+    15.5 Miscelánea
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Procedimientos
+  </h1>
+
+<h4 class="minitoc">
+      <a href="procedures.es.html" target="_top">
+    16. Procedimientos
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="procedures.es.html#797">
+    16.1 Principales lanzamientos
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="procedures.es.html#803">
+    16.2 Nuevas versiones
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="procedures.es.html#807">
+  16.2.1 Última actualización de una versión Debian
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="procedures.es.html#809">
+  16.2.2 Plantilla para anunciar nuevas versiones.
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    Repositorios Git
+  </h1>
+
+<h4 class="minitoc">
+      <a href="git-repositories.es.html" target="_top">
+    17. Repositorios Git
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="git-repositories.es.html#829">
+    17.1 Manejo de múltiples repositorios
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Ejemplos
+  </h1>
+
+<h1 class="minitoc">
+    Ejemplos
+  </h1>
+
+<h4 class="minitoc">
+      <a href="examples.es.html" target="_top">
+    18. Ejemplos
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#837">
+    18.1 Uso de los ejemplos
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#841">
+    18.2 Tutorial 1: Una imagen predeterminada
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#850">
+    18.3 Tutorial 2: Una utilidad de navegador web
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#858">
+    18.4 Tutorial 3: Una imagen personalizada
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="examples.es.html#861">
+  18.4.1 Primera revisión
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="examples.es.html#875">
+  18.4.2 Segunda revisión
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#887">
+    18.5 Un cliente VNC kiosk
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#901">
+    18.6 Una imagen básica para un pendrive USB de 128MB
+  </a>
+  </h5>
+
+<h5 class="minitoc">
+      <a href="examples.es.html#912">
+    18.7 Un escritorio GNOME con variante local e instalador
+  </a>
+  </h5>
+
+<h1 class="minitoc">
+    Apéndice
+  </h1>
+
+<h1 class="minitoc">
+    Style guide
+  </h1>
+
+<h4 class="minitoc">
+      <a href="style-guide.es.html" target="_top">
+    19. Guía de estilo
+  </a> 
+  </h4>
+
+<h5 class="minitoc">
+      <a href="style-guide.es.html#927">
+    19.1 Instrucciones para los autores
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.es.html#930">
+  19.1.1 Aspectos lingüísticos
+</a>
+  </h6>
+
+<h6 class="minitoc">
+      <a href="style-guide.es.html#963">
+  19.1.2 Procedimientos
+</a>
+  </h6>
+
+<h5 class="minitoc">
+      <a href="style-guide.es.html#1002">
+    19.2 Directrices para los traductores
+  </a>
+  </h5>
+
+<h6 class="minitoc">
+      <a href="style-guide.es.html#1006">
+  19.2.1 Consejos de traducción
+</a>
+  </h6>
+
+<h1 class="minitoc">
+    <b><a href="metadata.es.html">Metadata</a></b>
+  </h1>
+
+<h4 class="minitoc">
+      <a href="metadata.es.html" target="_top">
+    SiSU Metadata, document information
+  </a> 
+  </h4>
+</div><div class="content">
+<h1 class="tiny">
+    Manual de Live Systems
+  </h1>
+</div><div class="content">
+<h1 class="tiny">
+    Cómo informar acerca de errores.
+  </h1>
+</div><div class="content"><div class="substance">
+  <label class="ocn"><a href="#692" class="lnkocn">692</a></label>
+  <h1 class="norm" id="692"><a name="692"></a>
+    14. Informes de errores.
+  </h1>
+</div><div class="substance">
+  <label class="ocn"><a href="#693" class="lnkocn">693</a></label>
+  <p class="i0" id="693">
+    Los sistemas en vivo están lejos de ser perfectos, pero queremos que sean lo más perfectos posible - con su ayuda. No dudar en informar de un error. Es mejor llenar un informe dos veces que no hacerlo nunca. Sin embargo, este capítulo incluye recomendaciones sobre cómo presentar buenos informes de errores.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#694" class="lnkocn">694</a></label>
+  <p class="i0" id="694">
+    Para los impacientes:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#695" class="lnkocn">695</a></label>
+  <ul>
+  <li class="bullet" id="695">
+    Primero, siempre se debe comprobar el estado actualizado de la imagen en busca de problemas conocidos en la página web ‹<a href="http://debian-live.alioth.debian.org/" target="_top">http://debian-live.alioth.debian.org/</a>›.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#696" class="lnkocn">696</a></label>
+  <ul>
+  <li class="bullet" id="696">
+    Antes de presentar un informe de errores, se debe intentar reproducir el error con las <b>versiones más recientes</b> de <i>live-build</i>, <i>live-boot</i>, <i>live-config</i> y <i>live-tools</i> de la rama de que se está utilizando (como la última versión 4.x de <i>live-build</i> si se utiliza <i>live-build</i> 4).
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#697" class="lnkocn">697</a></label>
+  <ul>
+  <li class="bullet" id="697">
+    Se debe intentar proporcionar <b>una información tan específica como sea posible</b> acerca del error. Esto incluye (al menos) la versión de <i>live-build</i>, <i>live-boot</i>, <i>live-config</i> y <i>live-tools</i> utilizada y la distribución del sistema en vivo que se está construyendo.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#698" class="lnkocn">698</a></label>
+  <p class="bold" id="698"><a name="698"></a> <a id="hc14.1"></a>
+    <a name="c14.1" ></a><a name="h14.1" ></a>14.1 Problemas conocidos
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#699" class="lnkocn">699</a></label>
+  <p class="i0" id="699">
+    Debido a que Debian <b>testing</b> y Debian <b>unstable</b> están cambiando continuamente, no siempre es posible crear un sistema con éxito cuando se especifica cualquiera de estas dos versiones como distribución objetivo.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#700" class="lnkocn">700</a></label>
+  <p class="i0" id="700">
+    Si esto causa mucha dificultad, no se debe crear un sistema basado en <b>testing</b> o <b>unstable</b>, sino que debe utilizarse <b>stable</b>. <i>live-build</i> siempre crea, por defecto, la versión <b>stable</b> .
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#701" class="lnkocn">701</a></label>
+  <p class="i0" id="701">
+    Los problemas detectados se especifican en la sección 'status' de la página web ‹<a href="http://debian-live.alioth.debian.org/" target="_top">http://debian-live.alioth.debian.org/</a>›.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#702" class="lnkocn">702</a></label>
+  <p class="i0" id="702">
+    Está fuera del alcance de este manual enseñar cómo identificar y solucionar correctamente problemas de los paquetes de las distribuciones en desarrollo, sin embargo, hay dos cosas que siempre se puede intentar: Si se detecta un error de creación cuando la distribución de destino es <b>testing</b>, se debe intentar con <b>unstable</b>. Si <b>unstable</b> no funciona bien, se debe volver a <b>testing</b> haciendo un pin con la nueva versión del paquete de <b>unstable</b> (véase  <a href="customizing-package-installation.es.html#apt-pinning">APT pinning</a>  para más detalles).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#703" class="lnkocn">703</a></label>
+  <p class="bold" id="703"><a name="703"></a> <a id="hc14.2"></a>
+    <a name="c14.2" ></a><a name="h14.2" ></a>14.2 Reconstruir desde cero
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#704" class="lnkocn">704</a></label>
+  <p class="i0" id="704">
+    Para asegurarse de que un error en particular no es causado por crear el sistema basándose en los datos de un sistema anterior, se debe reconstruir el sistema en vivo entero, desde el principio y comprobar si el error es reproducible.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#705" class="lnkocn">705</a></label>
+  <p class="bold" id="705"><a name="705"></a> <a id="hc14.3"></a>
+    <a name="c14.3" ></a><a name="h14.3" ></a>14.3 Utilizar paquetes actualizados
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#706" class="lnkocn">706</a></label>
+  <p class="i0" id="706">
+    Utilizar paquetes obsoletos puede causar problemas importantes al tratar de reproducir (y en última instancia, solucionar) el problema. Hay que asegurarse de que el sistema de construcción está actualizado y cualquier paquete que se incluya en la imagen esté también al día .
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#707" class="lnkocn">707</a></label>
+  <p class="bold" id="707"><a name="707"></a> <a id="hcollect-information"></a>
+    <a name="h14.4" ></a><a name="collect-information" ></a>14.4 Recopilar información
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#708" class="lnkocn">708</a></label>
+  <p class="i0" id="708">
+    Se debe proporcionar información suficiente con el informe. Como mínimo, la versión exacta de <i>live-build</i> donde se encuentra el error y los pasos para reproducirlo. Se debe utilizar el sentido común e incluir cualquier información pertinente si se cree que podría ayudar a resolver el problema.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#709" class="lnkocn">709</a></label>
+  <p class="i0" id="709">
+    Para sacar el máximo provecho de un informe de errores, se requerirá al menos la siguiente información:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#710" class="lnkocn">710</a></label>
+  <ul>
+  <li class="bullet" id="710">
+    Arquitectura del sistema anfitrión
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#711" class="lnkocn">711</a></label>
+  <ul>
+  <li class="bullet" id="711">
+    Distribución del sistema anfitrión.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#712" class="lnkocn">712</a></label>
+  <ul>
+  <li class="bullet" id="712">
+    La versión de <i>live-build</i> del sistema anfitrión.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#713" class="lnkocn">713</a></label>
+  <ul>
+  <li class="bullet" id="713">
+    Versión de <i>debootstrap</i> en el sistema anfitrión.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#714" class="lnkocn">714</a></label>
+  <ul>
+  <li class="bullet" id="714">
+    Arquitectura del sistema en vivo.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#715" class="lnkocn">715</a></label>
+  <ul>
+  <li class="bullet" id="715">
+    Distribución del sistema en vivo.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#716" class="lnkocn">716</a></label>
+  <ul>
+  <li class="bullet" id="716">
+    Versión de <i>live-boot</i> en el sistema en vivo.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#717" class="lnkocn">717</a></label>
+  <ul>
+  <li class="bullet" id="717">
+    Versión de <i>live-config</i> en el sistema en vivo.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#718" class="lnkocn">718</a></label>
+  <ul>
+  <li class="bullet" id="718">
+    Versión de <i>live-tools</i> en el sistema en vivo.
+  </li>
+  </ul>
+</div><div class="substance">
+  <label class="ocn"><a href="#719" class="lnkocn">719</a></label>
+  <p class="i0" id="719">
+    Se puede generar un log del proceso de creación mediante el comando <tt>tee</tt>. Se recomienda hacer esto de forma automática con un script <tt>auto/build</tt> (ver  <a href="managing-a-configuration.es.html#managing-a-configuration">Gestionar una configuración</a>  para más detalles).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#720" class="lnkocn">720</a></label>
+  <p class="code" id="720">
+    # lb build 2&gt;&amp;1 | tee build.log<br>
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#721" class="lnkocn">721</a></label>
+  <p class="i0" id="721">
+    En el momento del arranque, <i>live-boot</i> y <i>live-config</i> guardan sus logs en <tt>/var/log/live/</tt>. Comprobar si hay algún mensaje de error en estos ficheros.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#722" class="lnkocn">722</a></label>
+  <p class="i0" id="722">
+    Además, para descartar otros errores, siempre es una buena idea comprimir en un .tar el directorio <tt>config/</tt> y subirlo a algún lugar, para que el equipo de Debian Live pueda reproducir el error (<b>No</b> se debe enviar como documento adjunto a la lista de correo). Si esto es difícil (por ejemplo, debido a su tamaño) se puede utilizar la salida del comando <tt>lb config --dump</tt> que produce un resumen del árbol de configuración (es decir, listas de archivos de los subdirectorios de <tt>config /</tt> pero no los incluye).
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#723" class="lnkocn">723</a></label>
+  <p class="i0" id="723">
+    Hay que recordar que los informes a enviar se deben hacer en ingles, por lo que para generar los logs en este idioma se debe utilizar la variante local English, p.ej. ejecutar los comandos de <i>live-build</i> o cualquier otro precedidos de <tt>LC_ALL=C</tt> o <tt>LC_ALL=en_US</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#724" class="lnkocn">724</a></label>
+  <p class="bold" id="724"><a name="724"></a> <a id="hc14.5"></a>
+    <a name="c14.5" ></a><a name="h14.5" ></a>14.5 Aislar el fallo si es posible
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#725" class="lnkocn">725</a></label>
+  <p class="i0" id="725">
+    Si es posible, aislar el caso del fallo al menor cambio posible que lo produzca. No siempre es fácil hacer esto, así que si no se consigue para el informe, no hay que preocuparse. Sin embargo, si se planea el ciclo de desarrollo bién, con conjuntos de cambios lo bastante pequeños por iteración, puede ser posible aislar el problema mediante la construcción de una simple «base» de configuración que se ajuste a la configuración actual deseada, más el conjunto del cambio que falla añadido. Si resulta difícil determinar que cambios produjeron el error, puede ser que se haya incluido demasiado en cada conjunto de cambios y se deba desarrollar en incrementos más pequeños.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#726" class="lnkocn">726</a></label>
+  <p class="bold" id="726"><a name="726"></a> <a id="hc14.6"></a>
+    <a name="c14.6" ></a><a name="h14.6" ></a>14.6 Utilizar el paquete correcto sobre el que informar del error
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#727" class="lnkocn">727</a></label>
+  <p class="i0" id="727">
+    Si no se sabe qué componente es responsable del error o si el error es un error general relativo a los sistemas en vivo, se puede rellenar un informe de errores contra el pseudo-paquete debian-live.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#728" class="lnkocn">728</a></label>
+  <p class="i0" id="728">
+    Sin embargo, se agradece si se intenta limitar la búsqueda a donde aparece el error.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#729" class="lnkocn">729</a></label>
+  <p class="bold" id="729"><a name="729"></a> <a id="hc14.6.1"></a>
+    <a name="c14.6.1" ></a><a name="h14.6.1" ></a>14.6.1 En la preinstalación (bootstrap) en tiempo de creación.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#730" class="lnkocn">730</a></label>
+  <p class="i0" id="730">
+    <i>live-build</i> crea primero un sistema Debian básico con <i>debootstrap</i>. Si un error aparece en este momento, se debe comprobar si está relacionado con un paquete específico de Debian (es lo más probable), o si está relacionado con la herramienta de preinstalación en sí.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#731" class="lnkocn">731</a></label>
+  <p class="i0" id="731">
+    En ambos casos, esto no es un error en el sistema en vivo, sino de Debian en sí mismo, por lo cual nosotros probablemente no podamos solucionarlo directamente. Informar del error sobre la herramienta de preinstalación o el paquete que falla.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#732" class="lnkocn">732</a></label>
+  <p class="bold" id="732"><a name="732"></a> <a id="hc14.6.2"></a>
+    <a name="c14.6.2" ></a><a name="h14.6.2" ></a>14.6.2 Mientras se instalan paquetes en tiempo de creación.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#733" class="lnkocn">733</a></label>
+  <p class="i0" id="733">
+    <i>live-build</i> instala paquetes adicionales del archivo de Debian que pueden fallar en función de la distribución Debian utilizada y del estado diario del archivo Debian. Se debe comprobar si el error es reproducible en un sistema Debian normal, si el fallo aparece en esta etapa.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#734" class="lnkocn">734</a></label>
+  <p class="i0" id="734">
+    Si este es el caso, esto no es un error en el sistema en vivo, sino de Debian - se debe informar sobre el paquete que falla. Se puede obtener más información ejecutando <i>debootstrap</i> de forma separada del sistema de creación en vivo o ejecutando <tt>lb bootstrap --debug</tt>.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#735" class="lnkocn">735</a></label>
+  <p class="i0" id="735">
+    Además, si se está utilizando una réplica local y/o cualquier tipo de proxy y se experimenta un problema, se debe intentar reproducir siempre preinstalando desde una réplica oficial.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#736" class="lnkocn">736</a></label>
+  <p class="bold" id="736"><a name="736"></a> <a id="hc14.6.3"></a>
+    <a name="c14.6.3" ></a><a name="h14.6.3" ></a>14.6.3 En tiempo de arranque
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#737" class="lnkocn">737</a></label>
+  <p class="i0" id="737">
+    Si la imagen no arranca, se debería informar a la lista de correo, junto con la información solicitada en  <a href="bugs.es.html#collect-information">Recopilar información</a>.  No hay que olvidar mencionar, cómo y cuándo la imagen falla, si es utilizando virtualización o hardware real. Si se está utilizando una tecnología de virtualización de cualquier tipo, se debe probar la imagen en hardware real antes de informar de un error. Proporcionar una captura de pantalla del error también es muy útil.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#738" class="lnkocn">738</a></label>
+  <p class="bold" id="738"><a name="738"></a> <a id="hc14.6.4"></a>
+    <a name="c14.6.4" ></a><a name="h14.6.4" ></a>14.6.4 En tiempo de ejecución
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#739" class="lnkocn">739</a></label>
+  <p class="i0" id="739">
+    Si un paquete se ha instalado correctamente, pero falla cuando se ejecuta el sistema en vivo, esto es probablemente un error en el sistema en vivo. Sin embargo:
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#740" class="lnkocn">740</a></label>
+  <p class="bold" id="740"><a name="740"></a> <a id="hc14.7"></a>
+    <a name="c14.7" ></a><a name="h14.7" ></a>14.7 Hacer la investigación
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#741" class="lnkocn">741</a></label>
+  <p class="i0" id="741">
+    Antes de presentar el informe de errores, buscar en la web el mensaje de error en particular o el síntoma que se está percibiendo. Como es muy poco probable que sea la única persona que tiene ese problema en concreto, siempre existe la posibilidad de que se haya discutido en otras partes y exista una posible solución, parche o se haya propuesto una alternativa.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#742" class="lnkocn">742</a></label>
+  <p class="i0" id="742">
+    Se debe prestar especial atención a la lista de correo del sistema en vivo, así como a su página web, ya que seguramente tienen la información más actualizada. Si esa información existe, se debe incluir una referencia a ella en el informe de errores.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#743" class="lnkocn">743</a></label>
+  <p class="i0" id="743">
+    Además, se debe comprobar las listas de errores actuales de <i>live-build</i>, <i>live-boot</i>, <i>live-config</i> y <i>live-tools</i> y verificar si se ha informado ya de algo similar.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#744" class="lnkocn">744</a></label>
+  <p class="bold" id="744"><a name="744"></a> <a id="hc14.8"></a>
+    <a name="c14.8" ></a><a name="h14.8" ></a>14.8 Dónde informar de los fallos
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#745" class="lnkocn">745</a></label>
+  <p class="i0" id="745">
+    El Live Systems Project realiza un seguimiento de todos los errores en el sistema de seguimiento de errores de Debian (BTS). Para obtener información sobre cómo utilizar el sistema, consultar ‹<a href="https://bugs.debian.org/" target="_top">https://bugs.debian.org/</a>›. También se puede enviar los errores mediante el comando <tt>reportbug</tt> del paquete con el mismo nombre.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#746" class="lnkocn">746</a></label>
+  <p class="i0" id="746">
+    En general, se debe informar sobre los errores en tiempo de creación contra el paquete <i>live-build</i>. De los fallos en tiempo de arranque contra el paquete <i>live-boot</i>, y de los errores en tiempo de ejecución contra el paquete <i>live-config</i>. Si no se está seguro de qué paquete es el adecuado o se necesita más ayuda antes de presentar un informe de errores, lo mejor es enviar un informe contra el pseudo-paquete debian-live. Nosotros nos encargaremos de reasignarlo donde sea apropiado.
+  </p>
+</div><div class="substance">
+  <label class="ocn"><a href="#747" class="lnkocn">747</a></label>
+  <p class="i0" id="747">
+    Hay que tener en cuenta que los errores que se encuentran en las distribuciones derivadas de Debian (como Ubuntu y otras) <b>no</b> deben enviarse al BTS de Debian a menos que también se puedan reproducir en un sistema Debian usando paquetes oficiales de Debian.
+  </p>
+</div></div><br><div class="main_column">
+  <table summary="segment navigation band" bgcolor="#ffffff" width="100%"><tr>
+  <td width="70%" align="center">
+    
+<table summary="segment navigation available documents types: toc,doc,pdf,concordance" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  
+  
+</tr></table>
+  </td>
+  <td width="5%" align="right">
+    <table summary="segment navigation pre/next" border="0" cellpadding="3" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#ffffff">
+  <a href="contributing-to-project.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_prev_red.png" alt="&lt;&lt;&nbsp;previous" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="toc.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_up_red.png" alt="toc" />
+  </a>
+</td>
+<td align="center" bgcolor="#ffffff">
+  <a href="coding-style.es.html" target="_top">
+    <img border="0" width="22" height="22" src="../../_sisu/image_sys/arrow_next_red.png" alt="next&nbsp;&gt;&gt;" />
+  </a>
+</td>
+<td>
+</td></tr>
+</table>
+  </td></tr>
+  </table>
+  
+</div><div class="main_column">
+
+<a name="bottom" id="bottom"></a>
+<a name="end" id="end"></a>
+</div></div></body>
+</html>

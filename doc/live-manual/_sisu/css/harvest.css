@@ -1,0 +1,126 @@
+/* SiSU harvest css default stylesheet */
+  body {
+    color: black;
+    background: #ffffff;
+    background-color: #ffffff;
+  }
+  a:link {
+    color: #003399;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #003399;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #000000;
+    background-color: #f9f9aa;
+  }
+  a:hover img {
+    background-color: #ffffff;
+  }
+  a:active {
+    color: #003399;
+    text-decoration: underline;
+  }
+
+  .norm, .bold {
+    line-height: 150%;
+    margin-left: 1em;
+    margin-right: 2em;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-indent: 0mm;
+  }
+  p, h0, h1, h2, h3, h4, h5, h6, h7 {
+    display: block;
+    font-family: verdana, arial, georgia, tahoma, sans-serif, helvetica, times, roman;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 150%;
+    /* text-align: justify; */
+    margin-left: 1em;
+    text-indent: 0mm;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 6px;
+    text-align: left;
+  }
+  h1 {
+    font-size: 120%;
+    font-weight: bold;
+    color: white;
+    background: #000088;
+    margin-left: 0em;
+  }
+  p.work {
+    font-size: 80%;
+    margin-left: 5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 6px;
+    text-align: left;
+  }
+  p.author {
+    font-size: 100%;
+    margin-left: 2em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 6px;
+    text-align: left;
+  }
+  p.publication {
+    font-size: 80%;
+    margin-left: 4em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 6px;
+    text-align: left;
+  }
+  p.letter {
+    font-weight: bold;
+    font-size: 60%;
+    margin-left: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 6px;
+    text-align: left;
+    color: white;
+    background: #880000;
+  }
+  p.lev0 {
+    font-size: 120%;
+    margin-left: 1em;
+    color: white;
+    background: #000000;
+  }
+
+  p.lev1 {
+    font-size: 110%;
+    margin-left: 2em;
+    color: white;
+    background: #444444;
+  }
+
+  p.lev2 {
+    font-size: 100%;
+    margin-left: 3em;
+    background: #888888;
+  }
+
+  p.lev3 {
+    font-size: 90%;
+    margin-left: 4em;
+    background: #bbbbbb;
+  }
+
+  p.lev4 {
+    font-size: 80%;
+    margin-left: 5em;
+    background: #eeeeee;
+  }
+
+  p.lev5 {
+    font-size: 80%;
+    margin-left: 6em;
+  }
