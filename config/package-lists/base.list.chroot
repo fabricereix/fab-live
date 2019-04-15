@@ -12,3 +12,4 @@ libsqlite3-dev
 lsof
 sqlite3
 libdbus-glib-1-2
+psmisc
