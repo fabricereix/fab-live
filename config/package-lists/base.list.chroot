@@ -13,5 +13,4 @@ lsof
 sqlite3
 libdbus-glib-1-2
 psmisc
-libqt5opengl5
-libqt5printsupport5
+
