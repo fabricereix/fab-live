@@ -16,4 +16,5 @@ psmisc
 linux-kernel-headers
 dkms
 wpasupplicant
+wireless-tools
 
