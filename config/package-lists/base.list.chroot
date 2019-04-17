@@ -17,4 +17,5 @@ linux-kernel-headers
 dkms
 wpasupplicant
 wireless-tools
-
+usbutils
+pciutils
