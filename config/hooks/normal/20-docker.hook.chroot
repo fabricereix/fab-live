@@ -12,3 +12,5 @@ dpkg -i /tmp/containerd.io_1.2.2-3_amd64.deb
 dpkg -i /tmp/docker-ce-cli_18.09.2~3-0~debian-stretch_amd64.deb
 dpkg -i /tmp/docker-ce_18.09.2~3-0~debian-stretch_amd64.deb
 
+ls -lh /var/cache/apt/archives
+

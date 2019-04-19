@@ -1,7 +1,6 @@
 FROM debian:9.5
 
-RUN apt-get update
-RUN apt-get install -y debootstrap squashfs-tools xorriso grub-pc-bin grub-efi-amd64-bin mtools
+RUN apt-get update && apt-get install -y debootstrap squashfs-tools xorriso grub-pc-bin grub-efi-amd64-bin mtools
 RUN apt-get install -y cpio curl
 RUN apt-get install -y dosfstools
 RUN apt-get install -y isolinux 
