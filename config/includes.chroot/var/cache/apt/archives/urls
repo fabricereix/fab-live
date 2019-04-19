@@ -3,7 +3,6 @@ https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/docker-
 https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/docker-ce-cli_18.09.2~3-0~debian-stretch_amd64.deb
 http://ftp.de.debian.org/debian/pool/contrib/v/virtualbox/virtualbox-dkms_5.2.24-dfsg-4~bpo9+1_all.deb
 http://ftp.de.debian.org/debian/pool/non-free/f/firmware-nonfree/firmware-misc-nonfree_20161130-4_all.deb
-
-
+http://ftp.de.debian.org/debian/pool/non-free/f/firmware-nonfree/firmware-iwlwifi_20161130-4_all.deb
 
 
