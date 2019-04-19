@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+dpkg -i /var/cache/apt/archives/firmware-misc-nonfree_20161130-4_all.deb
+

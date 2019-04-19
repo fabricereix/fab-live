@@ -3,9 +3,9 @@ set -e
 
 cd /tmp
 
-DOWNLOAD_URL=https://download.virtualbox.org/virtualbox/6.0.4/virtualbox-6.0_6.0.4-128413~Debian~stretch_amd64.deb
+#DOWNLOAD_URL=https://download.virtualbox.org/virtualbox/6.0.4/virtualbox-6.0_6.0.4-128413~Debian~stretch_amd64.deb
 
-wget --no-verbose $DOWNLOAD_URL
+dpkg -i /var/cache/apt/archives/virtualbox-dkms_5.2.24-dfsg-4~bpo9+1_all.deb
 
 # TODO install dependencies in the live system
 #dpkg -i virtualbox-6.0_6.0.4-128413~Debian~stretch_amd64.deb
