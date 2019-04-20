@@ -8,4 +8,6 @@ synergy
 printer-driver-cups-pdf
 rxvt-unicode
 xfonts-terminus
+wmctrl
+xdotool
 
