@@ -1,4 +1,4 @@
-xorg 
+xorg
 #xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev
 i3-wm i3status i3lock
 vlc chromium
@@ -11,3 +11,4 @@ xfonts-terminus
 wmctrl
 xdotool
 dmenu
+alsa-utils
