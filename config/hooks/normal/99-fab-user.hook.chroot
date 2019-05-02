@@ -3,6 +3,7 @@ echo $0
 
 useradd -m -s /bin/bash fab
 usermod -a -G docker fab
+echo fab:fab | chpasswd
 
 chown -R fab:fab /home/fab
 find /home/fab
