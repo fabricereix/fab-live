@@ -1,4 +1,6 @@
 #/!bin/bash
+set -e
+set -x
 echo $0
 
 useradd -m -s /bin/bash fab
