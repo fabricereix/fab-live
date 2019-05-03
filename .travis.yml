@@ -9,6 +9,9 @@ script:
     - docker build -t debian/live-build .
     - mkdir build
     - pwd
+    - echo "Generated at $(date)" | tee -a config/includes.binary/README
+    - echo "Travis Build $TRAVIS_BUILD_NUMBER" | tee -a config/includes.binary/README
+    - echo "Commit $(git rev-parse HEAD)" | tee -a config/includes.binary/README
     - docker run --privileged -v $PWD/build:/tmp debian/live-build sh -c "cd /tmp && cp -r /fab-live/* . && lb build" || travis_terminate 1;
     - find build | grep 'iso$'
     - tar cfvz config.tar.gz build/config
