@@ -14,7 +14,7 @@ RUN apt-get install -y live-build
 RUN mkdir /fab-live
 RUN cd /fab-live && lb config  \
      --architectures amd64 \
-     --linux-packages "linux-image" \
+     --linux-packages "linux-image-4.9.0-9-amd64" \
      --archive-areas "main contrib" \
      --bootappend-live "boot=live components username=live-user persistence persistence-label=persistence persistence-storage=filesystem hostname=fab-live timezone=Europe/Paris keyboard-layouts=fr user-default-groups=audio,cdrom,dip,floppy,video,plugdev,netdev,powerdev,scanner,bluetooth,fuse,docker" \
      "${@}"
