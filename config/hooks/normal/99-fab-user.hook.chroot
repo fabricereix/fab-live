@@ -5,6 +5,7 @@ echo $0
 
 useradd -m -s /bin/bash fab
 usermod -a -G docker fab
+usermod -a -G sudo fab
 echo fab:fab | chpasswd
 
 chown -R fab:fab /home/fab
