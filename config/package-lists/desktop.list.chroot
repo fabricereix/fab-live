@@ -12,3 +12,5 @@ wmctrl
 xdotool
 dmenu
 alsa-utils
+w3m-img
+
