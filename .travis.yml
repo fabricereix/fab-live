@@ -12,7 +12,7 @@ script:
     - docker build -t debian/live-build .
     - mkdir build
     - pwd
-    - docker run --privileged -v $PWD/build:/tmp debian/live-build sh -c "cd /tmp && cp -r /fab-live/* . && lb build" || travis_terminate 1;
+    - docker run --privileged -v $PWD/build:/tmp debian/live-build sh -c "cd /tmp && cp -r /fab-live/* . && lb build"; # || travis_terminate 1;
     - find build | grep 'iso$'
     - tar cfvz config.tar.gz build/config
     #- $TRAVIS_BUILD_DIR/upload.sh build/live-image-amd64.hybrid.iso
